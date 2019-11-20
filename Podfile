@@ -19,14 +19,6 @@ target 'SteamAnalyticsApp' do
   project 'App/App.xcodeproj'
 end
 
-target 'Services' do
-  project 'Services/Services.xcodeproj'
-end
-
-target 'APIClient' do
-  project 'APIClient/APIClient.xcodeproj'
-end
-
 target 'Storages' do
   project 'Storages/Storages.xcodeproj'
 

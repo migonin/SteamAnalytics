@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A50EC684003B35382AA9C2D1 /* Pods_APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30E0B3CA003FB80493C55C7 /* Pods_APIClient.framework */; };
 		BC604C292384E9E600FA5588 /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC604C1F2384E9E600FA5588 /* APIClient.framework */; };
 		BC604C2E2384E9E600FA5588 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604C2D2384E9E600FA5588 /* APIClientTests.swift */; };
 		BC604C302384E9E600FA5588 /* APIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = BC604C222384E9E600FA5588 /* APIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,15 +23,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		379BA596E5BCB1C71101ECBC /* Pods-APIClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIClient.release.xcconfig"; path = "Target Support Files/Pods-APIClient/Pods-APIClient.release.xcconfig"; sourceTree = "<group>"; };
-		A92D472CA384678025A31004 /* Pods-APIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIClient.debug.xcconfig"; path = "Target Support Files/Pods-APIClient/Pods-APIClient.debug.xcconfig"; sourceTree = "<group>"; };
 		BC604C1F2384E9E600FA5588 /* APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604C222384E9E600FA5588 /* APIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		BC604C232384E9E600FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC604C282384E9E600FA5588 /* APIClientUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIClientUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604C2D2384E9E600FA5588 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		BC604C2F2384E9E600FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F30E0B3CA003FB80493C55C7 /* Pods_APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A50EC684003B35382AA9C2D1 /* Pods_APIClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,32 +50,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B63CFE23DD49EC1E07B9075 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A92D472CA384678025A31004 /* Pods-APIClient.debug.xcconfig */,
-				379BA596E5BCB1C71101ECBC /* Pods-APIClient.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
-		3F9DCF9F2CECDAEA3A76EE24 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F30E0B3CA003FB80493C55C7 /* Pods_APIClient.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BC604C152384E9E600FA5588 = {
 			isa = PBXGroup;
 			children = (
 				BC604C212384E9E600FA5588 /* Main */,
 				BC604C2C2384E9E600FA5588 /* UnitTests */,
 				BC604C202384E9E600FA5588 /* Products */,
-				0B63CFE23DD49EC1E07B9075 /* Pods */,
-				3F9DCF9F2CECDAEA3A76EE24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,7 +104,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC604C332384E9E600FA5588 /* Build configuration list for PBXNativeTarget "APIClient" */;
 			buildPhases = (
-				E6A9BF99BD79BFBB0488CF6B /* [CP] Check Pods Manifest.lock */,
 				BC604C1A2384E9E600FA5588 /* Headers */,
 				BC604C1B2384E9E600FA5588 /* Sources */,
 				BC604C1C2384E9E600FA5588 /* Frameworks */,
@@ -215,31 +189,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E6A9BF99BD79BFBB0488CF6B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-APIClient-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC604C1B2384E9E600FA5588 /* Sources */ = {
@@ -390,7 +339,6 @@
 		};
 		BC604C342384E9E600FA5588 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A92D472CA384678025A31004 /* Pods-APIClient.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -414,7 +362,6 @@
 		};
 		BC604C352384E9E600FA5588 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 379BA596E5BCB1C71101ECBC /* Pods-APIClient.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
