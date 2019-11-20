@@ -10,6 +10,13 @@
    </Group>
    <Group
       location = "container:"
+      name = "L2">
+      <FileRef
+         location = "group:Dependencies/Dependencies.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "L1">
       <FileRef
          location = "group:Services/Services.xcodeproj">

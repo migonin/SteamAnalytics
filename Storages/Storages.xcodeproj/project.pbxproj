@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		090DF56B7522BB73D68AECE9 /* Pods_Storages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29885AD661F4FFD3B166B2 /* Pods_Storages.framework */; };
+		BC3E79DD238521200052AF7A /* AuthStorageInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E79DC238521200052AF7A /* AuthStorageInput.swift */; };
+		BC3E79DF238521450052AF7A /* AuthStorageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E79DE238521450052AF7A /* AuthStorageOutput.swift */; };
+		BC3E79E12385215B0052AF7A /* AuthStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E79E02385215B0052AF7A /* AuthStorage.swift */; };
+		BC3E79E3238522AF0052AF7A /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E79E2238522AF0052AF7A /* UserDefaultsKey.swift */; };
 		BC604C052384E9C800FA5588 /* Storages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC604BFB2384E9C800FA5588 /* Storages.framework */; };
 		BC604C0A2384E9C800FA5588 /* StoragesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604C092384E9C800FA5588 /* StoragesTests.swift */; };
 		BC604C0C2384E9C800FA5588 /* Storages.h in Headers */ = {isa = PBXBuildFile; fileRef = BC604BFE2384E9C800FA5588 /* Storages.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +30,10 @@
 /* Begin PBXFileReference section */
 		93608A8F0093FDAE842A2831 /* Pods-Storages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storages.debug.xcconfig"; path = "Target Support Files/Pods-Storages/Pods-Storages.debug.xcconfig"; sourceTree = "<group>"; };
 		AF29885AD661F4FFD3B166B2 /* Pods_Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC3E79DC238521200052AF7A /* AuthStorageInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorageInput.swift; sourceTree = "<group>"; };
+		BC3E79DE238521450052AF7A /* AuthStorageOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorageOutput.swift; sourceTree = "<group>"; };
+		BC3E79E02385215B0052AF7A /* AuthStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorage.swift; sourceTree = "<group>"; };
+		BC3E79E2238522AF0052AF7A /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		BC604BFB2384E9C800FA5588 /* Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604BFE2384E9C800FA5588 /* Storages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storages.h; sourceTree = "<group>"; };
 		BC604BFF2384E9C800FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +81,17 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		BC3E79DB238521100052AF7A /* AuthStorage */ = {
+			isa = PBXGroup;
+			children = (
+				BC3E79DC238521200052AF7A /* AuthStorageInput.swift */,
+				BC3E79DE238521450052AF7A /* AuthStorageOutput.swift */,
+				BC3E79E02385215B0052AF7A /* AuthStorage.swift */,
+				BC3E79E2238522AF0052AF7A /* UserDefaultsKey.swift */,
+			);
+			path = AuthStorage;
+			sourceTree = "<group>";
+		};
 		BC604BF12384E9C800FA5588 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +115,7 @@
 		BC604BFD2384E9C800FA5588 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BC3E79DB238521100052AF7A /* AuthStorage */,
 				BC604BFE2384E9C800FA5588 /* Storages.h */,
 				BC604BFF2384E9C800FA5588 /* Info.plist */,
 			);
@@ -174,6 +194,7 @@
 				TargetAttributes = {
 					BC604BFA2384E9C800FA5588 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					BC604C032384E9C800FA5588 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -246,6 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3E79E3238522AF0052AF7A /* UserDefaultsKey.swift in Sources */,
+				BC3E79DF238521450052AF7A /* AuthStorageOutput.swift in Sources */,
+				BC3E79E12385215B0052AF7A /* AuthStorage.swift in Sources */,
+				BC3E79DD238521200052AF7A /* AuthStorageInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93608A8F0093FDAE842A2831 /* Pods-Storages.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -407,6 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.frozenlion.steamanalytics.Storages;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE25D0EE90394E92E17CA869 /* Pods-Storages.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -439,6 +467,7 @@
 		BC604C132384E9C800FA5588 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,6 +485,7 @@
 		BC604C142384E9C800FA5588 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
