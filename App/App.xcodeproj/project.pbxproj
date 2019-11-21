@@ -13,8 +13,24 @@
 		BC604B792384E7EA00FA5588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC604B772384E7EA00FA5588 /* Main.storyboard */; };
 		BC604B7B2384E7EA00FA5588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC604B7A2384E7EA00FA5588 /* Assets.xcassets */; };
 		BC604B7E2384E7EA00FA5588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC604B7C2384E7EA00FA5588 /* LaunchScreen.storyboard */; };
+		BC8C1B1E2386908B000A80BA /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8C1B1D2386908B000A80BA /* APIClient.framework */; };
+		BC8C1B1F2386908B000A80BA /* APIClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC8C1B1D2386908B000A80BA /* APIClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C3089D65C072E47F245A690A /* Pods_SteamAnalyticsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DED0B260414F8C014DD4D2C /* Pods_SteamAnalyticsApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC8C1B202386908B000A80BA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC8C1B1F2386908B000A80BA /* APIClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		605B4DC8D320D485879DF30F /* Pods-SteamAnalyticsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SteamAnalyticsApp.debug.xcconfig"; path = "Target Support Files/Pods-SteamAnalyticsApp/Pods-SteamAnalyticsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -28,6 +44,7 @@
 		BC604B7A2384E7EA00FA5588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC604B7D2384E7EA00FA5588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC604B7F2384E7EA00FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC8C1B1D2386908B000A80BA /* APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8C1B1E2386908B000A80BA /* APIClient.framework in Frameworks */,
 				C3089D65C072E47F245A690A /* Pods_SteamAnalyticsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +63,7 @@
 		0CB67D48871BD23FCAD4B6F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC8C1B1D2386908B000A80BA /* APIClient.framework */,
 				7DED0B260414F8C014DD4D2C /* Pods_SteamAnalyticsApp.framework */,
 			);
 			name = Frameworks;
@@ -103,6 +122,8 @@
 				BC604B6A2384E7EA00FA5588 /* Sources */,
 				BC604B6B2384E7EA00FA5588 /* Frameworks */,
 				BC604B6C2384E7EA00FA5588 /* Resources */,
+				BC8C1B202386908B000A80BA /* Embed Frameworks */,
+				E496CB94686F7B50294AA7A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +201,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E496CB94686F7B50294AA7A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SteamAnalyticsApp/Pods-SteamAnalyticsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SteamAnalyticsApp/Pods-SteamAnalyticsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SteamAnalyticsApp/Pods-SteamAnalyticsApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -15,11 +15,29 @@ def kingfisher_pod
 	pod 'Kingfisher', '5.10.1'
 end
 
+def alamofire_pod
+  pod 'Alamofire', '~> 5.0.0-rc.3'
+end
+
 target 'SteamAnalyticsApp' do
   project 'App/App.xcodeproj'
+
+  alamofire_pod
+end
+
+target 'APIClient' do
+  project 'APIClient/APIClient.xcodeproj'
+
+  alamofire_pod
 end
 
 target 'Storages' do
+  project 'Storages/Storages.xcodeproj'
+
+  corestore_pod
+end
+
+target 'StoragesUnitTests' do
   project 'Storages/Storages.xcodeproj'
 
   corestore_pod

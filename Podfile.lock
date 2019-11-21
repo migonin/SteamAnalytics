@@ -1,16 +1,20 @@
 PODS:
+  - Alamofire (5.0.0-rc.3)
   - CoreStore (7.0.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.3)
   - CoreStore (= 7.0.1)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - CoreStore
 
 SPEC CHECKSUMS:
+  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
   CoreStore: c353080c6ae1708f621b75d9f8afe7d2ee716807
 
-PODFILE CHECKSUM: 4a32acea6795a88c04a346e21dc49b1249b34bac
+PODFILE CHECKSUM: d3f01d1c988f07d0c0c38d3cb00ce56f33b6c9a4
 
 COCOAPODS: 1.8.4

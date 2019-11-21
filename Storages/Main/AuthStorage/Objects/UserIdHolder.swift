@@ -1,5 +1,5 @@
 //
-//  UserDefaultsKey.swift
+//  UserIdHolder.swift
 //  Storages
 //
 //  Created by Михаил Игонин on 20.11.2019.
@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import CoreStore
 
-enum UserDefaultsKey: String, CaseIterable {
-    case authUserID = "authUserID"
+public class UserIdHolder: CoreStoreObject {
+    public let userId = Value.Optional<Int>("userId")
 }
