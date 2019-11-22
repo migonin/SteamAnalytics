@@ -19,7 +19,7 @@ class AuthStorageTests: XCTestCase {
             CoreStoreSchema(
                 modelVersion: "V1",
                 entities: [
-                    Entity<UserIdHolder>("UserIdHolder"),
+                    Entity<AuthUserIdHolder>("AuthUserIdHolder"),
                 ]
             )
         )
@@ -37,19 +37,19 @@ class AuthStorageTests: XCTestCase {
         //when
 
         //then
-        XCTAssertNil(storage?.getUserID())
+        XCTAssertNil(storage.authUserIdHolder().userId.value)
     }
 
     func testSetUserId_ifId_userIdHolderShouldExistWithNilId() {
         //given
-        let userId = 100
+        let userId = "someID"
         storage.setUserID(userId)
 
         //when
         waitForAllBackgroundOperations()
 
         //then
-        XCTAssertEqual(storage.getUserID(), userId)
+        XCTAssertEqual(storage.authUserIdHolder().userId.value, userId)
     }
 
 }

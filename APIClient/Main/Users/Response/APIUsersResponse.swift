@@ -10,23 +10,20 @@ import Foundation
 
 // MARK: - APIUsersResponse
 public struct APIUsersResponse: Codable {
-    let response: APIUsers
+    public let response: APIUsers
 }
 
 // MARK: - APIUsers
 public struct APIUsers: Codable {
-    let players: [APIUser]
+    public let players: [APIUser]
 }
 
 // MARK: - APIUser
 public struct APIUser: Codable {
-    let steamid: String
-    let communityvisibilitystate, profilestate: Int
-    let personaname: String
-    let lastlogoff: Int
-    let profileurl: String
-    let avatar, avatarmedium, avatarfull: String
-    let personastate: Int
-    let primaryclanid: String
-    let timecreated, personastateflags: Int
+    public let steamid: String
+    public let communityvisibilitystate: Int
+    public let personaname: String
+    public let lastlogoff: Int
+    public let avatar, avatarmedium, avatarfull: String
+    public let personastate: Int
 }

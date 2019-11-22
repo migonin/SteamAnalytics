@@ -1,5 +1,5 @@
 //
-//  AlamofireUsersRequestFactory.swift
+//  AlamofireUsersAPIClient.swift
 //  APIClient
 //
 //  Created by Михаил Игонин on 21.11.2019.
@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-public struct AlamofireUsersRequestFactory: UsersRequestFactoring {
+public struct AlamofireUsersAPIClient: UsersAPIClienting {
     let queue: DispatchQueue
     let decoder: DataDecoder
 
@@ -21,6 +21,11 @@ public struct AlamofireUsersRequestFactory: UsersRequestFactoring {
     public func getUsers(request: URLRequest, completionHandler: @escaping (Result<APIUsersResponse, Error>) -> Void) {
         requestDecodable(request, completionHandler: completionHandler)
     }
+
+    public func getUserFriends(request: URLRequest, completionHandler: @escaping (Result<APIFriendsResponse, Error>) -> Void) {
+        requestDecodable(request, completionHandler: completionHandler)
+    }
+
 }
 
-extension AlamofireUsersRequestFactory: Requestable { }
+extension AlamofireUsersAPIClient: Requestable { }

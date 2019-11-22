@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol AuthStorageInput {
-    func setUserID(_ userID: Int?)
+    func setUserID(_ userID: String?)
 }

@@ -12,10 +12,18 @@
 		BC3E79DD238521200052AF7A /* AuthStorageInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E79DC238521200052AF7A /* AuthStorageInput.swift */; };
 		BC3E79DF238521450052AF7A /* AuthStorageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E79DE238521450052AF7A /* AuthStorageOutput.swift */; };
 		BC3E79E12385215B0052AF7A /* AuthStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E79E02385215B0052AF7A /* AuthStorage.swift */; };
-		BC3E7A0323852EF70052AF7A /* UserIdHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E7A0223852EF70052AF7A /* UserIdHolder.swift */; };
+		BC3E7A0323852EF70052AF7A /* AuthUserIdHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E7A0223852EF70052AF7A /* AuthUserIdHolder.swift */; };
+		BC45C64D2386D5C60096EBD2 /* User+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C64C2386D5C60096EBD2 /* User+Import.swift */; };
+		BC45C64F2386D5E80096EBD2 /* User+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C64E2386D5E80096EBD2 /* User+Export.swift */; };
 		BC604C052384E9C800FA5588 /* Storages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC604BFB2384E9C800FA5588 /* Storages.framework */; };
 		BC604C0A2384E9C800FA5588 /* AuthStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604C092384E9C800FA5588 /* AuthStorageTests.swift */; };
 		BC604C0C2384E9C800FA5588 /* Storages.h in Headers */ = {isa = PBXBuildFile; fileRef = BC604BFE2384E9C800FA5588 /* Storages.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC8C1B2523869A02000A80BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B2423869A02000A80BA /* User.swift */; };
+		BC8C1B272386A7BB000A80BA /* UsersStorageInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B262386A7BB000A80BA /* UsersStorageInput.swift */; };
+		BC8C1B292386A7CF000A80BA /* UsersStorageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B282386A7CF000A80BA /* UsersStorageOutput.swift */; };
+		BC8C1B2B2386A7E4000A80BA /* UsersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B2A2386A7E4000A80BA /* UsersStorage.swift */; };
+		BC8C1B2D2386AA9F000A80BA /* UserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B2C2386AA9F000A80BA /* UserStruct.swift */; };
+		BC8C1B342386B720000A80BA /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B332386B720000A80BA /* UserStatus.swift */; };
 		BCC0232523853DB200D59337 /* DataStackTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC0232423853DB200D59337 /* DataStackTestable.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,13 +45,21 @@
 		BC3E79DC238521200052AF7A /* AuthStorageInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorageInput.swift; sourceTree = "<group>"; };
 		BC3E79DE238521450052AF7A /* AuthStorageOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorageOutput.swift; sourceTree = "<group>"; };
 		BC3E79E02385215B0052AF7A /* AuthStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorage.swift; sourceTree = "<group>"; };
-		BC3E7A0223852EF70052AF7A /* UserIdHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdHolder.swift; sourceTree = "<group>"; };
+		BC3E7A0223852EF70052AF7A /* AuthUserIdHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserIdHolder.swift; sourceTree = "<group>"; };
+		BC45C64C2386D5C60096EBD2 /* User+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Import.swift"; sourceTree = "<group>"; };
+		BC45C64E2386D5E80096EBD2 /* User+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Export.swift"; sourceTree = "<group>"; };
 		BC604BFB2384E9C800FA5588 /* Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604BFE2384E9C800FA5588 /* Storages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storages.h; sourceTree = "<group>"; };
 		BC604BFF2384E9C800FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC604C042384E9C800FA5588 /* StoragesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoragesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604C092384E9C800FA5588 /* AuthStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorageTests.swift; sourceTree = "<group>"; };
 		BC604C0B2384E9C800FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC8C1B2423869A02000A80BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BC8C1B262386A7BB000A80BA /* UsersStorageInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStorageInput.swift; sourceTree = "<group>"; };
+		BC8C1B282386A7CF000A80BA /* UsersStorageOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStorageOutput.swift; sourceTree = "<group>"; };
+		BC8C1B2A2386A7E4000A80BA /* UsersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStorage.swift; sourceTree = "<group>"; };
+		BC8C1B2C2386AA9F000A80BA /* UserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStruct.swift; sourceTree = "<group>"; };
+		BC8C1B332386B720000A80BA /* UserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		BCC0232423853DB200D59337 /* DataStackTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStackTestable.swift; sourceTree = "<group>"; };
 		CE25D0EE90394E92E17CA869 /* Pods-Storages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storages.release.xcconfig"; path = "Target Support Files/Pods-Storages/Pods-Storages.release.xcconfig"; sourceTree = "<group>"; };
 		E02CC4AC8B8080D8FF3C8803 /* Pods-StoragesUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragesUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-StoragesUnitTests/Pods-StoragesUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,7 +121,7 @@
 		BC3E7A0423852FC20052AF7A /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				BC3E7A0223852EF70052AF7A /* UserIdHolder.swift */,
+				BC3E7A0223852EF70052AF7A /* AuthUserIdHolder.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -133,6 +149,7 @@
 		BC604BFD2384E9C800FA5588 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BC8C1B2223869937000A80BA /* UsersStorage */,
 				BC3E79DB238521100052AF7A /* AuthStorage */,
 				BC604BFE2384E9C800FA5588 /* Storages.h */,
 				BC604BFF2384E9C800FA5588 /* Info.plist */,
@@ -148,6 +165,29 @@
 				BC604C0B2384E9C800FA5588 /* Info.plist */,
 			);
 			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		BC8C1B2223869937000A80BA /* UsersStorage */ = {
+			isa = PBXGroup;
+			children = (
+				BC8C1B232386996D000A80BA /* Objects */,
+				BC8C1B262386A7BB000A80BA /* UsersStorageInput.swift */,
+				BC8C1B282386A7CF000A80BA /* UsersStorageOutput.swift */,
+				BC8C1B2A2386A7E4000A80BA /* UsersStorage.swift */,
+			);
+			path = UsersStorage;
+			sourceTree = "<group>";
+		};
+		BC8C1B232386996D000A80BA /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BC8C1B2C2386AA9F000A80BA /* UserStruct.swift */,
+				BC8C1B332386B720000A80BA /* UserStatus.swift */,
+				BC8C1B2423869A02000A80BA /* User.swift */,
+				BC45C64C2386D5C60096EBD2 /* User+Import.swift */,
+				BC45C64E2386D5E80096EBD2 /* User+Export.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,9 +368,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC3E79DF238521450052AF7A /* AuthStorageOutput.swift in Sources */,
-				BC3E7A0323852EF70052AF7A /* UserIdHolder.swift in Sources */,
+				BC8C1B292386A7CF000A80BA /* UsersStorageOutput.swift in Sources */,
+				BC3E7A0323852EF70052AF7A /* AuthUserIdHolder.swift in Sources */,
+				BC45C64D2386D5C60096EBD2 /* User+Import.swift in Sources */,
 				BC3E79E12385215B0052AF7A /* AuthStorage.swift in Sources */,
+				BC45C64F2386D5E80096EBD2 /* User+Export.swift in Sources */,
+				BC8C1B2B2386A7E4000A80BA /* UsersStorage.swift in Sources */,
+				BC8C1B2D2386AA9F000A80BA /* UserStruct.swift in Sources */,
+				BC8C1B2523869A02000A80BA /* User.swift in Sources */,
 				BC3E79DD238521200052AF7A /* AuthStorageInput.swift in Sources */,
+				BC8C1B342386B720000A80BA /* UserStatus.swift in Sources */,
+				BC8C1B272386A7BB000A80BA /* UsersStorageInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

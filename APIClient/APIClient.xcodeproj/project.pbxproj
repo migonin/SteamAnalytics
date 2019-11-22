@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		36FD2AF7E06C33968326961E /* Pods_APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DB97357BCFE94B638D3EDB /* Pods_APIClient.framework */; };
 		BC311C2323867AD600E5F6AC /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC311C2223867AD600E5F6AC /* Requestable.swift */; };
+		BC45C65223878ED00096EBD2 /* APIFriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C65123878ED00096EBD2 /* APIFriendsResponse.swift */; };
+		BC45C654238792140096EBD2 /* UserQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C653238792140096EBD2 /* UserQuery.swift */; };
 		BC604C292384E9E600FA5588 /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC604C1F2384E9E600FA5588 /* APIClient.framework */; };
 		BC604C2E2384E9E600FA5588 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604C2D2384E9E600FA5588 /* APIClientTests.swift */; };
 		BC604C302384E9E600FA5588 /* APIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = BC604C222384E9E600FA5588 /* APIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,14 +18,14 @@
 		BCCEDC87238639BD00986E16 /* MethodPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC86238639BD00986E16 /* MethodPath.swift */; };
 		BCCEDC8923863A0F00986E16 /* URLFactoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC8823863A0F00986E16 /* URLFactoring.swift */; };
 		BCCEDC8B23863A4E00986E16 /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC8A23863A4E00986E16 /* URLFactory.swift */; };
-		BCCEDC8D23863B0300986E16 /* URLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC8C23863B0300986E16 /* URLError.swift */; };
+		BCCEDC8D23863B0300986E16 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC8C23863B0300986E16 /* NetworkingError.swift */; };
 		BCCEDC9123863C9A00986E16 /* QueryItemsRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC9023863C9A00986E16 /* QueryItemsRepresentable.swift */; };
 		BCCEDC9423863D7C00986E16 /* URLRequestFactoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC9323863D7C00986E16 /* URLRequestFactoring.swift */; };
 		BCCEDC9623863DF900986E16 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC9523863DF900986E16 /* URLRequestFactory.swift */; };
 		BCCEDC9823863E8E00986E16 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC9723863E8E00986E16 /* URLExtensions.swift */; };
 		BCCEDC9A2386407100986E16 /* UsersQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC992386407100986E16 /* UsersQuery.swift */; };
-		BCCEDCA323864B4700986E16 /* UsersRequestFactoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDCA223864B4700986E16 /* UsersRequestFactoring.swift */; };
-		BCCEDCA523864C2A00986E16 /* AlamofireUsersRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDCA423864C2A00986E16 /* AlamofireUsersRequestFactory.swift */; };
+		BCCEDCA323864B4700986E16 /* UsersAPIClienting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDCA223864B4700986E16 /* UsersAPIClienting.swift */; };
+		BCCEDCA523864C2A00986E16 /* AlamofireUsersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDCA423864C2A00986E16 /* AlamofireUsersAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		54C0CB38BC28C7F4B36CBA98 /* Pods-APIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIClient.debug.xcconfig"; path = "Target Support Files/Pods-APIClient/Pods-APIClient.debug.xcconfig"; sourceTree = "<group>"; };
 		BC311C2223867AD600E5F6AC /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		BC45C65123878ED00096EBD2 /* APIFriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFriendsResponse.swift; sourceTree = "<group>"; };
+		BC45C653238792140096EBD2 /* UserQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserQuery.swift; sourceTree = "<group>"; };
 		BC604C1F2384E9E600FA5588 /* APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604C222384E9E600FA5588 /* APIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		BC604C232384E9E600FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,14 +53,14 @@
 		BCCEDC86238639BD00986E16 /* MethodPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodPath.swift; sourceTree = "<group>"; };
 		BCCEDC8823863A0F00986E16 /* URLFactoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoring.swift; sourceTree = "<group>"; };
 		BCCEDC8A23863A4E00986E16 /* URLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
-		BCCEDC8C23863B0300986E16 /* URLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLError.swift; sourceTree = "<group>"; };
+		BCCEDC8C23863B0300986E16 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		BCCEDC9023863C9A00986E16 /* QueryItemsRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItemsRepresentable.swift; sourceTree = "<group>"; };
 		BCCEDC9323863D7C00986E16 /* URLRequestFactoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactoring.swift; sourceTree = "<group>"; };
 		BCCEDC9523863DF900986E16 /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
 		BCCEDC9723863E8E00986E16 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		BCCEDC992386407100986E16 /* UsersQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersQuery.swift; sourceTree = "<group>"; };
-		BCCEDCA223864B4700986E16 /* UsersRequestFactoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequestFactoring.swift; sourceTree = "<group>"; };
-		BCCEDCA423864C2A00986E16 /* AlamofireUsersRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireUsersRequestFactory.swift; sourceTree = "<group>"; };
+		BCCEDCA223864B4700986E16 /* UsersAPIClienting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPIClienting.swift; sourceTree = "<group>"; };
+		BCCEDCA423864C2A00986E16 /* AlamofireUsersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireUsersAPIClient.swift; sourceTree = "<group>"; };
 		C7DB97357BCFE94B638D3EDB /* Pods_APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4604C46AF491F0DE03C219 /* Pods-APIClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIClient.release.xcconfig"; path = "Target Support Files/Pods-APIClient/Pods-APIClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				BCCEDC802386370E00986E16 /* APIUsersResponse.swift */,
+				BC45C65123878ED00096EBD2 /* APIFriendsResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -157,7 +162,7 @@
 				BCCEDC86238639BD00986E16 /* MethodPath.swift */,
 				BCCEDC8823863A0F00986E16 /* URLFactoring.swift */,
 				BCCEDC8A23863A4E00986E16 /* URLFactory.swift */,
-				BCCEDC8C23863B0300986E16 /* URLError.swift */,
+				BCCEDC8C23863B0300986E16 /* NetworkingError.swift */,
 			);
 			path = URLFactory;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 		BCCEDC8E23863B4D00986E16 /* Query */ = {
 			isa = PBXGroup;
 			children = (
+				BC45C653238792140096EBD2 /* UserQuery.swift */,
 				BCCEDC992386407100986E16 /* UsersQuery.swift */,
 			);
 			path = Query;
@@ -192,8 +198,8 @@
 		BCCEDCA123864B2A00986E16 /* UsersRequestFactory */ = {
 			isa = PBXGroup;
 			children = (
-				BCCEDCA223864B4700986E16 /* UsersRequestFactoring.swift */,
-				BCCEDCA423864C2A00986E16 /* AlamofireUsersRequestFactory.swift */,
+				BCCEDCA223864B4700986E16 /* UsersAPIClienting.swift */,
+				BCCEDCA423864C2A00986E16 /* AlamofireUsersAPIClient.swift */,
 			);
 			path = UsersRequestFactory;
 			sourceTree = "<group>";
@@ -342,18 +348,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCCEDCA323864B4700986E16 /* UsersRequestFactoring.swift in Sources */,
-				BCCEDC8D23863B0300986E16 /* URLError.swift in Sources */,
+				BCCEDCA323864B4700986E16 /* UsersAPIClienting.swift in Sources */,
+				BCCEDC8D23863B0300986E16 /* NetworkingError.swift in Sources */,
 				BCCEDC812386370E00986E16 /* APIUsersResponse.swift in Sources */,
 				BCCEDC87238639BD00986E16 /* MethodPath.swift in Sources */,
 				BCCEDC9A2386407100986E16 /* UsersQuery.swift in Sources */,
+				BC45C654238792140096EBD2 /* UserQuery.swift in Sources */,
 				BCCEDC8B23863A4E00986E16 /* URLFactory.swift in Sources */,
 				BCCEDC9823863E8E00986E16 /* URLExtensions.swift in Sources */,
 				BCCEDC9123863C9A00986E16 /* QueryItemsRepresentable.swift in Sources */,
 				BCCEDC9423863D7C00986E16 /* URLRequestFactoring.swift in Sources */,
 				BCCEDC9623863DF900986E16 /* URLRequestFactory.swift in Sources */,
 				BC311C2323867AD600E5F6AC /* Requestable.swift in Sources */,
-				BCCEDCA523864C2A00986E16 /* AlamofireUsersRequestFactory.swift in Sources */,
+				BCCEDCA523864C2A00986E16 /* AlamofireUsersAPIClient.swift in Sources */,
+				BC45C65223878ED00096EBD2 /* APIFriendsResponse.swift in Sources */,
 				BCCEDC8923863A0F00986E16 /* URLFactoring.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

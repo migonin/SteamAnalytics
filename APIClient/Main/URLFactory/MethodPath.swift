@@ -9,7 +9,8 @@
 import Foundation
 
 public enum MethodPath: String, CustomStringConvertible {
-    case usersDetails = "/ISteamUser/GetPlayerSummaries/v0002"
+    case usersDetails = "ISteamUser/GetPlayerSummaries/v0002"
+    case userFriends = "ISteamUser/GetFriendList/v0001"
 
     public var description: String {
         return self.rawValue

@@ -12,8 +12,7 @@ public struct URLRequestFactory: URLRequestFactoring {
     let apiKeyParameter: String
     let apiKey: String
 
-    // TODO remove key from here
-    public init(apiKeyParameter: String = "key", apiKey: String = "91D10F93B51628B7F4C36989DA961363") {
+    public init(apiKeyParameter: String = "key", apiKey: String) {
         self.apiKeyParameter = apiKeyParameter
         self.apiKey = apiKey
     }

@@ -1,5 +1,5 @@
 //
-//  URLError.swift
+//  NetworkingError.swift
 //  APIClient
 //
 //  Created by Михаил Игонин on 21.11.2019.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-public enum URLError: Error {
-    case cannotBeFormed
+public enum NetworkingError: Error {
+    case urlCannotBeFormed
+    case wrongResponse
 }

@@ -1,5 +1,5 @@
 //
-//  UserIdHolder.swift
+//  AuthUserIdHolder.swift
 //  Storages
 //
 //  Created by Михаил Игонин on 20.11.2019.
@@ -9,6 +9,6 @@
 import Foundation
 import CoreStore
 
-public class UserIdHolder: CoreStoreObject {
-    public let userId = Value.Optional<Int>("userId")
+public class AuthUserIdHolder: CoreStoreObject {
+    public let userId = Value.Optional<String>("userId")
 }

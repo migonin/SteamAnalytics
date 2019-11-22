@@ -15,7 +15,7 @@ extension URL {
         }
 
         guard var components = URLComponents(url: self, resolvingAgainstBaseURL: true) else {
-            throw URLError.cannotBeFormed
+            throw NetworkingError.urlCannotBeFormed
         }
 
         var newQueryItemsList = components.queryItems
@@ -29,7 +29,7 @@ extension URL {
         components.queryItems = newQueryItemsList
 
         guard let appendedURL = components.url else {
-            throw URLError.cannotBeFormed
+            throw NetworkingError.urlCannotBeFormed
         }
 
         return appendedURL

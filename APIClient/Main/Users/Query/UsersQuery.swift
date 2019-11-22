@@ -13,17 +13,16 @@ public struct UsersQuery: QueryItemsRepresentable {
         case ids = "steamids"
     }
 
-    public let userIds: [Int]
+    public let userIds: [String]
 
-    public init(userIds: [Int]) {
+    public init(userIds: [String]) {
         self.userIds = userIds
     }
 
     public func queryItems() -> [URLQueryItem] {
         var items = [URLQueryItem]()
 
-        let userIdsStr: String = userIds.map({String($0)}).joined(separator: ",")
-        items.append(URLQueryItem(name: Attribute.ids.rawValue, value: userIdsStr))
+        items.append(URLQueryItem(name: Attribute.ids.rawValue, value: userIds.joined(separator: ",")))
 
         return items
     }

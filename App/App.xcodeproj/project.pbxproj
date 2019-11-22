@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC45C66B23879B8B0096EBD2 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C66A23879B8B0096EBD2 /* Services.framework */; };
+		BC45C66C23879B8B0096EBD2 /* Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C66A23879B8B0096EBD2 /* Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC604B722384E7EA00FA5588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604B712384E7EA00FA5588 /* AppDelegate.swift */; };
 		BC604B742384E7EA00FA5588 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604B732384E7EA00FA5588 /* SceneDelegate.swift */; };
 		BC604B762384E7EA00FA5588 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604B752384E7EA00FA5588 /* ViewController.swift */; };
@@ -25,6 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BC45C66C23879B8B0096EBD2 /* Services.framework in Embed Frameworks */,
 				BC8C1B1F2386908B000A80BA /* APIClient.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -36,6 +39,7 @@
 		605B4DC8D320D485879DF30F /* Pods-SteamAnalyticsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SteamAnalyticsApp.debug.xcconfig"; path = "Target Support Files/Pods-SteamAnalyticsApp/Pods-SteamAnalyticsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7DED0B260414F8C014DD4D2C /* Pods_SteamAnalyticsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SteamAnalyticsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC522B637C40D73DBE0E8C6 /* Pods-SteamAnalyticsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SteamAnalyticsApp.release.xcconfig"; path = "Target Support Files/Pods-SteamAnalyticsApp/Pods-SteamAnalyticsApp.release.xcconfig"; sourceTree = "<group>"; };
+		BC45C66A23879B8B0096EBD2 /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604B6E2384E7EA00FA5588 /* SteamAnalyticsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteamAnalyticsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604B712384E7EA00FA5588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC604B732384E7EA00FA5588 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC8C1B1E2386908B000A80BA /* APIClient.framework in Frameworks */,
+				BC45C66B23879B8B0096EBD2 /* Services.framework in Frameworks */,
 				C3089D65C072E47F245A690A /* Pods_SteamAnalyticsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +68,7 @@
 		0CB67D48871BD23FCAD4B6F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC45C66A23879B8B0096EBD2 /* Services.framework */,
 				BC8C1B1D2386908B000A80BA /* APIClient.framework */,
 				7DED0B260414F8C014DD4D2C /* Pods_SteamAnalyticsApp.framework */,
 			);

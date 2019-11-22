@@ -17,8 +17,8 @@ public final class AuthStorage: AuthStorageInput, AuthStorageOutput {
     }
 
     // MARK: AuthStorageInput
-    public func setUserID(_ userID: Int?) {
-        let holder = userIdHolder()
+    public func setUserID(_ userID: String?) {
+        let holder = authUserIdHolder()
 
         dataStack.perform(asynchronous: { (transaction) -> Void in
             guard let holder = transaction.fetchExisting(holder) else { return }
@@ -30,13 +30,13 @@ public final class AuthStorage: AuthStorageInput, AuthStorageOutput {
     }
 
     // MARK: AuthStorageOutput
-    public func userIdHolder() -> UserIdHolder {
-        if let holder = try? dataStack.fetchOne(From<UserIdHolder>()) {
+    public func authUserIdHolder() -> AuthUserIdHolder {
+        if let holder = try? dataStack.fetchOne(From<AuthUserIdHolder>()) {
             return holder
         } else {
             // Holder not exist yet, let's create it sync
-            guard let transactionHolder = try? dataStack.perform(synchronous: { transaction -> UserIdHolder in
-                return transaction.create(Into<UserIdHolder>())
+            guard let transactionHolder = try? dataStack.perform(synchronous: { transaction -> AuthUserIdHolder in
+                return transaction.create(Into<AuthUserIdHolder>())
             }) else {
                 fatalError("Data stack error, userIdHolder not created")
             }
@@ -47,9 +47,5 @@ public final class AuthStorage: AuthStorageInput, AuthStorageOutput {
 
             return holder
         }
-    }
-
-    public func getUserID() -> Int? {
-        return userIdHolder().userId.value
     }
 }

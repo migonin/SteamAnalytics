@@ -9,6 +9,5 @@
 import Foundation
 
 public protocol AuthStorageOutput {
-    func userIdHolder() -> UserIdHolder
-    func getUserID() -> Int?
+    func authUserIdHolder() -> AuthUserIdHolder
 }

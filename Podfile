@@ -23,6 +23,20 @@ target 'SteamAnalyticsApp' do
   project 'App/App.xcodeproj'
 
   alamofire_pod
+  corestore_pod
+end
+
+target 'Dependencies' do
+  project 'Dependencies/Dependencies.xcodeproj'
+
+  corestore_pod
+  alamofire_pod
+end
+
+target 'Services' do
+  project 'Services/Services.xcodeproj'
+
+  corestore_pod
 end
 
 target 'APIClient' do

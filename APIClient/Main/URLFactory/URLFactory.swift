@@ -17,16 +17,10 @@ public struct URLFactory: URLFactoring {
     }
 
     public func buildURL(methodPath: MethodPath) throws -> URL {
-        var methodPath = String(describing: methodPath)
-
-        if !methodPath.hasPrefix("/") {
-            methodPath = "/" + methodPath
-        }
-
-        let urlString = "\(baseURL)\(methodPath)"
+        let urlString = "\(baseURL)/\(methodPath)"
 
         guard let methodURL = URL(string: urlString) else {
-            throw URLError.cannotBeFormed
+            throw NetworkingError.urlCannotBeFormed
         }
 
         return methodURL

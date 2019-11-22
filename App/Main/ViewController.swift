@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import APIClient
+import Dependencies
 
 class ViewController: UIViewController {
 
@@ -15,15 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        let urlFactory: URLFactoring = URLFactory(baseURL: "https://api.steampowered.com")
-        let urlRequestFactory: URLRequestFactoring = URLRequestFactory()
-        let userRequestFactory: UsersRequestFactoring = AlamofireUsersRequestFactory()
+        let id = "76561198324029511"
 
-        let url = try! urlFactory.buildURL(methodPath: .usersDetails)
-        let request = try! urlRequestFactory.buildRequest(url: url, query: UsersQuery(userIds: [76561198324029511]), timeoutInterval: 60.0)
-
-        userRequestFactory.getUsers(request: request) { (reult) in
-            print("")
+        Services.usersService.getUser(withID: id) { (result) in
+            if let user = Storages.usersStorage.getUser(withID: id) {
+                Services.usersService.getUserFriends(user) { (result) in
+                    let friends = user.friends
+                    print("")
+                }
+            }
         }
     }
 
