@@ -8,6 +8,8 @@
 
 import UIKit
 import Dependencies
+import Storages
+import Core
 
 class ViewController: UIViewController {
 
@@ -17,13 +19,9 @@ class ViewController: UIViewController {
 
         let id = "76561198324029511"
 
-        Services.usersService.getUser(withID: id) { (result) in
-            if let user = Storages.usersStorage.getUser(withID: id) {
-                Services.usersService.getUserFriends(user) { (result) in
-                    let friends = user.friends
-                    print("")
-                }
-            }
+        let user = User(id: id, name: "", isProfileVisible: true, status: .online, avatar: "", avatarMedium: "", avatarFull: "", lastLogOff: 0)
+
+        Services.gamesService.getUserGames(user) { (result) in
         }
     }
 

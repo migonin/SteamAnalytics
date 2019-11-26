@@ -13,18 +13,36 @@
 		BC3E79DF238521450052AF7A /* AuthStorageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E79DE238521450052AF7A /* AuthStorageOutput.swift */; };
 		BC3E79E12385215B0052AF7A /* AuthStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E79E02385215B0052AF7A /* AuthStorage.swift */; };
 		BC3E7A0323852EF70052AF7A /* AuthUserIdHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E7A0223852EF70052AF7A /* AuthUserIdHolder.swift */; };
-		BC45C64D2386D5C60096EBD2 /* User+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C64C2386D5C60096EBD2 /* User+Import.swift */; };
-		BC45C64F2386D5E80096EBD2 /* User+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C64E2386D5E80096EBD2 /* User+Export.swift */; };
+		BC45C64D2386D5C60096EBD2 /* CSUser+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C64C2386D5C60096EBD2 /* CSUser+Import.swift */; };
+		BC45C64F2386D5E80096EBD2 /* CSUser+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C64E2386D5E80096EBD2 /* CSUser+Export.swift */; };
 		BC604C052384E9C800FA5588 /* Storages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC604BFB2384E9C800FA5588 /* Storages.framework */; };
 		BC604C0A2384E9C800FA5588 /* AuthStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604C092384E9C800FA5588 /* AuthStorageTests.swift */; };
 		BC604C0C2384E9C800FA5588 /* Storages.h in Headers */ = {isa = PBXBuildFile; fileRef = BC604BFE2384E9C800FA5588 /* Storages.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC8C1B2523869A02000A80BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B2423869A02000A80BA /* User.swift */; };
+		BC8BF36B238900B000B754AF /* CSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF36A238900B000B754AF /* CSGame.swift */; };
+		BC8BF36D2389013100B754AF /* CSGameOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF36C2389013100B754AF /* CSGameOwner.swift */; };
+		BC8BF36F2389016500B754AF /* CSAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF36E2389016500B754AF /* CSAchievement.swift */; };
+		BC8BF3712389017100B754AF /* CSStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3702389017100B754AF /* CSStat.swift */; };
+		BC8BF3732389069F00B754AF /* CSAchievementValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3722389069F00B754AF /* CSAchievementValue.swift */; };
+		BC8BF375238906A400B754AF /* CSStatValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF374238906A300B754AF /* CSStatValue.swift */; };
+		BC8BF377238939CC00B754AF /* GamesStorageInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF376238939CC00B754AF /* GamesStorageInput.swift */; };
+		BC8BF379238939D600B754AF /* GamesStorageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF378238939D600B754AF /* GamesStorageOutput.swift */; };
+		BC8BF37B238939DC00B754AF /* GamesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF37A238939DC00B754AF /* GamesStorage.swift */; };
+		BC8BF39723893CBC00B754AF /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8BF39623893CBC00B754AF /* Core.framework */; };
+		BC8BF39823893CBC00B754AF /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC8BF39623893CBC00B754AF /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC8C1B2523869A02000A80BA /* CSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B2423869A02000A80BA /* CSUser.swift */; };
 		BC8C1B272386A7BB000A80BA /* UsersStorageInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B262386A7BB000A80BA /* UsersStorageInput.swift */; };
 		BC8C1B292386A7CF000A80BA /* UsersStorageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B282386A7CF000A80BA /* UsersStorageOutput.swift */; };
 		BC8C1B2B2386A7E4000A80BA /* UsersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B2A2386A7E4000A80BA /* UsersStorage.swift */; };
-		BC8C1B2D2386AA9F000A80BA /* UserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B2C2386AA9F000A80BA /* UserStruct.swift */; };
-		BC8C1B342386B720000A80BA /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B332386B720000A80BA /* UserStatus.swift */; };
 		BCC0232523853DB200D59337 /* DataStackTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC0232423853DB200D59337 /* DataStackTestable.swift */; };
+		BCD22C3C238D5FE00020885E /* CSStat+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C3B238D5FE00020885E /* CSStat+Export.swift */; };
+		BCE32221238AF83200792F50 /* CSGame+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE32220238AF83200792F50 /* CSGame+Import.swift */; };
+		BCE32223238AF8BF00792F50 /* CSGame+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE32222238AF8BF00792F50 /* CSGame+Export.swift */; };
+		BCE32225238AFB1400792F50 /* CSStat+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE32224238AFB1400792F50 /* CSStat+Import.swift */; };
+		BCE32227238AFCB100792F50 /* CSStatValue+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE32226238AFCB100792F50 /* CSStatValue+Import.swift */; };
+		BCE32229238AFD2F00792F50 /* CSStatValue+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE32228238AFD2F00792F50 /* CSStatValue+Export.swift */; };
+		BCE3222B238AFFBF00792F50 /* CSAchievement+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3222A238AFFBF00792F50 /* CSAchievement+Import.swift */; };
+		BCE3222D238B003D00792F50 /* CSAchievementValue+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3222C238B003D00792F50 /* CSAchievementValue+Import.swift */; };
+		BCE3222F238B016700792F50 /* CSAchievement+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3222E238B016700792F50 /* CSAchievement+Export.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +55,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BC8BF39923893CBC00B754AF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC8BF39823893CBC00B754AF /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		101E4EA4FCA187F0E61C9088 /* Pods_StoragesUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoragesUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		502EC18D94D9F5A7E54DE3A9 /* Pods-StoragesUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragesUnitTests.release.xcconfig"; path = "Target Support Files/Pods-StoragesUnitTests/Pods-StoragesUnitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,21 +78,38 @@
 		BC3E79DE238521450052AF7A /* AuthStorageOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorageOutput.swift; sourceTree = "<group>"; };
 		BC3E79E02385215B0052AF7A /* AuthStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorage.swift; sourceTree = "<group>"; };
 		BC3E7A0223852EF70052AF7A /* AuthUserIdHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserIdHolder.swift; sourceTree = "<group>"; };
-		BC45C64C2386D5C60096EBD2 /* User+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Import.swift"; sourceTree = "<group>"; };
-		BC45C64E2386D5E80096EBD2 /* User+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Export.swift"; sourceTree = "<group>"; };
+		BC45C64C2386D5C60096EBD2 /* CSUser+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSUser+Import.swift"; sourceTree = "<group>"; };
+		BC45C64E2386D5E80096EBD2 /* CSUser+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSUser+Export.swift"; sourceTree = "<group>"; };
 		BC604BFB2384E9C800FA5588 /* Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604BFE2384E9C800FA5588 /* Storages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storages.h; sourceTree = "<group>"; };
 		BC604BFF2384E9C800FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC604C042384E9C800FA5588 /* StoragesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoragesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604C092384E9C800FA5588 /* AuthStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorageTests.swift; sourceTree = "<group>"; };
 		BC604C0B2384E9C800FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC8C1B2423869A02000A80BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BC8BF36A238900B000B754AF /* CSGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGame.swift; sourceTree = "<group>"; };
+		BC8BF36C2389013100B754AF /* CSGameOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGameOwner.swift; sourceTree = "<group>"; };
+		BC8BF36E2389016500B754AF /* CSAchievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAchievement.swift; sourceTree = "<group>"; };
+		BC8BF3702389017100B754AF /* CSStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSStat.swift; sourceTree = "<group>"; };
+		BC8BF3722389069F00B754AF /* CSAchievementValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSAchievementValue.swift; sourceTree = "<group>"; };
+		BC8BF374238906A300B754AF /* CSStatValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStatValue.swift; sourceTree = "<group>"; };
+		BC8BF376238939CC00B754AF /* GamesStorageInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesStorageInput.swift; sourceTree = "<group>"; };
+		BC8BF378238939D600B754AF /* GamesStorageOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesStorageOutput.swift; sourceTree = "<group>"; };
+		BC8BF37A238939DC00B754AF /* GamesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesStorage.swift; sourceTree = "<group>"; };
+		BC8BF39623893CBC00B754AF /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC8C1B2423869A02000A80BA /* CSUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSUser.swift; sourceTree = "<group>"; };
 		BC8C1B262386A7BB000A80BA /* UsersStorageInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStorageInput.swift; sourceTree = "<group>"; };
 		BC8C1B282386A7CF000A80BA /* UsersStorageOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStorageOutput.swift; sourceTree = "<group>"; };
 		BC8C1B2A2386A7E4000A80BA /* UsersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStorage.swift; sourceTree = "<group>"; };
-		BC8C1B2C2386AA9F000A80BA /* UserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStruct.swift; sourceTree = "<group>"; };
-		BC8C1B332386B720000A80BA /* UserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		BCC0232423853DB200D59337 /* DataStackTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStackTestable.swift; sourceTree = "<group>"; };
+		BCD22C3B238D5FE00020885E /* CSStat+Export.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CSStat+Export.swift"; sourceTree = "<group>"; };
+		BCE32220238AF83200792F50 /* CSGame+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSGame+Import.swift"; sourceTree = "<group>"; };
+		BCE32222238AF8BF00792F50 /* CSGame+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSGame+Export.swift"; sourceTree = "<group>"; };
+		BCE32224238AFB1400792F50 /* CSStat+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSStat+Import.swift"; sourceTree = "<group>"; };
+		BCE32226238AFCB100792F50 /* CSStatValue+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSStatValue+Import.swift"; sourceTree = "<group>"; };
+		BCE32228238AFD2F00792F50 /* CSStatValue+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSStatValue+Export.swift"; sourceTree = "<group>"; };
+		BCE3222A238AFFBF00792F50 /* CSAchievement+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSAchievement+Import.swift"; sourceTree = "<group>"; };
+		BCE3222C238B003D00792F50 /* CSAchievementValue+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSAchievementValue+Import.swift"; sourceTree = "<group>"; };
+		BCE3222E238B016700792F50 /* CSAchievement+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSAchievement+Export.swift"; sourceTree = "<group>"; };
 		CE25D0EE90394E92E17CA869 /* Pods-Storages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storages.release.xcconfig"; path = "Target Support Files/Pods-Storages/Pods-Storages.release.xcconfig"; sourceTree = "<group>"; };
 		E02CC4AC8B8080D8FF3C8803 /* Pods-StoragesUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragesUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-StoragesUnitTests/Pods-StoragesUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				090DF56B7522BB73D68AECE9 /* Pods_Storages.framework in Frameworks */,
+				BC8BF39723893CBC00B754AF /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +139,7 @@
 		6EEF09E8BE1121EBDB800202 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC8BF39623893CBC00B754AF /* Core.framework */,
 				AF29885AD661F4FFD3B166B2 /* Pods_Storages.framework */,
 				101E4EA4FCA187F0E61C9088 /* Pods_StoragesUnitTests.framework */,
 			);
@@ -149,6 +200,7 @@
 		BC604BFD2384E9C800FA5588 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BC8BF3682388FEA300B754AF /* GamesStorage */,
 				BC8C1B2223869937000A80BA /* UsersStorage */,
 				BC3E79DB238521100052AF7A /* AuthStorage */,
 				BC604BFE2384E9C800FA5588 /* Storages.h */,
@@ -167,6 +219,39 @@
 			path = UnitTests;
 			sourceTree = "<group>";
 		};
+		BC8BF3682388FEA300B754AF /* GamesStorage */ = {
+			isa = PBXGroup;
+			children = (
+				BC8BF3692388FF9E00B754AF /* Objects */,
+				BC8BF376238939CC00B754AF /* GamesStorageInput.swift */,
+				BC8BF378238939D600B754AF /* GamesStorageOutput.swift */,
+				BC8BF37A238939DC00B754AF /* GamesStorage.swift */,
+			);
+			path = GamesStorage;
+			sourceTree = "<group>";
+		};
+		BC8BF3692388FF9E00B754AF /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BC8BF36C2389013100B754AF /* CSGameOwner.swift */,
+				BC8BF36E2389016500B754AF /* CSAchievement.swift */,
+				BCE3222A238AFFBF00792F50 /* CSAchievement+Import.swift */,
+				BCE3222E238B016700792F50 /* CSAchievement+Export.swift */,
+				BC8BF3722389069F00B754AF /* CSAchievementValue.swift */,
+				BCE3222C238B003D00792F50 /* CSAchievementValue+Import.swift */,
+				BC8BF3702389017100B754AF /* CSStat.swift */,
+				BCE32224238AFB1400792F50 /* CSStat+Import.swift */,
+				BCD22C3B238D5FE00020885E /* CSStat+Export.swift */,
+				BC8BF374238906A300B754AF /* CSStatValue.swift */,
+				BCE32226238AFCB100792F50 /* CSStatValue+Import.swift */,
+				BCE32228238AFD2F00792F50 /* CSStatValue+Export.swift */,
+				BC8BF36A238900B000B754AF /* CSGame.swift */,
+				BCE32220238AF83200792F50 /* CSGame+Import.swift */,
+				BCE32222238AF8BF00792F50 /* CSGame+Export.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		BC8C1B2223869937000A80BA /* UsersStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,11 +266,9 @@
 		BC8C1B232386996D000A80BA /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				BC8C1B2C2386AA9F000A80BA /* UserStruct.swift */,
-				BC8C1B332386B720000A80BA /* UserStatus.swift */,
-				BC8C1B2423869A02000A80BA /* User.swift */,
-				BC45C64C2386D5C60096EBD2 /* User+Import.swift */,
-				BC45C64E2386D5E80096EBD2 /* User+Export.swift */,
+				BC8C1B2423869A02000A80BA /* CSUser.swift */,
+				BC45C64C2386D5C60096EBD2 /* CSUser+Import.swift */,
+				BC45C64E2386D5E80096EBD2 /* CSUser+Export.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -213,6 +296,7 @@
 				BC604BF72384E9C800FA5588 /* Sources */,
 				BC604BF82384E9C800FA5588 /* Frameworks */,
 				BC604BF92384E9C800FA5588 /* Resources */,
+				BC8BF39923893CBC00B754AF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,18 +451,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE32225238AFB1400792F50 /* CSStat+Import.swift in Sources */,
+				BCE3222B238AFFBF00792F50 /* CSAchievement+Import.swift in Sources */,
 				BC3E79DF238521450052AF7A /* AuthStorageOutput.swift in Sources */,
+				BC8BF3712389017100B754AF /* CSStat.swift in Sources */,
 				BC8C1B292386A7CF000A80BA /* UsersStorageOutput.swift in Sources */,
 				BC3E7A0323852EF70052AF7A /* AuthUserIdHolder.swift in Sources */,
-				BC45C64D2386D5C60096EBD2 /* User+Import.swift in Sources */,
+				BC8BF377238939CC00B754AF /* GamesStorageInput.swift in Sources */,
+				BC8BF36B238900B000B754AF /* CSGame.swift in Sources */,
+				BCE32223238AF8BF00792F50 /* CSGame+Export.swift in Sources */,
+				BCD22C3C238D5FE00020885E /* CSStat+Export.swift in Sources */,
+				BC8BF379238939D600B754AF /* GamesStorageOutput.swift in Sources */,
+				BC45C64D2386D5C60096EBD2 /* CSUser+Import.swift in Sources */,
 				BC3E79E12385215B0052AF7A /* AuthStorage.swift in Sources */,
-				BC45C64F2386D5E80096EBD2 /* User+Export.swift in Sources */,
+				BC8BF3732389069F00B754AF /* CSAchievementValue.swift in Sources */,
+				BC45C64F2386D5E80096EBD2 /* CSUser+Export.swift in Sources */,
+				BC8BF36D2389013100B754AF /* CSGameOwner.swift in Sources */,
 				BC8C1B2B2386A7E4000A80BA /* UsersStorage.swift in Sources */,
-				BC8C1B2D2386AA9F000A80BA /* UserStruct.swift in Sources */,
-				BC8C1B2523869A02000A80BA /* User.swift in Sources */,
+				BC8C1B2523869A02000A80BA /* CSUser.swift in Sources */,
+				BCE3222D238B003D00792F50 /* CSAchievementValue+Import.swift in Sources */,
+				BC8BF375238906A400B754AF /* CSStatValue.swift in Sources */,
+				BCE32227238AFCB100792F50 /* CSStatValue+Import.swift in Sources */,
 				BC3E79DD238521200052AF7A /* AuthStorageInput.swift in Sources */,
-				BC8C1B342386B720000A80BA /* UserStatus.swift in Sources */,
+				BCE32221238AF83200792F50 /* CSGame+Import.swift in Sources */,
+				BCE3222F238B016700792F50 /* CSAchievement+Export.swift in Sources */,
 				BC8C1B272386A7BB000A80BA /* UsersStorageInput.swift in Sources */,
+				BC8BF37B238939DC00B754AF /* GamesStorage.swift in Sources */,
+				BC8BF36F2389016500B754AF /* CSAchievement.swift in Sources */,
+				BCE32229238AFD2F00792F50 /* CSStatValue+Export.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

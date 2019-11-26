@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import Core
 
 public protocol UsersStorageOutput {
+    func getCSUser(withID id: String) -> CSUser?
     func getUser(withID id: String) -> User?
+    func getUserFirends(_ user: User) -> [User]
 }

@@ -15,7 +15,7 @@ protocol Requestable {
 }
 
 extension Requestable {
-    func requestDecodable<ResponseType: Codable>(_ request: URLRequest, completionHandler: @escaping (Result<ResponseType, Error>) -> Void) {
+    func requestDecodable<ResponseType: Decodable>(_ request: URLRequest, completionHandler: @escaping (Result<ResponseType, Error>) -> Void) {
 
         AF.request(request).responseDecodable(of: ResponseType.self, queue: queue, decoder: decoder) { (response) in
             // Cannot convert Result<_, AFError> to Result<_, Error>, omg

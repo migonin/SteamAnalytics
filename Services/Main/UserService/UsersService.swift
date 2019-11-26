@@ -9,25 +9,23 @@
 import Foundation
 import APIClient
 import Storages
+import Core
 
 public struct UsersService: UsersServicing {
     let urlFactory: URLFactoring
     let urlRequestFactory: URLRequestFactoring
     let usersAPIClient: UsersAPIClienting
-    let mapper: UserMapping
     let storage: UsersStorageInput
     let timeout: TimeInterval
 
     public init(urlFactory: URLFactoring,
                 urlRequestFactory: URLRequestFactoring,
                 userAPIClient: UsersAPIClienting,
-                mapper: UserMapping,
                 storage: UsersStorageInput,
                 timeout: TimeInterval) {
         self.urlFactory = urlFactory
         self.urlRequestFactory = urlRequestFactory
         self.usersAPIClient = userAPIClient
-        self.mapper = mapper
         self.storage = storage
         self.timeout = timeout
     }
@@ -47,10 +45,8 @@ public struct UsersService: UsersServicing {
         usersAPIClient.getUsers(request: request) { (result) in
             switch result {
             case .success(let response):
-                if let userResonse = response.response.players.first {
-                    let userStruct = self.mapper.mapApiUserToStorageStruct(userResonse)
-
-                    self.storage.createOrUpdateUsers([userStruct])
+                if let user = response.response.players.first {
+                    self.storage.createOrUpdateUsers([user])
 
                     completionHandler(.success(()))
                 } else {
@@ -68,7 +64,7 @@ public struct UsersService: UsersServicing {
 
         do {
             url = try urlFactory.buildURL(methodPath: .userFriends)
-            request = try urlRequestFactory.buildRequest(url: url, query: UserQuery(userId: user.id.value), timeoutInterval: timeout)
+            request = try urlRequestFactory.buildRequest(url: url, query: UserQuery(userId: user.id), timeoutInterval: timeout)
         } catch {
             completionHandler(.failure(error))
             return
@@ -82,10 +78,8 @@ public struct UsersService: UsersServicing {
                 // Steam API return only friend ids, not full profiles, so let's chain it to user request
                 self.getUsers(withIDs: friendIDs) { (result) in
                     switch result {
-                    case .success(let users):
-                        let userStructs = users.map({self.mapper.mapApiUserToStorageStruct($0)})
-
-                        self.storage.setFriends(userStructs, to: user)
+                    case .success(let friends):
+                        self.storage.setFriends(friends, to: user)
 
                         completionHandler(.success(()))
 
@@ -101,7 +95,7 @@ public struct UsersService: UsersServicing {
     }
 
     // MARK: Helpers
-    private func getUsers(withIDs ids: [String], completionHandler: @escaping (Result<[APIUser], Error>) -> Void) {
+    private func getUsers(withIDs ids: [String], completionHandler: @escaping (Result<[User], Error>) -> Void) {
         let url: URL
         let request: URLRequest
 

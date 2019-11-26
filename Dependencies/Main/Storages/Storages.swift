@@ -37,7 +37,7 @@ public final class Storages {
             CoreStoreSchema(
                 modelVersion: "V1",
                 entities: [
-                    Entity<User>("User"),
+                    Entity<CSUser>("User"),
                 ]
             )
         )
@@ -51,5 +51,31 @@ public final class Storages {
 
 
         return UsersStorage(dataStack: dataStack)
+    }()
+
+    public static let gamesStorage: GamesStorageInput & GamesStorageOutput = {
+        let dataStack = DataStack(
+            CoreStoreSchema(
+                modelVersion: "V1",
+                entities: [
+                    Entity<CSGameOwner>("CSGameOwner"),
+                    Entity<CSGame>("CSGame"),
+                    Entity<CSAchievement>("CSAchievement"),
+                    Entity<CSAchievementValue>("CSAchievementValue"),
+                    Entity<CSStat>("CSStat"),
+                    Entity<CSStatValue>("CSStatValue")
+                ]
+            )
+        )
+
+        try! dataStack.addStorageAndWait(
+            SQLiteStore(
+                fileName: "GamesStorage.sqlite",
+                localStorageOptions: .recreateStoreOnModelMismatch
+            )
+        )
+
+
+        return GamesStorage(dataStack: dataStack)
     }()
 }

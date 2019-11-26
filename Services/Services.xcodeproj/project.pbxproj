@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC45C6562387929E0096EBD2 /* UserMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C6552387929E0096EBD2 /* UserMapping.swift */; };
-		BC45C658238792A50096EBD2 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C657238792A50096EBD2 /* UserMapper.swift */; };
 		BC45C65B238792CA0096EBD2 /* Storages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C65A238792CA0096EBD2 /* Storages.framework */; };
 		BC45C65C238792CA0096EBD2 /* Storages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C65A238792CA0096EBD2 /* Storages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC45C65F238792CF0096EBD2 /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C65E238792CF0096EBD2 /* APIClient.framework */; };
@@ -20,6 +18,8 @@
 		BC604C4D2384EA9E00FA5588 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC604C432384EA9D00FA5588 /* Services.framework */; };
 		BC604C522384EA9E00FA5588 /* ServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604C512384EA9E00FA5588 /* ServicesTests.swift */; };
 		BC604C542384EA9E00FA5588 /* Services.h in Headers */ = {isa = PBXBuildFile; fileRef = BC604C462384EA9D00FA5588 /* Services.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCE3221D238AF11300792F50 /* GamesServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3221C238AF11300792F50 /* GamesServicing.swift */; };
+		BCE3221F238AF13000792F50 /* GamesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3221E238AF13000792F50 /* GamesService.swift */; };
 		FFF202B99D13C26B49D052C6 /* Pods_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB04B20E6E09FD8997043A6 /* Pods_Services.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +50,6 @@
 
 /* Begin PBXFileReference section */
 		072C0B2F49E4FB33C1A52442 /* Pods-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.debug.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.debug.xcconfig"; sourceTree = "<group>"; };
-		BC45C6552387929E0096EBD2 /* UserMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapping.swift; sourceTree = "<group>"; };
-		BC45C657238792A50096EBD2 /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
 		BC45C65A238792CA0096EBD2 /* Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC45C65E238792CF0096EBD2 /* APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC45C661238794DA0096EBD2 /* UsersServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersServicing.swift; sourceTree = "<group>"; };
@@ -64,6 +62,8 @@
 		BC604C4C2384EA9E00FA5588 /* ServicesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServicesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604C512384EA9E00FA5588 /* ServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTests.swift; sourceTree = "<group>"; };
 		BC604C532384EA9E00FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE3221C238AF11300792F50 /* GamesServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesServicing.swift; sourceTree = "<group>"; };
+		BCE3221E238AF13000792F50 /* GamesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesService.swift; sourceTree = "<group>"; };
 		BD06CB512914A8A1DC5750B7 /* Pods-Services.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.release.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.release.xcconfig"; sourceTree = "<group>"; };
 		BDB04B20E6E09FD8997043A6 /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,15 +98,6 @@
 			);
 			name = Pods;
 			path = ../Pods;
-			sourceTree = "<group>";
-		};
-		BC45C65023878C910096EBD2 /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				BC45C6552387929E0096EBD2 /* UserMapping.swift */,
-				BC45C657238792A50096EBD2 /* UserMapper.swift */,
-			);
-			path = Mapper;
 			sourceTree = "<group>";
 		};
 		BC45C659238792CA0096EBD2 /* Frameworks */ = {
@@ -153,6 +144,7 @@
 			children = (
 				BC45C6652387963D0096EBD2 /* Common */,
 				BC8C1B21238698F9000A80BA /* UserService */,
+				BCE3221B238AF0FE00792F50 /* GamesService */,
 				BC604C462384EA9D00FA5588 /* Services.h */,
 				BC604C472384EA9D00FA5588 /* Info.plist */,
 			);
@@ -171,11 +163,19 @@
 		BC8C1B21238698F9000A80BA /* UserService */ = {
 			isa = PBXGroup;
 			children = (
-				BC45C65023878C910096EBD2 /* Mapper */,
 				BC45C661238794DA0096EBD2 /* UsersServicing.swift */,
 				BC45C663238794E10096EBD2 /* UsersService.swift */,
 			);
 			path = UserService;
+			sourceTree = "<group>";
+		};
+		BCE3221B238AF0FE00792F50 /* GamesService */ = {
+			isa = PBXGroup;
+			children = (
+				BCE3221C238AF11300792F50 /* GamesServicing.swift */,
+				BCE3221E238AF13000792F50 /* GamesService.swift */,
+			);
+			path = GamesService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,9 +318,9 @@
 				BC45C667238796500096EBD2 /* ServiceResult.swift in Sources */,
 				BC45C669238796C10096EBD2 /* ServiceCompletion.swift in Sources */,
 				BC45C664238794E10096EBD2 /* UsersService.swift in Sources */,
-				BC45C6562387929E0096EBD2 /* UserMapping.swift in Sources */,
+				BCE3221F238AF13000792F50 /* GamesService.swift in Sources */,
 				BC45C662238794DA0096EBD2 /* UsersServicing.swift in Sources */,
-				BC45C658238792A50096EBD2 /* UserMapper.swift in Sources */,
+				BCE3221D238AF11300792F50 /* GamesServicing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

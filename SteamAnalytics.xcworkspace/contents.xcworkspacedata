@@ -10,26 +10,33 @@
    </Group>
    <Group
       location = "container:"
-      name = "L2">
+      name = "L3">
       <FileRef
          location = "group:Dependencies/Dependencies.xcodeproj">
       </FileRef>
    </Group>
    <Group
       location = "container:"
-      name = "L1">
+      name = "L2">
       <FileRef
          location = "group:Services/Services.xcodeproj">
       </FileRef>
    </Group>
    <Group
       location = "container:"
-      name = "L0">
+      name = "L1">
       <FileRef
          location = "group:APIClient/APIClient.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:Storages/Storages.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "L0">
+      <FileRef
+         location = "group:Core/Core.xcodeproj">
       </FileRef>
    </Group>
    <FileRef

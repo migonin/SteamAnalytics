@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreStore
+import Core
 
 public struct UsersStorage: UsersStorageInput, UsersStorageOutput {
     private let dataStack: DataStack
@@ -16,30 +17,42 @@ public struct UsersStorage: UsersStorageInput, UsersStorageOutput {
         self.dataStack = dataStack
     }
 
-    public func getUser(withID id: String) -> User? {
-        return try? dataStack.fetchOne(From<User>().where(\.id == id))
+    public func getCSUser(withID id: String) -> CSUser? {
+        return try? dataStack.fetchOne(From<CSUser>().where(\.id == id))
     }
 
-    public func createOrUpdateUsers(_ users: [UserStruct]) {
+    public func getUser(withID id: String) -> User? {
+        return getCSUser(withID: id)?.toUser()
+    }
+
+    public func getUserFirends(_ user: User) -> [User] {
+        return getCSUser(withID: user.id)?.friends.value.map({$0.toUser()}) ?? []
+    }
+
+    public func createOrUpdateUsers(_ users: [User]) {
         dataStack.perform(asynchronous: { (transaction) -> Void in
-            _  = try transaction.importUniqueObjects(Into<User>(), sourceArray: users)
+            _  = try transaction.importUniqueObjects(Into<CSUser>(), sourceArray: users)
         }, completion: { _ in })
     }
 
-    public func setFriends(_ friends: [UserStruct], to user: User) {
-        dataStack.perform(asynchronous: { (transaction) -> Void in
-            guard let user = transaction.fetchExisting(user) else { return }
-            let friends  = try transaction.importUniqueObjects(Into<User>(), sourceArray: friends)
+    public func setFriends(_ friends: [User], to user: User) {
+        guard let csUser = getCSUser(withID: user.id) else { return }
 
-            user.friends.value = friends
+        dataStack.perform(asynchronous: { (transaction) -> Void in
+            guard let csUser = transaction.fetchExisting(csUser) else { return }
+            let friends  = try transaction.importUniqueObjects(Into<CSUser>(), sourceArray: friends)
+
+            csUser.friends.value = friends
         }, completion: { _ in })
     }
 
     public func deleteUser(_ user: User) {
-        dataStack.perform(asynchronous: { (transaction) -> Void in
-            guard let user = transaction.fetchExisting(user) else { return }
+        guard let csUser = getCSUser(withID: user.id) else { return }
 
-            transaction.delete(user)
+        dataStack.perform(asynchronous: { (transaction) -> Void in
+            guard let csUser = transaction.fetchExisting(csUser) else { return }
+
+            transaction.delete(csUser)
         }, completion: { _ in })
     }
 }

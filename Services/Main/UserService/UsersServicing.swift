@@ -8,9 +8,9 @@
 
 import Foundation
 import Storages
+import Core
 
 public protocol UsersServicing {
     func getUser(withID id: String, completionHandler: @escaping ServiceCompletion)
-
     func getUserFriends(_ user: User, completionHandler: @escaping ServiceCompletion)
 }
