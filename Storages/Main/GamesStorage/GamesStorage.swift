@@ -135,6 +135,12 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
         return retArray
     }
 
+    public func getGameSchema(_ game: Game) -> ([Stat], [Achievement]) {
+        guard let game = try? dataStack.fetchOne(From<CSGame>().where(\.id == game.id)) else { return ([], []) }
+
+        return (game.stats.value.map({$0.toStat()}), game.achievements.value.map({$0.toAchievement()}))
+    }
+
     // MARK: Helpers
     private func addGamesStats(stats: [StatValue], achievements: [AchievementValue], for csGame: CSGame, schemaCSStats: [CSStat], schemaCSAchievements: [CSAchievement], owner: CSGameOwner, in transaction: BaseDataTransaction) throws {
 

@@ -11,10 +11,10 @@ import Core
 
 extension CSAchievement {
     public func toAchievement() -> Achievement {
-        return Achievement(name: self.name.value ?? "",
-                           displayName: self.displayName.value ?? "",
-                           description: self.description.value ?? "",
-                           icon: self.icon.value ?? "",
-                           iconGray: self.iconGray.value ?? "")
+        return Achievement(name: self.name.value,
+                           displayName: self.displayName.value,
+                           description: self.description.value,
+                           icon: self.icon.value,
+                           iconGray: self.iconGray.value)
     }
 }

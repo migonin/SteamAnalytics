@@ -13,16 +13,16 @@ public struct GameSchemaQuery: QueryItemsRepresentable {
         case gameId = "appid"
     }
 
-    public let gameId: String
+    public let gameId: Int
 
-    public init(gameId: String) {
+    public init(gameId: Int) {
         self.gameId = gameId
     }
 
     public func queryItems() -> [URLQueryItem] {
         var items = [URLQueryItem]()
 
-        items.append(URLQueryItem(name: Attribute.gameId.rawValue, value: gameId))
+        items.append(URLQueryItem(name: Attribute.gameId.rawValue, value: "\(gameId)"))
 
         return items
     }
