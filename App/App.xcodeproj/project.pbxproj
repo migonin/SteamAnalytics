@@ -15,10 +15,10 @@
 		BC604B792384E7EA00FA5588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC604B772384E7EA00FA5588 /* Main.storyboard */; };
 		BC604B7B2384E7EA00FA5588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC604B7A2384E7EA00FA5588 /* Assets.xcassets */; };
 		BC604B7E2384E7EA00FA5588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC604B7C2384E7EA00FA5588 /* LaunchScreen.storyboard */; };
-		BC8BF3A22389723C00B754AF /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8BF3A12389723C00B754AF /* Dependencies.framework */; };
-		BC8BF3A32389723C00B754AF /* Dependencies.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC8BF3A12389723C00B754AF /* Dependencies.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC8C1B1E2386908B000A80BA /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8C1B1D2386908B000A80BA /* APIClient.framework */; };
 		BC8C1B1F2386908B000A80BA /* APIClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC8C1B1D2386908B000A80BA /* APIClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BCD22C43238E30F20020885E /* Storages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C40238E30F20020885E /* Storages.swift */; };
+		BCD22C44238E30F20020885E /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C42238E30F20020885E /* Services.swift */; };
 		C3089D65C072E47F245A690A /* Pods_SteamAnalyticsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DED0B260414F8C014DD4D2C /* Pods_SteamAnalyticsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,6 @@
 			files = (
 				BC45C66C23879B8B0096EBD2 /* Services.framework in Embed Frameworks */,
 				BC8C1B1F2386908B000A80BA /* APIClient.framework in Embed Frameworks */,
-				BC8BF3A32389723C00B754AF /* Dependencies.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +52,8 @@
 		BC604B7F2384E7EA00FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC8BF3A12389723C00B754AF /* Dependencies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Dependencies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8C1B1D2386908B000A80BA /* APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD22C40238E30F20020885E /* Storages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storages.swift; sourceTree = "<group>"; };
+		BCD22C42238E30F20020885E /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +62,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC8C1B1E2386908B000A80BA /* APIClient.framework in Frameworks */,
-				BC8BF3A22389723C00B754AF /* Dependencies.framework in Frameworks */,
 				BC45C66B23879B8B0096EBD2 /* Services.framework in Frameworks */,
 				C3089D65C072E47F245A690A /* Pods_SteamAnalyticsApp.framework in Frameworks */,
 			);
@@ -102,6 +102,7 @@
 		BC604B702384E7EA00FA5588 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BCD22C3E238E30F20020885E /* Assemblies */,
 				BC604B712384E7EA00FA5588 /* AppDelegate.swift */,
 				BC604B732384E7EA00FA5588 /* SceneDelegate.swift */,
 				BC604B752384E7EA00FA5588 /* ViewController.swift */,
@@ -111,6 +112,31 @@
 				BC604B7F2384E7EA00FA5588 /* Info.plist */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		BCD22C3E238E30F20020885E /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				BCD22C3F238E30F20020885E /* Storages */,
+				BCD22C41238E30F20020885E /* Services */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		BCD22C3F238E30F20020885E /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				BCD22C40238E30F20020885E /* Storages.swift */,
+			);
+			path = Storages;
+			sourceTree = "<group>";
+		};
+		BCD22C41238E30F20020885E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BCD22C42238E30F20020885E /* Services.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D49AD01984E003848C41A5E1 /* Pods */ = {
@@ -239,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD22C44238E30F20020885E /* Services.swift in Sources */,
 				BC604B762384E7EA00FA5588 /* ViewController.swift in Sources */,
+				BCD22C43238E30F20020885E /* Storages.swift in Sources */,
 				BC604B722384E7EA00FA5588 /* AppDelegate.swift in Sources */,
 				BC604B742384E7EA00FA5588 /* SceneDelegate.swift in Sources */,
 			);

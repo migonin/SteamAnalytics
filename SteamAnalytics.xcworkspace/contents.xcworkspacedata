@@ -11,9 +11,6 @@
    <Group
       location = "container:"
       name = "L3">
-      <FileRef
-         location = "group:Dependencies/Dependencies.xcodeproj">
-      </FileRef>
    </Group>
    <Group
       location = "container:"
