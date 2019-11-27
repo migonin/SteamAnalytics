@@ -11,6 +11,12 @@
    <Group
       location = "container:"
       name = "L3">
+      <FileRef
+         location = "group:GameScenes/GameScenes.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:UserScenes/UserScenes.xcodeproj">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
@@ -22,6 +28,9 @@
    <Group
       location = "container:"
       name = "L1">
+      <FileRef
+         location = "group:UICommon/UICommon.xcodeproj">
+      </FileRef>
       <FileRef
          location = "group:APIClient/APIClient.xcodeproj">
       </FileRef>

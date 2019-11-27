@@ -22,15 +22,9 @@ end
 target 'SteamAnalyticsApp' do
   project 'App/App.xcodeproj'
 
+  snapkit_pod
   alamofire_pod
   corestore_pod
-end
-
-target 'Dependencies' do
-  project 'Dependencies/Dependencies.xcodeproj'
-
-  corestore_pod
-  alamofire_pod
 end
 
 target 'Services' do
@@ -38,6 +32,13 @@ target 'Services' do
 
   corestore_pod
 end
+
+target 'UICommon' do
+  project 'UICommon/UICommon.xcodeproj'
+
+  snapkit_pod
+end
+
 
 target 'APIClient' do
   project 'APIClient/APIClient.xcodeproj'

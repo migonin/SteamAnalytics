@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.0.0-rc.3)
   - CoreStore (7.0.1)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
   - CoreStore (= 7.0.1)
+  - SnapKit (= 5.0.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - CoreStore
+    - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
   CoreStore: c353080c6ae1708f621b75d9f8afe7d2ee716807
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 845f5156d4be27d99244340dbec7ed3f0ab97e61
+PODFILE CHECKSUM: dbaa41e631b217f3002955ac59daa89288ee71bb
 
 COCOAPODS: 1.8.4
