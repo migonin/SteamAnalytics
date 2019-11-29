@@ -10,7 +10,7 @@ import Foundation
 import UICommon
 import Core
 
-public final class GameCoordinator: BaseCoordinator, Coordinatable {
+public final class UserCoordinator: BaseCoordinator, Coordinatable {
     public typealias InputType = GameCoordinatorStartOption
     public typealias OutputType = Void
 
@@ -32,12 +32,12 @@ public final class GameCoordinator: BaseCoordinator, Coordinatable {
     public func start(with option: GameCoordinatorStartOption, animated: Bool) {
         super.start()
 
-        goToUser(nil)
+        goToUser(nil, animated: animated)
     }
 
     public var output: ((()) -> Void)?
 
-    private func goToUser(_ user: User?) {
+    private func goToUser(_ user: User?, animated: Bool) {
         let (module, presentable) = modulesFactory.makeUserScreen()
 
         let startOption: UserModuleStartOption
@@ -61,8 +61,8 @@ public final class GameCoordinator: BaseCoordinator, Coordinatable {
             }
         }
 
-        module.start(with: startOption, animated: true)
-        push(presentable, animated: true)
+        module.start(with: startOption, animated: animated)
+        push(presentable, animated: animated)
     }
 
     private func goToGames(of user: User) {
@@ -71,6 +71,22 @@ public final class GameCoordinator: BaseCoordinator, Coordinatable {
 
     private func goToFriends(of user: User) {
 
+    }
+
+    private func goToGame(_ game: Game) {
+        let (coordinator, _) = coordinatorsFactory.makeGameCoordinator(navigator: navigator)
+
+        addDependency(coordinator)
+
+        coordinator.output = { [weak self, weak coordinator] _ in
+            guard let self = self else { return }
+            guard let coordinator = coordinator else { return }
+
+            self.navigator.delegate = self
+            self.removeDependency(coordinator)
+        }
+
+        coordinator.start(with: .game(game), animated: true)
     }
 
     private func showSettings() {

@@ -9,5 +9,18 @@
 import Foundation
 
 public struct ListItemCellModel {
-    
+    public let title: String
+    public let imgUrl: String?
+    public let subtitle: String?
+    public let showDisclosureIndicator: Bool
+
+    public init(title: String,
+                subtitle: String?,
+                imgUrl: String?,
+                showDisclosureIndicator: Bool) {
+        self.title = title
+        self.imgUrl = imgUrl
+        self.showDisclosureIndicator = showDisclosureIndicator
+        self.subtitle = subtitle
+    }
 }

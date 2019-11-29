@@ -16,8 +16,14 @@ def kingfisher_pod
 end
 
 def alamofire_pod
-  pod 'Alamofire', '~> 5.0.0-rc.3'
+  pod 'Alamofire', '5.0.0-rc.3'
 end
+
+def charts_pod
+  pod 'Charts', '3.4.0'
+end
+
+###########################
 
 target 'SteamAnalyticsApp' do
   project 'App/App.xcodeproj'
@@ -37,8 +43,15 @@ target 'UICommon' do
   project 'UICommon/UICommon.xcodeproj'
 
   snapkit_pod
+  kingfisher_pod
+  charts_pod
 end
 
+target 'UICommonTestApp' do
+  project 'UICommon/UICommon.xcodeproj'
+
+  snapkit_pod
+end
 
 target 'APIClient' do
   project 'APIClient/APIClient.xcodeproj'

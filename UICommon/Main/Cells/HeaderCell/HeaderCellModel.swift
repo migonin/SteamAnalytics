@@ -9,5 +9,18 @@
 import Foundation
 
 public struct HeaderCellModel {
-    
+    public let title: String
+    public let subtitle: String?
+    public let imgUrl: String
+    public let roundedImg: Bool
+
+    public init(title: String,
+                subtitle: String?,
+                imgUrl: String,
+                roundedImg: Bool) {
+        self.title = title
+        self.imgUrl = imgUrl
+        self.roundedImg = roundedImg
+        self.subtitle = subtitle
+    }
 }
