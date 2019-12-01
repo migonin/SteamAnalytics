@@ -35,7 +35,7 @@ public class HeaderCell: UITableViewCell {
         selectionStyle = .none
 
         stackView.axis = .vertical
-        stackView.alignment = .leading
+        stackView.alignment = .center
         stackView.spacing = 5.0
 
         addSubview(stackView)

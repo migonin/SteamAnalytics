@@ -8,6 +8,7 @@
 
 import UIKit
 import UICommon
+import Core
 
 final class UserModuleConfigurator {
     let dependencies: UserScenesDependencies
@@ -17,12 +18,19 @@ final class UserModuleConfigurator {
 
         let presenter = UserPresenter()
         presenter.view = viewController
+        presenter.errorDescriber = ErrorDescriber()
 
         let interactor = UserInteractor()
         interactor.output = presenter
+        interactor.userService = dependencies.userService
+        interactor.authStorage = dependencies.authStorage
+        interactor.userStorage = dependencies.userStorage
 
         presenter.interactor = interactor
+        presenter.modelBuilder = UserModelBuilder()
+        
         viewController.output = presenter
+        viewController.itemsSource = presenter
 
         return (AnyCoordinatable(presenter), viewController)
     }

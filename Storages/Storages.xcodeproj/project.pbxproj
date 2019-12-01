@@ -15,6 +15,7 @@
 		BC3E7A0323852EF70052AF7A /* AuthUserIdHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E7A0223852EF70052AF7A /* AuthUserIdHolder.swift */; };
 		BC45C64D2386D5C60096EBD2 /* CSUser+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C64C2386D5C60096EBD2 /* CSUser+Import.swift */; };
 		BC45C64F2386D5E80096EBD2 /* CSUser+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C64E2386D5E80096EBD2 /* CSUser+Export.swift */; };
+		BC5B4BBC23927E9500896A98 /* FakeAuthStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B4BBB23927E9500896A98 /* FakeAuthStorage.swift */; };
 		BC604C052384E9C800FA5588 /* Storages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC604BFB2384E9C800FA5588 /* Storages.framework */; };
 		BC604C0A2384E9C800FA5588 /* AuthStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604C092384E9C800FA5588 /* AuthStorageTests.swift */; };
 		BC604C0C2384E9C800FA5588 /* Storages.h in Headers */ = {isa = PBXBuildFile; fileRef = BC604BFE2384E9C800FA5588 /* Storages.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,6 +81,7 @@
 		BC3E7A0223852EF70052AF7A /* AuthUserIdHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserIdHolder.swift; sourceTree = "<group>"; };
 		BC45C64C2386D5C60096EBD2 /* CSUser+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSUser+Import.swift"; sourceTree = "<group>"; };
 		BC45C64E2386D5E80096EBD2 /* CSUser+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSUser+Export.swift"; sourceTree = "<group>"; };
+		BC5B4BBB23927E9500896A98 /* FakeAuthStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthStorage.swift; sourceTree = "<group>"; };
 		BC604BFB2384E9C800FA5588 /* Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604BFE2384E9C800FA5588 /* Storages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storages.h; sourceTree = "<group>"; };
 		BC604BFF2384E9C800FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -177,6 +179,14 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		BC5B4BBA23927E8100896A98 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BC5B4BBB23927E9500896A98 /* FakeAuthStorage.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		BC604BF12384E9C800FA5588 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +210,7 @@
 		BC604BFD2384E9C800FA5588 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BC5B4BBA23927E8100896A98 /* Mocks */,
 				BC8BF3682388FEA300B754AF /* GamesStorage */,
 				BC8C1B2223869937000A80BA /* UsersStorage */,
 				BC3E79DB238521100052AF7A /* AuthStorage */,
@@ -458,6 +469,7 @@
 				BC8C1B292386A7CF000A80BA /* UsersStorageOutput.swift in Sources */,
 				BC3E7A0323852EF70052AF7A /* AuthUserIdHolder.swift in Sources */,
 				BC8BF377238939CC00B754AF /* GamesStorageInput.swift in Sources */,
+				BC5B4BBC23927E9500896A98 /* FakeAuthStorage.swift in Sources */,
 				BC8BF36B238900B000B754AF /* CSGame.swift in Sources */,
 				BCE32223238AF8BF00792F50 /* CSGame+Export.swift in Sources */,
 				BCD22C3C238D5FE00020885E /* CSStat+Export.swift in Sources */,

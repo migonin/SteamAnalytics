@@ -17,13 +17,20 @@
 		BC1117182390DCF600422EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1117162390DCF600422EEA /* LaunchScreen.storyboard */; };
 		BC11171D2390E29400422EEA /* UICommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD22C4F238E329D0020885E /* UICommon.framework */; };
 		BC11171E2390E29400422EEA /* UICommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCD22C4F238E329D0020885E /* UICommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC5B4BC0239288BB00896A98 /* UserCoordinatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B4BBF239288BB00896A98 /* UserCoordinatorResult.swift */; };
+		BC5B4BE82392F1CD00896A98 /* LoginCoordinatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B4BE72392F1CD00896A98 /* LoginCoordinatorResult.swift */; };
 		BC85FCE6239148B2002138B3 /* TwoUsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCE4239148B2002138B3 /* TwoUsersCell.swift */; };
 		BC85FCE7239148B2002138B3 /* TwoUsersCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCE5239148B2002138B3 /* TwoUsersCellModel.swift */; };
 		BC85FCF023916511002138B3 /* ComparsionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEE23916511002138B3 /* ComparsionCell.swift */; };
 		BC85FCF123916511002138B3 /* ComparsionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEF23916511002138B3 /* ComparsionCellModel.swift */; };
 		BC85FCF523916BF9002138B3 /* TwoUserComparsionCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF423916BF8002138B3 /* TwoUserComparsionCellsViewController.swift */; };
+		BC85FCF9239171D8002138B3 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF7239171D7002138B3 /* GraphCell.swift */; };
+		BC85FCFA239171D8002138B3 /* GraphCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF8239171D7002138B3 /* GraphCellModel.swift */; };
+		BC85FCFC239173D8002138B3 /* GraphCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */; };
 		BC99B3DB2390E89A00CCAEA8 /* HeaderCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */; };
 		BC99B3DC2390E89A00CCAEA8 /* ListItemCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */; };
+		BCCCCA2B2392F6D600772A89 /* Spinnerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA2A2392F6D600772A89 /* Spinnerable.swift */; };
+		BCCCCA2F2392F7F900772A89 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */; };
 		BCD22C54238E329D0020885E /* UICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD22C52238E329D0020885E /* UICommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCD22C61238E37920020885E /* NavigatorDegelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C5D238E37920020885E /* NavigatorDegelate.swift */; };
 		BCD22C62238E37920020885E /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C5E238E37920020885E /* Coordinatable.swift */; };
@@ -41,7 +48,7 @@
 		BCD22C80238E78F70020885E /* ListItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C7F238E78F70020885E /* ListItemCellModel.swift */; };
 		BCD22C82238E79260020885E /* HeaderCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C81238E79260020885E /* HeaderCellModel.swift */; };
 		BCD22CC9238E89AC0020885E /* EmptyOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22CC8238E89AC0020885E /* EmptyOption.swift */; };
-		BCD22CE8238E8C100020885E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22CE7238E8C100020885E /* BaseViewController.swift */; };
+		BCD22CE8238E8C100020885E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22CE7238E8C100020885E /* BaseTableViewController.swift */; };
 		F7A1AC092A08D1EA2A998D4C /* Pods_UICommonTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CA2149ACCDACC2B9E5CB6B /* Pods_UICommonTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,13 +101,20 @@
 		BC1117142390DCF600422EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC1117172390DCF600422EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC1117192390DCF600422EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5B4BBF239288BB00896A98 /* UserCoordinatorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinatorResult.swift; sourceTree = "<group>"; };
+		BC5B4BE72392F1CD00896A98 /* LoginCoordinatorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorResult.swift; sourceTree = "<group>"; };
 		BC85FCE4239148B2002138B3 /* TwoUsersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoUsersCell.swift; sourceTree = "<group>"; };
 		BC85FCE5239148B2002138B3 /* TwoUsersCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoUsersCellModel.swift; sourceTree = "<group>"; };
 		BC85FCEE23916511002138B3 /* ComparsionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparsionCell.swift; sourceTree = "<group>"; };
 		BC85FCEF23916511002138B3 /* ComparsionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparsionCellModel.swift; sourceTree = "<group>"; };
 		BC85FCF423916BF8002138B3 /* TwoUserComparsionCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoUserComparsionCellsViewController.swift; sourceTree = "<group>"; };
+		BC85FCF7239171D7002138B3 /* GraphCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCell.swift; sourceTree = "<group>"; };
+		BC85FCF8239171D7002138B3 /* GraphCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCellModel.swift; sourceTree = "<group>"; };
+		BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCellsViewController.swift; sourceTree = "<group>"; };
 		BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCellsViewController.swift; sourceTree = "<group>"; };
 		BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCellsViewController.swift; sourceTree = "<group>"; };
+		BCCCCA2A2392F6D600772A89 /* Spinnerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinnerable.swift; sourceTree = "<group>"; };
+		BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BCD22C4F238E329D0020885E /* UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD22C52238E329D0020885E /* UICommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICommon.h; sourceTree = "<group>"; };
 		BCD22C53238E329D0020885E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,7 +133,7 @@
 		BCD22C7F238E78F70020885E /* ListItemCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCellModel.swift; sourceTree = "<group>"; };
 		BCD22C81238E79260020885E /* HeaderCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellModel.swift; sourceTree = "<group>"; };
 		BCD22CC8238E89AC0020885E /* EmptyOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyOption.swift; sourceTree = "<group>"; };
-		BCD22CE7238E8C100020885E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BCD22CE7238E8C100020885E /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		C077D74B881BA0DC6936BE74 /* Pods-UICommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICommon.release.xcconfig"; path = "Target Support Files/Pods-UICommon/Pods-UICommon.release.xcconfig"; sourceTree = "<group>"; };
 		EA6A3EC5BFDD1350D7C8D863 /* Pods_UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,6 +173,14 @@
 			path = UICommonTestApp;
 			sourceTree = "<group>";
 		};
+		BC5B4BE62392F1B500896A98 /* LoginCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BC5B4BE72392F1CD00896A98 /* LoginCoordinatorResult.swift */,
+			);
+			path = LoginCoordinator;
+			sourceTree = "<group>";
+		};
 		BC85FCE3239148B2002138B3 /* TwoUsersCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +196,7 @@
 				BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */,
 				BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */,
 				BC85FCF423916BF8002138B3 /* TwoUserComparsionCellsViewController.swift */,
+				BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */,
 			);
 			path = CellsViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +208,15 @@
 				BC85FCEF23916511002138B3 /* ComparsionCellModel.swift */,
 			);
 			path = ComparsionCell;
+			sourceTree = "<group>";
+		};
+		BC85FCF6239171D7002138B3 /* GraphCell */ = {
+			isa = PBXGroup;
+			children = (
+				BC85FCF7239171D7002138B3 /* GraphCell.swift */,
+				BC85FCF8239171D7002138B3 /* GraphCellModel.swift */,
+			);
+			path = GraphCell;
 			sourceTree = "<group>";
 		};
 		BCD22C45238E329D0020885E = {
@@ -210,7 +242,7 @@
 		BCD22C51238E329D0020885E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				BCD22CE6238E8BEB0020885E /* BaseViewController */,
+				BCD22CE6238E8BEB0020885E /* BaseViewControllers */,
 				BCD22C5B238E35C90020885E /* Protocols */,
 				BCD22CBE238E859F0020885E /* Coordinators */,
 				BCD22C65238E38640020885E /* Navigator */,
@@ -225,6 +257,7 @@
 		BCD22C5A238E35BA0020885E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */,
 				BC1117032390DBE800422EEA /* UITableViewExtensions.swift */,
 			);
 			path = Extensions;
@@ -248,6 +281,7 @@
 				BCD22C7D238E77FA0020885E /* HeaderCell */,
 				BC85FCE3239148B2002138B3 /* TwoUsersCell */,
 				BC85FCED23916511002138B3 /* ComparsionCell */,
+				BC85FCF6239171D7002138B3 /* GraphCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -271,6 +305,7 @@
 		BCD22C69238E5D850020885E /* Abstractions */ = {
 			isa = PBXGroup;
 			children = (
+				BC5B4BE62392F1B500896A98 /* LoginCoordinator */,
 				BCD22C78238E65530020885E /* StubCoordinators */,
 				BCD22C73238E608C0020885E /* GameCoordinator */,
 				BCD22C6C238E60290020885E /* UserCoordinator */,
@@ -284,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD22C6D238E60370020885E /* UserCoordinatorStartOption.swift */,
+				BC5B4BBF239288BB00896A98 /* UserCoordinatorResult.swift */,
 			);
 			path = UserCoordinator;
 			sourceTree = "<group>";
@@ -332,12 +368,13 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		BCD22CE6238E8BEB0020885E /* BaseViewController */ = {
+		BCD22CE6238E8BEB0020885E /* BaseViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BCD22CE7238E8C100020885E /* BaseViewController.swift */,
+				BCD22CE7238E8C100020885E /* BaseTableViewController.swift */,
+				BCCCCA2A2392F6D600772A89 /* Spinnerable.swift */,
 			);
-			path = BaseViewController;
+			path = BaseViewControllers;
 			sourceTree = "<group>";
 		};
 		BE8EBB1DD411D9C55410A676 /* Frameworks */ = {
@@ -543,9 +580,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC85FCF9239171D8002138B3 /* GraphCell.swift in Sources */,
 				BC1117102390DCF500422EEA /* RootViewController.swift in Sources */,
+				BC85FCFA239171D8002138B3 /* GraphCellModel.swift in Sources */,
 				BC85FCF523916BF9002138B3 /* TwoUserComparsionCellsViewController.swift in Sources */,
 				BC99B3DB2390E89A00CCAEA8 /* HeaderCellsViewController.swift in Sources */,
+				BC85FCFC239173D8002138B3 /* GraphCellsViewController.swift in Sources */,
 				BC11170C2390DCF500422EEA /* AppDelegate.swift in Sources */,
 				BC99B3DC2390E89A00CCAEA8 /* ListItemCellsViewController.swift in Sources */,
 			);
@@ -556,12 +596,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD22CC9238E89AC0020885E /* EmptyOption.swift in Sources */,
-				BCD22CE8238E8C100020885E /* BaseViewController.swift in Sources */,
+				BCD22CE8238E8C100020885E /* BaseTableViewController.swift in Sources */,
 				BCD22C7A238E65630020885E /* StubCoordinator.swift in Sources */,
 				BC1117042390DBE800422EEA /* UITableViewExtensions.swift in Sources */,
 				BC85FCF123916511002138B3 /* ComparsionCellModel.swift in Sources */,
 				BC85FCE6239148B2002138B3 /* TwoUsersCell.swift in Sources */,
 				BCD22C7C238E6E530020885E /* BaseCoordinator.swift in Sources */,
+				BCCCCA2B2392F6D600772A89 /* Spinnerable.swift in Sources */,
 				BC1117002390DB7A00422EEA /* ListItemCell.swift in Sources */,
 				BCD22C75238E609F0020885E /* GameCoordinatorStartOption.swift in Sources */,
 				BCD22C61238E37920020885E /* NavigatorDegelate.swift in Sources */,
@@ -573,6 +614,9 @@
 				BCD22C82238E79260020885E /* HeaderCellModel.swift in Sources */,
 				BCD22C6E238E60370020885E /* UserCoordinatorStartOption.swift in Sources */,
 				BCD22C6B238E5F980020885E /* CoordinatorFactoring.swift in Sources */,
+				BC5B4BC0239288BB00896A98 /* UserCoordinatorResult.swift in Sources */,
+				BC5B4BE82392F1CD00896A98 /* LoginCoordinatorResult.swift in Sources */,
+				BCCCCA2F2392F7F900772A89 /* UIViewControllerExtensions.swift in Sources */,
 				BC1117022390DB9300422EEA /* HeaderCell.swift in Sources */,
 				BCD22C80238E78F70020885E /* ListItemCellModel.swift in Sources */,
 				BCD22C63238E37920020885E /* Navigable.swift in Sources */,

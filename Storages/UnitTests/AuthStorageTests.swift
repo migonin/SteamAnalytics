@@ -37,7 +37,7 @@ class AuthStorageTests: XCTestCase {
         //when
 
         //then
-        XCTAssertNil(storage.authUserIdHolder().userId.value)
+        XCTAssertNil(storage.getOwnUserID())
     }
 
     func testSetUserId_ifId_userIdHolderShouldExistWithNilId() {
@@ -49,7 +49,7 @@ class AuthStorageTests: XCTestCase {
         waitForAllBackgroundOperations()
 
         //then
-        XCTAssertEqual(storage.authUserIdHolder().userId.value, userId)
+        XCTAssertEqual(storage.getOwnUserID(), userId)
     }
 
 }

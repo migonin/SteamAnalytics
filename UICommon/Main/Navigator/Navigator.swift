@@ -48,6 +48,10 @@ extension Navigator: Navigating {
     public func popModule(animated: Bool) {
         rootController.popViewController(animated: animated)
     }
+
+    public func clearNavigationStack() {
+        rootController.setViewControllers([], animated: false)
+    }
 }
 
 extension Navigator: UINavigationControllerDelegate {

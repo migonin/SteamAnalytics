@@ -10,12 +10,18 @@
 		BC45C66B23879B8B0096EBD2 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C66A23879B8B0096EBD2 /* Services.framework */; };
 		BC45C66C23879B8B0096EBD2 /* Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C66A23879B8B0096EBD2 /* Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC604B722384E7EA00FA5588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604B712384E7EA00FA5588 /* AppDelegate.swift */; };
-		BC604B742384E7EA00FA5588 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604B732384E7EA00FA5588 /* SceneDelegate.swift */; };
-		BC604B762384E7EA00FA5588 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604B752384E7EA00FA5588 /* ViewController.swift */; };
 		BC604B7B2384E7EA00FA5588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC604B7A2384E7EA00FA5588 /* Assets.xcassets */; };
 		BC604B7E2384E7EA00FA5588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC604B7C2384E7EA00FA5588 /* LaunchScreen.storyboard */; };
 		BC8C1B1E2386908B000A80BA /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8C1B1D2386908B000A80BA /* APIClient.framework */; };
 		BC8C1B1F2386908B000A80BA /* APIClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC8C1B1D2386908B000A80BA /* APIClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BCCCCA322392FC7D00772A89 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA312392FC7D00772A89 /* MainCoordinator.swift */; };
+		BCCCCA352392FD6100772A89 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA342392FD6100772A89 /* CoordinatorFactory.swift */; };
+		BCCCCA372392FDBE00772A89 /* LoginScenes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCA362392FDBE00772A89 /* LoginScenes.framework */; };
+		BCCCCA382392FDBE00772A89 /* LoginScenes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCA362392FDBE00772A89 /* LoginScenes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BCCCCA3A2392FDC300772A89 /* UserScenes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCA392392FDC300772A89 /* UserScenes.framework */; };
+		BCCCCA3B2392FDC300772A89 /* UserScenes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCA392392FDC300772A89 /* UserScenes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BCCCCA3D2392FDC800772A89 /* GameScenes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCA3C2392FDC800772A89 /* GameScenes.framework */; };
+		BCCCCA3E2392FDC800772A89 /* GameScenes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCA3C2392FDC800772A89 /* GameScenes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BCD22C43238E30F20020885E /* Storages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C40238E30F20020885E /* Storages.swift */; };
 		BCD22C44238E30F20020885E /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C42238E30F20020885E /* Services.swift */; };
 		C3089D65C072E47F245A690A /* Pods_SteamAnalyticsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DED0B260414F8C014DD4D2C /* Pods_SteamAnalyticsApp.framework */; };
@@ -28,6 +34,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BCCCCA3B2392FDC300772A89 /* UserScenes.framework in Embed Frameworks */,
+				BCCCCA382392FDBE00772A89 /* LoginScenes.framework in Embed Frameworks */,
+				BCCCCA3E2392FDC800772A89 /* GameScenes.framework in Embed Frameworks */,
 				BC45C66C23879B8B0096EBD2 /* Services.framework in Embed Frameworks */,
 				BC8C1B1F2386908B000A80BA /* APIClient.framework in Embed Frameworks */,
 			);
@@ -43,13 +52,16 @@
 		BC45C66A23879B8B0096EBD2 /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604B6E2384E7EA00FA5588 /* SteamAnalyticsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteamAnalyticsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604B712384E7EA00FA5588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC604B732384E7EA00FA5588 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC604B752384E7EA00FA5588 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC604B7A2384E7EA00FA5588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC604B7D2384E7EA00FA5588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC604B7F2384E7EA00FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC8BF3A12389723C00B754AF /* Dependencies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Dependencies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8C1B1D2386908B000A80BA /* APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCCCA312392FC7D00772A89 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BCCCCA342392FD6100772A89 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		BCCCCA362392FDBE00772A89 /* LoginScenes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoginScenes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCCCA392392FDC300772A89 /* UserScenes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UserScenes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCCCA3C2392FDC800772A89 /* GameScenes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameScenes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD22C40238E30F20020885E /* Storages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storages.swift; sourceTree = "<group>"; };
 		BCD22C42238E30F20020885E /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +74,9 @@
 				BC8C1B1E2386908B000A80BA /* APIClient.framework in Frameworks */,
 				BC45C66B23879B8B0096EBD2 /* Services.framework in Frameworks */,
 				C3089D65C072E47F245A690A /* Pods_SteamAnalyticsApp.framework in Frameworks */,
+				BCCCCA3D2392FDC800772A89 /* GameScenes.framework in Frameworks */,
+				BCCCCA3A2392FDC300772A89 /* UserScenes.framework in Frameworks */,
+				BCCCCA372392FDBE00772A89 /* LoginScenes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +86,9 @@
 		0CB67D48871BD23FCAD4B6F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCCCCA3C2392FDC800772A89 /* GameScenes.framework */,
+				BCCCCA392392FDC300772A89 /* UserScenes.framework */,
+				BCCCCA362392FDBE00772A89 /* LoginScenes.framework */,
 				BC8BF3A12389723C00B754AF /* Dependencies.framework */,
 				BC45C66A23879B8B0096EBD2 /* Services.framework */,
 				BC8C1B1D2386908B000A80BA /* APIClient.framework */,
@@ -100,15 +118,31 @@
 		BC604B702384E7EA00FA5588 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BCCCCA332392FD4C00772A89 /* CoordinatorFactory */,
+				BCCCCA302392FC6800772A89 /* MainCoordinator */,
 				BCD22C3E238E30F20020885E /* Assemblies */,
 				BC604B712384E7EA00FA5588 /* AppDelegate.swift */,
-				BC604B732384E7EA00FA5588 /* SceneDelegate.swift */,
-				BC604B752384E7EA00FA5588 /* ViewController.swift */,
 				BC604B7A2384E7EA00FA5588 /* Assets.xcassets */,
 				BC604B7C2384E7EA00FA5588 /* LaunchScreen.storyboard */,
 				BC604B7F2384E7EA00FA5588 /* Info.plist */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		BCCCCA302392FC6800772A89 /* MainCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA312392FC7D00772A89 /* MainCoordinator.swift */,
+			);
+			path = MainCoordinator;
+			sourceTree = "<group>";
+		};
+		BCCCCA332392FD4C00772A89 /* CoordinatorFactory */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA342392FD6100772A89 /* CoordinatorFactory.swift */,
+			);
+			path = CoordinatorFactory;
 			sourceTree = "<group>";
 		};
 		BCD22C3E238E30F20020885E /* Assemblies */ = {
@@ -262,10 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD22C44238E30F20020885E /* Services.swift in Sources */,
-				BC604B762384E7EA00FA5588 /* ViewController.swift in Sources */,
+				BCCCCA322392FC7D00772A89 /* MainCoordinator.swift in Sources */,
+				BCCCCA352392FD6100772A89 /* CoordinatorFactory.swift in Sources */,
 				BCD22C43238E30F20020885E /* Storages.swift in Sources */,
 				BC604B722384E7EA00FA5588 /* AppDelegate.swift in Sources */,
-				BC604B742384E7EA00FA5588 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ class RootViewController: UITableViewController {
         case headerCells = "HeaderCells"
         case listItemCells = "LitItemCells"
         case userComparsion = "UserComparsion"
+        case graphCells = "GraphCells"
     }
 
     let dataSource = Row.allCases
@@ -34,6 +35,7 @@ class RootViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: UITableViewCell.self)
         cell.textLabel?.text = dataSource[indexPath.row].rawValue
+        cell.accessoryType = .disclosureIndicator
 
         return cell
     }
@@ -46,6 +48,8 @@ class RootViewController: UITableViewController {
             navigationController?.pushViewController(ListItemCellsViewController(), animated: true)
         case .userComparsion:
             navigationController?.pushViewController(TwoUserComparsionCellsViewController(), animated: true)
+        case .graphCells:
+            navigationController?.pushViewController(GraphCellsViewController(), animated: true)
         }
     }
 }

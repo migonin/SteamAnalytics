@@ -36,6 +36,8 @@ public class ComparsionCell: UITableViewCell {
 
         addSubview(titleLabel)
 
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().inset(10)
             make.leading.equalTo(snp.leadingMargin)

@@ -10,7 +10,8 @@ import Foundation
 import Core
 
 public enum UserModuleResult {
-    case settingsTapped
-    case friendsTapped(User)
-    case gamesTapped(User)
+    case back
+    case logout
+    case friendsTapped
+    case gamesTapped
 }

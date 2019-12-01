@@ -46,9 +46,9 @@ public struct UsersService: UsersServicing {
             switch result {
             case .success(let response):
                 if let user = response.response.players.first {
-                    self.storage.createOrUpdateUsers([user])
-
-                    completionHandler(.success(()))
+                    self.storage.createOrUpdateUsers([user]) {
+                        completionHandler(.success(()))
+                    }
                 } else {
                     completionHandler(.failure(NetworkingError.wrongResponse))
                 }

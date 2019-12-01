@@ -9,6 +9,6 @@
 import Core
 
 public enum UserModuleStartOption {
-    case ownUser
-    case otherUser(User)
+    case startScreen(User)
+    case user(User)
 }

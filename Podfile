@@ -31,6 +31,20 @@ target 'SteamAnalyticsApp' do
   snapkit_pod
   alamofire_pod
   corestore_pod
+  kingfisher_pod
+end
+
+target 'LoginScenes' do
+  project 'LoginScenes/LoginScenes.xcodeproj'
+
+  snapkit_pod
+  kingfisher_pod
+end
+
+target 'UserScenes' do
+  project 'UserScenes/UserScenes.xcodeproj'
+
+  corestore_pod
 end
 
 target 'Services' do
@@ -44,7 +58,7 @@ target 'UICommon' do
 
   snapkit_pod
   kingfisher_pod
-  charts_pod
+#  charts_pod
 end
 
 target 'UICommonTestApp' do
@@ -68,5 +82,12 @@ end
 target 'StoragesUnitTests' do
   project 'Storages/Storages.xcodeproj'
 
+  corestore_pod
+end
+
+target 'Core' do
+  project 'Core/Core.xcodeproj'
+
+  alamofire_pod
   corestore_pod
 end

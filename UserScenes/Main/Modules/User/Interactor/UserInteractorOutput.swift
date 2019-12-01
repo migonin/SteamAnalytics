@@ -7,6 +7,11 @@
 //
 
 import Foundation
+import Services
 
 protocol UserInteractorOutput: class {
+    func didStartUserLoading()
+    func didFinishUserLoading(result: Result<Void, Error>)
+
+    func userChanged()
 }

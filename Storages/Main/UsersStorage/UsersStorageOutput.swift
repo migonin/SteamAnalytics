@@ -8,9 +8,11 @@
 
 import Foundation
 import Core
+import CoreStore
 
 public protocol UsersStorageOutput {
-    func getCSUser(withID id: String) -> CSUser?
+    func monitorUser(_ user: User) -> ObjectMonitor<CSUser>
+
     func getUser(withID id: String) -> User?
     func getUserFirends(_ user: User) -> [User]
 }

@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import CoreStore
 
 public protocol AuthStorageOutput {
-    func authUserIdHolder() -> AuthUserIdHolder
+    func getOwnUserID() -> String?
 }

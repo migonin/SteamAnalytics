@@ -1,0 +1,6 @@
+framework module Pods_UserScenes {
+  umbrella header "Pods-UserScenes-umbrella.h"
+
+  export *
+  module * { export * }
+}

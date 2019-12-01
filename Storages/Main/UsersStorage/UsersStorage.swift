@@ -17,8 +17,16 @@ public struct UsersStorage: UsersStorageInput, UsersStorageOutput {
         self.dataStack = dataStack
     }
 
-    public func getCSUser(withID id: String) -> CSUser? {
+    func getCSUser(withID id: String) -> CSUser? {
         return try? dataStack.fetchOne(From<CSUser>().where(\.id == id))
+    }
+
+    public func monitorUser(_ user: User) -> ObjectMonitor<CSUser> {
+        guard let csUser = getCSUser(withID: user.id) else {
+            fatalError("User not exist")
+        }
+
+        return dataStack.monitorObject(csUser)
     }
 
     public func getUser(withID id: String) -> User? {
@@ -29,10 +37,16 @@ public struct UsersStorage: UsersStorageInput, UsersStorageOutput {
         return getCSUser(withID: user.id)?.friends.value.map({$0.toUser()}) ?? []
     }
 
-    public func createOrUpdateUsers(_ users: [User]) {
+    public func createOrUpdateUsers(_ users: [User], completion: (() -> Void)?) {
         dataStack.perform(asynchronous: { (transaction) -> Void in
             _  = try transaction.importUniqueObjects(Into<CSUser>(), sourceArray: users)
-        }, completion: { _ in })
+        }, completion: { _ in
+            completion?()
+        })
+    }
+
+    public func createOrUpdateUsers(_ users: [User]) {
+        createOrUpdateUsers(users, completion: nil)
     }
 
     public func setFriends(_ friends: [User], to user: User) {

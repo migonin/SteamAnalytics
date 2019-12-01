@@ -8,4 +8,6 @@
 
 import Foundation
 
-public typealias EmptyOption = Void
+public enum EmptyOption {
+    case none
+}

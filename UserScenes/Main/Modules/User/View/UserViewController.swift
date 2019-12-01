@@ -10,21 +10,21 @@ import UIKit
 import UICommon
 import SnapKit
 
-class UserViewController: BaseViewController, UserViewInput {
-
+class UserViewController: BaseTableViewController, UserViewInput {
     var output: UserViewOutput!
+    var itemsSource: UserItemsSourcing!
 
-    // MARK: Life cycle
-    
-    override func loadView() {
-        super.loadView()
-        
-    }
+    // MARK: View life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         output.didLoad()
+    }
+
+    override func registerCells() {
+        tableView.registerClassCell(HeaderCell.self)
+        tableView.registerClassCell(ListItemCell.self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +50,73 @@ class UserViewController: BaseViewController, UserViewInput {
         
         output.didDisappear(animated: animated)
     }
-    
+
+    func reloadData() {
+        tableView.reloadData()
+    }
+
+    @objc func logoutTapped() {
+        output.logoutButtonTapped()
+    }
+
+    // MARK: - Table view
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return itemsSource.numberOfSections()
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemsSource.itemsInSection(index: section)
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = itemsSource.itemModelFor(indexPath: indexPath)
+
+        switch model {
+        case .header(let model):
+            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: HeaderCell.self)
+            cell.configure(with: model)
+
+            return cell
+        case .games(let model), .friends(let model) :
+            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: ListItemCell.self)
+            cell.configure(with: model)
+
+            return cell
+        }
+    }
+
+    // MARK: - Alerts
+
+    override func errorAlertOKButtonTapped() {
+        output.didTapOKButton()
+    }
+
+    override func errorAlertRetryButtonTapped() {
+        output.didTapRetryButton()
+    }
+
     // MARK: - UserViewInput
-    
+    func addLogoutButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Выйти", style: .plain, target: self, action: #selector(logoutTapped))
+    }
+
+    func setTitle(_ title: String) {
+        self.title = title
+    }
+
+    func showLogoutPopup() {
+        let alertController = UIAlertController(title: "", message: "Вы точно хотите выйти?", preferredStyle: .alert)
+
+        alertController.addAction(UIAlertAction(title: "Выйти", style: .destructive, handler: { [weak self] (_) in
+            self?.output.logoutConfirmed()
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Отмена", style: .default, handler: { (_) in
+
+        }))
+
+        present(alertController, animated: true)
+    }
+
 }

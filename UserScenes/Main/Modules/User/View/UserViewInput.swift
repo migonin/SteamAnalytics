@@ -7,5 +7,13 @@
 //
 
 protocol UserViewInput: class {
-    func showError(message: String, retryButtonTitle: String?)
+    func setTitle(_ title: String)
+
+    func showError(message: String, okButtonTitle: String?, retryButtonTitle: String?)
+    func showSpinner()
+    func hideSpinner()
+    func reloadData()
+
+    func addLogoutButton()
+    func showLogoutPopup()
 }

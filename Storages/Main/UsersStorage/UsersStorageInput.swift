@@ -10,8 +10,10 @@ import Foundation
 import Core
 
 public protocol UsersStorageInput {
-    // Managed objects can be constructed only from unmanaged structs
+
     func createOrUpdateUsers(_ users: [User])
+    func createOrUpdateUsers(_ users: [User], completion: (() -> Void)?)
+
     func setFriends(_ friends: [User], to user: User)
 
     func deleteUser(_ user: User)

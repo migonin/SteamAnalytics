@@ -11,12 +11,14 @@ import UICommon
 import Core
 
 public final class UserCoordinator: BaseCoordinator, Coordinatable {
-    public typealias InputType = GameCoordinatorStartOption
-    public typealias OutputType = Void
+    public typealias InputType = UserCoordinatorStartOption
+    public typealias OutputType = UserCoordinatorResult
 
     let dependencies: UserScenesDependencies
     let modulesFactory: UserModulesFactoring
     let coordinatorsFactory: CoordinatorFactoring
+
+    private var user: User!
 
     public init(dependencies: UserScenesDependencies,
                 modulesFactory: UserModulesFactoring,
@@ -29,35 +31,35 @@ public final class UserCoordinator: BaseCoordinator, Coordinatable {
         super.init(navigator: navigator)
     }
 
-    public func start(with option: GameCoordinatorStartOption, animated: Bool) {
+    public func start(with option: UserCoordinatorStartOption, animated: Bool) {
         super.start()
 
-        goToUser(nil, animated: animated)
+        if case let UserCoordinatorStartOption.ownUser(user) = option {
+            self.user = user
+        }
+
+        goToUser(user, startScreen: true,  animated: animated)
     }
 
-    public var output: ((()) -> Void)?
+    public var output: ((UserCoordinatorResult) -> Void)?
 
-    private func goToUser(_ user: User?, animated: Bool) {
+    private func goToUser(_ user: User, startScreen: Bool = false, animated: Bool) {
         let (module, presentable) = modulesFactory.makeUserScreen()
 
-        let startOption: UserModuleStartOption
-
-        if let user = user {
-            startOption = .otherUser(user)
-        } else {
-            startOption = .ownUser
-        }
+        let startOption = startScreen ? UserModuleStartOption.startScreen(user) : UserModuleStartOption.user(user)
 
         module.output = { [weak self] result in
             guard let self = self else { return }
 
             switch result {
-            case .friendsTapped(let user):
+            case .friendsTapped:
                 self.goToFriends(of: user)
-            case .gamesTapped(let user):
+            case .gamesTapped:
                 self.goToGames(of: user)
-            case .settingsTapped:
-                self.showSettings()
+            case .logout:
+                self.output?(.loggedOut)
+            case .back:
+                self.popModule(animated: true)
             }
         }
 
@@ -73,6 +75,7 @@ public final class UserCoordinator: BaseCoordinator, Coordinatable {
 
     }
 
+
     private func goToGame(_ game: Game) {
         let (coordinator, _) = coordinatorsFactory.makeGameCoordinator(navigator: navigator)
 
@@ -87,9 +90,5 @@ public final class UserCoordinator: BaseCoordinator, Coordinatable {
         }
 
         coordinator.start(with: .game(game), animated: true)
-    }
-
-    private func showSettings() {
-
     }
 }

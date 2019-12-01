@@ -9,11 +9,15 @@
 import Foundation
 
 open class StubCoordinatorFactory: CoordinatorFactoring {
-    open func makeUserCoordinator(navigator: Navigating) -> CoordinatableFactoryResult<UserCoordinatorStartOption, Void> {
+    public func makeLoginCoordinator(navigator: Navigating) -> CoordinatableFactoryResult<EmptyOption, LoginCoordinatorResult> {
+        return makeStubCoordinatable(message: "Stub LoginCoordinator", navigator: navigator)
+    }
+
+    public func makeUserCoordinator(navigator: Navigating) -> CoordinatableFactoryResult<UserCoordinatorStartOption, UserCoordinatorResult> {
         return makeStubCoordinatable(message: "Stub UserCoordinator", navigator: navigator)
     }
 
-    open func makeGameCoordinator(navigator: Navigating) -> CoordinatableFactoryResult<GameCoordinatorStartOption, Void> {
+    open func makeGameCoordinator(navigator: Navigating) -> CoordinatableFactoryResult<GameCoordinatorStartOption, EmptyOption> {
         return makeStubCoordinatable(message: "Stub GameCoordinator", navigator: navigator)
     }
 

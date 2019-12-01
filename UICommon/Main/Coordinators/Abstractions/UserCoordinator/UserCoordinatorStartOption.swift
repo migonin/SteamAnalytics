@@ -10,6 +10,5 @@ import Foundation
 import Core
 
 public enum UserCoordinatorStartOption {
-    case ownUser
-    case otherUser(User)
+    case ownUser(User)
 }

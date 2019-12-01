@@ -29,7 +29,7 @@ class TwoUserComparsionCellsViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        title = "TwoUserCells"
+        title = "UserComparsion"
         tableView.registerClassCell(TwoUsersCell.self)
         tableView.registerClassCell(ComparsionCell.self)
     }

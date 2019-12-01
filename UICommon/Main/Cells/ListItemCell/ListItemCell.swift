@@ -56,8 +56,10 @@ public class ListItemCell: UITableViewCell {
 
         stackView.addArrangedSubview(imgView)
 
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         stackView.addArrangedSubview(titleLabel)
 
+        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         subtitleLabel.textColor = UIColor.systemGray
         stackView.addArrangedSubview(subtitleLabel)
 

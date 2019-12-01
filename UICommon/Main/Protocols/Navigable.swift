@@ -17,4 +17,6 @@ public protocol Navigating: Presentable {
 
     func push(_ module: Presentable, animated: Bool)
     func popModule(animated: Bool)
+
+    func clearNavigationStack()
 }

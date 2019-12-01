@@ -7,7 +7,15 @@
 //
 
 import Foundation
+import Core
 
 protocol UserInteractorInput {
-    
+    func prepareDataSource(user: User)
+    func subscribeForDataSourceChanges()
+    func unsubscribeForDataSourceChanges()
+
+    func loadUser()
+    func isUserOwn(_ user: User) -> Bool
+
+    func logout()
 }
