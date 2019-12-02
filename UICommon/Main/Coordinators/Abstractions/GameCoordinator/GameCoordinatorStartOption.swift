@@ -10,5 +10,5 @@ import Foundation
 import Core
 
 public enum GameCoordinatorStartOption {
-    case game(Game)
+    case game(Game, of: User)
 }

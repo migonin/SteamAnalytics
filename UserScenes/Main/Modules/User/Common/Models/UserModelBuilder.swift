@@ -19,32 +19,39 @@ struct UserModelBuilder: UserModelBuilding {
         models.append(.header(
             HeaderCellModel(
                 title: settings.user.name,
-                subtitle: nil,
+                subtitle: settings.user.status.description,
                 imgUrl: settings.user.avatarFull,
                 roundedImg: true
             )
         ))
 
         // TODO Localize
-        // Friends
-        models.append(.friends(
-            ListItemCellModel(
-                title: "Friends",
-                subtitle: nil,
-                imgUrl: nil,
-                showDisclosureIndicator: true
-            )
-        ))
+        if settings.user.isProfileVisible {
+            models.append(.friends(
+                ListItemCellModel(
+                    title: "Друзья",
+                    subtitle: nil,
+                    imgUrl: nil,
+                    showDisclosureIndicator: true
+                )
+            ))
 
-        // Friends
-        models.append(.games(
-            ListItemCellModel(
-                title: "Games",
-                subtitle: nil,
-                imgUrl: nil,
-                showDisclosureIndicator: true
-            )
-        ))
+            models.append(.games(
+                ListItemCellModel(
+                    title: "Игры",
+                    subtitle: nil,
+                    imgUrl: nil,
+                    showDisclosureIndicator: true
+                )
+            ))
+        } else {
+            models.append(.privateProfile(
+                MessageCellModel(
+                    title: "Приватный профиль"
+                )
+            ))
+        }
+
 
         return models
     }

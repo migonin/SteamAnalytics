@@ -54,6 +54,8 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
         } else {
             view.setTitle("Юзер")
         }
+
+        interactor.loadUser()
     }
 
     func willAppear(animated: Bool) {
@@ -65,8 +67,6 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
     func didAppear(animated: Bool) {
         state.isViewWillPresented = false
         state.isViewPresented = true
-
-        interactor.loadUser()
     }
     
     func willDisappear(animated: Bool) {
@@ -112,6 +112,9 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
                 } else {
                     view.showError(message: message, okButtonTitle: okTitle, retryButtonTitle: retryTitle)
                 }
+
+            case .wrongResponse:
+                break
             }
         }
     }

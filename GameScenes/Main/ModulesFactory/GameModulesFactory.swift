@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UICommon
 
 public struct GameModulesFactory: GameModulesFactoring {
     let dependencies: GameScenesDependencies
@@ -17,7 +18,7 @@ public struct GameModulesFactory: GameModulesFactoring {
 
     public func makeGameScreen() ->
         CoordinatableFactoryResult<GameModuleStartOption, GameModuleResult> {
-            
+            return GameModuleConfigurator(dependencies: dependencies).configure()
     }
 
 //    func makeGameHistoryScreen() ->

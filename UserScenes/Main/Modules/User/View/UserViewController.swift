@@ -25,6 +25,7 @@ class UserViewController: BaseTableViewController, UserViewInput {
     override func registerCells() {
         tableView.registerClassCell(HeaderCell.self)
         tableView.registerClassCell(ListItemCell.self)
+        tableView.registerClassCell(MessageCell.self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,11 +79,18 @@ class UserViewController: BaseTableViewController, UserViewInput {
             cell.configure(with: model)
 
             return cell
-        case .games(let model), .friends(let model) :
+        case .games(let model), .friends(let model):
             let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: ListItemCell.self)
             cell.configure(with: model)
 
             return cell
+
+        case  .privateProfile(let model):
+            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: MessageCell.self)
+            cell.configure(with: model)
+
+            return cell
+
         }
     }
 

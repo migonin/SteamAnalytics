@@ -104,11 +104,24 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
         var retArray: [(Stat, [StatValue])] = []
 
         for stat in game.stats.value {
-            let userStats = stat.values.value.filter({$0.owner.value?.id.value == owner.id.value}).map({$0.toStatValue()})
+            let userStats = stat.values.value
+                .filter({$0.owner.value?.id.value == owner.id.value})
+                .sorted(by: {$0.date.value < $1.date.value})
+                .map({$0.toStatValue()})
             retArray.append((stat.toStat(), userStats))
         }
 
         return retArray
+    }
+
+    public func getLastGameStats(_ game: Game, user: User) -> [(Stat, StatValue)] {
+        return getGameStats(game, user: user).compactMap { (stat, values) -> (Stat, StatValue)? in
+            if let lastValue = values.last {
+                return (stat, lastValue)
+            } else {
+                return nil
+            }
+        }
     }
 
     public func getGameAchievements(_ game: Game, user: User) -> [Achievement] {

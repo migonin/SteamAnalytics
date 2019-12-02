@@ -14,10 +14,14 @@ public class ErrorDescriber: ErrorDescribing {
 
     public func describeError(_ error: Error) -> ErrorType {
         //TODO Localize
-        if error is AFError || (error as NSError).domain == NSURLErrorDomain {
-            return .networkError(text: "Проблемы с инернетом.", okMessage: "Назад", retryMessage: "Повторить")
+        if let error = error as? AFError {
+            if error.isSessionTaskError {
+                return .networkError(text: "Проблемы с инернетом.", okMessage: "Назад", retryMessage: "Повторить")
+            } else {
+                return .wrongResponse
+            }
         } else {
-            return .message(text: "Проблемы с инернетом.", okMessage: "Назад", retryMessage: "Повторить")
+            return .message(text: "Что-то пошло не так.", okMessage: "Назад", retryMessage: "Повторить")
         }
     }
 }

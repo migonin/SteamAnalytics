@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 public class ListItemCell: UITableViewCell {
     let stackView = UIStackView()
@@ -33,11 +34,12 @@ public class ListItemCell: UITableViewCell {
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.spacing = 10.0
+        stackView.isUserInteractionEnabled = false
 
         addSubview(stackView)
 
         stackView.snp.makeConstraints { make in
-            make.height.equalTo(44).priority(999)
+            make.height.equalTo(imgViewSize).priority(999)
             make.top.bottom.equalToSuperview().inset(5.0)
             make.leading.equalTo(snp.leadingMargin)
             make.trailing.equalTo(snp.trailingMargin)
@@ -49,17 +51,12 @@ public class ListItemCell: UITableViewCell {
             make.height.width.equalTo(imgViewSize)
         }
 
-        imgView.layer.borderColor = UIColor(white: 1.0, alpha: 0.1).cgColor
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.masksToBounds = true
-        imgView.layer.cornerRadius = 4.0
-
         stackView.addArrangedSubview(imgView)
 
-        titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
         stackView.addArrangedSubview(titleLabel)
 
-        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .body)
         subtitleLabel.textColor = UIColor.systemGray
         stackView.addArrangedSubview(subtitleLabel)
 
@@ -75,7 +72,8 @@ public class ListItemCell: UITableViewCell {
         subtitleLabel.text = model.subtitle
 
         if let imgUrl = model.imgUrl {
-            imgView.kf.setImage(with: URL(string: imgUrl))
+            let processor = RoundCornerImageProcessor(cornerRadius: 5)
+            imgView.kf.setImage(with: URL(string: imgUrl), options: [.processor(processor)])
             imgView.isHidden = false
         } else {
             imgView.isHidden = true

@@ -9,6 +9,7 @@
 import Foundation
 
 public enum ErrorType {
+    case wrongResponse
     case message(text: String, okMessage: String, retryMessage: String)
     case networkError(text: String, okMessage: String, retryMessage: String)
 }

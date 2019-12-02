@@ -21,6 +21,7 @@ public final class GameCoordinator: BaseCoordinator, Coordinatable {
     let coordinatorsFactory: CoordinatorFactoring
 
     private var game: Game!
+    private var user: User!
 
     public init(dependencies: GameScenesDependencies,
                 modulesFactory: GameModulesFactoring,
@@ -36,8 +37,9 @@ public final class GameCoordinator: BaseCoordinator, Coordinatable {
     public func start(with option: GameCoordinatorStartOption, animated: Bool) {
         super.start()
 
-        if case let GameCoordinatorStartOption.game(game) = option {
+        if case let GameCoordinatorStartOption.game(game, of: user) = option {
             self.game = game
+            self.user = user
         }
 
         goToGame(game, animated: animated)
@@ -58,7 +60,7 @@ public final class GameCoordinator: BaseCoordinator, Coordinatable {
 
         }
 
-        module.start(with: .game(game), animated: true)
+        module.start(with: .game(game, of: user), animated: true)
         push(presentable, animated: true)
     }
 

@@ -11,6 +11,7 @@ import UICommon
 
 enum UserCellModel {
     case header(HeaderCellModel)
+    case privateProfile(MessageCellModel)
     case friends(ListItemCellModel)
     case games(ListItemCellModel)
 }

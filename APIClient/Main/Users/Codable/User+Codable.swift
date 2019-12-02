@@ -37,7 +37,7 @@ extension User: Decodable {
         let id = try values.decode(String.self, forKey: .steamid)
         let name = try values.decode(String.self, forKey: .personaname)
         let communityVisibilityState = try values.decode(Int.self, forKey: .communityvisibilitystate)
-        let status = try values.decode(Int.self, forKey: .profilestate)
+        let status = try values.decode(Int.self, forKey: .personastate)
 
         let avatar = try values.decode(String.self, forKey: .avatar)
         let avatarMedium = try values.decode(String.self, forKey: .avatarmedium)

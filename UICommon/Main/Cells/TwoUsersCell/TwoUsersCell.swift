@@ -54,7 +54,7 @@ public class TwoUsersCell: UITableViewCell {
 
         stackView.addArrangedSubview(imageView)
 
-        titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
         titleLabel.numberOfLines = 0
         stackView.addArrangedSubview(titleLabel)
     }

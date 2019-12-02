@@ -118,6 +118,6 @@ public final class UserCoordinator: BaseCoordinator, Coordinatable {
             self.removeDependency(coordinator)
         }
 
-        coordinator.start(with: .game(game), animated: true)
+        coordinator.start(with: .game(game, of: user), animated: true)
     }
 }

@@ -43,6 +43,7 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
         state.isViewPresented = false
 
         view.setTitle("Друзья \(state.user.name)")
+        interactor.loadUserFriends()
     }
 
     func willAppear(animated: Bool) {
@@ -54,8 +55,6 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
     func didAppear(animated: Bool) {
         state.isViewWillPresented = false
         state.isViewPresented = true
-
-        interactor.loadUserFriends()
     }
     
     func willDisappear(animated: Bool) {
@@ -93,6 +92,10 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
             case .message(let message, let okTitle, let retryTitle),
                  .networkError(let message, let okTitle, let retryTitle):
                     view.showError(message: message, okButtonTitle: okTitle, retryButtonTitle: retryTitle)
+
+            case .wrongResponse:
+                view.showError(message: "Друзья пользователя недоступны", okButtonTitle: "Назад", retryButtonTitle: nil)
+
             }
         }
     }

@@ -29,6 +29,8 @@
 		BC85FCFC239173D8002138B3 /* GraphCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */; };
 		BC99B3DB2390E89A00CCAEA8 /* HeaderCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */; };
 		BC99B3DC2390E89A00CCAEA8 /* ListItemCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */; };
+		BCA361EE23951F0500296C17 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA361EC23951F0500296C17 /* MessageCell.swift */; };
+		BCA361EF23951F0500296C17 /* MessageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA361ED23951F0500296C17 /* MessageCellModel.swift */; };
 		BCCCCA2F2392F7F900772A89 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */; };
 		BCCCCA832393F5C000772A89 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA822393F5C000772A89 /* BaseViewController.swift */; };
 		BCD22C54238E329D0020885E /* UICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD22C52238E329D0020885E /* UICommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -113,6 +115,8 @@
 		BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCellsViewController.swift; sourceTree = "<group>"; };
 		BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCellsViewController.swift; sourceTree = "<group>"; };
 		BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCellsViewController.swift; sourceTree = "<group>"; };
+		BCA361EC23951F0500296C17 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		BCA361ED23951F0500296C17 /* MessageCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellModel.swift; sourceTree = "<group>"; };
 		BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BCCCCA822393F5C000772A89 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BCD22C4F238E329D0020885E /* UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +223,15 @@
 			path = GraphCell;
 			sourceTree = "<group>";
 		};
+		BCA361EB23951F0500296C17 /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				BCA361EC23951F0500296C17 /* MessageCell.swift */,
+				BCA361ED23951F0500296C17 /* MessageCellModel.swift */,
+			);
+			path = MessageCell;
+			sourceTree = "<group>";
+		};
 		BCD22C45238E329D0020885E = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +290,7 @@
 		BCD22C5C238E37440020885E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				BCA361EB23951F0500296C17 /* MessageCell */,
 				BCD22C7E238E781F0020885E /* ListItemCell */,
 				BCD22C7D238E77FA0020885E /* HeaderCell */,
 				BC85FCE3239148B2002138B3 /* TwoUsersCell */,
@@ -621,6 +635,8 @@
 				BCD22C80238E78F70020885E /* ListItemCellModel.swift in Sources */,
 				BCD22C63238E37920020885E /* Navigable.swift in Sources */,
 				BC85FCE7239148B2002138B3 /* TwoUsersCellModel.swift in Sources */,
+				BCA361EE23951F0500296C17 /* MessageCell.swift in Sources */,
+				BCA361EF23951F0500296C17 /* MessageCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

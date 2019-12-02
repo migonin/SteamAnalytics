@@ -16,4 +16,23 @@ public enum UserStatus: Int {
     case snooze = 4
     case lookingToTrade = 5
     case lookingToPlay = 6
+
+    public var description: String {
+        switch self {
+        case .offline:
+            return "Offline"
+        case .online:
+            return "Online"
+        case .busy:
+            return "Busy"
+        case .away:
+            return "Away"
+        case .snooze:
+            return "Snooze"
+        case .lookingToTrade:
+            return "Looking to trade"
+        case .lookingToPlay:
+            return "Looking to play"
+        }
+    }
 }

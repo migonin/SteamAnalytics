@@ -83,6 +83,9 @@ class LoginPresenter: Coordinatable, LoginViewOutput, LoginInteractorOutput {
             case .message(let message, _, let retryTitle),
                  .networkError(let message, _, let retryTitle):
                 view.showError(message: message, okButtonTitle: retryTitle, retryButtonTitle: nil)
+            default:
+                break
+
             }
         }
     }

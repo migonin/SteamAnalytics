@@ -43,6 +43,7 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
         state.isViewPresented = false
 
         view.setTitle("Игры \(state.user.name)")
+        interactor.loadUserGames()
     }
 
     func willAppear(animated: Bool) {
@@ -54,8 +55,6 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
     func didAppear(animated: Bool) {
         state.isViewWillPresented = false
         state.isViewPresented = true
-
-        interactor.loadUserGames()
     }
     
     func willDisappear(animated: Bool) {
@@ -93,6 +92,10 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
             case .message(let message, let okTitle, let retryTitle),
                  .networkError(let message, let okTitle, let retryTitle):
                     view.showError(message: message, okButtonTitle: okTitle, retryButtonTitle: retryTitle)
+
+            case .wrongResponse:
+                break
+//                view.showError(message: "Игры пользователя недоступны", okButtonTitle: "Назад", retryButtonTitle: nil)
             }
         }
     }

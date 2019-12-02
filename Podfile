@@ -47,6 +47,13 @@ target 'UserScenes' do
   corestore_pod
 end
 
+target 'GameScenes' do
+  project 'GameScenes/GameScenes.xcodeproj'
+
+  corestore_pod
+end
+
+
 target 'Services' do
   project 'Services/Services.xcodeproj'
 

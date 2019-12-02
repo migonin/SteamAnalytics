@@ -11,7 +11,7 @@ import UIKit
 
 open class BaseViewController: UIViewController {
     public let hidingView = UIView()
-    public let spinnerView = UIActivityIndicatorView(style: .whiteLarge)
+    public let spinnerView = UIActivityIndicatorView(style: .gray)
     public let animationDuration = 0.3
 
     open override func loadView() {
@@ -21,7 +21,13 @@ open class BaseViewController: UIViewController {
     }
 
     private func setupSpinner() {
-        hidingView.backgroundColor = UIColor.systemGray
+        if #available(iOS 13.0, *) {
+            hidingView.backgroundColor = UIColor.systemBackground
+            spinnerView.style = .large
+        } else {
+            hidingView.backgroundColor = UIColor.white
+        }
+
         hidingView.isHidden = true
         view.addSubview(hidingView)
 

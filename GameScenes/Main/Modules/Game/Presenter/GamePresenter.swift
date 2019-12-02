@@ -1,0 +1,138 @@
+//
+//  GamePresenter.swift
+//  GameScenes
+//
+//  Created by Михаил Игонин on 27.11.2019.
+//  Copyright © 2019 FrozenApps. All rights reserved.
+//
+
+import UICommon
+import Core
+
+class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
+    typealias InputType = GameModuleStartOption
+    typealias OutputType = GameModuleResult
+
+    weak var view: GameViewInput!
+    var interactor: GameInteractorInput!
+    
+    var errorDescriber: ErrorDescribing!
+    var modelBuilder: GameModelBuilding!
+
+    var output: ((GameModuleResult) -> Void)?
+
+    // MARK: Local enviroment
+    var state = GamePresenterState()
+    var displayModels = [GameCellModel]()
+
+    // MARK: Coordinatable
+    func start(with option: GameModuleStartOption, animated: Bool) {
+        switch option {
+        case .game(let game, let user):
+            state.game = game
+            state.user = user
+        }
+
+        interactor.prepareDataSource(game: state.game, of: state.user)
+        loadModels()
+    }
+
+    // MARK: View lifecycle
+    func didLoad() {
+        state.isViewLoaded = true
+        state.isViewWillPresented = false
+        state.isViewPresented = false
+
+        view.setTitle(state.game.name)
+        interactor.loadGame()
+    }
+
+    func willAppear(animated: Bool) {
+        state.isViewWillPresented = true
+
+        interactor.subscribeForDataSourceChanges()
+    }
+    
+    func didAppear(animated: Bool) {
+        state.isViewWillPresented = false
+        state.isViewPresented = true
+    }
+    
+    func willDisappear(animated: Bool) {
+
+    }
+    
+    func didDisappear(animated: Bool) {
+        state.isViewPresented = false
+
+        interactor.unsubscribeForDataSourceChanges()
+    }
+
+    // MARK: - GameViewOutput
+
+    func didTapOKButton() {
+        output?(.back)
+    }
+
+    func didTapRetryButton() {
+        interactor.loadGame()
+    }
+
+    func statButtonTapped() {
+        output?(.goToStats)
+    }
+
+    // MARK: - GameInteractorOutput
+    func didStartGameLoading() {
+        if interactor.provideGameStats().isEmpty {
+            view.showSpinner()
+        }
+    }
+
+    func didFinishGameLoading(result: Result<Void, Error>) {
+        view.hideSpinner()
+
+        if case let Result.failure(error) = result {
+            switch errorDescriber.describeError(error) {
+            case .message(let message, let okTitle, let retryTitle),
+                 .networkError(let message, let okTitle, let retryTitle):
+                    view.showError(message: message, okButtonTitle: okTitle, retryButtonTitle: retryTitle)
+
+            case .wrongResponse:
+                state.gameHasNoStats = true
+                gameChanged()
+            }
+        }
+    }
+
+    func loadModels() {
+        let settings = GameModelBuilderSettings(user: state.user,
+                                                game: state.game,
+                                                stats: interactor.provideGameStats(),
+                                                gameHasNoStats: state.gameHasNoStats)
+
+        displayModels = modelBuilder.buildModels(settings: settings)
+    }
+
+    func gameChanged() {
+        loadModels()
+        view.reloadData()
+    }
+
+    func didTapCell(at index: Int) {
+    }
+}
+
+extension GamePresenter: GameItemsSourcing {
+    func numberOfSections() -> Int {
+        return 1
+    }
+
+    func itemsInSection(index: Int) -> Int {
+        return displayModels.count
+    }
+
+    func itemModelFor(indexPath: IndexPath) -> GameCellModel {
+        return displayModels[indexPath.row]
+    }
+}

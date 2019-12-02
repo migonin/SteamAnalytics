@@ -10,6 +10,7 @@ import Foundation
 import UICommon
 import LoginScenes
 import UserScenes
+import GameScenes
 
 class CoordinatorFactory: CoordinatorFactoring {
     func makeLoginCoordinator(navigator: Navigating) ->
@@ -56,6 +57,16 @@ class CoordinatorFactory: CoordinatorFactoring {
     func makeGameCoordinator(navigator: Navigating) ->
         CoordinatableFactoryResult<GameCoordinatorStartOption, EmptyOption> {
 
-            fatalError()
+            let dependencies = GameScenesDependencies(gameService: Services.gamesService,
+                                                      gameStorage: Storages.gamesStorage)
+
+            let modulesFactory = GameModulesFactory(dependencies: dependencies)
+
+            let coordinator = GameCoordinator(dependencies: dependencies,
+                                              modulesFactory: modulesFactory,
+                                              coordinatorsFactory: self,
+                                              navigator: navigator)
+
+            return (AnyCoordinatable(coordinator), navigator)
     }
 }
