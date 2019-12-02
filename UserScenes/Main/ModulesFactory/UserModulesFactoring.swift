@@ -10,7 +10,12 @@ import Foundation
 import UICommon
 
 public protocol UserModulesFactoring {
-    func makeUserScreen() -> CoordinatableFactoryResult<UserModuleStartOption, UserModuleResult>
-//    func makeUserFriendsScreen() -> CoordinatableFactoryResult<UserScreenStartOption, Void>
-//    func makeUserGamesScreen() -> CoordinatableFactoryResult<UserGamesStartOption, Void>
+    func makeUserScreen() ->
+        CoordinatableFactoryResult<UserModuleStartOption, UserModuleResult>
+
+    func makeUserFriendsScreen() ->
+        CoordinatableFactoryResult<UserFriendsModuleStartOption, UserFriendsModuleResult>
+
+    func makeUserGamesScreen() ->
+        CoordinatableFactoryResult<UserGamesModuleStartOption, UserGamesModuleResult>
 }

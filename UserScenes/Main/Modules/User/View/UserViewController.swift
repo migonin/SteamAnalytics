@@ -61,7 +61,7 @@ class UserViewController: BaseTableViewController, UserViewInput {
 
     // MARK: - Table view
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return itemsSource.numberOfSections()
     }
 
@@ -84,6 +84,10 @@ class UserViewController: BaseTableViewController, UserViewInput {
 
             return cell
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        output.didTapCell(at: indexPath.row)
     }
 
     // MARK: - Alerts

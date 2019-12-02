@@ -9,7 +9,10 @@
 import Foundation
 import UICommon
 
-protocol GameModulesFactoring {
-//    func makeGameScreen() -> CoordinatableFactoryResult<GameScreenStartOption, Void>
-//    func makeUserFriendsScreen() -> CoordinatableFactoryResult<UserScreenStartOption, Void>
+public protocol GameModulesFactoring {
+    func makeGameScreen() ->
+        CoordinatableFactoryResult<GameModuleStartOption, GameModuleResult>
+
+//    func makeGameHistoryScreen() ->
+//        CoordinatableFactoryResult<GameHistoryModuleStartOption, GameHistoryModuleResult>
 }

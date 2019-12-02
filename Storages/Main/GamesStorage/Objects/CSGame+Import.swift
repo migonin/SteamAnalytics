@@ -25,7 +25,11 @@ extension CSGame: ImportableUniqueObject {
     public func update(from source: Game, in transaction: BaseDataTransaction) throws {
         self.id.value = source.id
         self.name.value = source.name
-        self.iconUrl.value = source.icon
-        self.logoUrl.value = source.logo
+        self.iconUrl.value = constructImageURL(gameID: source.id, imageHash: source.icon)
+        self.logoUrl.value = constructImageURL(gameID: source.id, imageHash: source.logo)
+    }
+
+    private func constructImageURL(gameID: Int, imageHash: String) -> String {
+        return "http://media.steampowered.com/steamcommunity/public/images/apps/\(gameID)/\(imageHash).jpg"
     }
 }

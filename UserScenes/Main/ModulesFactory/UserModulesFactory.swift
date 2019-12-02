@@ -20,4 +20,14 @@ public struct UserModulesFactory: UserModulesFactoring {
     public func makeUserScreen() -> CoordinatableFactoryResult<UserModuleStartOption, UserModuleResult> {
         return UserModuleConfigurator(dependencies: dependencies).configure()
     }
+
+    public func makeUserFriendsScreen() -> CoordinatableFactoryResult<UserFriendsModuleStartOption, UserFriendsModuleResult> {
+        return UserFriendsModuleConfigurator(dependencies: dependencies).configure()
+    }
+
+    public func makeUserGamesScreen() ->
+        CoordinatableFactoryResult<UserGamesModuleStartOption, UserGamesModuleResult> {
+            return UserGamesModuleConfigurator(dependencies: dependencies).configure()
+    }
+
 }

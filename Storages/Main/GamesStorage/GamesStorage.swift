@@ -81,26 +81,16 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
 
     // MARK: GamesStorageOutput
 
-    public func gamesOwnerObject(for user: User) -> CSGameOwner {
-        if let owner = try? dataStack.fetchOne(From<CSGameOwner>().where(\.id == user.id)) {
-            return owner
-        } else {
-            // Owner not exist yet, let's create it sync
-            guard let owner = try? dataStack.perform(synchronous: { transaction -> CSGameOwner in
-                let owner = transaction.create(Into<CSGameOwner>())
-                owner.id.value = user.id
-
-                return owner
-            }) else {
-                fatalError("Data stack error, gamesOwner not created")
-            }
-
-            return owner
-        }
+    public func monitorGames(of user: User) -> ObjectMonitor<CSGameOwner> {
+        return dataStack.monitorObject(gamesOwnerObject(for: user))
     }
 
-    public func csGame(for game: Game) -> CSGame? {
-        return try? dataStack.fetchOne(From<CSGame>().where(\.id == game.id))
+    public func monitorGame(_ game: Game) -> ObjectMonitor<CSGame> {
+        guard let game = csGame(for: game) else {
+            fatalError("Game not found")
+        }
+
+        return dataStack.monitorObject(game)
     }
 
     public func getUserGames(_ user: User) -> [Game] {
@@ -142,6 +132,28 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
     }
 
     // MARK: Helpers
+    private func gamesOwnerObject(for user: User) -> CSGameOwner {
+        if let owner = try? dataStack.fetchOne(From<CSGameOwner>().where(\.id == user.id)) {
+            return owner
+        } else {
+            // Owner not exist yet, let's create it sync
+            guard let owner = try? dataStack.perform(synchronous: { transaction -> CSGameOwner in
+                let owner = transaction.create(Into<CSGameOwner>())
+                owner.id.value = user.id
+
+                return owner
+            }) else {
+                fatalError("Data stack error, gamesOwner not created")
+            }
+
+            return owner
+        }
+    }
+
+    private func csGame(for game: Game) -> CSGame? {
+        return try? dataStack.fetchOne(From<CSGame>().where(\.id == game.id))
+    }
+
     private func addGamesStats(stats: [StatValue], achievements: [AchievementValue], for csGame: CSGame, schemaCSStats: [CSStat], schemaCSAchievements: [CSAchievement], owner: CSGameOwner, in transaction: BaseDataTransaction) throws {
 
         for stat in stats {

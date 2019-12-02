@@ -29,7 +29,9 @@ public final class LoginCoordinator: BaseCoordinator, Coordinatable {
     }
 
     public func start(with option: EmptyOption, animated: Bool) {
-        let (module, presentable) = modulesFactory.makeUserScreen()
+        super.start()
+
+        let (module, presentable) = modulesFactory.makeLoginScreen()
 
         module.output = { [weak self] result in
             if case let LoginModuleResult.loggedIn(user) = result {

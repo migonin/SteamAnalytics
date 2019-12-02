@@ -29,8 +29,8 @@
 		BC85FCFC239173D8002138B3 /* GraphCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */; };
 		BC99B3DB2390E89A00CCAEA8 /* HeaderCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */; };
 		BC99B3DC2390E89A00CCAEA8 /* ListItemCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */; };
-		BCCCCA2B2392F6D600772A89 /* Spinnerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA2A2392F6D600772A89 /* Spinnerable.swift */; };
 		BCCCCA2F2392F7F900772A89 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */; };
+		BCCCCA832393F5C000772A89 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA822393F5C000772A89 /* BaseViewController.swift */; };
 		BCD22C54238E329D0020885E /* UICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD22C52238E329D0020885E /* UICommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCD22C61238E37920020885E /* NavigatorDegelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C5D238E37920020885E /* NavigatorDegelate.swift */; };
 		BCD22C62238E37920020885E /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C5E238E37920020885E /* Coordinatable.swift */; };
@@ -113,8 +113,8 @@
 		BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCellsViewController.swift; sourceTree = "<group>"; };
 		BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCellsViewController.swift; sourceTree = "<group>"; };
 		BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCellsViewController.swift; sourceTree = "<group>"; };
-		BCCCCA2A2392F6D600772A89 /* Spinnerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinnerable.swift; sourceTree = "<group>"; };
 		BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		BCCCCA822393F5C000772A89 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BCD22C4F238E329D0020885E /* UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD22C52238E329D0020885E /* UICommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICommon.h; sourceTree = "<group>"; };
 		BCD22C53238E329D0020885E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -372,7 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD22CE7238E8C100020885E /* BaseTableViewController.swift */,
-				BCCCCA2A2392F6D600772A89 /* Spinnerable.swift */,
+				BCCCCA822393F5C000772A89 /* BaseViewController.swift */,
 			);
 			path = BaseViewControllers;
 			sourceTree = "<group>";
@@ -602,13 +602,13 @@
 				BC85FCF123916511002138B3 /* ComparsionCellModel.swift in Sources */,
 				BC85FCE6239148B2002138B3 /* TwoUsersCell.swift in Sources */,
 				BCD22C7C238E6E530020885E /* BaseCoordinator.swift in Sources */,
-				BCCCCA2B2392F6D600772A89 /* Spinnerable.swift in Sources */,
 				BC1117002390DB7A00422EEA /* ListItemCell.swift in Sources */,
 				BCD22C75238E609F0020885E /* GameCoordinatorStartOption.swift in Sources */,
 				BCD22C61238E37920020885E /* NavigatorDegelate.swift in Sources */,
 				BCD22C67238E38810020885E /* Navigator.swift in Sources */,
 				BC85FCF023916511002138B3 /* ComparsionCell.swift in Sources */,
 				BCD22C77238E650C0020885E /* StubCoordinatorFactory.swift in Sources */,
+				BCCCCA832393F5C000772A89 /* BaseViewController.swift in Sources */,
 				BCD22C64238E37920020885E /* Presentable.swift in Sources */,
 				BCD22C62238E37920020885E /* Coordinatable.swift in Sources */,
 				BCD22C82238E79260020885E /* HeaderCellModel.swift in Sources */,

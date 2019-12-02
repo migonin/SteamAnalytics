@@ -8,10 +8,11 @@
 
 import Foundation
 import Core
+import CoreStore
 
 public protocol GamesStorageOutput {
-    func gamesOwnerObject(for user: User) -> CSGameOwner
-    func csGame(for game: Game) -> CSGame?
+    func monitorGames(of user: User) -> ObjectMonitor<CSGameOwner>
+    func monitorGame(_ game: Game) -> ObjectMonitor<CSGame>
 
     func getUserGames(_ user: User) -> [Game]
     func getGameSchema(_ game: Game) -> ([Stat], [Achievement])

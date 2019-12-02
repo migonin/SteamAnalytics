@@ -10,11 +10,7 @@ import UIKit
 import UICommon
 import SnapKit
 
-class LoginViewController: UIViewController, Spinnerable, LoginViewInput {
-    public let hidingView = UIView()
-    public let spinnerView = UIActivityIndicatorView(style: .whiteLarge)
-    public let animationDuration = 0.3
-
+class LoginViewController: BaseViewController, LoginViewInput {
     var output: LoginViewOutput!
 
     // MARK: View life cycle
@@ -23,7 +19,6 @@ class LoginViewController: UIViewController, Spinnerable, LoginViewInput {
         super.loadView()
 
         view.backgroundColor = UIColor.systemGray
-        setupSpinner()
     }
 
     override func viewDidLoad() {

@@ -67,14 +67,43 @@ public final class UserCoordinator: BaseCoordinator, Coordinatable {
         push(presentable, animated: animated)
     }
 
-    private func goToGames(of user: User) {
-
-    }
-
     private func goToFriends(of user: User) {
+        let (module, presentable) = modulesFactory.makeUserFriendsScreen()
 
+        module.output = { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+            case .userTapped(let user):
+                self.goToUser(user, animated: true)
+            case .back:
+                self.popModule(animated: true)
+            }
+
+        }
+
+        module.start(with: .user(user), animated: true)
+        push(presentable, animated: true)
     }
 
+    private func goToGames(of user: User) {
+        let (module, presentable) = modulesFactory.makeUserGamesScreen()
+
+        module.output = { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+            case .gameTapped(let game):
+                self.goToGame(game)
+            case .back:
+                self.popModule(animated: true)
+            }
+
+        }
+
+        module.start(with: .user(user), animated: true)
+        push(presentable, animated: true)
+    }
 
     private func goToGame(_ game: Game) {
         let (coordinator, _) = coordinatorsFactory.makeGameCoordinator(navigator: navigator)

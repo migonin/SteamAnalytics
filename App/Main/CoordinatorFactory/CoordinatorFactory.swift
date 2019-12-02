@@ -37,6 +37,8 @@ class CoordinatorFactory: CoordinatorFactoring {
             let dependencies = UserScenesDependencies(
                 userService: Services.usersService,
                 userStorage: Storages.usersStorage,
+                gameService: Services.gamesService,
+                gameStorage: Storages.gamesStorage,
                 authStorage: Storages.authStorage
             )
 

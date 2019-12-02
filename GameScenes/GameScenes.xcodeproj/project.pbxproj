@@ -7,11 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCCCCAAE2394269E00772A89 /* UICommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCAAD2394269E00772A89 /* UICommon.framework */; };
+		BCCCCAAF2394269E00772A89 /* UICommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCAAD2394269E00772A89 /* UICommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BCCCCAB2239426A300772A89 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCAB1239426A300772A89 /* Services.framework */; };
+		BCCCCAB3239426A300772A89 /* Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCAB1239426A300772A89 /* Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BCCCCAB5239426A800772A89 /* Storages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCAB4239426A800772A89 /* Storages.framework */; };
+		BCCCCAB6239426A800772A89 /* Storages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCAB4239426A800772A89 /* Storages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BCCCCAB82394270400772A89 /* GameModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCAB72394270400772A89 /* GameModulesFactory.swift */; };
+		BCCCCABA2394275C00772A89 /* GameScenesDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCAB92394275B00772A89 /* GameScenesDependencies.swift */; };
+		BCCCCABC239428C200772A89 /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCABB239428C200772A89 /* GameCoordinator.swift */; };
 		BCD22CA7238E83FE0020885E /* GameScenes.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD22CA5238E83FE0020885E /* GameScenes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCD22CC4238E87410020885E /* GameModulesFactoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22CC3238E87410020885E /* GameModulesFactoring.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BCCCCAB02394269F00772A89 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BCCCCAB6239426A800772A89 /* Storages.framework in Embed Frameworks */,
+				BCCCCAB3239426A300772A89 /* Services.framework in Embed Frameworks */,
+				BCCCCAAF2394269E00772A89 /* UICommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		BCCCCAAD2394269E00772A89 /* UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCCCAB1239426A300772A89 /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCCCAB4239426A800772A89 /* Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCCCAB72394270400772A89 /* GameModulesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModulesFactory.swift; sourceTree = "<group>"; };
+		BCCCCAB92394275B00772A89 /* GameScenesDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScenesDependencies.swift; sourceTree = "<group>"; };
+		BCCCCABB239428C200772A89 /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
 		BCD22CA2238E83FE0020885E /* GameScenes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GameScenes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD22CA5238E83FE0020885E /* GameScenes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScenes.h; sourceTree = "<group>"; };
 		BCD22CA6238E83FE0020885E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -23,17 +54,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCCCAB5239426A800772A89 /* Storages.framework in Frameworks */,
+				BCCCCAB2239426A300772A89 /* Services.framework in Frameworks */,
+				BCCCCAAE2394269E00772A89 /* UICommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BCCCCAAC2394269E00772A89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCAB4239426A800772A89 /* Storages.framework */,
+				BCCCCAB1239426A300772A89 /* Services.framework */,
+				BCCCCAAD2394269E00772A89 /* UICommon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCD22C98238E83FE0020885E = {
 			isa = PBXGroup;
 			children = (
 				BCD22CA4238E83FE0020885E /* Main */,
 				BCD22CA3238E83FE0020885E /* Products */,
+				BCCCCAAC2394269E00772A89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,6 +93,7 @@
 		BCD22CA4238E83FE0020885E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BCCCCAB92394275B00772A89 /* GameScenesDependencies.swift */,
 				BCD22CB1238E84890020885E /* Coordinator */,
 				BCD22CB2238E84890020885E /* Modules */,
 				BCD22CB0238E84890020885E /* ModulesFactory */,
@@ -61,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD22CC3238E87410020885E /* GameModulesFactoring.swift */,
+				BCCCCAB72394270400772A89 /* GameModulesFactory.swift */,
 			);
 			path = ModulesFactory;
 			sourceTree = "<group>";
@@ -68,6 +115,7 @@
 		BCD22CB1238E84890020885E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				BCCCCABB239428C200772A89 /* GameCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -101,6 +149,7 @@
 				BCD22C9E238E83FE0020885E /* Sources */,
 				BCD22C9F238E83FE0020885E /* Frameworks */,
 				BCD22CA0238E83FE0020885E /* Resources */,
+				BCCCCAB02394269F00772A89 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCCCABA2394275C00772A89 /* GameScenesDependencies.swift in Sources */,
+				BCCCCAB82394270400772A89 /* GameModulesFactory.swift in Sources */,
+				BCCCCABC239428C200772A89 /* GameCoordinator.swift in Sources */,
 				BCD22CC4238E87410020885E /* GameModulesFactoring.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

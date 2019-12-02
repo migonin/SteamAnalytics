@@ -48,10 +48,11 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
         state.isViewWillPresented = false
         state.isViewPresented = false
 
-        view.setTitle("")
-
         if state.startScreen {
+            view.setTitle("Стартовый экран")
             view.addLogoutButton()
+        } else {
+            view.setTitle("Юзер")
         }
     }
 

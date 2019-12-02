@@ -46,6 +46,7 @@ public class HeaderCell: UITableViewCell {
             make.trailing.equalTo(snp.trailingMargin)
         }
 
+        imgView.backgroundColor = UIColor.systemGray.withAlphaComponent(0.1)
         imgView.contentMode = .scaleAspectFill
 
         imgView.snp.makeConstraints { make in

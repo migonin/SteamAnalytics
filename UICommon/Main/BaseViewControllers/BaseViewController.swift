@@ -1,23 +1,27 @@
 //
-//  Spinnerable.swift
+//  BaseViewController.swift
 //  UICommon
 //
-//  Created by Михаил Игонин on 30.11.2019.
+//  Created by Михаил Игонин on 01.12.2019.
 //  Copyright © 2019 YouDo. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-public protocol Spinnerable {
-    var hidingView: UIView { get }
-    var spinnerView: UIActivityIndicatorView { get }
-    var animationDuration: TimeInterval { get }
-}
+open class BaseViewController: UIViewController {
+    public let hidingView = UIView()
+    public let spinnerView = UIActivityIndicatorView(style: .whiteLarge)
+    public let animationDuration = 0.3
 
-extension Spinnerable where Self: UIViewController {
-    public func setupSpinner() {
-        hidingView.backgroundColor = UIColor.systemGray.withAlphaComponent(0.1)
+    open override func loadView() {
+        super.loadView()
+
+        setupSpinner()
+    }
+
+    private func setupSpinner() {
+        hidingView.backgroundColor = UIColor.systemGray
         hidingView.isHidden = true
         view.addSubview(hidingView)
 

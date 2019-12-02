@@ -110,10 +110,24 @@ public struct UsersService: UsersServicing {
         usersAPIClient.getUsers(request: request) { (result) in
             switch result {
             case .success(let response):
-                completionHandler(.success(response.response.players))
+                //OMG, API returns friends with random order...
+                let orderedFriends = self.reoderUsers(response.response.players, ids: ids)
+                completionHandler(.success(orderedFriends))
             case .failure(let error):
                 completionHandler(.failure(error))
             }
         }
+    }
+
+    private func reoderUsers(_ users: [User], ids: [String]) -> [User] {
+        var retArray: [User] = []
+
+        for id in ids {
+            if let userWithId = users.first(where: {$0.id == id}) {
+                retArray.append(userWithId)
+            }
+        }
+
+        return retArray
     }
 }

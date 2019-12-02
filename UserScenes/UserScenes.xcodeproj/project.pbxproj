@@ -15,6 +15,38 @@
 		BC85FD0A239271BA002138B3 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC85FD09239271BA002138B3 /* Core.framework */; };
 		BC85FD0B239271BA002138B3 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC85FD09239271BA002138B3 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BCCCCA592393DFC000772A89 /* UserModelBuilderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA582393DFC000772A89 /* UserModelBuilderSettings.swift */; };
+		BCCCCA722393EFD900772A89 /* UserFriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA5C2393EFD900772A89 /* UserFriendsPresenter.swift */; };
+		BCCCCA732393EFD900772A89 /* UserFriendsPresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA5D2393EFD900772A89 /* UserFriendsPresenterState.swift */; };
+		BCCCCA742393EFD900772A89 /* UserFriendsItemsSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA5F2393EFD900772A89 /* UserFriendsItemsSourcing.swift */; };
+		BCCCCA752393EFD900772A89 /* UserFriendsModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA612393EFD900772A89 /* UserFriendsModelBuilder.swift */; };
+		BCCCCA762393EFD900772A89 /* UserFriendsModelBuilderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA622393EFD900772A89 /* UserFriendsModelBuilderSettings.swift */; };
+		BCCCCA772393EFD900772A89 /* UserFriendsModelBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA632393EFD900772A89 /* UserFriendsModelBuilding.swift */; };
+		BCCCCA782393EFD900772A89 /* UserFriendsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA642393EFD900772A89 /* UserFriendsCellModel.swift */; };
+		BCCCCA792393EFD900772A89 /* UserFriendsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA662393EFD900772A89 /* UserFriendsViewInput.swift */; };
+		BCCCCA7A2393EFD900772A89 /* UserFriendsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA672393EFD900772A89 /* UserFriendsViewOutput.swift */; };
+		BCCCCA7B2393EFD900772A89 /* UserFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA682393EFD900772A89 /* UserFriendsViewController.swift */; };
+		BCCCCA7C2393EFD900772A89 /* UserFriendsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA6A2393EFD900772A89 /* UserFriendsConfigurator.swift */; };
+		BCCCCA7D2393EFD900772A89 /* UserFriendsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA6C2393EFD900772A89 /* UserFriendsInteractorInput.swift */; };
+		BCCCCA7E2393EFD900772A89 /* UserFriendsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA6D2393EFD900772A89 /* UserFriendsInteractor.swift */; };
+		BCCCCA7F2393EFD900772A89 /* UserFriendsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA6E2393EFD900772A89 /* UserFriendsInteractorOutput.swift */; };
+		BCCCCA802393EFD900772A89 /* UserFriendsModuleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA702393EFD900772A89 /* UserFriendsModuleResult.swift */; };
+		BCCCCA812393EFD900772A89 /* UserFriendsModuleStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA712393EFD900772A89 /* UserFriendsModuleStartOption.swift */; };
+		BCCCCA9C2393FF5200772A89 /* UserGamesPresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA862393FF5200772A89 /* UserGamesPresenterState.swift */; };
+		BCCCCA9D2393FF5200772A89 /* UserGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA872393FF5200772A89 /* UserGamesPresenter.swift */; };
+		BCCCCA9E2393FF5200772A89 /* UserGamesItemsSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA892393FF5200772A89 /* UserGamesItemsSourcing.swift */; };
+		BCCCCA9F2393FF5200772A89 /* UserGamesModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA8B2393FF5200772A89 /* UserGamesModelBuilder.swift */; };
+		BCCCCAA02393FF5200772A89 /* UserGamesCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA8C2393FF5200772A89 /* UserGamesCellModel.swift */; };
+		BCCCCAA12393FF5200772A89 /* UserGamesModelBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA8D2393FF5200772A89 /* UserGamesModelBuilding.swift */; };
+		BCCCCAA22393FF5200772A89 /* UserGamesModelBuilderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA8E2393FF5200772A89 /* UserGamesModelBuilderSettings.swift */; };
+		BCCCCAA32393FF5200772A89 /* UserGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA902393FF5200772A89 /* UserGamesViewController.swift */; };
+		BCCCCAA42393FF5200772A89 /* UserGamesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA912393FF5200772A89 /* UserGamesViewOutput.swift */; };
+		BCCCCAA52393FF5200772A89 /* UserGamesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA922393FF5200772A89 /* UserGamesViewInput.swift */; };
+		BCCCCAA62393FF5200772A89 /* UserGamesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA942393FF5200772A89 /* UserGamesConfigurator.swift */; };
+		BCCCCAA72393FF5200772A89 /* UserGamesInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA962393FF5200772A89 /* UserGamesInteractorOutput.swift */; };
+		BCCCCAA82393FF5200772A89 /* UserGamesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA972393FF5200772A89 /* UserGamesInteractor.swift */; };
+		BCCCCAA92393FF5200772A89 /* UserGamesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA982393FF5200772A89 /* UserGamesInteractorInput.swift */; };
+		BCCCCAAA2393FF5200772A89 /* UserGamesModuleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA9A2393FF5200772A89 /* UserGamesModuleResult.swift */; };
+		BCCCCAAB2393FF5200772A89 /* UserGamesModuleStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA9B2393FF5200772A89 /* UserGamesModuleStartOption.swift */; };
 		BCD22C92238E83E90020885E /* UserScenes.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD22C90238E83E90020885E /* UserScenes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCD22CB5238E84B10020885E /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD22CB4238E84B10020885E /* Services.framework */; };
 		BCD22CB6238E84B10020885E /* Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCD22CB4238E84B10020885E /* Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -66,6 +98,38 @@
 		BC85FD0723924855002138B3 /* UserItemsSourcing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemsSourcing.swift; sourceTree = "<group>"; };
 		BC85FD09239271BA002138B3 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCCCA582393DFC000772A89 /* UserModelBuilderSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelBuilderSettings.swift; sourceTree = "<group>"; };
+		BCCCCA5C2393EFD900772A89 /* UserFriendsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsPresenter.swift; sourceTree = "<group>"; };
+		BCCCCA5D2393EFD900772A89 /* UserFriendsPresenterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsPresenterState.swift; sourceTree = "<group>"; };
+		BCCCCA5F2393EFD900772A89 /* UserFriendsItemsSourcing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsItemsSourcing.swift; sourceTree = "<group>"; };
+		BCCCCA612393EFD900772A89 /* UserFriendsModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsModelBuilder.swift; sourceTree = "<group>"; };
+		BCCCCA622393EFD900772A89 /* UserFriendsModelBuilderSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsModelBuilderSettings.swift; sourceTree = "<group>"; };
+		BCCCCA632393EFD900772A89 /* UserFriendsModelBuilding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsModelBuilding.swift; sourceTree = "<group>"; };
+		BCCCCA642393EFD900772A89 /* UserFriendsCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsCellModel.swift; sourceTree = "<group>"; };
+		BCCCCA662393EFD900772A89 /* UserFriendsViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsViewInput.swift; sourceTree = "<group>"; };
+		BCCCCA672393EFD900772A89 /* UserFriendsViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsViewOutput.swift; sourceTree = "<group>"; };
+		BCCCCA682393EFD900772A89 /* UserFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsViewController.swift; sourceTree = "<group>"; };
+		BCCCCA6A2393EFD900772A89 /* UserFriendsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsConfigurator.swift; sourceTree = "<group>"; };
+		BCCCCA6C2393EFD900772A89 /* UserFriendsInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsInteractorInput.swift; sourceTree = "<group>"; };
+		BCCCCA6D2393EFD900772A89 /* UserFriendsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsInteractor.swift; sourceTree = "<group>"; };
+		BCCCCA6E2393EFD900772A89 /* UserFriendsInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsInteractorOutput.swift; sourceTree = "<group>"; };
+		BCCCCA702393EFD900772A89 /* UserFriendsModuleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsModuleResult.swift; sourceTree = "<group>"; };
+		BCCCCA712393EFD900772A89 /* UserFriendsModuleStartOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriendsModuleStartOption.swift; sourceTree = "<group>"; };
+		BCCCCA862393FF5200772A89 /* UserGamesPresenterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesPresenterState.swift; sourceTree = "<group>"; };
+		BCCCCA872393FF5200772A89 /* UserGamesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesPresenter.swift; sourceTree = "<group>"; };
+		BCCCCA892393FF5200772A89 /* UserGamesItemsSourcing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesItemsSourcing.swift; sourceTree = "<group>"; };
+		BCCCCA8B2393FF5200772A89 /* UserGamesModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesModelBuilder.swift; sourceTree = "<group>"; };
+		BCCCCA8C2393FF5200772A89 /* UserGamesCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesCellModel.swift; sourceTree = "<group>"; };
+		BCCCCA8D2393FF5200772A89 /* UserGamesModelBuilding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesModelBuilding.swift; sourceTree = "<group>"; };
+		BCCCCA8E2393FF5200772A89 /* UserGamesModelBuilderSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesModelBuilderSettings.swift; sourceTree = "<group>"; };
+		BCCCCA902393FF5200772A89 /* UserGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesViewController.swift; sourceTree = "<group>"; };
+		BCCCCA912393FF5200772A89 /* UserGamesViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesViewOutput.swift; sourceTree = "<group>"; };
+		BCCCCA922393FF5200772A89 /* UserGamesViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesViewInput.swift; sourceTree = "<group>"; };
+		BCCCCA942393FF5200772A89 /* UserGamesConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesConfigurator.swift; sourceTree = "<group>"; };
+		BCCCCA962393FF5200772A89 /* UserGamesInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesInteractorOutput.swift; sourceTree = "<group>"; };
+		BCCCCA972393FF5200772A89 /* UserGamesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesInteractor.swift; sourceTree = "<group>"; };
+		BCCCCA982393FF5200772A89 /* UserGamesInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesInteractorInput.swift; sourceTree = "<group>"; };
+		BCCCCA9A2393FF5200772A89 /* UserGamesModuleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesModuleResult.swift; sourceTree = "<group>"; };
+		BCCCCA9B2393FF5200772A89 /* UserGamesModuleStartOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesModuleStartOption.swift; sourceTree = "<group>"; };
 		BCD22C8D238E83E90020885E /* UserScenes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserScenes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD22C90238E83E90020885E /* UserScenes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserScenes.h; sourceTree = "<group>"; };
 		BCD22C91238E83E90020885E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +189,164 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		BCCCCA5A2393EFD900772A89 /* UserFriends */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA5B2393EFD900772A89 /* Presenter */,
+				BCCCCA5E2393EFD900772A89 /* Common */,
+				BCCCCA652393EFD900772A89 /* View */,
+				BCCCCA692393EFD900772A89 /* Configurator */,
+				BCCCCA6B2393EFD900772A89 /* Interactor */,
+				BCCCCA6F2393EFD900772A89 /* Router */,
+			);
+			path = UserFriends;
+			sourceTree = "<group>";
+		};
+		BCCCCA5B2393EFD900772A89 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA5C2393EFD900772A89 /* UserFriendsPresenter.swift */,
+				BCCCCA5D2393EFD900772A89 /* UserFriendsPresenterState.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BCCCCA5E2393EFD900772A89 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA5F2393EFD900772A89 /* UserFriendsItemsSourcing.swift */,
+				BCCCCA602393EFD900772A89 /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BCCCCA602393EFD900772A89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA612393EFD900772A89 /* UserFriendsModelBuilder.swift */,
+				BCCCCA622393EFD900772A89 /* UserFriendsModelBuilderSettings.swift */,
+				BCCCCA632393EFD900772A89 /* UserFriendsModelBuilding.swift */,
+				BCCCCA642393EFD900772A89 /* UserFriendsCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCCCCA652393EFD900772A89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA662393EFD900772A89 /* UserFriendsViewInput.swift */,
+				BCCCCA672393EFD900772A89 /* UserFriendsViewOutput.swift */,
+				BCCCCA682393EFD900772A89 /* UserFriendsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCCCCA692393EFD900772A89 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA6A2393EFD900772A89 /* UserFriendsConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		BCCCCA6B2393EFD900772A89 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA6C2393EFD900772A89 /* UserFriendsInteractorInput.swift */,
+				BCCCCA6D2393EFD900772A89 /* UserFriendsInteractor.swift */,
+				BCCCCA6E2393EFD900772A89 /* UserFriendsInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BCCCCA6F2393EFD900772A89 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA702393EFD900772A89 /* UserFriendsModuleResult.swift */,
+				BCCCCA712393EFD900772A89 /* UserFriendsModuleStartOption.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BCCCCA842393FF5200772A89 /* UserGames */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA852393FF5200772A89 /* Presenter */,
+				BCCCCA882393FF5200772A89 /* Common */,
+				BCCCCA8F2393FF5200772A89 /* View */,
+				BCCCCA932393FF5200772A89 /* Configurator */,
+				BCCCCA952393FF5200772A89 /* Interactor */,
+				BCCCCA992393FF5200772A89 /* Router */,
+			);
+			path = UserGames;
+			sourceTree = "<group>";
+		};
+		BCCCCA852393FF5200772A89 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA862393FF5200772A89 /* UserGamesPresenterState.swift */,
+				BCCCCA872393FF5200772A89 /* UserGamesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BCCCCA882393FF5200772A89 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA892393FF5200772A89 /* UserGamesItemsSourcing.swift */,
+				BCCCCA8A2393FF5200772A89 /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BCCCCA8A2393FF5200772A89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA8B2393FF5200772A89 /* UserGamesModelBuilder.swift */,
+				BCCCCA8C2393FF5200772A89 /* UserGamesCellModel.swift */,
+				BCCCCA8D2393FF5200772A89 /* UserGamesModelBuilding.swift */,
+				BCCCCA8E2393FF5200772A89 /* UserGamesModelBuilderSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCCCCA8F2393FF5200772A89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA902393FF5200772A89 /* UserGamesViewController.swift */,
+				BCCCCA912393FF5200772A89 /* UserGamesViewOutput.swift */,
+				BCCCCA922393FF5200772A89 /* UserGamesViewInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCCCCA932393FF5200772A89 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA942393FF5200772A89 /* UserGamesConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		BCCCCA952393FF5200772A89 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA962393FF5200772A89 /* UserGamesInteractorOutput.swift */,
+				BCCCCA972393FF5200772A89 /* UserGamesInteractor.swift */,
+				BCCCCA982393FF5200772A89 /* UserGamesInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BCCCCA992393FF5200772A89 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCCA9A2393FF5200772A89 /* UserGamesModuleResult.swift */,
+				BCCCCA9B2393FF5200772A89 /* UserGamesModuleStartOption.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		BCD22C83238E83E90020885E = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +390,8 @@
 			isa = PBXGroup;
 			children = (
 				BCD22CCA238E8BC90020885E /* User */,
+				BCCCCA5A2393EFD900772A89 /* UserFriends */,
+				BCCCCA842393FF5200772A89 /* UserGames */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -369,26 +593,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCCCA7D2393EFD900772A89 /* UserFriendsInteractorInput.swift in Sources */,
 				BC85FD01239245AA002138B3 /* UserModelBuilding.swift in Sources */,
+				BCCCCAA12393FF5200772A89 /* UserGamesModelBuilding.swift in Sources */,
+				BCCCCA782393EFD900772A89 /* UserFriendsCellModel.swift in Sources */,
 				BCD22CE1238E8BC90020885E /* UserInteractorInput.swift in Sources */,
+				BCCCCA772393EFD900772A89 /* UserFriendsModelBuilding.swift in Sources */,
 				BCD22CE3238E8BC90020885E /* UserInteractor.swift in Sources */,
 				BCD22CEE238E8E4F0020885E /* UserModuleStartOption.swift in Sources */,
 				BCD22CC2238E869F0020885E /* UserModulesFactoring.swift in Sources */,
+				BCCCCAAA2393FF5200772A89 /* UserGamesModuleResult.swift in Sources */,
+				BCCCCA732393EFD900772A89 /* UserFriendsPresenterState.swift in Sources */,
 				BCD22CF0238E90610020885E /* UserModulesFactory.swift in Sources */,
+				BCCCCAA22393FF5200772A89 /* UserGamesModelBuilderSettings.swift in Sources */,
+				BCCCCA722393EFD900772A89 /* UserFriendsPresenter.swift in Sources */,
+				BCCCCAA42393FF5200772A89 /* UserGamesViewOutput.swift in Sources */,
 				BCD22CE0238E8BC90020885E /* UserConfigurator.swift in Sources */,
 				BCD22CDE238E8BC90020885E /* UserViewInput.swift in Sources */,
+				BCCCCAA92393FF5200772A89 /* UserGamesInteractorInput.swift in Sources */,
+				BCCCCAA52393FF5200772A89 /* UserGamesViewInput.swift in Sources */,
+				BCCCCA9E2393FF5200772A89 /* UserGamesItemsSourcing.swift in Sources */,
+				BCCCCAA02393FF5200772A89 /* UserGamesCellModel.swift in Sources */,
+				BCCCCA9C2393FF5200772A89 /* UserGamesPresenterState.swift in Sources */,
+				BCCCCA7E2393EFD900772A89 /* UserFriendsInteractor.swift in Sources */,
+				BCCCCA802393EFD900772A89 /* UserFriendsModuleResult.swift in Sources */,
+				BCCCCAA82393FF5200772A89 /* UserGamesInteractor.swift in Sources */,
+				BCCCCA752393EFD900772A89 /* UserFriendsModelBuilder.swift in Sources */,
 				BCD22CDF238E8BC90020885E /* UserViewOutput.swift in Sources */,
 				BCD22CDD238E8BC90020885E /* UserViewController.swift in Sources */,
+				BCCCCAAB2393FF5200772A89 /* UserGamesModuleStartOption.swift in Sources */,
 				BCD22CC6238E88030020885E /* UserScenesDependencies.swift in Sources */,
+				BCCCCA7F2393EFD900772A89 /* UserFriendsInteractorOutput.swift in Sources */,
 				BCD22CC0238E86730020885E /* UserCoordinator.swift in Sources */,
 				BCD22CDC238E8BC90020885E /* UserPresenter.swift in Sources */,
+				BCCCCA792393EFD900772A89 /* UserFriendsViewInput.swift in Sources */,
 				BCD22CDB238E8BC90020885E /* UserPresenterState.swift in Sources */,
 				BC85FD03239245B8002138B3 /* UserModelBuilder.swift in Sources */,
 				BCD22CE2238E8BC90020885E /* UserInteractorOutput.swift in Sources */,
+				BCCCCA7C2393EFD900772A89 /* UserFriendsConfigurator.swift in Sources */,
+				BCCCCAA72393FF5200772A89 /* UserGamesInteractorOutput.swift in Sources */,
+				BCCCCAA62393FF5200772A89 /* UserGamesConfigurator.swift in Sources */,
 				BC85FD05239245C6002138B3 /* UserCellModel.swift in Sources */,
+				BCCCCA762393EFD900772A89 /* UserFriendsModelBuilderSettings.swift in Sources */,
 				BCCCCA592393DFC000772A89 /* UserModelBuilderSettings.swift in Sources */,
 				BCD22CED238E8E4F0020885E /* UserModuleResult.swift in Sources */,
 				BC85FD0823924855002138B3 /* UserItemsSourcing.swift in Sources */,
+				BCCCCA9F2393FF5200772A89 /* UserGamesModelBuilder.swift in Sources */,
+				BCCCCA9D2393FF5200772A89 /* UserGamesPresenter.swift in Sources */,
+				BCCCCAA32393FF5200772A89 /* UserGamesViewController.swift in Sources */,
+				BCCCCA812393EFD900772A89 /* UserFriendsModuleStartOption.swift in Sources */,
+				BCCCCA742393EFD900772A89 /* UserFriendsItemsSourcing.swift in Sources */,
+				BCCCCA7A2393EFD900772A89 /* UserFriendsViewOutput.swift in Sources */,
+				BCCCCA7B2393EFD900772A89 /* UserFriendsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
