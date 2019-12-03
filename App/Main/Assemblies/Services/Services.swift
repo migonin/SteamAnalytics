@@ -39,4 +39,9 @@ public final class Services {
                             timeout: 60.0)
 
     }()
+
+    public static let logoutService: LogoutServicing = {
+        return LogoutService(userStorage: Storages.usersStorage,
+                             authStorage: Storages.authStorage)
+    }()
 }

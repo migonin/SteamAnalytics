@@ -18,6 +18,8 @@
 		BC604C4D2384EA9E00FA5588 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC604C432384EA9D00FA5588 /* Services.framework */; };
 		BC604C522384EA9E00FA5588 /* ServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604C512384EA9E00FA5588 /* ServicesTests.swift */; };
 		BC604C542384EA9E00FA5588 /* Services.h in Headers */ = {isa = PBXBuildFile; fileRef = BC604C462384EA9D00FA5588 /* Services.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCC302F92396171000914EB1 /* LogoutServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302F82396171000914EB1 /* LogoutServicing.swift */; };
+		BCC302FB2396171400914EB1 /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302FA2396171400914EB1 /* LogoutService.swift */; };
 		BCE3221D238AF11300792F50 /* GamesServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3221C238AF11300792F50 /* GamesServicing.swift */; };
 		BCE3221F238AF13000792F50 /* GamesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3221E238AF13000792F50 /* GamesService.swift */; };
 		FFF202B99D13C26B49D052C6 /* Pods_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB04B20E6E09FD8997043A6 /* Pods_Services.framework */; };
@@ -62,6 +64,8 @@
 		BC604C4C2384EA9E00FA5588 /* ServicesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServicesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604C512384EA9E00FA5588 /* ServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTests.swift; sourceTree = "<group>"; };
 		BC604C532384EA9E00FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCC302F82396171000914EB1 /* LogoutServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutServicing.swift; sourceTree = "<group>"; };
+		BCC302FA2396171400914EB1 /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		BCE3221C238AF11300792F50 /* GamesServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesServicing.swift; sourceTree = "<group>"; };
 		BCE3221E238AF13000792F50 /* GamesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesService.swift; sourceTree = "<group>"; };
 		BD06CB512914A8A1DC5750B7 /* Pods-Services.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.release.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 		BC604C452384EA9D00FA5588 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BCC302F7239616FD00914EB1 /* LogoutService */,
 				BC45C6652387963D0096EBD2 /* Common */,
 				BC8C1B21238698F9000A80BA /* UserService */,
 				BCE3221B238AF0FE00792F50 /* GamesService */,
@@ -167,6 +172,15 @@
 				BC45C663238794E10096EBD2 /* UsersService.swift */,
 			);
 			path = UserService;
+			sourceTree = "<group>";
+		};
+		BCC302F7239616FD00914EB1 /* LogoutService */ = {
+			isa = PBXGroup;
+			children = (
+				BCC302F82396171000914EB1 /* LogoutServicing.swift */,
+				BCC302FA2396171400914EB1 /* LogoutService.swift */,
+			);
+			path = LogoutService;
 			sourceTree = "<group>";
 		};
 		BCE3221B238AF0FE00792F50 /* GamesService */ = {
@@ -316,6 +330,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC45C667238796500096EBD2 /* ServiceResult.swift in Sources */,
+				BCC302FB2396171400914EB1 /* LogoutService.swift in Sources */,
+				BCC302F92396171000914EB1 /* LogoutServicing.swift in Sources */,
 				BC45C669238796C10096EBD2 /* ServiceCompletion.swift in Sources */,
 				BC45C664238794E10096EBD2 /* UsersService.swift in Sources */,
 				BCE3221F238AF13000792F50 /* GamesService.swift in Sources */,

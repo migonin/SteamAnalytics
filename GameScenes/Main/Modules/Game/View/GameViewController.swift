@@ -114,7 +114,4 @@ class GameViewController: BaseTableViewController, GameViewInput {
     }
 
     // MARK: - GameViewInput
-    func setTitle(_ title: String) {
-        self.title = title
-    }
 }

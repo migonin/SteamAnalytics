@@ -13,16 +13,47 @@ class GraphCellsViewController: UITableViewController {
 
     let dataSource: [GraphCellModel] = [
         GraphCellModel(title: "Первый показатель", values: [
-            (Date(), 100),
-            (Date().addingTimeInterval(-10), 0),
-            (Date().addingTimeInterval(-20), 10),
-            (Date().addingTimeInterval(-30), 100),
-            (Date().addingTimeInterval(-40), 50),
-            (Date().addingTimeInterval(-50), 10),
-            (Date().addingTimeInterval(-60), 20),
-            (Date().addingTimeInterval(-70), 80),
+
+            (Date().addingTimeInterval(-170), 40),
+            (Date().addingTimeInterval(-160), 10),
+            (Date().addingTimeInterval(-150), 80),
+            (Date().addingTimeInterval(-140), 20),
+            (Date().addingTimeInterval(-130), 10),
+            (Date().addingTimeInterval(-120), 50),
+            (Date().addingTimeInterval(-110), 100),
+            (Date().addingTimeInterval(-100), 10),
+            (Date().addingTimeInterval(-90), 40),
             (Date().addingTimeInterval(-80), 10),
-            (Date().addingTimeInterval(-90), 40)
+            (Date().addingTimeInterval(-70), 80),
+            (Date().addingTimeInterval(-60), 20),
+            (Date().addingTimeInterval(-50), 10),
+            (Date().addingTimeInterval(-40), 50),
+            (Date().addingTimeInterval(-30), 100),
+            (Date().addingTimeInterval(-20), 10),
+            (Date().addingTimeInterval(-10), 0),
+            (Date(), 100)
+        ]),
+
+        GraphCellModel(title: "Второй показатель", values: [
+
+            (Date().addingTimeInterval(-170), 40),
+            (Date().addingTimeInterval(-160), 10),
+            (Date().addingTimeInterval(-150), 80),
+            (Date().addingTimeInterval(-140), 20),
+            (Date().addingTimeInterval(-130), 10),
+            (Date().addingTimeInterval(-120), 50),
+            (Date().addingTimeInterval(-110), 100),
+            (Date().addingTimeInterval(-100), 10),
+            (Date().addingTimeInterval(-90), 40),
+            (Date().addingTimeInterval(-80), 10),
+            (Date().addingTimeInterval(-70), 80),
+            (Date().addingTimeInterval(-60), 20),
+            (Date().addingTimeInterval(-50), 10),
+            (Date().addingTimeInterval(-40), 50),
+            (Date().addingTimeInterval(-30), 100),
+            (Date().addingTimeInterval(-20), 10),
+            (Date().addingTimeInterval(-10), 0),
+            (Date(), 100)
         ])
     ]
 

@@ -16,16 +16,26 @@ struct UserFriendsModelBuilder: UserFriendsModelBuilding {
     func buildModels(settings: UserFriendsModelBuilderSettings) -> [UserFriendsCellModel] {
         var models: [UserFriendsCellModel] = []
 
-        for friend in settings.friends {
-            models.append(.user(
-                friend,
-                ListItemCellModel(
-                    title: friend.name,
-                    subtitle: nil,
-                    imgUrl: friend.avatarMedium,
-                    showDisclosureIndicator: true
-                )
+        if settings.infoInaccessibleError {
+            models.append(.message(
+                MessageCellModel(title: "Игры пользователя недоступны")
             ))
+        } else if settings.friends.isEmpty && !settings.requestInProgress {
+            models.append(.message(
+                MessageCellModel(title: "У пользователя нет друзей")
+            ))
+        } else {
+            for friend in settings.friends {
+                models.append(.user(
+                    friend,
+                    ListItemCellModel(
+                        title: friend.name,
+                        subtitle: nil,
+                        imgUrl: friend.avatarMedium,
+                        showDisclosureIndicator: true
+                    )
+                ))
+            }
         }
 
         return models

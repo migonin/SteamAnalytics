@@ -24,6 +24,7 @@ class UserFriendsViewController: BaseTableViewController, UserFriendsViewInput {
 
     override func registerCells() {
         tableView.registerClassCell(ListItemCell.self)
+        tableView.registerClassCell(MessageCell.self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,6 +74,11 @@ class UserFriendsViewController: BaseTableViewController, UserFriendsViewInput {
             cell.configure(with: model)
 
             return cell
+        case .message(let model):
+            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: MessageCell.self)
+            cell.configure(with: model)
+
+            return cell
         }
     }
 
@@ -91,7 +97,4 @@ class UserFriendsViewController: BaseTableViewController, UserFriendsViewInput {
     }
 
     // MARK: - UserFriendsViewInput
-    func setTitle(_ title: String) {
-        self.title = title
-    }
 }

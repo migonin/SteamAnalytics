@@ -16,6 +16,7 @@ final class UserInteractor: UserInteractorInput {
     weak var output: UserInteractorOutput!
 
     var userService: UsersServicing!
+    var logoutService: LogoutServicing!
     var userStorage: UsersStorageOutput!
     var authStorage: (AuthStorageInput & AuthStorageOutput)!
 
@@ -38,7 +39,7 @@ final class UserInteractor: UserInteractorInput {
     }
 
     func logout() {
-        authStorage.setUserID(nil)
+        logoutService.logout()
     }
 
     func isUserOwn(_ user: User) -> Bool {

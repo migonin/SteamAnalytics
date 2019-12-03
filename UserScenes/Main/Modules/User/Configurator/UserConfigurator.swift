@@ -25,6 +25,7 @@ final class UserModuleConfigurator {
         interactor.userService = dependencies.userService
         interactor.authStorage = dependencies.authStorage
         interactor.userStorage = dependencies.userStorage
+        interactor.logoutService = dependencies.logoutService
 
         presenter.interactor = interactor
         presenter.modelBuilder = UserModelBuilder()

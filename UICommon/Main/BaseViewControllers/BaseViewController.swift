@@ -51,4 +51,8 @@ open class BaseViewController: UIViewController {
         spinnerView.stopAnimating()
         hidingView.isHidden = true
     }
+
+    public func setTitle(_ title: String) {
+        self.title = title
+    }
 }

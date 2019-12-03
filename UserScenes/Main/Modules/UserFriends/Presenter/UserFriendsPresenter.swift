@@ -79,12 +79,15 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
 
     // MARK: - UserFriendsInteractorOutput
     func didStartUserFriendsLoading() {
+        state.requestInProgress = true
+
         if interactor.provideUserFriends().isEmpty {
             view.showSpinner()
         }
     }
 
     func didFinishUserFriendsLoading(result: Result<Void, Error>) {
+        state.requestInProgress = false
         view.hideSpinner()
 
         if case let Result.failure(error) = result {
@@ -94,28 +97,36 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
                     view.showError(message: message, okButtonTitle: okTitle, retryButtonTitle: retryTitle)
 
             case .wrongResponse:
-                view.showError(message: "Друзья пользователя недоступны", okButtonTitle: "Назад", retryButtonTitle: nil)
-
+                state.infoInaccessibleError = true
+                reloadScreen()
             }
         }
     }
 
     func loadModels() {
         let friends = interactor.provideUserFriends()
-        let settings = UserFriendsModelBuilderSettings(friends: friends)
+        let settings = UserFriendsModelBuilderSettings(friends: friends,
+                                                       requestInProgress: state.requestInProgress,
+                                                       infoInaccessibleError: state.infoInaccessibleError)
 
         displayModels = modelBuilder.buildModels(settings: settings)
     }
 
-    func userChanged() {
+    func reloadScreen() {
         loadModels()
         view.reloadData()
+    }
+
+    func userChanged() {
+        reloadScreen()
     }
 
     func didTapCell(at index: Int) {
         switch displayModels[index] {
         case .user(let user, _):
             output?(.userTapped(user))
+        default:
+            break
         }
     }
 }

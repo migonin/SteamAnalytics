@@ -11,4 +11,6 @@ import Core
 
 struct UserFriendsModelBuilderSettings {
     let friends: [User]
+    let requestInProgress: Bool
+    let infoInaccessibleError: Bool
 }

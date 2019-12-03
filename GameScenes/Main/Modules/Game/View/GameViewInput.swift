@@ -6,11 +6,7 @@
 //  Copyright © 2019 FrozenApps. All rights reserved.
 //
 
-protocol GameViewInput: class {
-    func setTitle(_ title: String)
+import UICommon
 
-    func showError(message: String, okButtonTitle: String?, retryButtonTitle: String?)
-    func showSpinner()
-    func hideSpinner()
-    func reloadData()
+protocol GameViewInput: class, BaseTableViewInput {
 }

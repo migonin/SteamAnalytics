@@ -11,4 +11,6 @@ import Core
 
 struct UserGamesModelBuilderSettings {
     let games: [Game]
+    let requestInProgress: Bool
+    let infoInaccessibleError: Bool
 }

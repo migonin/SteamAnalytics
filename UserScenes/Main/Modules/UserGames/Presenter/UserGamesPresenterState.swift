@@ -15,4 +15,6 @@ struct UserGamesPresenterState {
     var isViewPresented: Bool = false
 
     var user: User!
+    var infoInaccessibleError = false
+    var requestInProgress = false
 }

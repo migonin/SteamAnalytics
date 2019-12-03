@@ -12,4 +12,5 @@ import Core
 
 enum UserGamesCellModel {
     case game(Game, ListItemCellModel)
+    case message(MessageCellModel)
 }

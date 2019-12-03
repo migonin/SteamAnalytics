@@ -79,12 +79,15 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
 
     // MARK: - UserGamesInteractorOutput
     func didStartUserGamesLoading() {
+        state.requestInProgress = true
+
         if interactor.provideUserGames().isEmpty {
             view.showSpinner()
         }
     }
 
     func didFinishUserGamesLoading(result: Result<Void, Error>) {
+        state.requestInProgress = false
         view.hideSpinner()
 
         if case let Result.failure(error) = result {
@@ -94,28 +97,36 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
                     view.showError(message: message, okButtonTitle: okTitle, retryButtonTitle: retryTitle)
 
             case .wrongResponse:
-                break
-//                view.showError(message: "Игры пользователя недоступны", okButtonTitle: "Назад", retryButtonTitle: nil)
+                state.infoInaccessibleError = true
+                reloadScreen()
             }
         }
     }
 
     func loadModels() {
         let games = interactor.provideUserGames()
-        let settings = UserGamesModelBuilderSettings(games: games)
+        let settings = UserGamesModelBuilderSettings(games: games,
+                                                     requestInProgress: state.requestInProgress,
+                                                     infoInaccessibleError: state.infoInaccessibleError)
 
         displayModels = modelBuilder.buildModels(settings: settings)
     }
 
-    func userChanged() {
+    func reloadScreen() {
         loadModels()
         view.reloadData()
+    }
+
+    func userChanged() {
+        reloadScreen()
     }
 
     func didTapCell(at index: Int) {
         switch displayModels[index] {
         case .game(let game, _):
             output?(.gameTapped(game))
+        default:
+            break
         }
     }
 }

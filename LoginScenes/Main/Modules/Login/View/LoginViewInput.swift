@@ -6,8 +6,8 @@
 //  Copyright © 2019 FrozenApps. All rights reserved.
 //
 
-protocol LoginViewInput: class {
-    func showError(message: String, okButtonTitle: String?, retryButtonTitle: String?)
-    func showSpinner()
-    func hideSpinner()
+import UICommon
+
+protocol LoginViewInput: class, BaseViewInput {
+    func loadRequest(_ request: URLRequest)
 }

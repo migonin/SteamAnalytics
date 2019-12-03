@@ -31,6 +31,8 @@
 		BC99B3DC2390E89A00CCAEA8 /* ListItemCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */; };
 		BCA361EE23951F0500296C17 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA361EC23951F0500296C17 /* MessageCell.swift */; };
 		BCA361EF23951F0500296C17 /* MessageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA361ED23951F0500296C17 /* MessageCellModel.swift */; };
+		BCC302F423960A3B00914EB1 /* BaseViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302F323960A3B00914EB1 /* BaseViewInput.swift */; };
+		BCC302F623960B2800914EB1 /* BaseTableViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302F523960B2800914EB1 /* BaseTableViewInput.swift */; };
 		BCCCCA2F2392F7F900772A89 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */; };
 		BCCCCA832393F5C000772A89 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA822393F5C000772A89 /* BaseViewController.swift */; };
 		BCD22C54238E329D0020885E /* UICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD22C52238E329D0020885E /* UICommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -117,6 +119,8 @@
 		BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCellsViewController.swift; sourceTree = "<group>"; };
 		BCA361EC23951F0500296C17 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		BCA361ED23951F0500296C17 /* MessageCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellModel.swift; sourceTree = "<group>"; };
+		BCC302F323960A3B00914EB1 /* BaseViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewInput.swift; sourceTree = "<group>"; };
+		BCC302F523960B2800914EB1 /* BaseTableViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewInput.swift; sourceTree = "<group>"; };
 		BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BCCCCA822393F5C000772A89 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BCD22C4F238E329D0020885E /* UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -387,6 +391,8 @@
 			children = (
 				BCD22CE7238E8C100020885E /* BaseTableViewController.swift */,
 				BCCCCA822393F5C000772A89 /* BaseViewController.swift */,
+				BCC302F323960A3B00914EB1 /* BaseViewInput.swift */,
+				BCC302F523960B2800914EB1 /* BaseTableViewInput.swift */,
 			);
 			path = BaseViewControllers;
 			sourceTree = "<group>";
@@ -610,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD22CC9238E89AC0020885E /* EmptyOption.swift in Sources */,
+				BCC302F423960A3B00914EB1 /* BaseViewInput.swift in Sources */,
 				BCD22CE8238E8C100020885E /* BaseTableViewController.swift in Sources */,
 				BCD22C7A238E65630020885E /* StubCoordinator.swift in Sources */,
 				BC1117042390DBE800422EEA /* UITableViewExtensions.swift in Sources */,
@@ -625,6 +632,7 @@
 				BCCCCA832393F5C000772A89 /* BaseViewController.swift in Sources */,
 				BCD22C64238E37920020885E /* Presentable.swift in Sources */,
 				BCD22C62238E37920020885E /* Coordinatable.swift in Sources */,
+				BCC302F623960B2800914EB1 /* BaseTableViewInput.swift in Sources */,
 				BCD22C82238E79260020885E /* HeaderCellModel.swift in Sources */,
 				BCD22C6E238E60370020885E /* UserCoordinatorStartOption.swift in Sources */,
 				BCD22C6B238E5F980020885E /* CoordinatorFactoring.swift in Sources */,
@@ -668,6 +676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UICommonTestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -687,6 +696,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UICommonTestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

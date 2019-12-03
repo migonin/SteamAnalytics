@@ -14,7 +14,9 @@ public class ErrorDescriber: ErrorDescribing {
 
     public func describeError(_ error: Error) -> ErrorType {
         //TODO Localize
-        if let error = error as? AFError {
+        if (error as NSError).domain == NSURLErrorDomain {
+            return .networkError(text: "Проблемы с инернетом.", okMessage: "Назад", retryMessage: "Повторить")
+        } else if let error = error as? AFError {
             if error.isSessionTaskError {
                 return .networkError(text: "Проблемы с инернетом.", okMessage: "Назад", retryMessage: "Повторить")
             } else {

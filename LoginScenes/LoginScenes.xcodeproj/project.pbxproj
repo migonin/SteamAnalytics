@@ -29,6 +29,9 @@
 		BC5B4C112392F3EF00896A98 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B4C012392F3EF00896A98 /* LoginInteractor.swift */; };
 		BC5B4C122392F3EF00896A98 /* LoginInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B4C022392F3EF00896A98 /* LoginInteractorInput.swift */; };
 		BC5B4C132392F3EF00896A98 /* LoginModuleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B4C042392F3EF00896A98 /* LoginModuleResult.swift */; };
+		BCC302ED239606A300914EB1 /* WebViewURLType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302EA239606A300914EB1 /* WebViewURLType.swift */; };
+		BCC302F1239607FE00914EB1 /* WebViewLoginURLDescriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302EF239607FE00914EB1 /* WebViewLoginURLDescriber.swift */; };
+		BCC302F2239607FE00914EB1 /* WebViewLoginURLDescribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302F0239607FE00914EB1 /* WebViewLoginURLDescribing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +73,9 @@
 		BC5B4C012392F3EF00896A98 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		BC5B4C022392F3EF00896A98 /* LoginInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractorInput.swift; sourceTree = "<group>"; };
 		BC5B4C042392F3EF00896A98 /* LoginModuleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModuleResult.swift; sourceTree = "<group>"; };
+		BCC302EA239606A300914EB1 /* WebViewURLType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewURLType.swift; sourceTree = "<group>"; };
+		BCC302EF239607FE00914EB1 /* WebViewLoginURLDescriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewLoginURLDescriber.swift; sourceTree = "<group>"; };
+		BCC302F0239607FE00914EB1 /* WebViewLoginURLDescribing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewLoginURLDescribing.swift; sourceTree = "<group>"; };
 		C122F80FABF974181B3DCF5A /* Pods-LoginScenes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginScenes.release.xcconfig"; path = "Target Support Files/Pods-LoginScenes/Pods-LoginScenes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +174,7 @@
 		BC5B4BEF2392F3EF00896A98 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BCC302E8239605EC00914EB1 /* Common */,
 				BC5B4BF02392F3EF00896A98 /* Presenter */,
 				BC5B4BF92392F3EF00896A98 /* View */,
 				BC5B4BFD2392F3EF00896A98 /* Configurator */,
@@ -220,6 +227,16 @@
 				BC5B4C042392F3EF00896A98 /* LoginModuleResult.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		BCC302E8239605EC00914EB1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BCC302EF239607FE00914EB1 /* WebViewLoginURLDescriber.swift */,
+				BCC302F0239607FE00914EB1 /* WebViewLoginURLDescribing.swift */,
+				BCC302EA239606A300914EB1 /* WebViewURLType.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC5B4C0F2392F3EF00896A98 /* LoginConfigurator.swift in Sources */,
+				BCC302F1239607FE00914EB1 /* WebViewLoginURLDescriber.swift in Sources */,
 				BC5B4C102392F3EF00896A98 /* LoginInteractorOutput.swift in Sources */,
 				BC5B4C072392F3EF00896A98 /* LoginPresenter.swift in Sources */,
 				BC5B4C062392F3EF00896A98 /* LoginPresenterState.swift in Sources */,
@@ -341,7 +359,9 @@
 				BC5B4C0D2392F3EF00896A98 /* LoginViewInput.swift in Sources */,
 				BC5B4BEE2392F39800896A98 /* LoginModulesFactory.swift in Sources */,
 				BC5B4C0C2392F3EF00896A98 /* LoginViewOutput.swift in Sources */,
+				BCC302ED239606A300914EB1 /* WebViewURLType.swift in Sources */,
 				BC5B4C0E2392F3EF00896A98 /* LoginViewController.swift in Sources */,
+				BCC302F2239607FE00914EB1 /* WebViewLoginURLDescribing.swift in Sources */,
 				BC5B4BE32392F16B00896A98 /* LoginScenesDependencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

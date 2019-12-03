@@ -32,6 +32,7 @@ target 'SteamAnalyticsApp' do
   alamofire_pod
   corestore_pod
   kingfisher_pod
+  charts_pod  
 end
 
 target 'LoginScenes' do
@@ -65,12 +66,14 @@ target 'UICommon' do
 
   snapkit_pod
   kingfisher_pod
-#  charts_pod
+  charts_pod
 end
 
 target 'UICommonTestApp' do
   project 'UICommon/UICommon.xcodeproj'
 
+  corestore_pod
+  alamofire_pod
   snapkit_pod
 end
 

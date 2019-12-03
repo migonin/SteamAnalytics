@@ -12,22 +12,25 @@ import Services
 
 public struct UserScenesDependencies {
     let userService: UsersServicing
-    let userStorage: UsersStorageOutput
+    let userStorage: UsersStorageInput & UsersStorageOutput
 
     let gameService: GamesServicing
     let gameStorage: GamesStorageOutput
 
-    let authStorage: AuthStorageInput&AuthStorageOutput
+    let authStorage: AuthStorageInput & AuthStorageOutput
+    let logoutService: LogoutServicing
 
     public init(userService: UsersServicing,
-                userStorage: UsersStorageOutput,
+                userStorage: UsersStorageInput & UsersStorageOutput,
                 gameService: GamesServicing,
                 gameStorage: GamesStorageOutput,
-                authStorage: AuthStorageInput&AuthStorageOutput) {
+                authStorage: AuthStorageInput & AuthStorageOutput,
+                logoutService: LogoutServicing) {
         self.userService = userService
         self.userStorage = userStorage
         self.gameService = gameService
         self.gameStorage = gameStorage
         self.authStorage = authStorage
+        self.logoutService = logoutService
     }
 }

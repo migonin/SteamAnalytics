@@ -100,7 +100,7 @@ class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
 
             case .wrongResponse:
                 state.gameHasNoStats = true
-                gameChanged()
+                reloadScreen()
             }
         }
     }
@@ -114,9 +114,13 @@ class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
         displayModels = modelBuilder.buildModels(settings: settings)
     }
 
-    func gameChanged() {
+    func reloadScreen() {
         loadModels()
         view.reloadData()
+    }
+
+    func gameChanged() {
+        reloadScreen()
     }
 
     func didTapCell(at index: Int) {

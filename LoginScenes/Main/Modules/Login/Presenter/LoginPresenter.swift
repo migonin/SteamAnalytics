@@ -17,6 +17,8 @@ class LoginPresenter: Coordinatable, LoginViewOutput, LoginInteractorOutput {
     weak var view: LoginViewInput!
     var interactor: LoginInteractorInput!
     var errorDescriber: ErrorDescribing!
+    var urlDescriber: WebViewLoginURLDescribing!
+    var webViewSignInPath: String!
 
     let fakeUserID = "76561198324029511"
 
@@ -34,6 +36,10 @@ class LoginPresenter: Coordinatable, LoginViewOutput, LoginInteractorOutput {
         state.isViewLoaded = true
         state.isViewWillPresented = false
         state.isViewPresented = false
+
+        view.setTitle("Вход")
+
+        loadWebView()
     }
     
     func willAppear(animated: Bool) {
@@ -43,8 +49,6 @@ class LoginPresenter: Coordinatable, LoginViewOutput, LoginInteractorOutput {
     func didAppear(animated: Bool) {
         state.isViewWillPresented = false
         state.isViewPresented = true
-
-        interactor.loadUserWithID(fakeUserID)
     }
     
     func willDisappear(animated: Bool) {
@@ -55,14 +59,54 @@ class LoginPresenter: Coordinatable, LoginViewOutput, LoginInteractorOutput {
         state.isViewPresented = false
     }
 
+    func loadWebView() {
+        guard let url = URL(string: webViewSignInPath) else { return }
+        view.loadRequest(URLRequest(url: url))
+    }
+
     // MARK: - LoginViewOutput
 
-    func didTapOKButton() {
-        
+    func fakeLoginTapped() {
+        state.userID = fakeUserID
+        interactor.loadUserWithID(fakeUserID)
+    }
+
+    func reloadTapped() {
+        loadWebView()
+    }
+
+    func shouldStartLoad(url: URL?) -> Bool {
+        switch urlDescriber.describeUrl(url) {
+        case .loggedIn(let id):
+
+            state.userID = id
+            interactor.loadUserWithID(id)
+
+            return false
+
+        case .other:
+            return true
+        }
+    }
+
+    func didStartLoad(url: URL?) {
+        view.showSpinner()
+    }
+
+    func didFinishLoad(url: URL?) {
+        view.hideSpinner()
+    }
+
+    func didFailLoad(url: URL?, with error: Error) {
+        processError(error)
     }
 
     func didTapRetryButton() {
-
+        if let id = state.userID {
+            interactor.loadUserWithID(id)
+        } else {
+            loadWebView()
+        }
     }
 
     // MARK: - LoginInteractorOutput
@@ -75,19 +119,21 @@ class LoginPresenter: Coordinatable, LoginViewOutput, LoginInteractorOutput {
 
         switch result {
         case .success:
-            if let user = interactor.provideUserWithID(fakeUserID) {
+            if let userID = state.userID, let user = interactor.provideUserWithID(userID) {
                 output?(.loggedIn(user))
             }
         case .failure(let error):
-            switch errorDescriber.describeError(error) {
-            case .message(let message, _, let retryTitle),
-                 .networkError(let message, _, let retryTitle):
-                view.showError(message: message, okButtonTitle: retryTitle, retryButtonTitle: nil)
-            default:
-                break
-
-            }
+            processError(error)
         }
     }
 
+    func processError(_ error: Error) {
+        switch errorDescriber.describeError(error) {
+        case .networkError(let message, _, let retryTitle):
+            view.showError(message: message, okButtonTitle: retryTitle, retryButtonTitle: nil)
+        default:
+            break
+
+        }
+    }
 }

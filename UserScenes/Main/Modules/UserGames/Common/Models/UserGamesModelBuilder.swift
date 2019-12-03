@@ -16,16 +16,26 @@ struct UserGamesModelBuilder: UserGamesModelBuilding {
     func buildModels(settings: UserGamesModelBuilderSettings) -> [UserGamesCellModel] {
         var models: [UserGamesCellModel] = []
 
-        for game in settings.games {
-            models.append(.game(
-                game,
-                ListItemCellModel(
-                    title: game.name,
-                    subtitle: nil,
-                    imgUrl: game.icon,
-                    showDisclosureIndicator: true
-                )
+        if settings.infoInaccessibleError {
+            models.append(.message(
+                MessageCellModel(title: "Игры пользователя недоступны")
             ))
+        } else if settings.games.isEmpty && !settings.requestInProgress {
+            models.append(.message(
+                MessageCellModel(title: "У пользователя нет игр")
+            ))
+        } else {
+            for game in settings.games {
+                models.append(.game(
+                    game,
+                    ListItemCellModel(
+                        title: game.name,
+                        subtitle: nil,
+                        imgUrl: game.icon,
+                        showDisclosureIndicator: true
+                    )
+                ))
+            }
         }
 
         return models

@@ -12,4 +12,5 @@ import Core
 
 enum UserFriendsCellModel {
     case user(User, ListItemCellModel)
+    case message(MessageCellModel)
 }

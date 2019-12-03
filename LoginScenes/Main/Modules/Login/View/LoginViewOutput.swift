@@ -15,4 +15,12 @@ protocol LoginViewOutput {
     func didDisappear(animated: Bool)
 
     func didTapRetryButton()
+
+    func shouldStartLoad(url: URL?) -> Bool
+    func didStartLoad(url: URL?)
+    func didFinishLoad(url: URL?)
+    func didFailLoad(url: URL?, with error: Error)
+
+    func fakeLoginTapped()
+    func reloadTapped()
 }

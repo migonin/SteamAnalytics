@@ -113,10 +113,6 @@ class UserViewController: BaseTableViewController, UserViewInput {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Выйти", style: .plain, target: self, action: #selector(logoutTapped))
     }
 
-    func setTitle(_ title: String) {
-        self.title = title
-    }
-
     func showLogoutPopup() {
         let alertController = UIAlertController(title: "", message: "Вы точно хотите выйти?", preferredStyle: .alert)
 
