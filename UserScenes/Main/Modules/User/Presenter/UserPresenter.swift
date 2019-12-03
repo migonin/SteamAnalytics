@@ -39,7 +39,6 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
         }
 
         interactor.prepareDataSource(user: state.user)
-        loadModels()
     }
 
     // MARK: View lifecycle
@@ -56,6 +55,7 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
         }
 
         interactor.loadUser()
+        loadModels()
     }
 
     func willAppear(animated: Bool) {

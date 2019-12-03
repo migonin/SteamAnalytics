@@ -10,7 +10,7 @@ import Foundation
 import UICommon
 import Core
 
-public final class GameCoordinator: BaseCoordinator, Coordinatable {
+public final class GameCoordinator: NavigationCoordinator, Coordinatable {
     public var output: ((EmptyOption) -> Void)?
 
     public typealias InputType = GameCoordinatorStartOption

@@ -35,10 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func makeMainCoordinator() -> AnyCoordinatable<EmptyOption, EmptyOption> {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.makeKeyAndVisible()
+
+        self.window = window
+
         let coordinator = MainCoordinator(coordinatorFactory: CoordinatorFactory(),
                                           authStorage: Storages.authStorage,
                                           userStorage: Storages.usersStorage,
-                                          navigator: Navigator(rootController: rootNavigationController))
+                                          window: window)
 
         return AnyCoordinatable(coordinator)
     }

@@ -53,6 +53,6 @@ open class BaseViewController: UIViewController {
     }
 
     public func setTitle(_ title: String) {
-        self.title = title
+        self.navigationItem.title = title
     }
 }

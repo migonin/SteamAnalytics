@@ -10,7 +10,7 @@ import Foundation
 import UICommon
 import Core
 
-public final class LoginCoordinator: BaseCoordinator, Coordinatable {
+public final class LoginCoordinator: NavigationCoordinator, Coordinatable {
     public typealias InputType = EmptyOption
     public typealias OutputType = LoginCoordinatorResult
 

@@ -33,7 +33,6 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
         }
 
         interactor.prepareDataSource(user: state.user)
-        loadModels()
     }
 
     // MARK: View lifecycle
@@ -44,6 +43,7 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
 
         view.setTitle("Друзья \(state.user.name)")
         interactor.loadUserFriends()
+        loadModels()
     }
 
     func willAppear(animated: Bool) {

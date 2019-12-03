@@ -10,7 +10,7 @@ import Foundation
 import UICommon
 import Core
 
-public final class UserCoordinator: BaseCoordinator, Coordinatable {
+public final class UserCoordinator: NavigationCoordinator, Coordinatable {
     public typealias InputType = UserCoordinatorStartOption
     public typealias OutputType = UserCoordinatorResult
 

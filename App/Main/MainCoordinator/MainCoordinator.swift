@@ -11,8 +11,9 @@ import Core
 import Services
 import Storages
 import UICommon
+import UIKit
 
-final class MainCoordinator: BaseCoordinator, Coordinatable {
+final class MainCoordinator: WindowCoordinator, Coordinatable {
     public typealias InputType = EmptyOption
     public typealias OutputType = EmptyOption
 
@@ -25,12 +26,12 @@ final class MainCoordinator: BaseCoordinator, Coordinatable {
     public init(coordinatorFactory: CoordinatorFactoring,
                 authStorage: AuthStorageOutput,
                 userStorage: UsersStorageOutput,
-                navigator: Navigating) {
+                window: UIWindow) {
         self.coordinatorFactory = coordinatorFactory
         self.authStorage = authStorage
         self.userStorage = userStorage
 
-        super.init(navigator: navigator)
+        super.init(window: window)
     }
 
     public func start(with option: EmptyOption, animated: Bool) {
@@ -42,44 +43,36 @@ final class MainCoordinator: BaseCoordinator, Coordinatable {
     }
 
     func runLoginFlow() {
-        let (coordinator, _) = coordinatorFactory.makeLoginCoordinator(navigator: navigator)
+        let (coordinator, presentable) = coordinatorFactory.makeLoginCoordinator()
 
         addDependency(coordinator)
 
-        coordinator.output = { [weak self, weak coordinator] result in
+        coordinator.output = { [weak self] result in
             guard let self = self else { return }
-            guard let coordinator = coordinator else { return }
-
-            self.navigator.delegate = self
-            self.removeDependency(coordinator)
 
             if case let LoginCoordinatorResult.loggedIn(user) = result {
-                self.navigator.clearNavigationStack()
                 self.runMainFlow(user: user)
             }
         }
 
+        setChildCoordinator((coordinator, presentable))
         coordinator.start(with: .none, animated: true)
     }
 
     func runMainFlow(user: User) {
-        let (coordinator, _) = coordinatorFactory.makeUserCoordinator(navigator: navigator)
+        let (coordinator, presentable) = coordinatorFactory.makeTabCoordinator()
 
         addDependency(coordinator)
 
-        coordinator.output = { [weak self, weak coordinator] result in
+        coordinator.output = { [weak self] result in
             guard let self = self else { return }
-            guard let coordinator = coordinator else { return }
-
-            self.navigator.delegate = self
-            self.removeDependency(coordinator)
 
             if result == UserCoordinatorResult.loggedOut {
-                self.navigator.clearNavigationStack()
                 self.runLoginFlow()
             }
         }
 
+        setChildCoordinator((coordinator, presentable))
         coordinator.start(with: .ownUser(user), animated: true)
     }
 }

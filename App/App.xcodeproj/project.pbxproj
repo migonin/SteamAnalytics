@@ -14,6 +14,7 @@
 		BC604B7E2384E7EA00FA5588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC604B7C2384E7EA00FA5588 /* LaunchScreen.storyboard */; };
 		BC8C1B1E2386908B000A80BA /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8C1B1D2386908B000A80BA /* APIClient.framework */; };
 		BC8C1B1F2386908B000A80BA /* APIClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC8C1B1D2386908B000A80BA /* APIClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BCC30301239623B300914EB1 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC30300239623B300914EB1 /* MainTabBarCoordinator.swift */; };
 		BCCCCA322392FC7D00772A89 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA312392FC7D00772A89 /* MainCoordinator.swift */; };
 		BCCCCA352392FD6100772A89 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA342392FD6100772A89 /* CoordinatorFactory.swift */; };
 		BCCCCA372392FDBE00772A89 /* LoginScenes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCCCA362392FDBE00772A89 /* LoginScenes.framework */; };
@@ -57,6 +58,7 @@
 		BC604B7F2384E7EA00FA5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC8BF3A12389723C00B754AF /* Dependencies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Dependencies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8C1B1D2386908B000A80BA /* APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC30300239623B300914EB1 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		BCCCCA312392FC7D00772A89 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BCCCCA342392FD6100772A89 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		BCCCCA362392FDBE00772A89 /* LoginScenes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoginScenes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				BCCCCA312392FC7D00772A89 /* MainCoordinator.swift */,
+				BCC30300239623B300914EB1 /* MainTabBarCoordinator.swift */,
 			);
 			path = MainCoordinator;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				BCCCCA322392FC7D00772A89 /* MainCoordinator.swift in Sources */,
 				BCCCCA352392FD6100772A89 /* CoordinatorFactory.swift in Sources */,
 				BCD22C43238E30F20020885E /* Storages.swift in Sources */,
+				BCC30301239623B300914EB1 /* MainTabBarCoordinator.swift in Sources */,
 				BC604B722384E7EA00FA5588 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

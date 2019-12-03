@@ -9,10 +9,15 @@
 import Foundation
 
 public protocol CoordinatorFactoring {
-    func makeLoginCoordinator(navigator: Navigating) ->
+    func makeLoginCoordinator() ->
         CoordinatableFactoryResult<EmptyOption, LoginCoordinatorResult>
+
+    func makeTabCoordinator() ->
+        CoordinatableFactoryResult<UserCoordinatorStartOption, UserCoordinatorResult>
+
     func makeUserCoordinator(navigator: Navigating) ->
         CoordinatableFactoryResult<UserCoordinatorStartOption, UserCoordinatorResult>
+
     func makeGameCoordinator(navigator: Navigating) ->
         CoordinatableFactoryResult<GameCoordinatorStartOption, EmptyOption>
 }

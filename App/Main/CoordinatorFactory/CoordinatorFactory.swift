@@ -11,10 +11,14 @@ import UICommon
 import LoginScenes
 import UserScenes
 import GameScenes
+import UIKit
 
 class CoordinatorFactory: CoordinatorFactoring {
-    func makeLoginCoordinator(navigator: Navigating) ->
+    func makeLoginCoordinator() ->
         CoordinatableFactoryResult<EmptyOption, LoginCoordinatorResult> {
+
+            let navController = UINavigationController()
+            let navigator = Navigator(rootController: navController)
 
             let dependencies = LoginScenesDependencies(
                 userService: Services.usersService,
@@ -29,7 +33,15 @@ class CoordinatorFactory: CoordinatorFactoring {
                 modulesFactory: modulesFactory,
                 navigator: navigator)
 
-            return (AnyCoordinatable(coordinator), navigator)
+            return (AnyCoordinatable(coordinator), navController)
+    }
+
+    func makeTabCoordinator() ->
+        CoordinatableFactoryResult<UserCoordinatorStartOption, UserCoordinatorResult> {
+            let tabBarController = UITabBarController()
+            let coordinator = MainTabBarCoordinator(coordinatorFactory: self, tabBarControlller: tabBarController)
+
+            return (AnyCoordinatable(coordinator), tabBarController)
     }
 
     func makeUserCoordinator(navigator: Navigating) ->

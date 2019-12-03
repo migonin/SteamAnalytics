@@ -33,6 +33,9 @@
 		BCA361EF23951F0500296C17 /* MessageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA361ED23951F0500296C17 /* MessageCellModel.swift */; };
 		BCC302F423960A3B00914EB1 /* BaseViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302F323960A3B00914EB1 /* BaseViewInput.swift */; };
 		BCC302F623960B2800914EB1 /* BaseTableViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302F523960B2800914EB1 /* BaseTableViewInput.swift */; };
+		BCC302FD2396197400914EB1 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302FC2396197400914EB1 /* BaseCoordinator.swift */; };
+		BCC302FF23961A5900914EB1 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302FE23961A5900914EB1 /* TabBarCoordinator.swift */; };
+		BCC30303239629D700914EB1 /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC30302239629D700914EB1 /* WindowCoordinator.swift */; };
 		BCCCCA2F2392F7F900772A89 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */; };
 		BCCCCA832393F5C000772A89 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA822393F5C000772A89 /* BaseViewController.swift */; };
 		BCD22C54238E329D0020885E /* UICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD22C52238E329D0020885E /* UICommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,7 +51,7 @@
 		BCD22C75238E609F0020885E /* GameCoordinatorStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C74238E609F0020885E /* GameCoordinatorStartOption.swift */; };
 		BCD22C77238E650C0020885E /* StubCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C76238E650C0020885E /* StubCoordinatorFactory.swift */; };
 		BCD22C7A238E65630020885E /* StubCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C79238E65630020885E /* StubCoordinator.swift */; };
-		BCD22C7C238E6E530020885E /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C7B238E6E530020885E /* BaseCoordinator.swift */; };
+		BCD22C7C238E6E530020885E /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C7B238E6E530020885E /* NavigationCoordinator.swift */; };
 		BCD22C80238E78F70020885E /* ListItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C7F238E78F70020885E /* ListItemCellModel.swift */; };
 		BCD22C82238E79260020885E /* HeaderCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C81238E79260020885E /* HeaderCellModel.swift */; };
 		BCD22CC9238E89AC0020885E /* EmptyOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22CC8238E89AC0020885E /* EmptyOption.swift */; };
@@ -121,6 +124,9 @@
 		BCA361ED23951F0500296C17 /* MessageCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellModel.swift; sourceTree = "<group>"; };
 		BCC302F323960A3B00914EB1 /* BaseViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewInput.swift; sourceTree = "<group>"; };
 		BCC302F523960B2800914EB1 /* BaseTableViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewInput.swift; sourceTree = "<group>"; };
+		BCC302FC2396197400914EB1 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		BCC302FE23961A5900914EB1 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		BCC30302239629D700914EB1 /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
 		BCCCCA2E2392F7F900772A89 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BCCCCA822393F5C000772A89 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BCD22C4F238E329D0020885E /* UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,7 +143,7 @@
 		BCD22C74238E609F0020885E /* GameCoordinatorStartOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinatorStartOption.swift; sourceTree = "<group>"; };
 		BCD22C76238E650C0020885E /* StubCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubCoordinatorFactory.swift; sourceTree = "<group>"; };
 		BCD22C79238E65630020885E /* StubCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubCoordinator.swift; sourceTree = "<group>"; };
-		BCD22C7B238E6E530020885E /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		BCD22C7B238E6E530020885E /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 		BCD22C7F238E78F70020885E /* ListItemCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCellModel.swift; sourceTree = "<group>"; };
 		BCD22C81238E79260020885E /* HeaderCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellModel.swift; sourceTree = "<group>"; };
 		BCD22CC8238E89AC0020885E /* EmptyOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyOption.swift; sourceTree = "<group>"; };
@@ -315,7 +321,10 @@
 		BCD22C68238E5D180020885E /* BaseCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				BCD22C7B238E6E530020885E /* BaseCoordinator.swift */,
+				BCC302FC2396197400914EB1 /* BaseCoordinator.swift */,
+				BCD22C7B238E6E530020885E /* NavigationCoordinator.swift */,
+				BCC30302239629D700914EB1 /* WindowCoordinator.swift */,
+				BCC302FE23961A5900914EB1 /* TabBarCoordinator.swift */,
 			);
 			path = BaseCoordinator;
 			sourceTree = "<group>";
@@ -617,12 +626,14 @@
 			files = (
 				BCD22CC9238E89AC0020885E /* EmptyOption.swift in Sources */,
 				BCC302F423960A3B00914EB1 /* BaseViewInput.swift in Sources */,
+				BCC30303239629D700914EB1 /* WindowCoordinator.swift in Sources */,
+				BCC302FF23961A5900914EB1 /* TabBarCoordinator.swift in Sources */,
 				BCD22CE8238E8C100020885E /* BaseTableViewController.swift in Sources */,
 				BCD22C7A238E65630020885E /* StubCoordinator.swift in Sources */,
 				BC1117042390DBE800422EEA /* UITableViewExtensions.swift in Sources */,
 				BC85FCF123916511002138B3 /* ComparsionCellModel.swift in Sources */,
 				BC85FCE6239148B2002138B3 /* TwoUsersCell.swift in Sources */,
-				BCD22C7C238E6E530020885E /* BaseCoordinator.swift in Sources */,
+				BCD22C7C238E6E530020885E /* NavigationCoordinator.swift in Sources */,
 				BC1117002390DB7A00422EEA /* ListItemCell.swift in Sources */,
 				BCD22C75238E609F0020885E /* GameCoordinatorStartOption.swift in Sources */,
 				BCD22C61238E37920020885E /* NavigatorDegelate.swift in Sources */,
@@ -633,6 +644,7 @@
 				BCD22C64238E37920020885E /* Presentable.swift in Sources */,
 				BCD22C62238E37920020885E /* Coordinatable.swift in Sources */,
 				BCC302F623960B2800914EB1 /* BaseTableViewInput.swift in Sources */,
+				BCC302FD2396197400914EB1 /* BaseCoordinator.swift in Sources */,
 				BCD22C82238E79260020885E /* HeaderCellModel.swift in Sources */,
 				BCD22C6E238E60370020885E /* UserCoordinatorStartOption.swift in Sources */,
 				BCD22C6B238E5F980020885E /* CoordinatorFactoring.swift in Sources */,

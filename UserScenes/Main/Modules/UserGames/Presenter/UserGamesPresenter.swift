@@ -33,7 +33,6 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
         }
 
         interactor.prepareDataSource(user: state.user)
-        loadModels()
     }
 
     // MARK: View lifecycle
@@ -44,6 +43,7 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
 
         view.setTitle("Игры \(state.user.name)")
         interactor.loadUserGames()
+        loadModels()
     }
 
     func willAppear(animated: Bool) {
