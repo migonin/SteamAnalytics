@@ -36,16 +36,16 @@ final class UserGamesInteractor: UserGamesInteractorInput {
         gameMonitor?.removeObserver(self)
     }
 
-    func loadUserGames() {
+    func loadUserGames(lastPlayed: Bool) {
         output.didStartUserGamesLoading()
 
-        gameService.getUserGames(user) { [weak self] (result) in
+        gameService.getUserGames(user, lastPlayed: lastPlayed) { [weak self] (result) in
             self?.output.didFinishUserGamesLoading(result: result)
         }
     }
 
-    func provideUserGames() -> [Game] {
-        return gameStorage.getUserGames(user)
+    func provideUserGames(lastPlayed: Bool) -> [Game] {
+        return gameStorage.getUserGames(user, lastPlayed: lastPlayed)
     }
 }
 

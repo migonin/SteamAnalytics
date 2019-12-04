@@ -18,6 +18,6 @@ public protocol CoordinatorFactoring {
     func makeUserCoordinator(navigator: Navigating) ->
         CoordinatableFactoryResult<UserCoordinatorStartOption, UserCoordinatorResult>
 
-    func makeGameCoordinator(navigator: Navigating) ->
-        CoordinatableFactoryResult<GameCoordinatorStartOption, EmptyOption>
+    func makeGamesCoordinator(navigator: Navigating) ->
+        CoordinatableFactoryResult<GamesCoordinatorStartOption, EmptyOption>
 }

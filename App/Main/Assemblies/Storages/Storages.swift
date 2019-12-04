@@ -63,7 +63,8 @@ public final class Storages {
                     Entity<CSAchievement>("CSAchievement"),
                     Entity<CSAchievementValue>("CSAchievementValue"),
                     Entity<CSStat>("CSStat"),
-                    Entity<CSStatValue>("CSStatValue")
+                    Entity<CSStatValue>("CSStatValue"),
+                    Entity<CSPlaytime>("CSPlaytime"),
                 ]
             )
         )

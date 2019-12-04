@@ -13,6 +13,8 @@ public enum MethodPath: String, CustomStringConvertible {
     case userFriends = "ISteamUser/GetFriendList/v0001"
 
     case userGames = "IPlayerService/GetOwnedGames/v0001"
+    case lastPlayedUserGames = "IPlayerService/GetRecentlyPlayedGames/v0001"
+
     case gameSchema = "ISteamUserStats/GetSchemaForGame/v2"
     case gameStats = "ISteamUserStats/GetUserStatsForGame/v0002"
 

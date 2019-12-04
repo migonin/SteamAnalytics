@@ -13,6 +13,7 @@ enum GameCodingKeys: String, CodingKey {
     case appid = "appid"
     case name = "name"
     case playtime_forever = "playtime_forever"
+    case playtime_2weeks = "playtime_2weeks"
     case img_icon_url = "img_icon_url"
     case img_logo_url = "img_logo_url"
     case has_community_visible_stats = "has_community_visible_stats"
@@ -30,9 +31,14 @@ extension Game: Decodable {
         let icon = try values.decode(String.self, forKey: .img_icon_url)
         let logo = try values.decode(String.self, forKey: .img_logo_url)
 
+        let totalPlaytime = try values.decode(Int.self, forKey: .playtime_forever)
+        let playtimeTwoWeeks = try values.decodeIfPresent(Int.self, forKey: .playtime_2weeks) ?? 0
+
         self.init(id: id,
                   name: name,
                   icon: icon,
-                  logo: logo)
+                  logo: logo,
+                  totalPlaytime: totalPlaytime,
+                  playtimeTwoWeeks: playtimeTwoWeeks)
     }
 }

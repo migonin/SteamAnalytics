@@ -30,12 +30,17 @@ public struct GamesService: GamesServicing {
         self.timeout = timeout
     }
 
-    public func getUserGames(_ user: User, completionHandler: @escaping ServiceCompletion) {
+    public func getUserGames(_ user: User, lastPlayed: Bool, completionHandler: @escaping ServiceCompletion) {
         let url: URL
         let request: URLRequest
 
         do {
-            url = try urlFactory.buildURL(methodPath: .userGames)
+            if lastPlayed {
+                url = try urlFactory.buildURL(methodPath: .lastPlayedUserGames)
+            } else {
+                url = try urlFactory.buildURL(methodPath: .userGames)
+            }
+
             request = try urlRequestFactory.buildRequest(url: url, query: UserGamesQuery(userId: user.id), timeoutInterval: timeout)
         } catch {
             completionHandler(.failure(error))
@@ -45,7 +50,7 @@ public struct GamesService: GamesServicing {
         gamesAPIClient.getUserGames(request: request) { (result) in
             switch result {
                 case .success(let response):
-                    self.storage.createOrUpdateOwnGames(response.response.games, for: user)
+                    self.storage.createOrUpdateOwnGames(response.response.games, lastPlayed: lastPlayed, for: user)
 
                 completionHandler(.success(()))
                 case .failure(let error):

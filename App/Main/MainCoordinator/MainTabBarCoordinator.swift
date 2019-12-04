@@ -31,7 +31,7 @@ class MainTabBarCoordinator: TabBarCoordinator, Coordinatable {
             self.user = user
         }
 
-        setTabCoordinators([makeUserCoordinator()])
+        setTabCoordinators([makeUserCoordinator(), makeLastGamesCoordinator()])
     }
 
     func makeUserCoordinator() -> CoordinatableFactoryResult<UserCoordinatorStartOption, UserCoordinatorResult> {
@@ -51,6 +51,23 @@ class MainTabBarCoordinator: TabBarCoordinator, Coordinatable {
         }
 
         coordinator.start(with: .ownUser(user), animated: false)
+
+        return (coordinator, presentable)
+    }
+
+    func makeLastGamesCoordinator() -> CoordinatableFactoryResult<GamesCoordinatorStartOption, EmptyOption> {
+        let navController = UINavigationController()
+
+        let tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        tabBarItem.title = "Последние игры"
+
+        navController.tabBarItem = tabBarItem
+
+        let navigator = Navigator(rootController: navController)
+
+        let (coordinator, presentable) = coordinatorFactory.makeGamesCoordinator(navigator: navigator)
+
+        coordinator.start(with: .lastPlayedGames(of: user), animated: false)
 
         return (coordinator, presentable)
     }

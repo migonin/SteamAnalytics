@@ -1,5 +1,5 @@
 //
-//  GameCoordinatorStartOption.swift
+//  GamesCoordinatorStartOption.swift
 //  UICommon
 //
 //  Created by Михаил Игонин on 27.11.2019.
@@ -9,6 +9,7 @@
 import Foundation
 import Core
 
-public enum GameCoordinatorStartOption {
-    case game(Game, of: User)
+public enum GamesCoordinatorStartOption {
+    case allGames(of: User)
+    case lastPlayedGames(of: User)
 }

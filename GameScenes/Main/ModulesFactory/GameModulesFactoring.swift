@@ -13,6 +13,9 @@ public protocol GameModulesFactoring {
     func makeGameScreen() ->
         CoordinatableFactoryResult<GameModuleStartOption, GameModuleResult>
 
+    func makeUserGamesScreen() ->
+        CoordinatableFactoryResult<UserGamesModuleStartOption, UserGamesModuleResult>
+
 //    func makeGameHistoryScreen() ->
 //        CoordinatableFactoryResult<GameHistoryModuleStartOption, GameHistoryModuleResult>
 }

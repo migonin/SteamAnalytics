@@ -10,6 +10,6 @@ import Foundation
 import Core
 
 public protocol GamesServicing {
-    func getUserGames(_ user: User, completionHandler: @escaping ServiceCompletion)
+    func getUserGames(_ user: User, lastPlayed: Bool, completionHandler: @escaping ServiceCompletion)
     func getGamesStats(_ game: Game, of user: User, completionHandler: @escaping ServiceCompletion)
 }

@@ -30,7 +30,7 @@ public class MessageCell: UITableViewCell {
         titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
         titleLabel.textColor = UIColor.systemGray
         titleLabel.numberOfLines = 0
-        titleLabel.textAlignment = .center
+        titleLabel.textAlignment = .left
         
         addSubview(titleLabel)
 

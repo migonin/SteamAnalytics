@@ -67,15 +67,15 @@ class CoordinatorFactory: CoordinatorFactoring {
             return (AnyCoordinatable(coordinator), navigator)
     }
 
-    func makeGameCoordinator(navigator: Navigating) ->
-        CoordinatableFactoryResult<GameCoordinatorStartOption, EmptyOption> {
+    func makeGamesCoordinator(navigator: Navigating) ->
+        CoordinatableFactoryResult<GamesCoordinatorStartOption, EmptyOption> {
 
             let dependencies = GameScenesDependencies(gameService: Services.gamesService,
                                                       gameStorage: Storages.gamesStorage)
 
             let modulesFactory = GameModulesFactory(dependencies: dependencies)
 
-            let coordinator = GameCoordinator(dependencies: dependencies,
+            let coordinator = GamesCoordinator(dependencies: dependencies,
                                               modulesFactory: modulesFactory,
                                               coordinatorsFactory: self,
                                               navigator: navigator)

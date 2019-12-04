@@ -39,5 +39,13 @@ open class NavigationCoordinator: BaseCoordinator, NavigatorDelegate {
 
     public func viewControllerPoped() {
         modulesInStack -= 1
+
+        if isModulesStackEmpty {
+            allModulesPopped()
+        }
+    }
+
+    open func allModulesPopped() {
+        
     }
 }

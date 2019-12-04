@@ -20,7 +20,7 @@ class LoginPresenter: Coordinatable, LoginViewOutput, LoginInteractorOutput {
     var urlDescriber: WebViewLoginURLDescribing!
     var webViewSignInPath: String!
 
-    let fakeUserID = "76561198324029511"
+    let fakeUserID = "76561198116504031"
 
     // MARK: Local enviroment
     var state = LoginPresenterState()

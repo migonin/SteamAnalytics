@@ -15,7 +15,4 @@ public protocol UserModulesFactoring {
 
     func makeUserFriendsScreen() ->
         CoordinatableFactoryResult<UserFriendsModuleStartOption, UserFriendsModuleResult>
-
-    func makeUserGamesScreen() ->
-        CoordinatableFactoryResult<UserGamesModuleStartOption, UserGamesModuleResult>
 }

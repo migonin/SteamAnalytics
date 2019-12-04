@@ -19,7 +19,7 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
 
     // MARK: GamesStorageInput
 
-    public func createOrUpdateOwnGames(_ games: [Game], for user: User) {
+    public func createOrUpdateOwnGames(_ games: [Game], lastPlayed: Bool, for user: User) {
         dataStack.perform(asynchronous: { (transaction) -> Void in
             let gamesOwner: CSGameOwner
 
@@ -30,7 +30,27 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
                 gamesOwner.id.value = user.id
             }
 
-            gamesOwner.games.value = try transaction.importUniqueObjects(Into<CSGame>(), sourceArray: games)
+            var csGames: [CSGame] = []
+
+            for game in games {
+                guard let csGame = try transaction.importUniqueObject(Into<CSGame>(), source: game) else { continue }
+                csGames.append(csGame)
+
+                // Delete previous playtimes first
+                let oldPlaytimes = csGame.playtimes.filter({$0.owner.value?.id.value == user.id})
+                transaction.delete(oldPlaytimes)
+
+                if let playTime = try transaction.importObject(Into<CSPlaytime>(), source: game) {
+                    playTime.owner.value = gamesOwner
+                    playTime.game.value = csGame
+                }
+            }
+
+            if lastPlayed {
+                gamesOwner.lastPlayedGames.value = csGames
+            } else {
+                gamesOwner.games.value = csGames
+            }
         }, completion: { _ in })
     }
 
@@ -93,8 +113,14 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
         return dataStack.monitorObject(game)
     }
 
-    public func getUserGames(_ user: User) -> [Game] {
-        return gamesOwnerObject(for: user).games.value.map({$0.toGame()})
+    public func getUserGames(_ user: User, lastPlayed: Bool) -> [Game] {
+        let owner = gamesOwnerObject(for: user)
+
+        if lastPlayed {
+            return owner.lastPlayedGames.value.map({$0.toGame(owner: owner)})
+        } else {
+            return owner.games.value.map({$0.toGame(owner: owner)})
+        }
     }
 
     public func getGameStats(_ game: Game, user: User) -> [(Stat, [StatValue])] {

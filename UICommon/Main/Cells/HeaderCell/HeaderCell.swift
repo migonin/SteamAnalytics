@@ -49,17 +49,13 @@ public class HeaderCell: UITableViewCell {
             make.trailing.equalTo(snp.trailingMargin)
         }
 
-        imgView.contentMode = .scaleAspectFill
+        imgView.contentMode = .scaleAspectFit
+        stackView.addArrangedSubview(imgView)
 
         imgView.snp.makeConstraints { make in
-            make.height.width.equalTo(imgViewSize)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(imgViewSize)
         }
-
-        imgView.layer.borderColor = UIColor(white: 1.0, alpha: 0.1).cgColor
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.masksToBounds = true
-
-        stackView.addArrangedSubview(imgView)
 
         titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
         titleLabel.numberOfLines = 0
@@ -71,7 +67,7 @@ public class HeaderCell: UITableViewCell {
         stackView.addArrangedSubview(subtitleLabel)
 
         subsubtitleLabel.textColor = UIColor.systemGray
-        subsubtitleLabel.font = UIFont.preferredFont(forTextStyle: .caption2)
+        subsubtitleLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
         subsubtitleLabel.numberOfLines = 0
         stackView.addArrangedSubview(subsubtitleLabel)
     }
@@ -88,6 +84,8 @@ public class HeaderCell: UITableViewCell {
             imgView.kf.setImage(with: URL(string: model.imgUrl))
         }
 
-
+        if model.alignment != .center {
+            stackView.alignment = model.alignment
+        }
     }
 }

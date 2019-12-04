@@ -14,7 +14,7 @@ public protocol GamesStorageOutput {
     func monitorGames(of user: User) -> ObjectMonitor<CSGameOwner>
     func monitorGame(_ game: Game) -> ObjectMonitor<CSGame>
 
-    func getUserGames(_ user: User) -> [Game]
+    func getUserGames(_ user: User, lastPlayed: Bool) -> [Game]
     func getGameSchema(_ game: Game) -> ([Stat], [Achievement])
     func getGameStats(_ game: Game, user: User) -> [(Stat, [StatValue])]
     func getLastGameStats(_ game: Game, user: User) -> [(Stat, StatValue)]

@@ -9,5 +9,6 @@
 import Core
 
 public enum UserGamesModuleStartOption {
-    case user(User)
+    case allGames(of: User)
+    case lastPlayedGames(of: User)
 }

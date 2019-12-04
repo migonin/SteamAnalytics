@@ -10,56 +10,67 @@ import UIKit
 import UICommon
 
 class GraphCellsViewController: UITableViewController {
+    var savedTransform = CGAffineTransform.identity
 
-    let dataSource: [GraphCellModel] = [
-        GraphCellModel(title: "Первый показатель", values: [
+    func generateRandomDataSet() -> [(Date, Int)] {
+        var dataSet: [(Date, Int)] = []
 
-            (Date().addingTimeInterval(-170), 40),
-            (Date().addingTimeInterval(-160), 10),
-            (Date().addingTimeInterval(-150), 80),
-            (Date().addingTimeInterval(-140), 20),
-            (Date().addingTimeInterval(-130), 10),
-            (Date().addingTimeInterval(-120), 50),
-            (Date().addingTimeInterval(-110), 100),
-            (Date().addingTimeInterval(-100), 10),
-            (Date().addingTimeInterval(-90), 40),
-            (Date().addingTimeInterval(-80), 10),
-            (Date().addingTimeInterval(-70), 80),
-            (Date().addingTimeInterval(-60), 20),
-            (Date().addingTimeInterval(-50), 10),
-            (Date().addingTimeInterval(-40), 50),
-            (Date().addingTimeInterval(-30), 100),
-            (Date().addingTimeInterval(-20), 10),
-            (Date().addingTimeInterval(-10), 0),
-            (Date(), 100)
-        ]),
+        for i in (0..<20).reversed() {
+            dataSet.append(((Date().addingTimeInterval(TimeInterval(-i * 3600))), Int.random(in: 0..<100)))
+        }
 
-        GraphCellModel(title: "Второй показатель", values: [
+        return dataSet
+    }
 
-            (Date().addingTimeInterval(-170), 40),
-            (Date().addingTimeInterval(-160), 10),
-            (Date().addingTimeInterval(-150), 80),
-            (Date().addingTimeInterval(-140), 20),
-            (Date().addingTimeInterval(-130), 10),
-            (Date().addingTimeInterval(-120), 50),
-            (Date().addingTimeInterval(-110), 100),
-            (Date().addingTimeInterval(-100), 10),
-            (Date().addingTimeInterval(-90), 40),
-            (Date().addingTimeInterval(-80), 10),
-            (Date().addingTimeInterval(-70), 80),
-            (Date().addingTimeInterval(-60), 20),
-            (Date().addingTimeInterval(-50), 10),
-            (Date().addingTimeInterval(-40), 50),
-            (Date().addingTimeInterval(-30), 100),
-            (Date().addingTimeInterval(-20), 10),
-            (Date().addingTimeInterval(-10), 0),
-            (Date(), 100)
-        ])
-    ]
+    var dataSource: [GraphCellModel]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+        dataSource = [
+            GraphCellModel(title: "Первый показатель",
+                           id: "1",
+                           values: generateRandomDataSet(),
+                           initialTransform: CGAffineTransform.identity,
+                           transformHandler: transformHandler),
+
+            GraphCellModel(title: "Второй показатель",
+                           id: "2",
+                           values: generateRandomDataSet(),
+                           initialTransform: CGAffineTransform.identity,
+                           transformHandler: transformHandler),
+
+            GraphCellModel(title: "Третий показатель",
+                           id: "3",
+                           values: generateRandomDataSet(),
+                           initialTransform: CGAffineTransform.identity,
+                           transformHandler: transformHandler),
+
+            GraphCellModel(title: "Четвертый показатель",
+                           id: "4",
+                           values: generateRandomDataSet(),
+                           initialTransform: CGAffineTransform.identity,
+                           transformHandler: transformHandler),
+
+            GraphCellModel(title: "Пятый показатель",
+                           id: "5",
+                           values: generateRandomDataSet(),
+                           initialTransform: CGAffineTransform.identity,
+                           transformHandler: transformHandler),
+
+            GraphCellModel(title: "Шестой показатель",
+                           id: "6",
+                           values: generateRandomDataSet(),
+                           initialTransform: CGAffineTransform.identity,
+                           transformHandler: transformHandler),
+
+            GraphCellModel(title: "Седьмой показатель",
+                           id: "7",
+                           values: generateRandomDataSet(),
+                           initialTransform: CGAffineTransform.identity,
+                           transformHandler: transformHandler),
+        ]
 
         title = "GraphCells"
         tableView.registerClassCell(GraphCell.self)
@@ -71,9 +82,22 @@ class GraphCellsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: GraphCell.self)
-        cell.configure(with: dataSource[indexPath.row])
+        var model = dataSource[indexPath.row]
+        model.initialTransform = savedTransform
+
+        cell.configure(with: model)
 
         return cell
+    }
+
+    func transformHandler(id: String, transform: CGAffineTransform) {
+        savedTransform = transform
+
+        for cell in tableView.visibleCells {
+            if let graphCell = cell as? GraphCell, graphCell.id != id {
+                graphCell.updateTransform(transform)
+            }
+        }
     }
 }
 

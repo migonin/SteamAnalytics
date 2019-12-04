@@ -11,43 +11,18 @@ import SnapKit
 import Kingfisher
 import Charts
 
-public extension Notification.Name {
-    static let didPan = Notification.Name("didPan")
-    static let didScale = Notification.Name("didZoom")
-}
-
 public class GraphCell: UITableViewCell, ChartViewDelegate {
     let titleLabel = UILabel()
     let chartView = LineChartView()
 
-    let xPanKey = "xPanKey"
-    let xScaleKey = "xScaleKey"
+    public var id: String!
+    var transformHandler: ((String, CGAffineTransform) -> Void)?
 
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         commonInit()
-
-        NotificationCenter.default.addObserver(self, selector: #selector(didPan(_:)), name: .didPan, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didScale(_:)), name: .didScale, object: nil)
     }
-
-    @objc func didPan(_ notification: Notification) {
-        if let notificationCell = notification.object as? GraphCell,
-            notificationCell !== self,
-            let dx = notification.userInfo?[xPanKey] as? Double {
-            chartView.moveViewToX(dx)
-        }
-    }
-
-    @objc func didScale(_ notification: Notification) {
-        if let notificationCell = notification.object as? GraphCell,
-            notificationCell !== self,
-            let scale = notification.userInfo?[xScaleKey] as? CGFloat{
-
-        }
-    }
-
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -76,14 +51,17 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
             make.leading.equalTo(snp.leadingMargin)
             make.trailing.equalTo(snp.trailingMargin)
             make.height.equalTo(200)
-            make.bottom.equalToSuperview().inset(20)
+            make.bottom.equalToSuperview().inset(5)
         }
 
         let formatter = DateFormatter()
 //        formatter.dateStyle = .short
 //        formatter.timeStyle = .none
-        formatter.locale = Locale.current
-        formatter.dateFormat = "d MMM HH:mm"
+        if let preferredLanguage = Locale.preferredLanguages.first {
+            formatter.locale = Locale(identifier: preferredLanguage)
+        }
+
+        formatter.dateFormat = "d MMMM HH:mm"
 
         let xValuesNumberFormatter = ChartXAxisFormatter(dateFormatter: formatter)
 
@@ -95,6 +73,22 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
         xAxis.avoidFirstLastClippingEnabled = true
         xAxis.valueFormatter = xValuesNumberFormatter
 
+        xAxis.gridColor = UIColor.systemGray.withAlphaComponent(0.25)
+        xAxis.axisLineColor = UIColor.systemGray
+//        xAxis.axisLineWidth = 0
+        xAxis.labelTextColor = UIColor.systemGray
+
+        let leftAxis = chartView.leftAxis
+        leftAxis.labelTextColor = UIColor.systemGray
+        leftAxis.axisLineColor = UIColor.systemGray
+        leftAxis.gridColor = UIColor.systemGray.withAlphaComponent(0.25)
+        leftAxis.gridLineWidth = 0.5
+
+        let rightAxis = chartView.rightAxis
+        rightAxis.labelTextColor = UIColor.systemGray
+        rightAxis.axisLineColor = UIColor.systemGray
+        rightAxis.gridColor = UIColor.clear
+
         chartView.pinchZoomEnabled = true
         chartView.scaleYEnabled = false
         chartView.delegate = self
@@ -102,6 +96,7 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
 
     public func configure(with model: GraphCellModel) {
         titleLabel.text = model.title
+        id = model.id
 
         let dataEntries = model.values.map { (date: Date, value: Int) -> ChartDataEntry in
             return ChartDataEntry(x: date.timeIntervalSinceReferenceDate, y: Double(value))
@@ -109,53 +104,36 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
 
         let dataSet = LineChartDataSet(entries: dataEntries, label: nil)
 
-        dataSet.colors = [.blue]
+        dataSet.colors = [UIColor.systemGray]
         dataSet.mode = .cubicBezier
-        dataSet.setCircleColor(.black)
+        dataSet.setCircleColor(UIColor.red)
         dataSet.lineWidth = 1
         dataSet.circleRadius = 3
         dataSet.drawCircleHoleEnabled = false
+
         dataSet.valueFont = .systemFont(ofSize: 8)
+        dataSet.valueTextColor = UIColor.systemGray
+
         dataSet.drawVerticalHighlightIndicatorEnabled = false
         dataSet.drawHorizontalHighlightIndicatorEnabled = false
 
         chartView.data = LineChartData(dataSet: dataSet)
+        chartView.legend.form = .none
+
+        transformHandler = model.transformHandler
+        chartView.viewPortHandler.refresh(newMatrix: model.initialTransform, chart: chartView, invalidate: false)
+    }
+
+    public func updateTransform(_ transform: CGAffineTransform) {
+        chartView.viewPortHandler.refresh(newMatrix: transform, chart: chartView, invalidate: false)
     }
 
     public func chartTranslated(_ chartView: ChartViewBase, dX: CGFloat, dY: CGFloat) {
-        var notification = Notification(name: .didPan)
-        notification.userInfo = [xPanKey: Double(dX)]
-        notification.object = self
-
-//        NotificationCenter.default.post(notification)
-
-//        print("Chart translated \(chartView) \(dY)")
+        transformHandler?(id, chartView.viewPortHandler.touchMatrix)
     }
 
     public func chartScaled(_ chartView: ChartViewBase, scaleX: CGFloat, scaleY: CGFloat) {
-        var notification = Notification(name: .didScale)
-        notification.userInfo = [xScaleKey: scaleX]
-        notification.object = self
-
-//        NotificationCenter.default.post(notification)
-    }
-}
-
-class ChartXAxisFormatter: NSObject {
-    fileprivate var dateFormatter: DateFormatter!
-
-    convenience init(dateFormatter: DateFormatter) {
-        self.init()
-        self.dateFormatter = dateFormatter
-    }
-}
-
-
-extension ChartXAxisFormatter: IAxisValueFormatter {
-
-    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        let date = Date(timeIntervalSinceReferenceDate: value)
-        return dateFormatter.string(from: date)
+        transformHandler?(id, chartView.viewPortHandler.touchMatrix)
     }
 
 }

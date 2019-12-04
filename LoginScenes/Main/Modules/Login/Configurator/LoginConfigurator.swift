@@ -21,7 +21,7 @@ final class LoginModuleConfigurator {
         presenter.errorDescriber = ErrorDescriber()
         presenter.urlDescriber = WebViewLoginURLDescriber()
 
-        presenter.webViewSignInPath = "https://steamcommunity.com/openid/login?openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.realm=http%3A%2F%2Flogin%2F&openid.return_to=http%3A%2F%2Flogin%2Floggedin"
+        presenter.webViewSignInPath = "https://steamcommunity.com/openid/login?openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.realm=http%3A%2F%2Fsteamanalytics%2F&openid.return_to=http%3A%2F%2Fsteamanalytics%2Floggedin"
 
         let interactor = LoginInteractor()
         interactor.output = presenter

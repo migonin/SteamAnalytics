@@ -16,19 +16,24 @@ struct GameModelBuilder: GameModelBuilding {
     func buildModels(settings: GameModelBuilderSettings) -> [GameCellModel] {
         var models: [GameCellModel] = []
 
+        let totalPlaytimeString = "Всего " + formatPlaytime(settings.game.totalPlaytime)
+        let twoWeeksPlaytimeString = settings.game.playtimeTwoWeeks != 0 ? "За 2 недели " + formatPlaytime(settings.game.playtimeTwoWeeks) : nil
+
         models.append(.header(
             HeaderCellModel(
                 title: settings.game.name,
-                subtitle: nil,
+                subtitle: totalPlaytimeString,
+                subsubtitle: twoWeeksPlaytimeString,
                 imgUrl: settings.game.logo,
-                roundedImg: false
+                roundedImg: false,
+                alignment: .leading
             )
         ))
 
         if settings.gameHasNoStats {
             models.append(.error(
                 MessageCellModel(
-                    title: "У игры нет доступных стат. Посмотрите другие игры, например, CS: GO."
+                    title: "У игры нет доступных стат. Посмотрите другие игры, например, CS: GO, Team Fortress 2, Portal 2, по ним есть много всего."
                 )
             ))
         } else {
@@ -45,5 +50,16 @@ struct GameModelBuilder: GameModelBuilding {
         }
 
         return models
+    }
+
+    private func formatPlaytime(_ playtime: Int) -> String {
+        if playtime > 60 {
+            let hours = playtime / 60
+            let minutes = playtime - hours * 60
+
+            return "\(hours) ч \(minutes) мин"
+        } else {
+            return "\(playtime) мин"
+        }
     }
 }

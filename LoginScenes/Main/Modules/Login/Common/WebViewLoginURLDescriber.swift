@@ -9,7 +9,7 @@
 import Foundation
 
 class WebViewLoginURLDescriber: WebViewLoginURLDescribing {
-    var loggedInHost = "login"
+    var loggedInHost = "steamanalytics"
     var loggedInPath = "/loggedin"
     var idParameterName = "openid.identity"
     var idPrefix = "https://steamcommunity.com/openid/id/"

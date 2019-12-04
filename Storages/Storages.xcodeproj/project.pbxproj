@@ -34,6 +34,8 @@
 		BC8C1B272386A7BB000A80BA /* UsersStorageInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B262386A7BB000A80BA /* UsersStorageInput.swift */; };
 		BC8C1B292386A7CF000A80BA /* UsersStorageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B282386A7CF000A80BA /* UsersStorageOutput.swift */; };
 		BC8C1B2B2386A7E4000A80BA /* UsersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8C1B2A2386A7E4000A80BA /* UsersStorage.swift */; };
+		BC9CF80423975DD000CCD732 /* CSPlaytime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF80323975DD000CCD732 /* CSPlaytime.swift */; };
+		BC9CF80623975FA100CCD732 /* CSPlaytine+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF80523975FA100CCD732 /* CSPlaytine+Import.swift */; };
 		BCC0232523853DB200D59337 /* DataStackTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC0232423853DB200D59337 /* DataStackTestable.swift */; };
 		BCD22C3C238D5FE00020885E /* CSStat+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C3B238D5FE00020885E /* CSStat+Export.swift */; };
 		BCE32221238AF83200792F50 /* CSGame+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE32220238AF83200792F50 /* CSGame+Import.swift */; };
@@ -102,6 +104,8 @@
 		BC8C1B262386A7BB000A80BA /* UsersStorageInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStorageInput.swift; sourceTree = "<group>"; };
 		BC8C1B282386A7CF000A80BA /* UsersStorageOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStorageOutput.swift; sourceTree = "<group>"; };
 		BC8C1B2A2386A7E4000A80BA /* UsersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStorage.swift; sourceTree = "<group>"; };
+		BC9CF80323975DD000CCD732 /* CSPlaytime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSPlaytime.swift; sourceTree = "<group>"; };
+		BC9CF80523975FA100CCD732 /* CSPlaytine+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSPlaytine+Import.swift"; sourceTree = "<group>"; };
 		BCC0232423853DB200D59337 /* DataStackTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStackTestable.swift; sourceTree = "<group>"; };
 		BCD22C3B238D5FE00020885E /* CSStat+Export.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CSStat+Export.swift"; sourceTree = "<group>"; };
 		BCE32220238AF83200792F50 /* CSGame+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSGame+Import.swift"; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 				BC8BF36A238900B000B754AF /* CSGame.swift */,
 				BCE32220238AF83200792F50 /* CSGame+Import.swift */,
 				BCE32222238AF8BF00792F50 /* CSGame+Export.swift */,
+				BC9CF80323975DD000CCD732 /* CSPlaytime.swift */,
+				BC9CF80523975FA100CCD732 /* CSPlaytine+Import.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -476,8 +482,10 @@
 				BC8BF379238939D600B754AF /* GamesStorageOutput.swift in Sources */,
 				BC45C64D2386D5C60096EBD2 /* CSUser+Import.swift in Sources */,
 				BC3E79E12385215B0052AF7A /* AuthStorage.swift in Sources */,
+				BC9CF80623975FA100CCD732 /* CSPlaytine+Import.swift in Sources */,
 				BC8BF3732389069F00B754AF /* CSAchievementValue.swift in Sources */,
 				BC45C64F2386D5E80096EBD2 /* CSUser+Export.swift in Sources */,
+				BC9CF80423975DD000CCD732 /* CSPlaytime.swift in Sources */,
 				BC8BF36D2389013100B754AF /* CSGameOwner.swift in Sources */,
 				BC8C1B2B2386A7E4000A80BA /* UsersStorage.swift in Sources */,
 				BC8C1B2523869A02000A80BA /* CSUser.swift in Sources */,

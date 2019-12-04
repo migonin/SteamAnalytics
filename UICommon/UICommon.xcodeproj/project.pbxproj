@@ -24,11 +24,12 @@
 		BC85FCF023916511002138B3 /* ComparsionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEE23916511002138B3 /* ComparsionCell.swift */; };
 		BC85FCF123916511002138B3 /* ComparsionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEF23916511002138B3 /* ComparsionCellModel.swift */; };
 		BC85FCF523916BF9002138B3 /* TwoUserComparsionCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF423916BF8002138B3 /* TwoUserComparsionCellsViewController.swift */; };
-		BC85FCF9239171D8002138B3 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF7239171D7002138B3 /* GraphCell.swift */; };
-		BC85FCFA239171D8002138B3 /* GraphCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF8239171D7002138B3 /* GraphCellModel.swift */; };
 		BC85FCFC239173D8002138B3 /* GraphCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */; };
 		BC99B3DB2390E89A00CCAEA8 /* HeaderCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */; };
 		BC99B3DC2390E89A00CCAEA8 /* ListItemCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */; };
+		BC9CF8082397ABCB00CCD732 /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF8072397ABCB00CCD732 /* ChartXAxisFormatter.swift */; };
+		BC9CF8092397AC3B00CCD732 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF7239171D7002138B3 /* GraphCell.swift */; };
+		BC9CF80A2397AC5300CCD732 /* GraphCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF8239171D7002138B3 /* GraphCellModel.swift */; };
 		BCA361EE23951F0500296C17 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA361EC23951F0500296C17 /* MessageCell.swift */; };
 		BCA361EF23951F0500296C17 /* MessageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA361ED23951F0500296C17 /* MessageCellModel.swift */; };
 		BCC302F423960A3B00914EB1 /* BaseViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC302F323960A3B00914EB1 /* BaseViewInput.swift */; };
@@ -48,7 +49,7 @@
 		BCD22C6E238E60370020885E /* UserCoordinatorStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C6D238E60370020885E /* UserCoordinatorStartOption.swift */; };
 		BCD22C70238E607B0020885E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD22C6F238E607B0020885E /* Core.framework */; };
 		BCD22C71238E607B0020885E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCD22C6F238E607B0020885E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BCD22C75238E609F0020885E /* GameCoordinatorStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C74238E609F0020885E /* GameCoordinatorStartOption.swift */; };
+		BCD22C75238E609F0020885E /* GamesCoordinatorStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C74238E609F0020885E /* GamesCoordinatorStartOption.swift */; };
 		BCD22C77238E650C0020885E /* StubCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C76238E650C0020885E /* StubCoordinatorFactory.swift */; };
 		BCD22C7A238E65630020885E /* StubCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C79238E65630020885E /* StubCoordinator.swift */; };
 		BCD22C7C238E6E530020885E /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD22C7B238E6E530020885E /* NavigationCoordinator.swift */; };
@@ -120,6 +121,7 @@
 		BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCellsViewController.swift; sourceTree = "<group>"; };
 		BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCellsViewController.swift; sourceTree = "<group>"; };
 		BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCellsViewController.swift; sourceTree = "<group>"; };
+		BC9CF8072397ABCB00CCD732 /* ChartXAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisFormatter.swift; sourceTree = "<group>"; };
 		BCA361EC23951F0500296C17 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		BCA361ED23951F0500296C17 /* MessageCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellModel.swift; sourceTree = "<group>"; };
 		BCC302F323960A3B00914EB1 /* BaseViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewInput.swift; sourceTree = "<group>"; };
@@ -140,7 +142,7 @@
 		BCD22C6A238E5F980020885E /* CoordinatorFactoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoring.swift; sourceTree = "<group>"; };
 		BCD22C6D238E60370020885E /* UserCoordinatorStartOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinatorStartOption.swift; sourceTree = "<group>"; };
 		BCD22C6F238E607B0020885E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCD22C74238E609F0020885E /* GameCoordinatorStartOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinatorStartOption.swift; sourceTree = "<group>"; };
+		BCD22C74238E609F0020885E /* GamesCoordinatorStartOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCoordinatorStartOption.swift; sourceTree = "<group>"; };
 		BCD22C76238E650C0020885E /* StubCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubCoordinatorFactory.swift; sourceTree = "<group>"; };
 		BCD22C79238E65630020885E /* StubCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubCoordinator.swift; sourceTree = "<group>"; };
 		BCD22C7B238E6E530020885E /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				BC85FCF7239171D7002138B3 /* GraphCell.swift */,
+				BC9CF8072397ABCB00CCD732 /* ChartXAxisFormatter.swift */,
 				BC85FCF8239171D7002138B3 /* GraphCellModel.swift */,
 			);
 			path = GraphCell;
@@ -354,7 +357,7 @@
 		BCD22C73238E608C0020885E /* GameCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				BCD22C74238E609F0020885E /* GameCoordinatorStartOption.swift */,
+				BCD22C74238E609F0020885E /* GamesCoordinatorStartOption.swift */,
 			);
 			path = GameCoordinator;
 			sourceTree = "<group>";
@@ -609,9 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC85FCF9239171D8002138B3 /* GraphCell.swift in Sources */,
 				BC1117102390DCF500422EEA /* RootViewController.swift in Sources */,
-				BC85FCFA239171D8002138B3 /* GraphCellModel.swift in Sources */,
 				BC85FCF523916BF9002138B3 /* TwoUserComparsionCellsViewController.swift in Sources */,
 				BC99B3DB2390E89A00CCAEA8 /* HeaderCellsViewController.swift in Sources */,
 				BC85FCFC239173D8002138B3 /* GraphCellsViewController.swift in Sources */,
@@ -635,8 +636,10 @@
 				BC85FCE6239148B2002138B3 /* TwoUsersCell.swift in Sources */,
 				BCD22C7C238E6E530020885E /* NavigationCoordinator.swift in Sources */,
 				BC1117002390DB7A00422EEA /* ListItemCell.swift in Sources */,
-				BCD22C75238E609F0020885E /* GameCoordinatorStartOption.swift in Sources */,
+				BCD22C75238E609F0020885E /* GamesCoordinatorStartOption.swift in Sources */,
 				BCD22C61238E37920020885E /* NavigatorDegelate.swift in Sources */,
+				BC9CF8082397ABCB00CCD732 /* ChartXAxisFormatter.swift in Sources */,
+				BC9CF80A2397AC5300CCD732 /* GraphCellModel.swift in Sources */,
 				BCD22C67238E38810020885E /* Navigator.swift in Sources */,
 				BC85FCF023916511002138B3 /* ComparsionCell.swift in Sources */,
 				BCD22C77238E650C0020885E /* StubCoordinatorFactory.swift in Sources */,
@@ -651,6 +654,7 @@
 				BC5B4BC0239288BB00896A98 /* UserCoordinatorResult.swift in Sources */,
 				BC5B4BE82392F1CD00896A98 /* LoginCoordinatorResult.swift in Sources */,
 				BCCCCA2F2392F7F900772A89 /* UIViewControllerExtensions.swift in Sources */,
+				BC9CF8092397AC3B00CCD732 /* GraphCell.swift in Sources */,
 				BC1117022390DB9300422EEA /* HeaderCell.swift in Sources */,
 				BCD22C80238E78F70020885E /* ListItemCellModel.swift in Sources */,
 				BCD22C63238E37920020885E /* Navigable.swift in Sources */,

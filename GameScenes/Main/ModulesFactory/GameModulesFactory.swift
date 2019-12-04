@@ -21,6 +21,11 @@ public struct GameModulesFactory: GameModulesFactoring {
             return GameModuleConfigurator(dependencies: dependencies).configure()
     }
 
+    public func makeUserGamesScreen() ->
+        CoordinatableFactoryResult<UserGamesModuleStartOption, UserGamesModuleResult> {
+            return UserGamesModuleConfigurator(dependencies: dependencies).configure()
+    }
+
 //    func makeGameHistoryScreen() ->
 //        CoordinatableFactoryResult<GameHistoryModuleStartOption, GameHistoryModuleResult>
 }

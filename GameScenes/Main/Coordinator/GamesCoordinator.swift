@@ -1,5 +1,5 @@
 //
-//  GameCoordinator.swift
+//  GamesCoordinator.swift
 //  GameScenes
 //
 //  Created by Михаил Игонин on 01.12.2019.
@@ -10,17 +10,16 @@ import Foundation
 import UICommon
 import Core
 
-public final class GameCoordinator: NavigationCoordinator, Coordinatable {
+public final class GamesCoordinator: NavigationCoordinator, Coordinatable {
     public var output: ((EmptyOption) -> Void)?
 
-    public typealias InputType = GameCoordinatorStartOption
+    public typealias InputType = GamesCoordinatorStartOption
     public typealias OutputType = EmptyOption
 
     let dependencies: GameScenesDependencies
     let modulesFactory: GameModulesFactoring
     let coordinatorsFactory: CoordinatorFactoring
 
-    private var game: Game!
     private var user: User!
 
     public init(dependencies: GameScenesDependencies,
@@ -34,15 +33,46 @@ public final class GameCoordinator: NavigationCoordinator, Coordinatable {
         super.init(navigator: navigator)
     }
 
-    public func start(with option: GameCoordinatorStartOption, animated: Bool) {
+    public func start(with option: GamesCoordinatorStartOption, animated: Bool) {
         super.start()
 
-        if case let GameCoordinatorStartOption.game(game, of: user) = option {
-            self.game = game
+        switch option {
+        case .allGames(let user):
             self.user = user
+            goToGames(of: user, lastPlayed: false, animated: true)
+        case .lastPlayedGames(let user):
+            self.user = user
+            goToGames(of: user, lastPlayed: true, animated: true)
+        }
+    }
+
+    override public func allModulesPopped() {
+        output?(.none)
+    }
+
+    private func goToGames(of user: User, lastPlayed: Bool, animated: Bool) {
+        let (module, presentable) = modulesFactory.makeUserGamesScreen()
+
+        module.output = { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+            case .gameTapped(let game):
+                self.goToGame(game, animated: true)
+            case .back:
+                if !lastPlayed {
+                    self.popModule(animated: true)
+                }
+            }
         }
 
-        goToGame(game, animated: animated)
+        if lastPlayed {
+            module.start(with: .lastPlayedGames(of: user), animated: true)
+        } else {
+            module.start(with: .allGames(of: user), animated: true)
+        }
+
+        push(presentable, animated: true)
     }
 
     private func goToGame(_ game: Game, animated: Bool) {

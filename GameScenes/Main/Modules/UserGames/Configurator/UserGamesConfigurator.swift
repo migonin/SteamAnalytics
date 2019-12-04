@@ -11,7 +11,7 @@ import UICommon
 import Core
 
 final class UserGamesModuleConfigurator {
-    let dependencies: UserScenesDependencies
+    let dependencies: GameScenesDependencies
     
     func configure() -> CoordinatableFactoryResult<UserGamesModuleStartOption, UserGamesModuleResult> {
         let viewController = UserGamesViewController()
@@ -34,7 +34,7 @@ final class UserGamesModuleConfigurator {
         return (AnyCoordinatable(presenter), viewController)
     }
 
-    internal init(dependencies: UserScenesDependencies) {
+    internal init(dependencies: GameScenesDependencies) {
         self.dependencies = dependencies
     }
 }

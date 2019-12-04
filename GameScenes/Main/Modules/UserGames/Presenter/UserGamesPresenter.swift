@@ -28,8 +28,11 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
     // MARK: Coordinatable
     func start(with option: UserGamesModuleStartOption, animated: Bool) {
         switch option {
-        case .user(let user):
+        case .allGames(let user):
             state.user = user
+        case .lastPlayedGames(let user):
+            state.user = user
+            state.lastPlayedGamed = true
         }
 
         interactor.prepareDataSource(user: state.user)
@@ -41,8 +44,13 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
         state.isViewWillPresented = false
         state.isViewPresented = false
 
-        view.setTitle("Игры \(state.user.name)")
-        interactor.loadUserGames()
+        if state.lastPlayedGamed {
+            view.setTitle("Последние игры \(state.user.name)")
+        } else {
+            view.setTitle("Игры \(state.user.name)")
+        }
+        
+        interactor.loadUserGames(lastPlayed: state.lastPlayedGamed)
         loadModels()
     }
 
@@ -74,14 +82,14 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
     }
 
     func didTapRetryButton() {
-        interactor.loadUserGames()
+        interactor.loadUserGames(lastPlayed: state.lastPlayedGamed)
     }
 
     // MARK: - UserGamesInteractorOutput
     func didStartUserGamesLoading() {
         state.requestInProgress = true
 
-        if interactor.provideUserGames().isEmpty {
+        if interactor.provideUserGames(lastPlayed: state.lastPlayedGamed).isEmpty {
             view.showSpinner()
         }
     }
@@ -94,7 +102,11 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
             switch errorDescriber.describeError(error) {
             case .message(let message, let okTitle, let retryTitle),
                  .networkError(let message, let okTitle, let retryTitle):
+                if state.lastPlayedGamed {
+                    view.showError(message: message, okButtonTitle: nil, retryButtonTitle: retryTitle)
+                } else {
                     view.showError(message: message, okButtonTitle: okTitle, retryButtonTitle: retryTitle)
+                }
 
             case .wrongResponse:
                 state.infoInaccessibleError = true
@@ -104,7 +116,7 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
     }
 
     func loadModels() {
-        let games = interactor.provideUserGames()
+        let games = interactor.provideUserGames(lastPlayed: state.lastPlayedGamed)
         let settings = UserGamesModelBuilderSettings(games: games,
                                                      requestInProgress: state.requestInProgress,
                                                      infoInaccessibleError: state.infoInaccessibleError)

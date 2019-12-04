@@ -87,26 +87,7 @@ public final class UserCoordinator: NavigationCoordinator, Coordinatable {
     }
 
     private func goToGames(of user: User) {
-        let (module, presentable) = modulesFactory.makeUserGamesScreen()
-
-        module.output = { [weak self] result in
-            guard let self = self else { return }
-
-            switch result {
-            case .gameTapped(let game):
-                self.goToGame(game)
-            case .back:
-                self.popModule(animated: true)
-            }
-
-        }
-
-        module.start(with: .user(user), animated: true)
-        push(presentable, animated: true)
-    }
-
-    private func goToGame(_ game: Game) {
-        let (coordinator, _) = coordinatorsFactory.makeGameCoordinator(navigator: navigator)
+        let (coordinator, _) = coordinatorsFactory.makeGamesCoordinator(navigator: navigator)
 
         addDependency(coordinator)
 
@@ -118,6 +99,6 @@ public final class UserCoordinator: NavigationCoordinator, Coordinatable {
             self.removeDependency(coordinator)
         }
 
-        coordinator.start(with: .game(game, of: user), animated: true)
+        coordinator.start(with: .allGames(of: user), animated: true)
     }
 }
