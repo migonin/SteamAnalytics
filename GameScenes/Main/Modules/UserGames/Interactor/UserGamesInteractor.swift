@@ -20,11 +20,14 @@ final class UserGamesInteractor: UserGamesInteractorInput {
 
     var gameMonitor: ObjectMonitor<CSGameOwner>?
 
+    var lastPlayed: Bool = false
     var user: User!
+    var games: [Game]?
 
     // MARK: - UserGamesInteractorInput
-    func prepareDataSource(user: User) {
+    func prepareDataSource(user: User, lastPlayed: Bool) {
         self.user = user
+        self.lastPlayed = lastPlayed
         gameMonitor = gameStorage.monitorGames(of: user)
     }
 
@@ -36,7 +39,7 @@ final class UserGamesInteractor: UserGamesInteractorInput {
         gameMonitor?.removeObserver(self)
     }
 
-    func loadUserGames(lastPlayed: Bool) {
+    func loadUserGames() {
         output.didStartUserGamesLoading()
 
         gameService.getUserGames(user, lastPlayed: lastPlayed) { [weak self] (result) in
@@ -44,13 +47,18 @@ final class UserGamesInteractor: UserGamesInteractorInput {
         }
     }
 
-    func provideUserGames(lastPlayed: Bool) -> [Game] {
-        return gameStorage.getUserGames(user, lastPlayed: lastPlayed)
+    func provideUserGames() -> [Game] {
+        if games == nil {
+            games = gameStorage.getUserGames(user, lastPlayed: lastPlayed)
+        }
+
+        return games!
     }
 }
 
 extension UserGamesInteractor: ObjectObserver {
     public func objectMonitor(_ monitor: ObjectMonitor<CSGameOwner>, didUpdateObject object: CSGameOwner, changedPersistentKeys: Set<KeyPathString>) {
+        games = gameStorage.getUserGames(user, lastPlayed: lastPlayed)
         output.userChanged()
     }
 }

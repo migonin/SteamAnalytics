@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		BC45C66B23879B8B0096EBD2 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C66A23879B8B0096EBD2 /* Services.framework */; };
 		BC45C66C23879B8B0096EBD2 /* Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C66A23879B8B0096EBD2 /* Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC4646EE2397D4180010881D /* Storages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4646ED2397D4180010881D /* Storages.framework */; };
+		BC4646EF2397D4180010881D /* Storages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC4646ED2397D4180010881D /* Storages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC4646F12397D43E0010881D /* UICommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4646F02397D43E0010881D /* UICommon.framework */; };
+		BC4646F22397D43E0010881D /* UICommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC4646F02397D43E0010881D /* UICommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC604B722384E7EA00FA5588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC604B712384E7EA00FA5588 /* AppDelegate.swift */; };
 		BC604B7B2384E7EA00FA5588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC604B7A2384E7EA00FA5588 /* Assets.xcassets */; };
 		BC604B7E2384E7EA00FA5588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC604B7C2384E7EA00FA5588 /* LaunchScreen.storyboard */; };
@@ -35,10 +39,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BC4646EF2397D4180010881D /* Storages.framework in Embed Frameworks */,
 				BCCCCA3B2392FDC300772A89 /* UserScenes.framework in Embed Frameworks */,
 				BCCCCA382392FDBE00772A89 /* LoginScenes.framework in Embed Frameworks */,
 				BCCCCA3E2392FDC800772A89 /* GameScenes.framework in Embed Frameworks */,
 				BC45C66C23879B8B0096EBD2 /* Services.framework in Embed Frameworks */,
+				BC4646F22397D43E0010881D /* UICommon.framework in Embed Frameworks */,
 				BC8C1B1F2386908B000A80BA /* APIClient.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -51,6 +57,8 @@
 		7DED0B260414F8C014DD4D2C /* Pods_SteamAnalyticsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SteamAnalyticsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC522B637C40D73DBE0E8C6 /* Pods-SteamAnalyticsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SteamAnalyticsApp.release.xcconfig"; path = "Target Support Files/Pods-SteamAnalyticsApp/Pods-SteamAnalyticsApp.release.xcconfig"; sourceTree = "<group>"; };
 		BC45C66A23879B8B0096EBD2 /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4646ED2397D4180010881D /* Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4646F02397D43E0010881D /* UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604B6E2384E7EA00FA5588 /* SteamAnalyticsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteamAnalyticsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604B712384E7EA00FA5588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC604B7A2384E7EA00FA5588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +86,8 @@
 				C3089D65C072E47F245A690A /* Pods_SteamAnalyticsApp.framework in Frameworks */,
 				BCCCCA3D2392FDC800772A89 /* GameScenes.framework in Frameworks */,
 				BCCCCA3A2392FDC300772A89 /* UserScenes.framework in Frameworks */,
+				BC4646F12397D43E0010881D /* UICommon.framework in Frameworks */,
+				BC4646EE2397D4180010881D /* Storages.framework in Frameworks */,
 				BCCCCA372392FDBE00772A89 /* LoginScenes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +98,8 @@
 		0CB67D48871BD23FCAD4B6F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC4646F02397D43E0010881D /* UICommon.framework */,
+				BC4646ED2397D4180010881D /* Storages.framework */,
 				BCCCCA3C2392FDC800772A89 /* GameScenes.framework */,
 				BCCCCA392392FDC300772A89 /* UserScenes.framework */,
 				BCCCCA362392FDBE00772A89 /* LoginScenes.framework */,

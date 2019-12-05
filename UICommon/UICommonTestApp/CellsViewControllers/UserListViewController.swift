@@ -1,5 +1,5 @@
 //
-//  ListItemCellsViewController.swift
+//  UserListViewController.swift
 //  UICommonTestApp
 //
 //  Created by Михаил Игонин on 29.11.2019.
@@ -9,7 +9,7 @@
 import UIKit
 import UICommon
 
-class ListItemCellsViewController: UITableViewController {
+class UserListViewController: UITableViewController {
 
     let dataSource: [ListItemCellModel] = [
         ListItemCellModel(
@@ -21,30 +21,16 @@ class ListItemCellsViewController: UITableViewController {
 
         ListItemCellModel(
             title: "Vasiliy Pupkin",
-            subtitle: "Gamer",
+            subtitle: nil,
             imgUrl: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c0/c0428498c7dee5b9e156e743af2d849a9fa66a90_medium.jpg",
             showDisclosureIndicator: true
         ),
 
         ListItemCellModel(
-            title: "Games",
+            title: "Vasiliy Pupkin",
             subtitle: nil,
-            imgUrl: nil,
+            imgUrl: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c0/c0428498c7dee5b9e156e743af2d849a9fa66a90_medium.jpg",
             showDisclosureIndicator: true
-        ),
-
-        ListItemCellModel(
-            title: "Games",
-            subtitle: "100500",
-            imgUrl: nil,
-            showDisclosureIndicator: true
-        ),
-
-        ListItemCellModel(
-            title: "Some stat",
-            subtitle: "12345",
-            imgUrl: nil,
-            showDisclosureIndicator: false
         )
     ]
 
@@ -52,7 +38,7 @@ class ListItemCellsViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        title = "ListItemCells"
+        title = "Список пользователей"
         tableView.registerClassCell(ListItemCell.self)
     }
 

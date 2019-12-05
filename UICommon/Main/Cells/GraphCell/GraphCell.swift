@@ -16,6 +16,7 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
     let chartView = LineChartView()
 
     public var id: String!
+
     var transformHandler: ((String, CGAffineTransform) -> Void)?
 
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -54,9 +55,12 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
             make.bottom.equalToSuperview().inset(5)
         }
 
+        setupChartView()
+    }
+
+    private func setupChartView() {
+        chartView.legend.form = .none
         let formatter = DateFormatter()
-//        formatter.dateStyle = .short
-//        formatter.timeStyle = .none
         if let preferredLanguage = Locale.preferredLanguages.first {
             formatter.locale = Locale(identifier: preferredLanguage)
         }
@@ -75,7 +79,6 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
 
         xAxis.gridColor = UIColor.systemGray.withAlphaComponent(0.25)
         xAxis.axisLineColor = UIColor.systemGray
-//        xAxis.axisLineWidth = 0
         xAxis.labelTextColor = UIColor.systemGray
 
         let leftAxis = chartView.leftAxis
@@ -92,20 +95,47 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
         chartView.pinchZoomEnabled = true
         chartView.scaleYEnabled = false
         chartView.delegate = self
+
+        chartView.setDragOffsetX(20)
     }
 
     public func configure(with model: GraphCellModel) {
         titleLabel.text = model.title
         id = model.id
 
-        let dataEntries = model.values.map { (date: Date, value: Int) -> ChartDataEntry in
+        let dataSet = prepareDataSet(for: model.values)
+        chartView.data = LineChartData(dataSet: dataSet)
+
+        transformHandler = model.transformHandler
+
+        chartView.scaleXEnabled = model.values.count > 1
+    }
+
+    public func setTransform(_ transform: CGAffineTransform?) {
+        if let transform = transform {
+            chartView.viewPortHandler.refresh(newMatrix: transform, chart: chartView, invalidate: false)
+        } else {
+//            // Workaround
+//            chartView.viewPortHandler.setChartDimens(width: bounds.size.width, height: bounds.size.height)
+//
+//            let xRange = CGFloat(chartView.xRange)
+//            let initialXScale = xRange / (3600 * 24)
+//            var zoomTransform = CGAffineTransform.init(scaleX: initialXScale, y: 1)
+//            zoomTransform.tx = -bounds.size.width * initialXScale
+//
+//            chartView.viewPortHandler.refresh(newMatrix: zoomTransform, chart: chartView, invalidate: false)
+        }
+    }
+
+    private func prepareDataSet(for values: [(Date, Int)]) -> LineChartDataSet {
+        let dataEntries = values.map { (date: Date, value: Int) -> ChartDataEntry in
             return ChartDataEntry(x: date.timeIntervalSinceReferenceDate, y: Double(value))
         }
 
         let dataSet = LineChartDataSet(entries: dataEntries, label: nil)
 
         dataSet.colors = [UIColor.systemGray]
-        dataSet.mode = .cubicBezier
+        dataSet.mode = .linear
         dataSet.setCircleColor(UIColor.red)
         dataSet.lineWidth = 1
         dataSet.circleRadius = 3
@@ -117,11 +147,7 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
         dataSet.drawVerticalHighlightIndicatorEnabled = false
         dataSet.drawHorizontalHighlightIndicatorEnabled = false
 
-        chartView.data = LineChartData(dataSet: dataSet)
-        chartView.legend.form = .none
-
-        transformHandler = model.transformHandler
-        chartView.viewPortHandler.refresh(newMatrix: model.initialTransform, chart: chartView, invalidate: false)
+        return dataSet
     }
 
     public func updateTransform(_ transform: CGAffineTransform) {

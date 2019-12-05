@@ -1,6 +1,6 @@
 //
-//  GameInteractor.swift
-//  GameScenes
+//  GameStatsInteractor.swift
+//  GameStatsScenes
 //
 //  Created by Михаил Игонин on 27.11.2019.
 //  Copyright © 2019 FrozenApps. All rights reserved.
@@ -11,9 +11,9 @@ import Storages
 import Core
 import CoreStore
 
-final class GameInteractor: GameInteractorInput {
+final class GameStatsInteractor: GameStatsInteractorInput {
     // MARK: Dependencies
-    weak var output: GameInteractorOutput!
+    weak var output: GameStatsInteractorOutput!
 
     var gamesService: GamesServicing!
     var gamesStorage: GamesStorageOutput!
@@ -23,9 +23,7 @@ final class GameInteractor: GameInteractorInput {
     var game: Game!
     var user: User!
 
-    var stats: [(Stat, StatValue)]? = nil
-
-    // MARK: - GameInteractorInput
+    // MARK: - GameStatsInteractorInput
     func prepareDataSource(game: Game, of user: User) {
         self.user = user
         self.game = game
@@ -41,26 +39,13 @@ final class GameInteractor: GameInteractorInput {
         gameMonitor?.removeObserver(self)
     }
 
-    func loadGame() {
-        output.didStartGameLoading()
-
-        gamesService.getGamesStats(game, of: user) { [weak self] (result) in
-            self?.output.didFinishGameLoading(result: result)
-        }
-    }
-
-    func provideGameStats() -> [(Stat, StatValue)] {
-        if stats == nil {
-            stats = gamesStorage.getLastGameStats(game, user: user)
-        }
-
-        return stats!
+    func provideGameStats() -> [(Stat, [StatValue])]{
+        return gamesStorage.getGameStats(game, user: user)
     }
 }
 
-extension GameInteractor: ObjectObserver {
+extension GameStatsInteractor: ObjectObserver {
     public func objectMonitor(_ monitor: ObjectMonitor<CSGame>, didUpdateObject object: CSGame, changedPersistentKeys: Set<KeyPathString>) {
-        stats = gamesStorage.getLastGameStats(game, user: user)
         output.gameChanged()
     }
 }

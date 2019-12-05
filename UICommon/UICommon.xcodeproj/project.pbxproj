@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B81FB10CCC9B3E0D5A5234FE /* Pods_UICommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6A3EC5BFDD1350D7C8D863 /* Pods_UICommon.framework */; };
+		BC0448362398A7E5008BEA66 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0448352398A7E5008BEA66 /* GameViewController.swift */; };
+		BC0448382398AA47008BEA66 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0448372398AA47008BEA66 /* GameListViewController.swift */; };
 		BC1117002390DB7A00422EEA /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1116FF2390DB7A00422EEA /* ListItemCell.swift */; };
 		BC1117022390DB9300422EEA /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1117012390DB9300422EEA /* HeaderCell.swift */; };
 		BC1117042390DBE800422EEA /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1117032390DBE800422EEA /* UITableViewExtensions.swift */; };
@@ -23,10 +25,10 @@
 		BC85FCE7239148B2002138B3 /* TwoUsersCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCE5239148B2002138B3 /* TwoUsersCellModel.swift */; };
 		BC85FCF023916511002138B3 /* ComparsionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEE23916511002138B3 /* ComparsionCell.swift */; };
 		BC85FCF123916511002138B3 /* ComparsionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEF23916511002138B3 /* ComparsionCellModel.swift */; };
-		BC85FCF523916BF9002138B3 /* TwoUserComparsionCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF423916BF8002138B3 /* TwoUserComparsionCellsViewController.swift */; };
+		BC85FCF523916BF9002138B3 /* ComparsionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF423916BF8002138B3 /* ComparsionViewController.swift */; };
 		BC85FCFC239173D8002138B3 /* GraphCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */; };
-		BC99B3DB2390E89A00CCAEA8 /* HeaderCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */; };
-		BC99B3DC2390E89A00CCAEA8 /* ListItemCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */; };
+		BC99B3DB2390E89A00CCAEA8 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3D92390E89A00CCAEA8 /* UserViewController.swift */; };
+		BC99B3DC2390E89A00CCAEA8 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3DA2390E89A00CCAEA8 /* UserListViewController.swift */; };
 		BC9CF8082397ABCB00CCD732 /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF8072397ABCB00CCD732 /* ChartXAxisFormatter.swift */; };
 		BC9CF8092397AC3B00CCD732 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF7239171D7002138B3 /* GraphCell.swift */; };
 		BC9CF80A2397AC5300CCD732 /* GraphCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF8239171D7002138B3 /* GraphCellModel.swift */; };
@@ -100,6 +102,8 @@
 		2AC94636C3FACBD5C51845A7 /* Pods-UICommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICommon.debug.xcconfig"; path = "Target Support Files/Pods-UICommon/Pods-UICommon.debug.xcconfig"; sourceTree = "<group>"; };
 		4E6EDC35FAA7FC7CCF52F5D3 /* Pods-UICommonTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICommonTestApp.release.xcconfig"; path = "Target Support Files/Pods-UICommonTestApp/Pods-UICommonTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		B5EE2BC2F7A413990C5C7945 /* Pods-UICommonTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICommonTestApp.debug.xcconfig"; path = "Target Support Files/Pods-UICommonTestApp/Pods-UICommonTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BC0448352398A7E5008BEA66 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BC0448372398AA47008BEA66 /* GameListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
 		BC1116FF2390DB7A00422EEA /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
 		BC1117012390DB9300422EEA /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		BC1117032390DBE800422EEA /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
@@ -115,12 +119,12 @@
 		BC85FCE5239148B2002138B3 /* TwoUsersCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoUsersCellModel.swift; sourceTree = "<group>"; };
 		BC85FCEE23916511002138B3 /* ComparsionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparsionCell.swift; sourceTree = "<group>"; };
 		BC85FCEF23916511002138B3 /* ComparsionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparsionCellModel.swift; sourceTree = "<group>"; };
-		BC85FCF423916BF8002138B3 /* TwoUserComparsionCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoUserComparsionCellsViewController.swift; sourceTree = "<group>"; };
+		BC85FCF423916BF8002138B3 /* ComparsionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparsionViewController.swift; sourceTree = "<group>"; };
 		BC85FCF7239171D7002138B3 /* GraphCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCell.swift; sourceTree = "<group>"; };
 		BC85FCF8239171D7002138B3 /* GraphCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCellModel.swift; sourceTree = "<group>"; };
 		BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCellsViewController.swift; sourceTree = "<group>"; };
-		BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCellsViewController.swift; sourceTree = "<group>"; };
-		BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCellsViewController.swift; sourceTree = "<group>"; };
+		BC99B3D92390E89A00CCAEA8 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		BC99B3DA2390E89A00CCAEA8 /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		BC9CF8072397ABCB00CCD732 /* ChartXAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisFormatter.swift; sourceTree = "<group>"; };
 		BCA361EC23951F0500296C17 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		BCA361ED23951F0500296C17 /* MessageCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellModel.swift; sourceTree = "<group>"; };
@@ -209,9 +213,11 @@
 		BC85FCEA23914BC2002138B3 /* CellsViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BC99B3D92390E89A00CCAEA8 /* HeaderCellsViewController.swift */,
-				BC99B3DA2390E89A00CCAEA8 /* ListItemCellsViewController.swift */,
-				BC85FCF423916BF8002138B3 /* TwoUserComparsionCellsViewController.swift */,
+				BC99B3D92390E89A00CCAEA8 /* UserViewController.swift */,
+				BC0448352398A7E5008BEA66 /* GameViewController.swift */,
+				BC99B3DA2390E89A00CCAEA8 /* UserListViewController.swift */,
+				BC0448372398AA47008BEA66 /* GameListViewController.swift */,
+				BC85FCF423916BF8002138B3 /* ComparsionViewController.swift */,
 				BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */,
 			);
 			path = CellsViewControllers;
@@ -612,12 +618,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC0448362398A7E5008BEA66 /* GameViewController.swift in Sources */,
 				BC1117102390DCF500422EEA /* RootViewController.swift in Sources */,
-				BC85FCF523916BF9002138B3 /* TwoUserComparsionCellsViewController.swift in Sources */,
-				BC99B3DB2390E89A00CCAEA8 /* HeaderCellsViewController.swift in Sources */,
+				BC85FCF523916BF9002138B3 /* ComparsionViewController.swift in Sources */,
+				BC99B3DB2390E89A00CCAEA8 /* UserViewController.swift in Sources */,
+				BC0448382398AA47008BEA66 /* GameListViewController.swift in Sources */,
 				BC85FCFC239173D8002138B3 /* GraphCellsViewController.swift in Sources */,
 				BC11170C2390DCF500422EEA /* AppDelegate.swift in Sources */,
-				BC99B3DC2390E89A00CCAEA8 /* ListItemCellsViewController.swift in Sources */,
+				BC99B3DC2390E89A00CCAEA8 /* UserListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

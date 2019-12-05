@@ -95,5 +95,19 @@ public final class GamesCoordinator: NavigationCoordinator, Coordinatable {
     }
 
     private func goToGameStats(_ game: Game, animated: Bool) {
+        let (module, presentable) = modulesFactory.makeGameStatsScreen()
+
+        module.output = { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+            case .back:
+                self.popModule(animated: true)
+            }
+
+        }
+
+        module.start(with: .gameStats(game, of: user), animated: true)
+        push(presentable, animated: true)
     }
 }

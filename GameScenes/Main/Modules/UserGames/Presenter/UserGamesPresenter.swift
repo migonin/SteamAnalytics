@@ -35,7 +35,7 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
             state.lastPlayedGamed = true
         }
 
-        interactor.prepareDataSource(user: state.user)
+        interactor.prepareDataSource(user: state.user, lastPlayed: state.lastPlayedGamed)
     }
 
     // MARK: View lifecycle
@@ -50,7 +50,7 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
             view.setTitle("Игры \(state.user.name)")
         }
         
-        interactor.loadUserGames(lastPlayed: state.lastPlayedGamed)
+        interactor.loadUserGames()
         loadModels()
     }
 
@@ -82,14 +82,14 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
     }
 
     func didTapRetryButton() {
-        interactor.loadUserGames(lastPlayed: state.lastPlayedGamed)
+        interactor.loadUserGames()
     }
 
     // MARK: - UserGamesInteractorOutput
     func didStartUserGamesLoading() {
         state.requestInProgress = true
 
-        if interactor.provideUserGames(lastPlayed: state.lastPlayedGamed).isEmpty {
+        if interactor.provideUserGames().isEmpty {
             view.showSpinner()
         }
     }
@@ -116,7 +116,7 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
     }
 
     func loadModels() {
-        let games = interactor.provideUserGames(lastPlayed: state.lastPlayedGamed)
+        let games = interactor.provideUserGames()
         let settings = UserGamesModelBuilderSettings(games: games,
                                                      requestInProgress: state.requestInProgress,
                                                      infoInaccessibleError: state.infoInaccessibleError)

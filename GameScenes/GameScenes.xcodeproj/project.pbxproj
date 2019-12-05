@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8DDDEBECA2E1E2E2449CBF2F /* Pods_GameScenes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F638CCC8FD80D453B5086F95 /* Pods_GameScenes.framework */; };
+		BC044825239813A3008BEA66 /* GameStatsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04480F239813A3008BEA66 /* GameStatsPresenter.swift */; };
+		BC044826239813A3008BEA66 /* GameStatsPresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044810239813A3008BEA66 /* GameStatsPresenterState.swift */; };
+		BC044827239813A3008BEA66 /* GameStatsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044813239813A3008BEA66 /* GameStatsCellModel.swift */; };
+		BC044828239813A3008BEA66 /* GameStatsModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044814239813A3008BEA66 /* GameStatsModelBuilder.swift */; };
+		BC044829239813A3008BEA66 /* GameStatsModelBuilderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044815239813A3008BEA66 /* GameStatsModelBuilderSettings.swift */; };
+		BC04482A239813A3008BEA66 /* GameStatsModelBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044816239813A3008BEA66 /* GameStatsModelBuilding.swift */; };
+		BC04482B239813A4008BEA66 /* GameStatsItemsSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044817239813A3008BEA66 /* GameStatsItemsSourcing.swift */; };
+		BC04482C239813A4008BEA66 /* GameStatsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044819239813A3008BEA66 /* GameStatsViewOutput.swift */; };
+		BC04482D239813A4008BEA66 /* GameStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04481A239813A3008BEA66 /* GameStatsViewController.swift */; };
+		BC04482E239813A4008BEA66 /* GameStatsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04481B239813A3008BEA66 /* GameStatsViewInput.swift */; };
+		BC04482F239813A4008BEA66 /* GameStatsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04481D239813A3008BEA66 /* GameStatsConfigurator.swift */; };
+		BC044830239813A4008BEA66 /* GameStatsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04481F239813A3008BEA66 /* GameStatsInteractorOutput.swift */; };
+		BC044831239813A4008BEA66 /* GameStatsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044820239813A3008BEA66 /* GameStatsInteractor.swift */; };
+		BC044832239813A4008BEA66 /* GameStatsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044821239813A3008BEA66 /* GameStatsInteractorInput.swift */; };
+		BC044833239813A4008BEA66 /* GameStatsModuleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044823239813A3008BEA66 /* GameStatsModuleResult.swift */; };
+		BC044834239813A4008BEA66 /* GameStatsModuleStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044824239813A3008BEA66 /* GameStatsModuleStartOption.swift */; };
 		BC9CF7F3239755FD00CCD732 /* UserGamesPresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF7DD239755FD00CCD732 /* UserGamesPresenterState.swift */; };
 		BC9CF7F4239755FD00CCD732 /* UserGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF7DE239755FD00CCD732 /* UserGamesPresenter.swift */; };
 		BC9CF7F5239755FD00CCD732 /* UserGamesItemsSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF7E0239755FD00CCD732 /* UserGamesItemsSourcing.swift */; };
@@ -71,6 +87,22 @@
 
 /* Begin PBXFileReference section */
 		986042936BEAC695F38CFE20 /* Pods-GameScenes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameScenes.debug.xcconfig"; path = "Target Support Files/Pods-GameScenes/Pods-GameScenes.debug.xcconfig"; sourceTree = "<group>"; };
+		BC04480F239813A3008BEA66 /* GameStatsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsPresenter.swift; sourceTree = "<group>"; };
+		BC044810239813A3008BEA66 /* GameStatsPresenterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsPresenterState.swift; sourceTree = "<group>"; };
+		BC044813239813A3008BEA66 /* GameStatsCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsCellModel.swift; sourceTree = "<group>"; };
+		BC044814239813A3008BEA66 /* GameStatsModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModelBuilder.swift; sourceTree = "<group>"; };
+		BC044815239813A3008BEA66 /* GameStatsModelBuilderSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModelBuilderSettings.swift; sourceTree = "<group>"; };
+		BC044816239813A3008BEA66 /* GameStatsModelBuilding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModelBuilding.swift; sourceTree = "<group>"; };
+		BC044817239813A3008BEA66 /* GameStatsItemsSourcing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsItemsSourcing.swift; sourceTree = "<group>"; };
+		BC044819239813A3008BEA66 /* GameStatsViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsViewOutput.swift; sourceTree = "<group>"; };
+		BC04481A239813A3008BEA66 /* GameStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsViewController.swift; sourceTree = "<group>"; };
+		BC04481B239813A3008BEA66 /* GameStatsViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsViewInput.swift; sourceTree = "<group>"; };
+		BC04481D239813A3008BEA66 /* GameStatsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsConfigurator.swift; sourceTree = "<group>"; };
+		BC04481F239813A3008BEA66 /* GameStatsInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsInteractorOutput.swift; sourceTree = "<group>"; };
+		BC044820239813A3008BEA66 /* GameStatsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsInteractor.swift; sourceTree = "<group>"; };
+		BC044821239813A3008BEA66 /* GameStatsInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsInteractorInput.swift; sourceTree = "<group>"; };
+		BC044823239813A3008BEA66 /* GameStatsModuleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModuleResult.swift; sourceTree = "<group>"; };
+		BC044824239813A3008BEA66 /* GameStatsModuleStartOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModuleStartOption.swift; sourceTree = "<group>"; };
 		BC9CF7DD239755FD00CCD732 /* UserGamesPresenterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesPresenterState.swift; sourceTree = "<group>"; };
 		BC9CF7DE239755FD00CCD732 /* UserGamesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesPresenter.swift; sourceTree = "<group>"; };
 		BC9CF7E0239755FD00CCD732 /* UserGamesItemsSourcing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesItemsSourcing.swift; sourceTree = "<group>"; };
@@ -140,6 +172,85 @@
 			);
 			name = Pods;
 			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		BC04480D239813A3008BEA66 /* GameStats */ = {
+			isa = PBXGroup;
+			children = (
+				BC04480E239813A3008BEA66 /* Presenter */,
+				BC044811239813A3008BEA66 /* Common */,
+				BC044818239813A3008BEA66 /* View */,
+				BC04481C239813A3008BEA66 /* Configurator */,
+				BC04481E239813A3008BEA66 /* Interactor */,
+				BC044822239813A3008BEA66 /* Router */,
+			);
+			path = GameStats;
+			sourceTree = "<group>";
+		};
+		BC04480E239813A3008BEA66 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BC04480F239813A3008BEA66 /* GameStatsPresenter.swift */,
+				BC044810239813A3008BEA66 /* GameStatsPresenterState.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BC044811239813A3008BEA66 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BC044812239813A3008BEA66 /* Models */,
+				BC044817239813A3008BEA66 /* GameStatsItemsSourcing.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BC044812239813A3008BEA66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC044813239813A3008BEA66 /* GameStatsCellModel.swift */,
+				BC044814239813A3008BEA66 /* GameStatsModelBuilder.swift */,
+				BC044815239813A3008BEA66 /* GameStatsModelBuilderSettings.swift */,
+				BC044816239813A3008BEA66 /* GameStatsModelBuilding.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC044818239813A3008BEA66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC044819239813A3008BEA66 /* GameStatsViewOutput.swift */,
+				BC04481A239813A3008BEA66 /* GameStatsViewController.swift */,
+				BC04481B239813A3008BEA66 /* GameStatsViewInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC04481C239813A3008BEA66 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				BC04481D239813A3008BEA66 /* GameStatsConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		BC04481E239813A3008BEA66 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BC04481F239813A3008BEA66 /* GameStatsInteractorOutput.swift */,
+				BC044820239813A3008BEA66 /* GameStatsInteractor.swift */,
+				BC044821239813A3008BEA66 /* GameStatsInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BC044822239813A3008BEA66 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BC044823239813A3008BEA66 /* GameStatsModuleResult.swift */,
+				BC044824239813A3008BEA66 /* GameStatsModuleStartOption.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		BC9CF7DB239755FD00CCD732 /* UserGames */ = {
@@ -363,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9CF7DB239755FD00CCD732 /* UserGames */,
+				BC04480D239813A3008BEA66 /* GameStats */,
 				BCCCCAEA23950A3100772A89 /* Game */,
 			);
 			path = Modules;
@@ -475,38 +587,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC044825239813A3008BEA66 /* GameStatsPresenter.swift in Sources */,
+				BC04482E239813A4008BEA66 /* GameStatsViewInput.swift in Sources */,
 				BC9CF7F9239755FD00CCD732 /* UserGamesModelBuilderSettings.swift in Sources */,
+				BC044826239813A3008BEA66 /* GameStatsPresenterState.swift in Sources */,
+				BC044827239813A3008BEA66 /* GameStatsCellModel.swift in Sources */,
 				BCCCCB0423950A3100772A89 /* GameItemsSourcing.swift in Sources */,
 				BCCCCABA2394275C00772A89 /* GameScenesDependencies.swift in Sources */,
 				BC9CF7F6239755FD00CCD732 /* UserGamesModelBuilder.swift in Sources */,
+				BC04482F239813A4008BEA66 /* GameStatsConfigurator.swift in Sources */,
 				BCCCCAB82394270400772A89 /* GameModulesFactory.swift in Sources */,
 				BC9CF7F4239755FD00CCD732 /* UserGamesPresenter.swift in Sources */,
 				BCCCCB0323950A3100772A89 /* GamePresenterState.swift in Sources */,
 				BCCCCB1023950A3100772A89 /* GameModuleStartOption.swift in Sources */,
 				BCCCCB0A23950A3100772A89 /* GameViewController.swift in Sources */,
 				BCCCCB0E23950A3100772A89 /* GameInteractorOutput.swift in Sources */,
+				BC04482A239813A3008BEA66 /* GameStatsModelBuilding.swift in Sources */,
 				BCCCCB0C23950A3100772A89 /* GameConfigurator.swift in Sources */,
 				BCCCCB0623950A3100772A89 /* GameCellModel.swift in Sources */,
 				BC9CF802239755FD00CCD732 /* UserGamesModuleStartOption.swift in Sources */,
 				BCCCCB0923950A3100772A89 /* GameViewOutput.swift in Sources */,
+				BC044829239813A3008BEA66 /* GameStatsModelBuilderSettings.swift in Sources */,
 				BC9CF7FD239755FD00CCD732 /* UserGamesConfigurator.swift in Sources */,
 				BC9CF7F8239755FD00CCD732 /* UserGamesModelBuilding.swift in Sources */,
 				BCCCCB0823950A3100772A89 /* GameModelBuilding.swift in Sources */,
+				BC04482D239813A4008BEA66 /* GameStatsViewController.swift in Sources */,
 				BC9CF7FF239755FD00CCD732 /* UserGamesInteractor.swift in Sources */,
 				BCCCCB0D23950A3100772A89 /* GameInteractorInput.swift in Sources */,
+				BC04482B239813A4008BEA66 /* GameStatsItemsSourcing.swift in Sources */,
 				BC9CF7FC239755FD00CCD732 /* UserGamesViewInput.swift in Sources */,
 				BC9CF7FE239755FD00CCD732 /* UserGamesInteractorOutput.swift in Sources */,
 				BCCCCB1123950A3100772A89 /* GameModuleResult.swift in Sources */,
+				BC044830239813A4008BEA66 /* GameStatsInteractorOutput.swift in Sources */,
 				BCCCCB0523950A3100772A89 /* GameModelBuilderSettings.swift in Sources */,
+				BC04482C239813A4008BEA66 /* GameStatsViewOutput.swift in Sources */,
 				BCCCCB0F23950A3100772A89 /* GameInteractor.swift in Sources */,
 				BC9CF7FA239755FD00CCD732 /* UserGamesViewController.swift in Sources */,
 				BC9CF800239755FD00CCD732 /* UserGamesInteractorInput.swift in Sources */,
 				BC9CF7FB239755FD00CCD732 /* UserGamesViewOutput.swift in Sources */,
 				BCCCCB0B23950A3100772A89 /* GameViewInput.swift in Sources */,
+				BC044828239813A3008BEA66 /* GameStatsModelBuilder.swift in Sources */,
 				BCCCCABC239428C200772A89 /* GamesCoordinator.swift in Sources */,
 				BCCCCB0223950A3100772A89 /* GamePresenter.swift in Sources */,
+				BC044834239813A4008BEA66 /* GameStatsModuleStartOption.swift in Sources */,
 				BCD22CC4238E87410020885E /* GameModulesFactoring.swift in Sources */,
+				BC044833239813A4008BEA66 /* GameStatsModuleResult.swift in Sources */,
+				BC044832239813A4008BEA66 /* GameStatsInteractorInput.swift in Sources */,
 				BC9CF7F5239755FD00CCD732 /* UserGamesItemsSourcing.swift in Sources */,
+				BC044831239813A4008BEA66 /* GameStatsInteractor.swift in Sources */,
 				BC9CF801239755FD00CCD732 /* UserGamesModuleResult.swift in Sources */,
 				BC9CF7F7239755FD00CCD732 /* UserGamesCellModel.swift in Sources */,
 				BC9CF7F3239755FD00CCD732 /* UserGamesPresenterState.swift in Sources */,

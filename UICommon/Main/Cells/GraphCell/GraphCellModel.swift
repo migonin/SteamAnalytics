@@ -13,18 +13,15 @@ public struct GraphCellModel {
     public let title: String
     public let id: String
     public let values: [(Date, Int)]
-    public var initialTransform: CGAffineTransform
     public let transformHandler: ((String, CGAffineTransform) -> Void)?
 
     public init(title: String,
                 id: String,
                 values: [(Date, Int)],
-                initialTransform: CGAffineTransform,
                 transformHandler: ((String, CGAffineTransform) -> Void)?) {
         self.title = title
         self.id = id
         self.values = values
-        self.initialTransform = initialTransform
         self.transformHandler = transformHandler
     }
 }

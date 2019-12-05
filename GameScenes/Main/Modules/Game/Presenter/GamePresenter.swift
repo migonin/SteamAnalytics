@@ -34,7 +34,6 @@ class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
         }
 
         interactor.prepareDataSource(game: state.game, of: state.user)
-        loadModels()
     }
 
     // MARK: View lifecycle
@@ -44,6 +43,7 @@ class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
         state.isViewPresented = false
 
         view.setTitle(state.game.name)
+        loadModels()
         interactor.loadGame()
     }
 
@@ -112,6 +112,7 @@ class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
                                                 gameHasNoStats: state.gameHasNoStats)
 
         displayModels = modelBuilder.buildModels(settings: settings)
+        view.setStatsButtonHidden(interactor.provideGameStats().isEmpty)
     }
 
     func reloadScreen() {

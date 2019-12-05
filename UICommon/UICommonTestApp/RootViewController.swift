@@ -12,10 +12,12 @@ import UICommon
 class RootViewController: UITableViewController {
 
     enum Row: String, CaseIterable {
-        case headerCells = "HeaderCells"
-        case listItemCells = "LitItemCells"
-        case userComparsion = "UserComparsion"
-        case graphCells = "GraphCells"
+        case user = "Экран юзера"
+        case game = "Экран игры"
+        case userList = "Список юзеров"
+        case gameList = "Список игр"
+        case userComparsion = "Сравнение пользователей"
+        case graphCells = "Статистика игры"
     }
 
     let dataSource = Row.allCases
@@ -24,7 +26,7 @@ class RootViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        title = "UI элементы"
+        title = "Экраны"
         tableView.registerClassCell(UITableViewCell.self)
     }
 
@@ -42,12 +44,16 @@ class RootViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch dataSource[indexPath.row] {
-        case .headerCells:
-            navigationController?.pushViewController(HeaderCellsViewController(), animated: true)
-        case .listItemCells:
-            navigationController?.pushViewController(ListItemCellsViewController(), animated: true)
+        case .user:
+            navigationController?.pushViewController(UserViewController(), animated: true)
+        case .game:
+            navigationController?.pushViewController(GameViewController(), animated: true)
+        case .userList:
+            navigationController?.pushViewController(UserListViewController(), animated: true)
+        case .gameList:
+            navigationController?.pushViewController(GameListViewController(), animated: true)
         case .userComparsion:
-            navigationController?.pushViewController(TwoUserComparsionCellsViewController(), animated: true)
+            navigationController?.pushViewController(ComparsionViewController(), animated: true)
         case .graphCells:
             navigationController?.pushViewController(GraphCellsViewController(), animated: true)
         }

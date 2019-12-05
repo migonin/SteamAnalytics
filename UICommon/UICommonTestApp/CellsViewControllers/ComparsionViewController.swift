@@ -1,5 +1,5 @@
 //
-//  TwoUserComparsionCellsViewController.swift
+//  ComparsionViewController.swift
 //  UICommonTestApp
 //
 //  Created by Михаил Игонин on 29.11.2019.
@@ -9,7 +9,7 @@
 import UIKit
 import UICommon
 
-class TwoUserComparsionCellsViewController: UITableViewController {
+class ComparsionViewController: UITableViewController {
 
     let dataSource: [Any] = [
         TwoUsersCellModel(leftTitle: "Vasya",
@@ -29,7 +29,7 @@ class TwoUserComparsionCellsViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        title = "UserComparsion"
+        title = "Сравнение пользователей"
         tableView.registerClassCell(TwoUsersCell.self)
         tableView.registerClassCell(ComparsionCell.self)
     }

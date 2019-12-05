@@ -20,7 +20,7 @@ extension Stat: Decodable {
         let values = try decoder.container(keyedBy: StatCodingKeys.self)
         
         let name = try values.decode(String.self, forKey: .name)
-        let displayName = try values.decode(String.self, forKey: .displayName)
+        let displayName = try values.decodeIfPresent(String.self, forKey: .displayName) ?? ""
 
         self.init(name: name,
                   displayName: displayName)

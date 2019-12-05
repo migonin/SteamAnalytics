@@ -12,13 +12,13 @@
       location = "container:"
       name = "L3">
       <FileRef
-         location = "group:LoginScenes/LoginScenes.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:GameScenes/GameScenes.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:UserScenes/UserScenes.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:LoginScenes/LoginScenes.xcodeproj">
       </FileRef>
    </Group>
    <Group

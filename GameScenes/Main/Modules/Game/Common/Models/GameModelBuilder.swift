@@ -38,9 +38,11 @@ struct GameModelBuilder: GameModelBuilding {
             ))
         } else {
             for (stat, value) in settings.stats {
+                let title = stat.displayName.isEmpty ? stat.name : stat.displayName
+
                 models.append(.stat(
                     ListItemCellModel(
-                        title: stat.displayName,
+                        title: title,
                         subtitle: String(value.value),
                         imgUrl: nil,
                         showDisclosureIndicator: false

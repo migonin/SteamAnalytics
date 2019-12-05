@@ -1,6 +1,6 @@
 //
-//  GameViewController.swift
-//  GameScenes
+//  GameStatsViewController.swift
+//  GameStatsScenes
 //
 //  Created by Михаил Игонин on 27.11.2019.
 //  Copyright © 2019 FrozenApps. All rights reserved.
@@ -10,9 +10,11 @@ import UIKit
 import UICommon
 import SnapKit
 
-class GameViewController: BaseTableViewController, GameViewInput {
-    var output: GameViewOutput!
-    var itemsSource: GameItemsSourcing!
+class GameStatsViewController: BaseTableViewController, GameStatsViewInput {
+    var output: GameStatsViewOutput!
+    var itemsSource: GameStatsItemsSourcing!
+
+    var currentTransform: CGAffineTransform? = nil
 
     // MARK: View life cycle
     
@@ -23,9 +25,7 @@ class GameViewController: BaseTableViewController, GameViewInput {
     }
 
     override func registerCells() {
-        tableView.registerClassCell(HeaderCell.self)
-        tableView.registerClassCell(ListItemCell.self)
-        tableView.registerClassCell(MessageCell.self)
+        tableView.registerClassCell(GraphCell.self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,18 +52,6 @@ class GameViewController: BaseTableViewController, GameViewInput {
         output.didDisappear(animated: animated)
     }
 
-    func setStatsButtonHidden(_ isHidden: Bool) {
-        if isHidden {
-            navigationItem.rightBarButtonItem = nil
-        } else {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "История", style: .plain, target: self, action: #selector(statsButtonTapped))
-        }
-    }
-
-    @objc private func statsButtonTapped() {
-        output.statButtonTapped()
-    }
-
     func reloadData() {
         tableView.reloadData()
     }
@@ -82,39 +70,23 @@ class GameViewController: BaseTableViewController, GameViewInput {
         let model = itemsSource.itemModelFor(indexPath: indexPath)
 
         switch model {
-        case .header(let model):
-            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: HeaderCell.self)
-            cell.configure(with: model)
-
-            return cell
         case .stat(let model):
-            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: ListItemCell.self)
+            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: GraphCell.self)
             cell.configure(with: model)
+            cell.setTransform(currentTransform)
 
             return cell
-
-        case .error(let model):
-            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: MessageCell.self)
-            cell.configure(with: model)
-            
-            return cell
-
         }
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        output.didTapCell(at: indexPath.row)
+    // MARK: - GameStatsViewInput
+    func changeTransform(_ transform: CGAffineTransform, forGraphsExcept id: String) {
+        currentTransform = transform
+
+        for cell in tableView.visibleCells {
+            if let graphCell = cell as? GraphCell, graphCell.id != id {
+                graphCell.updateTransform(transform)
+            }
+        }
     }
-
-    // MARK: - Alerts
-
-    override func errorAlertOKButtonTapped() {
-        output.didTapOKButton()
-    }
-
-    override func errorAlertRetryButtonTapped() {
-        output.didTapRetryButton()
-    }
-
-    // MARK: - GameViewInput
 }
