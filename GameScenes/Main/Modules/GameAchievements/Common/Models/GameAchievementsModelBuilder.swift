@@ -18,7 +18,7 @@ struct GameAchievementsModelBuilder: GameAchievementsModelBuilding {
 
         for achievement in settings.achievements {
             models.append(.achievement(
-                ListItemWithDescriptionCellModel(
+                TitleAndTextCellModel(
                     title: achievement.displayName,
                     description: achievement.description,
                     imgUrl: achievement.icon

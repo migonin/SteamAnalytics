@@ -35,7 +35,7 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
             }
 
             if lastPlayed {
-                gamesOwner.lastLastPlayedGamesUpdateDate.value = Date()
+                gamesOwner.lastPlayedGamesUpdateDate.value = Date()
             } else {
                 gamesOwner.lastGamesUpdateDate.value = Date()
             }
@@ -108,6 +108,16 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
                                    schemaCSAchievements: schemaCSAchievements,
                                    owner: owner,
                                    in: transaction)
+        }, completion: { _ in })
+    }
+
+    public func createOrUpdateNews(_ news: [NewsEntry], for game: Game) {
+        guard let csGame = csGame(for: game) else { return }
+
+        dataStack.perform(asynchronous: { (transaction) -> Void in
+            guard let csGame = transaction.fetchExisting(csGame) else { return }
+            csGame.news.value = try transaction.importUniqueObjects(Into<CSNewsEntry>(), sourceArray: news)
+            csGame.lastNewsUpdateDate.value = Date()
         }, completion: { _ in })
     }
 
@@ -190,7 +200,15 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
     }
 
     public func userLastPlayedGamesSyncDate(_ user: User) -> Date? {
-        return gamesOwnerObject(for: user).lastLastPlayedGamesUpdateDate.value
+        return gamesOwnerObject(for: user).lastPlayedGamesUpdateDate.value
+    }
+
+    public func getGameNews(_ game: Game) -> [NewsEntry] {
+        return csGame(for: game)?.news.value.map({$0.toNewsEntry()}) ?? []
+    }
+
+    public func gameNewsSyncDate(_ game: Game) -> Date? {
+        return csGame(for: game)?.lastNewsUpdateDate.value
     }
 
     // MARK: Helpers

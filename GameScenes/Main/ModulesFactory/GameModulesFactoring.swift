@@ -22,4 +22,7 @@ public protocol GameModulesFactoring {
     func makeGameAchievements() ->
         CoordinatableFactoryResult<GameAchievementsModuleStartOption, GameAchievementsModuleResult>
 
+    func makeGameNews() ->
+        CoordinatableFactoryResult<GameNewsModuleStartOption, GameNewsModuleResult>
+
 }

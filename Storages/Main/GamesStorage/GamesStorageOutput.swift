@@ -22,4 +22,7 @@ public protocol GamesStorageOutput {
 
     func userGamesSyncDate(_ user: User) -> Date?
     func userLastPlayedGamesSyncDate(_ user: User) -> Date?
+
+    func getGameNews(_ game: Game) -> [NewsEntry]
+    func gameNewsSyncDate(_ game: Game) -> Date?
 }

@@ -65,6 +65,7 @@ public final class Storages {
                     Entity<CSStat>("CSStat"),
                     Entity<CSStatValue>("CSStatValue"),
                     Entity<CSPlaytime>("CSPlaytime"),
+                    Entity<CSNewsEntry>("CSNewsEntry")
                 ]
             )
         )

@@ -12,6 +12,7 @@ import UIKit
 open class BaseViewController: UIViewController {
     public let hidingView = UIView()
     public let spinnerView = UIActivityIndicatorView(style: .gray)
+    public let textLabel = UILabel()
     public let animationDuration = 0.3
 
     open override func loadView() {
@@ -40,10 +41,27 @@ open class BaseViewController: UIViewController {
         spinnerView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
         }
+
+        hidingView.addSubview(textLabel)
+
+        textLabel.snp.makeConstraints { (make) in
+            make.leading.trailing.equalToSuperview().inset(50)
+            make.top.equalTo(spinnerView.snp.bottom).offset(10)
+        }
+
+        textLabel.textColor = .gray
+        textLabel.textAlignment = .center
+        textLabel.numberOfLines = 0
     }
 
     public func showSpinner() {
+        showSpinner(message: nil)
+    }
+
+    public func showSpinner(message: String?) {
         spinnerView.startAnimating()
+        textLabel.text = message
+        
         hidingView.isHidden = false
     }
 

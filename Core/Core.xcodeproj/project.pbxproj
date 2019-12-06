@@ -15,6 +15,7 @@
 		BC8BF3AD238A61A400B754AF /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3AC238A61A400B754AF /* Stat.swift */; };
 		BC8BF3AF238AE52B00B754AF /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3AE238AE52B00B754AF /* Achievement.swift */; };
 		BC938368239A5B9100A147BE /* HardcodedGameId.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938367239A5B9100A147BE /* HardcodedGameId.swift */; };
+		BC938399239A827500A147BE /* NewsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938398239A827500A147BE /* NewsEntry.swift */; };
 		BCCCCA552393DE5900772A89 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA522393DE5900772A89 /* ErrorType.swift */; };
 		BCCCCA562393DE5900772A89 /* ErrorDescribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA532393DE5900772A89 /* ErrorDescribing.swift */; };
 		BCCCCA572393DE5900772A89 /* ErrorDescriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCCA542393DE5900772A89 /* ErrorDescriber.swift */; };
@@ -34,6 +35,7 @@
 		BC8BF3AC238A61A400B754AF /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		BC8BF3AE238AE52B00B754AF /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		BC938367239A5B9100A147BE /* HardcodedGameId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardcodedGameId.swift; sourceTree = "<group>"; };
+		BC938398239A827500A147BE /* NewsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEntry.swift; sourceTree = "<group>"; };
 		BCCCCA522393DE5900772A89 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		BCCCCA532393DE5900772A89 /* ErrorDescribing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescribing.swift; sourceTree = "<group>"; };
 		BCCCCA542393DE5900772A89 /* ErrorDescriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescriber.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				BC8BF3AE238AE52B00B754AF /* Achievement.swift */,
 				BCD22C35238D5B280020885E /* AchievementValue.swift */,
 				BC938367239A5B9100A147BE /* HardcodedGameId.swift */,
+				BC938398239A827500A147BE /* NewsEntry.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCCCCA572393DE5900772A89 /* ErrorDescriber.swift in Sources */,
+				BC938399239A827500A147BE /* NewsEntry.swift in Sources */,
 				BC8BF39423893C8B00B754AF /* UserStatus.swift in Sources */,
 				BC938368239A5B9100A147BE /* HardcodedGameId.swift in Sources */,
 				BCD22C34238D5A7A0020885E /* StatValue.swift in Sources */,

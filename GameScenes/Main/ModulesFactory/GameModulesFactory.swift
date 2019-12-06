@@ -35,4 +35,10 @@ public struct GameModulesFactory: GameModulesFactoring {
         CoordinatableFactoryResult<GameAchievementsModuleStartOption, GameAchievementsModuleResult> {
             return GameAchievementsModuleConfigurator(dependencies: dependencies).configure()
     }
+
+    public func makeGameNews() ->
+        CoordinatableFactoryResult<GameNewsModuleStartOption, GameNewsModuleResult> {
+            return GameNewsModuleConfigurator(dependencies: dependencies).configure()
+    }
+
 }

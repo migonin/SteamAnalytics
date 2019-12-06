@@ -53,7 +53,7 @@ public class GameStatsSyncService: GameStatsSyncServicing {
 
     private func syncNextGame(for user: User) {
         if let game = gamesToSync.first {
-            gameService.getGamesStats(game, of: user) { [weak self] (result) in
+            gameService.getGameStats(game, of: user) { [weak self] (result) in
                 guard let self = self else { return }
 
                 switch result {

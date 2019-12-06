@@ -49,7 +49,7 @@ final class GameInteractor: GameInteractorInput {
 
         output.didStartGameLoading()
 
-        gamesService.getGamesStats(game, of: user) { [weak self] (result) in
+        gamesService.getGameStats(game, of: user) { [weak self] (result) in
             self?.output.didFinishGameLoading(result: result)
         }
     }

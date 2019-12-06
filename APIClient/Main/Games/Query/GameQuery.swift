@@ -1,5 +1,5 @@
 //
-//  GameSchemaQuery.swift
+//  GameQuery.swift
 //  APIClient
 //
 //  Created by Михаил Игонин on 24.11.2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct GameSchemaQuery: QueryItemsRepresentable {
+public struct GameQuery: QueryItemsRepresentable {
     enum Attribute: String {
         case gameId = "appid"
     }

@@ -19,6 +19,7 @@ class RootViewController: UITableViewController {
         case userComparsion = "Сравнение пользователей"
         case graphCells = "Статистика игры"
         case achievements = "Ачивки"
+        case news = "Новости"
     }
 
     let dataSource = Row.allCases
@@ -59,6 +60,9 @@ class RootViewController: UITableViewController {
             navigationController?.pushViewController(GraphCellsViewController(), animated: true)
         case .achievements:
             navigationController?.pushViewController(AchievementsViewController(), animated: true)
+        case .news:
+            navigationController?.pushViewController(NewsViewController(), animated: true)
+
         }
     }
 }

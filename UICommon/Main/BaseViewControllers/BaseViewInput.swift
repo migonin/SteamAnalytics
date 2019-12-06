@@ -12,6 +12,7 @@ public protocol BaseViewInput {
     func setTitle(_ title: String)
 
     func showError(message: String, okButtonTitle: String?, retryButtonTitle: String?)
+    func showSpinner(message: String?)
     func showSpinner()
     func hideSpinner()
 }

@@ -11,5 +11,6 @@ import Core
 
 public protocol GamesServicing {
     func getUserGames(_ user: User, lastPlayed: Bool, completionHandler: @escaping ServiceCompletion)
-    func getGamesStats(_ game: Game, of user: User, completionHandler: @escaping ServiceCompletion)
+    func getGameStats(_ game: Game, of user: User, completionHandler: @escaping ServiceCompletion)
+    func getGameNews(_ game: Game, completionHandler: @escaping ServiceCompletion)
 }

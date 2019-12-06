@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36FD2AF7E06C33968326961E /* Pods_APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DB97357BCFE94B638D3EDB /* Pods_APIClient.framework */; };
+		BC2C9A92239AA699006F7D14 /* GameNewsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9A91239AA699006F7D14 /* GameNewsQuery.swift */; };
 		BC311C2323867AD600E5F6AC /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC311C2223867AD600E5F6AC /* Requestable.swift */; };
 		BC45C65223878ED00096EBD2 /* FriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C65123878ED00096EBD2 /* FriendsResponse.swift */; };
 		BC45C654238792140096EBD2 /* UserQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45C653238792140096EBD2 /* UserQuery.swift */; };
@@ -20,12 +21,14 @@
 		BC8BF3B3238AE5B000B754AF /* Game+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3B2238AE5B000B754AF /* Game+Codable.swift */; };
 		BC8BF3B9238AE5E700B754AF /* Stat+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3B8238AE5E700B754AF /* Stat+Codable.swift */; };
 		BC8BF3BB238AE63600B754AF /* Achievement+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3BA238AE63600B754AF /* Achievement+Codable.swift */; };
-		BC8BF3BE238AE71C00B754AF /* GameSchemaQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3BC238AE71C00B754AF /* GameSchemaQuery.swift */; };
+		BC8BF3BE238AE71C00B754AF /* GameQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3BC238AE71C00B754AF /* GameQuery.swift */; };
 		BC8BF3BF238AE71C00B754AF /* UserGamesQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3BD238AE71C00B754AF /* UserGamesQuery.swift */; };
 		BC8BF3C1238AE8A900B754AF /* UserGamesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3C0238AE8A900B754AF /* UserGamesResponse.swift */; };
 		BC8BF3C3238AEC4700B754AF /* GameSchemaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3C2238AEC4700B754AF /* GameSchemaResponse.swift */; };
 		BC8BF3C5238AED0A00B754AF /* GameStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3C4238AED0A00B754AF /* GameStatsResponse.swift */; };
 		BC8BF3C7238AED7F00B754AF /* GameStatsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3C6238AED7F00B754AF /* GameStatsQuery.swift */; };
+		BC93839B239A834700A147BE /* NewsEntry+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93839A239A834700A147BE /* NewsEntry+Codable.swift */; };
+		BC93839D239A847E00A147BE /* GameNewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93839C239A847E00A147BE /* GameNewsResponse.swift */; };
 		BCCEDC87238639BD00986E16 /* MethodPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC86238639BD00986E16 /* MethodPath.swift */; };
 		BCCEDC8923863A0F00986E16 /* URLFactoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC8823863A0F00986E16 /* URLFactoring.swift */; };
 		BCCEDC8B23863A4E00986E16 /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEDC8A23863A4E00986E16 /* URLFactory.swift */; };
@@ -70,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		54C0CB38BC28C7F4B36CBA98 /* Pods-APIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIClient.debug.xcconfig"; path = "Target Support Files/Pods-APIClient/Pods-APIClient.debug.xcconfig"; sourceTree = "<group>"; };
+		BC2C9A91239AA699006F7D14 /* GameNewsQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsQuery.swift; sourceTree = "<group>"; };
 		BC311C2223867AD600E5F6AC /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		BC45C65123878ED00096EBD2 /* FriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResponse.swift; sourceTree = "<group>"; };
 		BC45C653238792140096EBD2 /* UserQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserQuery.swift; sourceTree = "<group>"; };
@@ -84,12 +88,14 @@
 		BC8BF3B2238AE5B000B754AF /* Game+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+Codable.swift"; sourceTree = "<group>"; };
 		BC8BF3B8238AE5E700B754AF /* Stat+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stat+Codable.swift"; sourceTree = "<group>"; };
 		BC8BF3BA238AE63600B754AF /* Achievement+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement+Codable.swift"; sourceTree = "<group>"; };
-		BC8BF3BC238AE71C00B754AF /* GameSchemaQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSchemaQuery.swift; sourceTree = "<group>"; };
+		BC8BF3BC238AE71C00B754AF /* GameQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameQuery.swift; sourceTree = "<group>"; };
 		BC8BF3BD238AE71C00B754AF /* UserGamesQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesQuery.swift; sourceTree = "<group>"; };
 		BC8BF3C0238AE8A900B754AF /* UserGamesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGamesResponse.swift; sourceTree = "<group>"; };
 		BC8BF3C2238AEC4700B754AF /* GameSchemaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSchemaResponse.swift; sourceTree = "<group>"; };
 		BC8BF3C4238AED0A00B754AF /* GameStatsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsResponse.swift; sourceTree = "<group>"; };
 		BC8BF3C6238AED7F00B754AF /* GameStatsQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsQuery.swift; sourceTree = "<group>"; };
+		BC93839A239A834700A147BE /* NewsEntry+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsEntry+Codable.swift"; sourceTree = "<group>"; };
+		BC93839C239A847E00A147BE /* GameNewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNewsResponse.swift; sourceTree = "<group>"; };
 		BCCEDC86238639BD00986E16 /* MethodPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodPath.swift; sourceTree = "<group>"; };
 		BCCEDC8823863A0F00986E16 /* URLFactoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoring.swift; sourceTree = "<group>"; };
 		BCCEDC8A23863A4E00986E16 /* URLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
@@ -209,6 +215,7 @@
 				BCD22C38238D5B650020885E /* StatValue+Codable.swift */,
 				BC8BF3BA238AE63600B754AF /* Achievement+Codable.swift */,
 				BCD22C37238D5B650020885E /* AchievementValue+Codable.swift */,
+				BC93839A239A834700A147BE /* NewsEntry+Codable.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -216,7 +223,8 @@
 		BC8BF3B4238AE5B600B754AF /* Query */ = {
 			isa = PBXGroup;
 			children = (
-				BC8BF3BC238AE71C00B754AF /* GameSchemaQuery.swift */,
+				BC8BF3BC238AE71C00B754AF /* GameQuery.swift */,
+				BC2C9A91239AA699006F7D14 /* GameNewsQuery.swift */,
 				BC8BF3BD238AE71C00B754AF /* UserGamesQuery.swift */,
 				BC8BF3C6238AED7F00B754AF /* GameStatsQuery.swift */,
 			);
@@ -229,6 +237,7 @@
 				BC8BF3C0238AE8A900B754AF /* UserGamesResponse.swift */,
 				BC8BF3C2238AEC4700B754AF /* GameSchemaResponse.swift */,
 				BC8BF3C4238AED0A00B754AF /* GameStatsResponse.swift */,
+				BC93839C239A847E00A147BE /* GameNewsResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -469,6 +478,7 @@
 				BC8BF3BB238AE63600B754AF /* Achievement+Codable.swift in Sources */,
 				BC45C654238792140096EBD2 /* UserQuery.swift in Sources */,
 				BC8BF3B3238AE5B000B754AF /* Game+Codable.swift in Sources */,
+				BC93839D239A847E00A147BE /* GameNewsResponse.swift in Sources */,
 				BC8BF3C1238AE8A900B754AF /* UserGamesResponse.swift in Sources */,
 				BCCEDC8B23863A4E00986E16 /* URLFactory.swift in Sources */,
 				BCCEDC9823863E8E00986E16 /* URLExtensions.swift in Sources */,
@@ -484,7 +494,9 @@
 				BC311C2323867AD600E5F6AC /* Requestable.swift in Sources */,
 				BCCEDCA523864C2A00986E16 /* AlamofireUsersAPIClient.swift in Sources */,
 				BCD22C39238D5B650020885E /* AchievementValue+Codable.swift in Sources */,
-				BC8BF3BE238AE71C00B754AF /* GameSchemaQuery.swift in Sources */,
+				BC2C9A92239AA699006F7D14 /* GameNewsQuery.swift in Sources */,
+				BC93839B239A834700A147BE /* NewsEntry+Codable.swift in Sources */,
+				BC8BF3BE238AE71C00B754AF /* GameQuery.swift in Sources */,
 				BC45C65223878ED00096EBD2 /* FriendsResponse.swift in Sources */,
 				BCCEDC8923863A0F00986E16 /* URLFactoring.swift in Sources */,
 			);

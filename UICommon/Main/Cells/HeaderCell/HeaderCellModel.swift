@@ -15,8 +15,7 @@ public struct HeaderCellModel {
     public let subsubtitle: String?
     public let imgUrl: String
     public let roundedImg: Bool
-    public let imgHeight: CGFloat
-    public let imgWidth: CGFloat
+    public let fillImage: Bool
     public let alignment: UIStackView.Alignment
 
     public init(title: String,
@@ -24,16 +23,14 @@ public struct HeaderCellModel {
                 subsubtitle: String? = nil,
                 imgUrl: String,
                 roundedImg: Bool,
-                imgHeight: CGFloat = 200.0,
-                imgWidth: CGFloat = 200.0,
+                fillImage: Bool = false,
                 alignment: UIStackView.Alignment = .center) {
         self.title = title
         self.imgUrl = imgUrl
         self.roundedImg = roundedImg
         self.subtitle = subtitle
         self.subsubtitle = subsubtitle
-        self.imgHeight = imgHeight
-        self.imgWidth = imgWidth
+        self.fillImage = fillImage
         self.alignment = alignment
     }
 }

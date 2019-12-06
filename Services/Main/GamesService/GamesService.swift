@@ -60,7 +60,32 @@ public struct GamesService: GamesServicing {
         }
     }
 
-    public func getGamesStats(_ game: Game, of user: User, completionHandler: @escaping ServiceCompletion) {
+    public func getGameNews(_ game: Game, completionHandler: @escaping ServiceCompletion) {
+        let url: URL
+        let request: URLRequest
+
+        do {
+            url = try urlFactory.buildURL(methodPath: .gameNews)
+
+            request = try urlRequestFactory.buildRequest(url: url, query: GameNewsQuery(gameId: game.id), timeoutInterval: timeout)
+        } catch {
+            completionHandler(.failure(error))
+            return
+        }
+
+        gamesAPIClient.getGameNews(request: request) { (result) in
+            switch result {
+                case .success(let response):
+                    self.storage.createOrUpdateNews(response.appnews.newsitems, for: game)
+                    completionHandler(.success(()))
+
+                case .failure(let error):
+                    completionHandler(.failure(error))
+            }
+        }
+    }
+
+    public func getGameStats(_ game: Game, of user: User, completionHandler: @escaping ServiceCompletion) {
         let url: URL
         let request: URLRequest
 
@@ -120,7 +145,7 @@ public struct GamesService: GamesServicing {
 
         do {
             url = try self.urlFactory.buildURL(methodPath: .gameSchema)
-            request = try self.urlRequestFactory.buildRequest(url: url, query: GameSchemaQuery(gameId: game.id), timeoutInterval: timeout)
+            request = try self.urlRequestFactory.buildRequest(url: url, query: GameQuery(gameId: game.id), timeoutInterval: timeout)
         } catch {
             completionHandler(.failure(error))
             return

@@ -29,6 +29,11 @@ public struct AlamofireGamesAPIClient: GamesAPIClienting {
     public func getGameStats(request: URLRequest, completionHandler: @escaping (Result<GameStatsResponse, Error>) -> Void) {
         requestDecodable(request, completionHandler: completionHandler)
     }
+
+    public func getGameNews(request: URLRequest, completionHandler: @escaping (Result<GameNewsResponse, Error>) -> Void) {
+        requestDecodable(request, completionHandler: completionHandler)
+    }
+
 }
 
 extension AlamofireGamesAPIClient: Requestable { }

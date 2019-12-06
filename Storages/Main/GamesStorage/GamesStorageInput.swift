@@ -15,4 +15,6 @@ public protocol GamesStorageInput {
 
     func addGamesStats(stats: [StatValue], achievements: [AchievementValue], for game: Game, user: User)
     func addGamesStats(stats: [StatValue], achievements: [AchievementValue], for game: Game, schemaStats: [Stat], schemaAchievements: [Achievement], user: User)
+
+    func createOrUpdateNews(_ news: [NewsEntry], for game: Game)
 }

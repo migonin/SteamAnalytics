@@ -26,6 +26,7 @@ struct GameModelBuilder: GameModelBuilding {
                 subsubtitle: twoWeeksPlaytimeString,
                 imgUrl: settings.game.logo,
                 roundedImg: false,
+                fillImage: true,
                 alignment: .leading
             )
         ))

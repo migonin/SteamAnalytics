@@ -21,4 +21,6 @@ public class CSGame: CoreStoreObject {
     public let owners = Relationship.ToManyUnordered<CSGameOwner>("owners")
     public let lastPlayers = Relationship.ToManyUnordered<CSGameOwner>("lastPlayers")
     public let playtimes = Relationship.ToManyUnordered<CSPlaytime>("playtimes", inverse: { $0.game })
+    public let news = Relationship.ToManyOrdered<CSNewsEntry>("news", inverse: { $0.game })
+    public let lastNewsUpdateDate = Value.Optional<Date>("lastNewsUpdateDate")
 }

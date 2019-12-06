@@ -18,6 +18,7 @@ class GameViewController: UITableViewController {
             subsubtitle: "На этой неделе 40 часов",
             imgUrl: "http://media.steampowered.com/steamcommunity/public/images/apps/730/d0595ff02f5c79fd19b06f4d6165c3fda2372820.jpg",
             roundedImg: false,
+            fillImage: true,
             alignment: .leading
         ),
 

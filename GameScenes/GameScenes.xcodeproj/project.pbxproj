@@ -40,6 +40,24 @@
 		BC93838E239A686800A147BE /* GameAchievementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93837D239A686700A147BE /* GameAchievementsInteractor.swift */; };
 		BC93838F239A686800A147BE /* GameAchievementsModuleStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93837F239A686700A147BE /* GameAchievementsModuleStartOption.swift */; };
 		BC938390239A686800A147BE /* GameAchievementsModuleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938380239A686700A147BE /* GameAchievementsModuleResult.swift */; };
+		BC9383BC239A8D9100A147BE /* GameNewsPresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383A6239A8D9100A147BE /* GameNewsPresenterState.swift */; };
+		BC9383BD239A8D9100A147BE /* GameNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383A7239A8D9100A147BE /* GameNewsPresenter.swift */; };
+		BC9383BE239A8D9100A147BE /* GameNewsModelBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383AA239A8D9100A147BE /* GameNewsModelBuilding.swift */; };
+		BC9383BF239A8D9100A147BE /* GameNewsModelBuilderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383AB239A8D9100A147BE /* GameNewsModelBuilderSettings.swift */; };
+		BC9383C0239A8D9100A147BE /* GameNewsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383AC239A8D9100A147BE /* GameNewsCellModel.swift */; };
+		BC9383C1239A8D9100A147BE /* GameNewsModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383AD239A8D9100A147BE /* GameNewsModelBuilder.swift */; };
+		BC9383C2239A8D9100A147BE /* GameNewsItemsSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383AE239A8D9100A147BE /* GameNewsItemsSourcing.swift */; };
+		BC9383C3239A8D9100A147BE /* GameNewsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383B0239A8D9100A147BE /* GameNewsViewOutput.swift */; };
+		BC9383C4239A8D9100A147BE /* GameNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383B1239A8D9100A147BE /* GameNewsViewController.swift */; };
+		BC9383C5239A8D9100A147BE /* GameNewsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383B2239A8D9100A147BE /* GameNewsViewInput.swift */; };
+		BC9383C6239A8D9100A147BE /* GameNewsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383B4239A8D9100A147BE /* GameNewsConfigurator.swift */; };
+		BC9383C7239A8D9100A147BE /* GameNewsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383B6239A8D9100A147BE /* GameNewsInteractorInput.swift */; };
+		BC9383C8239A8D9100A147BE /* GameNewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383B7239A8D9100A147BE /* GameNewsInteractor.swift */; };
+		BC9383C9239A8D9100A147BE /* GameNewsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383B8239A8D9100A147BE /* GameNewsInteractorOutput.swift */; };
+		BC9383CA239A8D9100A147BE /* GameNewsModuleStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383BA239A8D9100A147BE /* GameNewsModuleStartOption.swift */; };
+		BC9383CB239A8D9100A147BE /* GameNewsModuleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383BB239A8D9100A147BE /* GameNewsModuleResult.swift */; };
+		BC9383D4239A9AA600A147BE /* HtmlConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383D3239A9AA600A147BE /* HtmlConverter.swift */; };
+		BC9383D6239A9D6400A147BE /* HtmlConverting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383D5239A9D6400A147BE /* HtmlConverting.swift */; };
 		BC9CF7F3239755FD00CCD732 /* UserGamesPresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF7DD239755FD00CCD732 /* UserGamesPresenterState.swift */; };
 		BC9CF7F4239755FD00CCD732 /* UserGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF7DE239755FD00CCD732 /* UserGamesPresenter.swift */; };
 		BC9CF7F5239755FD00CCD732 /* UserGamesItemsSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF7E0239755FD00CCD732 /* UserGamesItemsSourcing.swift */; };
@@ -135,6 +153,24 @@
 		BC93837D239A686700A147BE /* GameAchievementsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsInteractor.swift; sourceTree = "<group>"; };
 		BC93837F239A686700A147BE /* GameAchievementsModuleStartOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsModuleStartOption.swift; sourceTree = "<group>"; };
 		BC938380239A686700A147BE /* GameAchievementsModuleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsModuleResult.swift; sourceTree = "<group>"; };
+		BC9383A6239A8D9100A147BE /* GameNewsPresenterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsPresenterState.swift; sourceTree = "<group>"; };
+		BC9383A7239A8D9100A147BE /* GameNewsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsPresenter.swift; sourceTree = "<group>"; };
+		BC9383AA239A8D9100A147BE /* GameNewsModelBuilding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsModelBuilding.swift; sourceTree = "<group>"; };
+		BC9383AB239A8D9100A147BE /* GameNewsModelBuilderSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsModelBuilderSettings.swift; sourceTree = "<group>"; };
+		BC9383AC239A8D9100A147BE /* GameNewsCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsCellModel.swift; sourceTree = "<group>"; };
+		BC9383AD239A8D9100A147BE /* GameNewsModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsModelBuilder.swift; sourceTree = "<group>"; };
+		BC9383AE239A8D9100A147BE /* GameNewsItemsSourcing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsItemsSourcing.swift; sourceTree = "<group>"; };
+		BC9383B0239A8D9100A147BE /* GameNewsViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsViewOutput.swift; sourceTree = "<group>"; };
+		BC9383B1239A8D9100A147BE /* GameNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsViewController.swift; sourceTree = "<group>"; };
+		BC9383B2239A8D9100A147BE /* GameNewsViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsViewInput.swift; sourceTree = "<group>"; };
+		BC9383B4239A8D9100A147BE /* GameNewsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsConfigurator.swift; sourceTree = "<group>"; };
+		BC9383B6239A8D9100A147BE /* GameNewsInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsInteractorInput.swift; sourceTree = "<group>"; };
+		BC9383B7239A8D9100A147BE /* GameNewsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsInteractor.swift; sourceTree = "<group>"; };
+		BC9383B8239A8D9100A147BE /* GameNewsInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsInteractorOutput.swift; sourceTree = "<group>"; };
+		BC9383BA239A8D9100A147BE /* GameNewsModuleStartOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsModuleStartOption.swift; sourceTree = "<group>"; };
+		BC9383BB239A8D9100A147BE /* GameNewsModuleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNewsModuleResult.swift; sourceTree = "<group>"; };
+		BC9383D3239A9AA600A147BE /* HtmlConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlConverter.swift; sourceTree = "<group>"; };
+		BC9383D5239A9D6400A147BE /* HtmlConverting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlConverting.swift; sourceTree = "<group>"; };
 		BC9CF7DD239755FD00CCD732 /* UserGamesPresenterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesPresenterState.swift; sourceTree = "<group>"; };
 		BC9CF7DE239755FD00CCD732 /* UserGamesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesPresenter.swift; sourceTree = "<group>"; };
 		BC9CF7E0239755FD00CCD732 /* UserGamesItemsSourcing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesItemsSourcing.swift; sourceTree = "<group>"; };
@@ -364,6 +400,87 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		BC9383A4239A8D9100A147BE /* GameNews */ = {
+			isa = PBXGroup;
+			children = (
+				BC9383A5239A8D9100A147BE /* Presenter */,
+				BC9383A8239A8D9100A147BE /* Common */,
+				BC9383AF239A8D9100A147BE /* View */,
+				BC9383B3239A8D9100A147BE /* Configurator */,
+				BC9383B5239A8D9100A147BE /* Interactor */,
+				BC9383B9239A8D9100A147BE /* Router */,
+			);
+			path = GameNews;
+			sourceTree = "<group>";
+		};
+		BC9383A5239A8D9100A147BE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BC9383A6239A8D9100A147BE /* GameNewsPresenterState.swift */,
+				BC9383A7239A8D9100A147BE /* GameNewsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BC9383A8239A8D9100A147BE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BC9383A9239A8D9100A147BE /* Models */,
+				BC9383AE239A8D9100A147BE /* GameNewsItemsSourcing.swift */,
+				BC9383D3239A9AA600A147BE /* HtmlConverter.swift */,
+				BC9383D5239A9D6400A147BE /* HtmlConverting.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BC9383A9239A8D9100A147BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC9383AA239A8D9100A147BE /* GameNewsModelBuilding.swift */,
+				BC9383AB239A8D9100A147BE /* GameNewsModelBuilderSettings.swift */,
+				BC9383AC239A8D9100A147BE /* GameNewsCellModel.swift */,
+				BC9383AD239A8D9100A147BE /* GameNewsModelBuilder.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC9383AF239A8D9100A147BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC9383B0239A8D9100A147BE /* GameNewsViewOutput.swift */,
+				BC9383B1239A8D9100A147BE /* GameNewsViewController.swift */,
+				BC9383B2239A8D9100A147BE /* GameNewsViewInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC9383B3239A8D9100A147BE /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				BC9383B4239A8D9100A147BE /* GameNewsConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		BC9383B5239A8D9100A147BE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BC9383B6239A8D9100A147BE /* GameNewsInteractorInput.swift */,
+				BC9383B7239A8D9100A147BE /* GameNewsInteractor.swift */,
+				BC9383B8239A8D9100A147BE /* GameNewsInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BC9383B9239A8D9100A147BE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BC9383BA239A8D9100A147BE /* GameNewsModuleStartOption.swift */,
+				BC9383BB239A8D9100A147BE /* GameNewsModuleResult.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		BC9CF7DB239755FD00CCD732 /* UserGames */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +705,7 @@
 				BCCCCAEA23950A3100772A89 /* Game */,
 				BC04480D239813A3008BEA66 /* GameStats */,
 				BC938369239A686700A147BE /* GameAchievements */,
+				BC9383A4239A8D9100A147BE /* GameNews */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -701,15 +819,20 @@
 			files = (
 				BC044825239813A3008BEA66 /* GameStatsPresenter.swift in Sources */,
 				BC04482E239813A4008BEA66 /* GameStatsViewInput.swift in Sources */,
+				BC9383C6239A8D9100A147BE /* GameNewsConfigurator.swift in Sources */,
 				BC9CF7F9239755FD00CCD732 /* UserGamesModelBuilderSettings.swift in Sources */,
 				BC044826239813A3008BEA66 /* GameStatsPresenterState.swift in Sources */,
 				BC044827239813A3008BEA66 /* GameStatsCellModel.swift in Sources */,
 				BCCCCB0423950A3100772A89 /* GameItemsSourcing.swift in Sources */,
 				BCCCCABA2394275C00772A89 /* GameScenesDependencies.swift in Sources */,
+				BC9383CA239A8D9100A147BE /* GameNewsModuleStartOption.swift in Sources */,
+				BC9383BD239A8D9100A147BE /* GameNewsPresenter.swift in Sources */,
 				BC9CF7F6239755FD00CCD732 /* UserGamesModelBuilder.swift in Sources */,
+				BC9383D6239A9D6400A147BE /* HtmlConverting.swift in Sources */,
 				BC938381239A686700A147BE /* GameAchievementsPresenter.swift in Sources */,
 				BC04482F239813A4008BEA66 /* GameStatsConfigurator.swift in Sources */,
 				BC93838E239A686800A147BE /* GameAchievementsInteractor.swift in Sources */,
+				BC9383D4239A9AA600A147BE /* HtmlConverter.swift in Sources */,
 				BC93838A239A686800A147BE /* GameAchievementsViewController.swift in Sources */,
 				BCCCCAB82394270400772A89 /* GameModulesFactory.swift in Sources */,
 				BC9CF7F4239755FD00CCD732 /* UserGamesPresenter.swift in Sources */,
@@ -723,10 +846,13 @@
 				BCCCCB0C23950A3100772A89 /* GameConfigurator.swift in Sources */,
 				BCCCCB0623950A3100772A89 /* GameCellModel.swift in Sources */,
 				BC9CF802239755FD00CCD732 /* UserGamesModuleStartOption.swift in Sources */,
+				BC9383C9239A8D9100A147BE /* GameNewsInteractorOutput.swift in Sources */,
 				BC93838D239A686800A147BE /* GameAchievementsInteractorOutput.swift in Sources */,
 				BCCCCB0923950A3100772A89 /* GameViewOutput.swift in Sources */,
 				BC938383239A686700A147BE /* GameAchievementsItemsSourcing.swift in Sources */,
+				BC9383C8239A8D9100A147BE /* GameNewsInteractor.swift in Sources */,
 				BC938385239A686700A147BE /* GameAchievementsModelBuilder.swift in Sources */,
+				BC9383C2239A8D9100A147BE /* GameNewsItemsSourcing.swift in Sources */,
 				BC044829239813A3008BEA66 /* GameStatsModelBuilderSettings.swift in Sources */,
 				BC9CF7FD239755FD00CCD732 /* UserGamesConfigurator.swift in Sources */,
 				BC9CF7F8239755FD00CCD732 /* UserGamesModelBuilding.swift in Sources */,
@@ -734,6 +860,7 @@
 				BC04482D239813A4008BEA66 /* GameStatsViewController.swift in Sources */,
 				BC9CF7FF239755FD00CCD732 /* UserGamesInteractor.swift in Sources */,
 				BCCCCB0D23950A3100772A89 /* GameInteractorInput.swift in Sources */,
+				BC9383BC239A8D9100A147BE /* GameNewsPresenterState.swift in Sources */,
 				BC04482B239813A4008BEA66 /* GameStatsItemsSourcing.swift in Sources */,
 				BC93838C239A686800A147BE /* GameAchievementsInteractorInput.swift in Sources */,
 				BC9CF7FC239755FD00CCD732 /* UserGamesViewInput.swift in Sources */,
@@ -742,8 +869,10 @@
 				BCCCCB1123950A3100772A89 /* GameModuleResult.swift in Sources */,
 				BC044830239813A4008BEA66 /* GameStatsInteractorOutput.swift in Sources */,
 				BC93838F239A686800A147BE /* GameAchievementsModuleStartOption.swift in Sources */,
+				BC9383C3239A8D9100A147BE /* GameNewsViewOutput.swift in Sources */,
 				BCCCCB0523950A3100772A89 /* GameModelBuilderSettings.swift in Sources */,
 				BC04482C239813A4008BEA66 /* GameStatsViewOutput.swift in Sources */,
+				BC9383CB239A8D9100A147BE /* GameNewsModuleResult.swift in Sources */,
 				BCCCCB0F23950A3100772A89 /* GameInteractor.swift in Sources */,
 				BC938386239A686800A147BE /* GameAchievementsModelBuilding.swift in Sources */,
 				BC9CF7FA239755FD00CCD732 /* UserGamesViewController.swift in Sources */,
@@ -755,17 +884,24 @@
 				BCCCCABC239428C200772A89 /* GamesCoordinator.swift in Sources */,
 				BC938384239A686700A147BE /* GameAchievementsModelBuilderSettings.swift in Sources */,
 				BCCCCB0223950A3100772A89 /* GamePresenter.swift in Sources */,
+				BC9383C4239A8D9100A147BE /* GameNewsViewController.swift in Sources */,
 				BC044834239813A4008BEA66 /* GameStatsModuleStartOption.swift in Sources */,
+				BC9383C5239A8D9100A147BE /* GameNewsViewInput.swift in Sources */,
 				BCD22CC4238E87410020885E /* GameModulesFactoring.swift in Sources */,
 				BC044833239813A4008BEA66 /* GameStatsModuleResult.swift in Sources */,
 				BC044832239813A4008BEA66 /* GameStatsInteractorInput.swift in Sources */,
 				BC9CF7F5239755FD00CCD732 /* UserGamesItemsSourcing.swift in Sources */,
+				BC9383C0239A8D9100A147BE /* GameNewsCellModel.swift in Sources */,
 				BC044831239813A4008BEA66 /* GameStatsInteractor.swift in Sources */,
+				BC9383BE239A8D9100A147BE /* GameNewsModelBuilding.swift in Sources */,
+				BC9383BF239A8D9100A147BE /* GameNewsModelBuilderSettings.swift in Sources */,
 				BC93838B239A686800A147BE /* GameAchievementsConfigurator.swift in Sources */,
 				BC938387239A686800A147BE /* GameAchievementsCellModel.swift in Sources */,
+				BC9383C7239A8D9100A147BE /* GameNewsInteractorInput.swift in Sources */,
 				BC9CF801239755FD00CCD732 /* UserGamesModuleResult.swift in Sources */,
 				BC9CF7F7239755FD00CCD732 /* UserGamesCellModel.swift in Sources */,
 				BC9CF7F3239755FD00CCD732 /* UserGamesPresenterState.swift in Sources */,
+				BC9383C1239A8D9100A147BE /* GameNewsModelBuilder.swift in Sources */,
 				BCCCCB0723950A3100772A89 /* GameModelBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ListItemWithDescriptionCellModel.swift
+//  TitleAndTextCellModel.swift
 //  UICommon
 //
 //  Created by Михаил Игонин on 27.11.2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ListItemWithDescriptionCellModel {
+public struct TitleAndTextCellModel {
     public let title: String
     public let imgUrl: String?
     public let description: String?

@@ -17,6 +17,7 @@ public enum MethodPath: String, CustomStringConvertible {
 
     case gameSchema = "ISteamUserStats/GetSchemaForGame/v2"
     case gameStats = "ISteamUserStats/GetUserStatsForGame/v0002"
+    case gameNews = "ISteamNews/GetNewsForApp/v0002"
 
     public var description: String {
         return self.rawValue

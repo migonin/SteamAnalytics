@@ -19,5 +19,5 @@ public class CSGameOwner: CoreStoreObject {
     public let playtimes = Relationship.ToManyUnordered<CSPlaytime>("playtimes", inverse: { $0.owner })
 
     public let lastGamesUpdateDate = Value.Optional<Date>("lastGamesUpdateDate")
-    public let lastLastPlayedGamesUpdateDate = Value.Optional<Date>("lastLastPlayedGamesUpdateDate")
+    public let lastPlayedGamesUpdateDate = Value.Optional<Date>("lastPlayedGamesUpdateDate")
 }

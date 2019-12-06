@@ -1,5 +1,5 @@
 //
-//  ListItemCell.swift
+//  TitleAndTextCell.swift
 //  UICommon
 //
 //  Created by Михаил Игонин on 29.11.2019.
@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-public class ListItemWithDescriptionCell: UITableViewCell {
+public class TitleAndTextCell: UITableViewCell {
     let stackView = UIStackView()
     let labelsStackView = UIStackView()
 
@@ -68,7 +68,7 @@ public class ListItemWithDescriptionCell: UITableViewCell {
         stackView.addArrangedSubview(labelsStackView)
     }
 
-    public func configure(with model: ListItemWithDescriptionCellModel) {
+    public func configure(with model: TitleAndTextCellModel) {
         titleLabel.text = model.title
         descriptionLabel.text = model.description
 

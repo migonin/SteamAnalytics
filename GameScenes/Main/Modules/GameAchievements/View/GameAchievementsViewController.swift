@@ -25,7 +25,7 @@ class GameAchievementsViewController: BaseTableViewController, GameAchievementsV
     }
 
     override func registerCells() {
-        tableView.registerClassCell(ListItemWithDescriptionCell.self)
+        tableView.registerClassCell(TitleAndTextCell.self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,7 +71,7 @@ class GameAchievementsViewController: BaseTableViewController, GameAchievementsV
 
         switch model {
         case .achievement(let model):
-            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: ListItemWithDescriptionCell.self)
+            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: TitleAndTextCell.self)
             cell.configure(with: model)
 
             return cell

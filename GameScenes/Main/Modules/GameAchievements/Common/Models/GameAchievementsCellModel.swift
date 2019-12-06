@@ -10,5 +10,5 @@ import Foundation
 import UICommon
 
 enum GameAchievementsCellModel {
-    case achievement(ListItemWithDescriptionCellModel)
+    case achievement(TitleAndTextCellModel)
 }
