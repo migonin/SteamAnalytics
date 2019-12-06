@@ -55,6 +55,10 @@ class UserFriendsViewController: BaseTableViewController, UserFriendsViewInput {
         tableView.reloadData()
     }
 
+    override func refresh() {
+        output.didRefresh()
+    }
+
     // MARK: - Table view
 
     func numberOfSections(in tableView: UITableView) -> Int {

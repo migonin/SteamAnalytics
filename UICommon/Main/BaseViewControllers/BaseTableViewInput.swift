@@ -10,4 +10,7 @@ import Foundation
 
 public protocol BaseTableViewInput: BaseViewInput {
     func reloadData()
+
+    func setPullToRefreshActive(_ isActive: Bool)
+    func setPullToRefreshEnabled(_ isEnabled: Bool)
 }

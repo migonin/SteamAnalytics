@@ -23,9 +23,9 @@ final class UserModuleConfigurator {
         let interactor = UserInteractor()
         interactor.output = presenter
         interactor.userService = dependencies.userService
-        interactor.authStorage = dependencies.authStorage
         interactor.userStorage = dependencies.userStorage
         interactor.logoutService = dependencies.logoutService
+        interactor.syncService = dependencies.gameStatsSyncService
 
         presenter.interactor = interactor
         presenter.modelBuilder = UserModelBuilder()

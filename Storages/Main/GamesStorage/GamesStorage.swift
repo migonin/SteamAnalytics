@@ -20,6 +20,10 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
     // MARK: GamesStorageInput
 
     public func createOrUpdateOwnGames(_ games: [Game], lastPlayed: Bool, for user: User) {
+        createOrUpdateOwnGames(games, lastPlayed: lastPlayed, for: user, completion: nil)
+    }
+
+    public func createOrUpdateOwnGames(_ games: [Game], lastPlayed: Bool, for user: User, completion: (() -> Void)?) {
         dataStack.perform(asynchronous: { (transaction) -> Void in
             let gamesOwner: CSGameOwner
 
@@ -28,6 +32,12 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
             } else {
                 gamesOwner = transaction.create(Into<CSGameOwner>())
                 gamesOwner.id.value = user.id
+            }
+
+            if lastPlayed {
+                gamesOwner.lastLastPlayedGamesUpdateDate.value = Date()
+            } else {
+                gamesOwner.lastGamesUpdateDate.value = Date()
             }
 
             var csGames: [CSGame] = []
@@ -51,7 +61,9 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
             } else {
                 gamesOwner.games.value = csGames
             }
-        }, completion: { _ in })
+        }, completion: { _ in
+            completion?()
+        })
     }
 
     public func addGamesStats(stats: [StatValue], achievements: [AchievementValue], for game: Game, user: User) {
@@ -134,7 +146,10 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
                 .filter({$0.owner.value?.id.value == owner.id.value})
                 .sorted(by: {$0.date.value < $1.date.value})
                 .map({$0.toStatValue()})
-            retArray.append((stat.toStat(), userStats))
+
+            if userStats.count != 0 {
+                retArray.append((stat.toStat(), userStats))
+            }
         }
 
         return retArray
@@ -168,6 +183,14 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
         guard let game = try? dataStack.fetchOne(From<CSGame>().where(\.id == game.id)) else { return ([], []) }
 
         return (game.stats.value.map({$0.toStat()}), game.achievements.value.map({$0.toAchievement()}))
+    }
+
+    public func userGamesSyncDate(_ user: User) -> Date? {
+        return gamesOwnerObject(for: user).lastGamesUpdateDate.value
+    }
+
+    public func userLastPlayedGamesSyncDate(_ user: User) -> Date? {
+        return gamesOwnerObject(for: user).lastLastPlayedGamesUpdateDate.value
     }
 
     // MARK: Helpers

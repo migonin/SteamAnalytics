@@ -24,6 +24,8 @@ final class UserGamesInteractor: UserGamesInteractorInput {
     var user: User!
     var games: [Game]?
 
+    let dataInvalidationTime: TimeInterval = 3600
+
     // MARK: - UserGamesInteractorInput
     func prepareDataSource(user: User, lastPlayed: Bool) {
         self.user = user
@@ -39,7 +41,14 @@ final class UserGamesInteractor: UserGamesInteractorInput {
         gameMonitor?.removeObserver(self)
     }
 
-    func loadUserGames() {
+    func loadUserGames(force: Bool) {
+        let date = lastPlayed ? gameStorage.userLastPlayedGamesSyncDate(user) : gameStorage.userGamesSyncDate(user)
+
+        if let lastGamesSyncDate = date,
+            Date().timeIntervalSince(lastGamesSyncDate) < dataInvalidationTime && !force {
+            return
+        }
+
         output.didStartUserGamesLoading()
 
         gameService.getUserGames(user, lastPlayed: lastPlayed) { [weak self] (result) in

@@ -32,6 +32,7 @@ struct UserFriendsModelBuilder: UserFriendsModelBuilding {
                         title: friend.name,
                         subtitle: nil,
                         imgUrl: friend.avatarMedium,
+                        roundedImg: true,
                         showDisclosureIndicator: true
                     )
                 ))

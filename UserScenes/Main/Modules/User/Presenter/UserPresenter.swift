@@ -30,15 +30,13 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
         switch option {
         case .startScreen(let user):
             state.startScreen = true
-            state.isUserOwn = true
             state.user = user
 
         case .user(let user):
             state.user = user
-            state.isUserOwn = interactor.isUserOwn(user)
         }
 
-        interactor.prepareDataSource(user: state.user)
+        interactor.prepareDataSource(user: state.user, startScreen: state.startScreen)
     }
 
     // MARK: View lifecycle
@@ -54,7 +52,7 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
             view.setTitle("Юзер")
         }
 
-        interactor.loadUser()
+        interactor.loadUser(force: false)
         loadModels()
     }
 
@@ -86,7 +84,7 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
     }
 
     func didTapRetryButton() {
-        interactor.loadUser()
+        interactor.loadUser(force: true)
     }
 
     func logoutButtonTapped() {
@@ -98,11 +96,17 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
         output?(.logout)
     }
 
+    func didRefresh() {
+        interactor.loadUser(force: true)
+    }
+
     // MARK: - UserInteractorOutput
     func didStartUserLoading() {
     }
 
     func didFinishUserLoading(result: Result<Void, Error>) {
+        view.setPullToRefreshActive(false)
+
         if case let Result.failure(error) = result {
             switch errorDescriber.describeError(error) {
             case .message(let message, let okTitle, let retryTitle),
@@ -121,7 +125,6 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
 
     func loadModels() {
         let settings = UserModelBuilderSettings(user: state.user,
-                                                isOwn: state.isUserOwn,
                                                 startScreen: state.startScreen)
 
         displayModels = modelBuilder.buildModels(settings: settings)

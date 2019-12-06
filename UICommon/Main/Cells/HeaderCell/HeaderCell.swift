@@ -78,7 +78,7 @@ public class HeaderCell: UITableViewCell {
         subsubtitleLabel.text = model.subsubtitle
 
         if model.roundedImg {
-            let processor = RoundCornerImageProcessor(cornerRadius: imgViewSize)
+            let processor = RoundCornerImageProcessor(cornerRadius: imgViewSize, backgroundColor: UIColor.clear)
             imgView.kf.setImage(with: URL(string: model.imgUrl), options: [.processor(processor)])
         } else {
             imgView.kf.setImage(with: URL(string: model.imgUrl))

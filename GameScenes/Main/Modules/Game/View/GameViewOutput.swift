@@ -13,9 +13,9 @@ protocol GameViewOutput: class {
     func willDisappear(animated: Bool)
     func didDisappear(animated: Bool)
 
-    func statButtonTapped()
-
     func didTapCell(at index: Int)
     func didTapOKButton()
     func didTapRetryButton()
+
+    func didRefresh()
 }

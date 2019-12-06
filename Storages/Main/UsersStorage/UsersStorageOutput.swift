@@ -14,5 +14,8 @@ public protocol UsersStorageOutput {
     func monitorUser(_ user: User) -> ObjectMonitor<CSUser>
 
     func getUser(withID id: String) -> User?
+    func userSyncDate(_ user: User) -> Date?
+    func userFriendsSyncDate(_ user: User) -> Date?
+
     func getUserFirends(_ user: User) -> [User]
 }

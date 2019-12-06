@@ -17,4 +17,7 @@ public class CSGameOwner: CoreStoreObject {
     public let achievements = Relationship.ToManyUnordered<CSAchievementValue>("achievements", inverse: { $0.owner })
     public let stats = Relationship.ToManyUnordered<CSStatValue>("stats", inverse: { $0.owner })
     public let playtimes = Relationship.ToManyUnordered<CSPlaytime>("playtimes", inverse: { $0.owner })
+
+    public let lastGamesUpdateDate = Value.Optional<Date>("lastGamesUpdateDate")
+    public let lastLastPlayedGamesUpdateDate = Value.Optional<Date>("lastLastPlayedGamesUpdateDate")
 }

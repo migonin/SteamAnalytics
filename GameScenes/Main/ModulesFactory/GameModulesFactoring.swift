@@ -18,4 +18,8 @@ public protocol GameModulesFactoring {
 
     func makeGameStatsScreen() ->
         CoordinatableFactoryResult<GameStatsModuleStartOption, GameStatsModuleResult>
+
+    func makeGameAchievements() ->
+        CoordinatableFactoryResult<GameAchievementsModuleStartOption, GameAchievementsModuleResult>
+
 }

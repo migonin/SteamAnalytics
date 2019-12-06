@@ -44,6 +44,7 @@ class GameStatsPresenter: Coordinatable, GameStatsViewOutput, GameStatsInteracto
         state.isViewPresented = false
 
         view.setTitle("Статистика игры")
+        view.setPullToRefreshEnabled(false)
         loadModels()
     }
 

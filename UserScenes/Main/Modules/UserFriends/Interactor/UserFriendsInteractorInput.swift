@@ -14,6 +14,6 @@ protocol UserFriendsInteractorInput {
     func subscribeForDataSourceChanges()
     func unsubscribeForDataSourceChanges()
 
-    func loadUserFriends()
+    func loadUserFriends(force: Bool)
     func provideUserFriends() -> [User]
 }

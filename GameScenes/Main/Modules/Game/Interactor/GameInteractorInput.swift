@@ -15,5 +15,5 @@ protocol GameInteractorInput {
     func unsubscribeForDataSourceChanges()
 
     func provideGameStats() -> [(Stat, StatValue)]
-    func loadGame()
+    func loadGame(force: Bool)
 }

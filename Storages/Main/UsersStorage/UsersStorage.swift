@@ -21,6 +21,7 @@ public struct UsersStorage: UsersStorageInput, UsersStorageOutput {
         return try? dataStack.fetchOne(From<CSUser>().where(\.id == id))
     }
 
+    // MARK: UserStorageOutput
     public func monitorUser(_ user: User) -> ObjectMonitor<CSUser> {
         guard let csUser = getCSUser(withID: user.id) else {
             fatalError("User not exist")
@@ -37,9 +38,21 @@ public struct UsersStorage: UsersStorageInput, UsersStorageOutput {
         return getCSUser(withID: user.id)?.friends.value.map({$0.toUser()}) ?? []
     }
 
+    public func userSyncDate(_ user: User) -> Date? {
+        return getCSUser(withID: user.id)?.lastUpdateDate.value
+    }
+
+    public func userFriendsSyncDate(_ user: User) -> Date? {
+        return getCSUser(withID: user.id)?.lastFriendsUpdateDate.value
+    }
+
     public func createOrUpdateUsers(_ users: [User], completion: (() -> Void)?) {
         dataStack.perform(asynchronous: { (transaction) -> Void in
-            _  = try transaction.importUniqueObjects(Into<CSUser>(), sourceArray: users)
+            let users  = try transaction.importUniqueObjects(Into<CSUser>(), sourceArray: users)
+
+            users.forEach { (user) in
+                user.lastUpdateDate.value = Date()
+            }
         }, completion: { _ in
             completion?()
         })
@@ -57,6 +70,7 @@ public struct UsersStorage: UsersStorageInput, UsersStorageOutput {
             let friends  = try transaction.importUniqueObjects(Into<CSUser>(), sourceArray: friends)
 
             csUser.friends.value = friends
+            csUser.lastFriendsUpdateDate.value = Date()
         }, completion: { _ in })
     }
 

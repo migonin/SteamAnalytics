@@ -9,5 +9,4 @@
 import UICommon
 
 protocol GameViewInput: class, BaseTableViewInput {
-    func setStatsButtonHidden(_ isHidden: Bool)
 }

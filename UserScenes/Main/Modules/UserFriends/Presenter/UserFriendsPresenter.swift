@@ -42,7 +42,7 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
         state.isViewPresented = false
 
         view.setTitle("Друзья \(state.user.name)")
-        interactor.loadUserFriends()
+        interactor.loadUserFriends(force: false)
         loadModels()
     }
 
@@ -74,7 +74,11 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
     }
 
     func didTapRetryButton() {
-        interactor.loadUserFriends()
+        interactor.loadUserFriends(force: true)
+    }
+
+    func didRefresh() {
+        interactor.loadUserFriends(force: true)
     }
 
     // MARK: - UserFriendsInteractorOutput
@@ -89,6 +93,7 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
     func didFinishUserFriendsLoading(result: Result<Void, Error>) {
         state.requestInProgress = false
         view.hideSpinner()
+        view.setPullToRefreshActive(false)
 
         if case let Result.failure(error) = result {
             switch errorDescriber.describeError(error) {

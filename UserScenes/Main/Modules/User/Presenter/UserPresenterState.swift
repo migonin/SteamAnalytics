@@ -16,5 +16,4 @@ struct UserPresenterState {
 
     var startScreen: Bool = false
     var user: User!
-    var isUserOwn: Bool = false
 }

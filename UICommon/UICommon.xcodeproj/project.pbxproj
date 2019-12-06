@@ -27,6 +27,9 @@
 		BC85FCF123916511002138B3 /* ComparsionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEF23916511002138B3 /* ComparsionCellModel.swift */; };
 		BC85FCF523916BF9002138B3 /* ComparsionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF423916BF8002138B3 /* ComparsionViewController.swift */; };
 		BC85FCFC239173D8002138B3 /* GraphCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */; };
+		BC938394239A754400A147BE /* ListItemWithDescriptionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938392239A754400A147BE /* ListItemWithDescriptionCellModel.swift */; };
+		BC938395239A754400A147BE /* ListItemWithDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938393239A754400A147BE /* ListItemWithDescriptionCell.swift */; };
+		BC938397239A76A700A147BE /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938396239A76A700A147BE /* AchievementsViewController.swift */; };
 		BC99B3DB2390E89A00CCAEA8 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3D92390E89A00CCAEA8 /* UserViewController.swift */; };
 		BC99B3DC2390E89A00CCAEA8 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99B3DA2390E89A00CCAEA8 /* UserListViewController.swift */; };
 		BC9CF8082397ABCB00CCD732 /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF8072397ABCB00CCD732 /* ChartXAxisFormatter.swift */; };
@@ -123,6 +126,9 @@
 		BC85FCF7239171D7002138B3 /* GraphCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCell.swift; sourceTree = "<group>"; };
 		BC85FCF8239171D7002138B3 /* GraphCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCellModel.swift; sourceTree = "<group>"; };
 		BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCellsViewController.swift; sourceTree = "<group>"; };
+		BC938392239A754400A147BE /* ListItemWithDescriptionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemWithDescriptionCellModel.swift; sourceTree = "<group>"; };
+		BC938393239A754400A147BE /* ListItemWithDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemWithDescriptionCell.swift; sourceTree = "<group>"; };
+		BC938396239A76A700A147BE /* AchievementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		BC99B3D92390E89A00CCAEA8 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		BC99B3DA2390E89A00CCAEA8 /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		BC9CF8072397ABCB00CCD732 /* ChartXAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisFormatter.swift; sourceTree = "<group>"; };
@@ -219,6 +225,7 @@
 				BC0448372398AA47008BEA66 /* GameListViewController.swift */,
 				BC85FCF423916BF8002138B3 /* ComparsionViewController.swift */,
 				BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */,
+				BC938396239A76A700A147BE /* AchievementsViewController.swift */,
 			);
 			path = CellsViewControllers;
 			sourceTree = "<group>";
@@ -241,6 +248,16 @@
 			);
 			path = GraphCell;
 			sourceTree = "<group>";
+		};
+		BC938391239A754400A147BE /* ListItemWithDescriptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				BC938392239A754400A147BE /* ListItemWithDescriptionCellModel.swift */,
+				BC938393239A754400A147BE /* ListItemWithDescriptionCell.swift */,
+			);
+			name = ListItemWithDescriptionCell;
+			path = Main/Cells/ListItemWithDescriptionCell;
+			sourceTree = SOURCE_ROOT;
 		};
 		BCA361EB23951F0500296C17 /* MessageCell */ = {
 			isa = PBXGroup;
@@ -315,6 +332,7 @@
 				BC85FCE3239148B2002138B3 /* TwoUsersCell */,
 				BC85FCED23916511002138B3 /* ComparsionCell */,
 				BC85FCF6239171D7002138B3 /* GraphCell */,
+				BC938391239A754400A147BE /* ListItemWithDescriptionCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -618,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC938397239A76A700A147BE /* AchievementsViewController.swift in Sources */,
 				BC0448362398A7E5008BEA66 /* GameViewController.swift in Sources */,
 				BC1117102390DCF500422EEA /* RootViewController.swift in Sources */,
 				BC85FCF523916BF9002138B3 /* ComparsionViewController.swift in Sources */,
@@ -645,6 +664,7 @@
 				BCD22C7C238E6E530020885E /* NavigationCoordinator.swift in Sources */,
 				BC1117002390DB7A00422EEA /* ListItemCell.swift in Sources */,
 				BCD22C75238E609F0020885E /* GamesCoordinatorStartOption.swift in Sources */,
+				BC938394239A754400A147BE /* ListItemWithDescriptionCellModel.swift in Sources */,
 				BCD22C61238E37920020885E /* NavigatorDegelate.swift in Sources */,
 				BC9CF8082397ABCB00CCD732 /* ChartXAxisFormatter.swift in Sources */,
 				BC9CF80A2397AC5300CCD732 /* GraphCellModel.swift in Sources */,
@@ -657,6 +677,7 @@
 				BCC302F623960B2800914EB1 /* BaseTableViewInput.swift in Sources */,
 				BCC302FD2396197400914EB1 /* BaseCoordinator.swift in Sources */,
 				BCD22C82238E79260020885E /* HeaderCellModel.swift in Sources */,
+				BC938395239A754400A147BE /* ListItemWithDescriptionCell.swift in Sources */,
 				BCD22C6E238E60370020885E /* UserCoordinatorStartOption.swift in Sources */,
 				BCD22C6B238E5F980020885E /* CoordinatorFactoring.swift in Sources */,
 				BC5B4BC0239288BB00896A98 /* UserCoordinatorResult.swift in Sources */,

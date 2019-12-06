@@ -50,7 +50,7 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
             view.setTitle("Игры \(state.user.name)")
         }
         
-        interactor.loadUserGames()
+        interactor.loadUserGames(force: false)
         loadModels()
     }
 
@@ -82,7 +82,11 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
     }
 
     func didTapRetryButton() {
-        interactor.loadUserGames()
+        interactor.loadUserGames(force: true)
+    }
+
+    func didRefresh() {
+        interactor.loadUserGames(force: true)
     }
 
     // MARK: - UserGamesInteractorOutput
@@ -97,6 +101,7 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
     func didFinishUserGamesLoading(result: Result<Void, Error>) {
         state.requestInProgress = false
         view.hideSpinner()
+        view.setPullToRefreshActive(false)
 
         if case let Result.failure(error) = result {
             switch errorDescriber.describeError(error) {

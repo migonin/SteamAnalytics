@@ -17,6 +17,7 @@ final class GameInteractor: GameInteractorInput {
 
     var gamesService: GamesServicing!
     var gamesStorage: GamesStorageOutput!
+    let dataInvalidationTime: TimeInterval = 3600
 
     var gameMonitor: ObjectMonitor<CSGame>?
 
@@ -41,7 +42,11 @@ final class GameInteractor: GameInteractorInput {
         gameMonitor?.removeObserver(self)
     }
 
-    func loadGame() {
+    func loadGame(force: Bool) {
+        if let (_, firstValue) = stats?.first, Date().timeIntervalSince(firstValue.date) < dataInvalidationTime && !force {
+            return
+        }
+
         output.didStartGameLoading()
 
         gamesService.getGamesStats(game, of: user) { [weak self] (result) in

@@ -52,8 +52,8 @@ class CoordinatorFactory: CoordinatorFactoring {
                 userStorage: Storages.usersStorage,
                 gameService: Services.gamesService,
                 gameStorage: Storages.gamesStorage,
-                authStorage: Storages.authStorage,
-                logoutService: Services.logoutService
+                logoutService: Services.logoutService,
+                gameStatsSyncService: Services.gameStatsSyncService
             )
 
             let modulesFactory = UserModulesFactory(dependencies: dependencies)

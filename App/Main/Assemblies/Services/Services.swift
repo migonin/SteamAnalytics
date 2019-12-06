@@ -44,4 +44,10 @@ public final class Services {
         return LogoutService(userStorage: Storages.usersStorage,
                              authStorage: Storages.authStorage)
     }()
+
+    public static let gameStatsSyncService: GameStatsSyncServicing = {
+        return GameStatsSyncService(gameService: Services.gamesService,
+                                    gameStorage: Storages.gamesStorage)
+    }()
+
 }

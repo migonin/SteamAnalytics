@@ -11,6 +11,8 @@ import UICommon
 
 enum GameCellModel {
     case header(HeaderCellModel)
-    case stat(ListItemCellModel)
     case error(MessageCellModel)
+    case stats(ListItemCellModel)
+    case achievements(ListItemCellModel)
+    case news(ListItemCellModel)
 }

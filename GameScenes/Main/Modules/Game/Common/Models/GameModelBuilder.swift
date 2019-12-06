@@ -30,6 +30,15 @@ struct GameModelBuilder: GameModelBuilding {
             )
         ))
 
+        models.append(.news(
+            ListItemCellModel(
+                title: "Новости",
+                subtitle: nil,
+                imgUrl: nil,
+                showDisclosureIndicator: true
+            )
+        ))
+
         if settings.gameHasNoStats {
             models.append(.error(
                 MessageCellModel(
@@ -37,18 +46,24 @@ struct GameModelBuilder: GameModelBuilding {
                 )
             ))
         } else {
-            for (stat, value) in settings.stats {
-                let title = stat.displayName.isEmpty ? stat.name : stat.displayName
+            models.append(.stats(
+                ListItemCellModel(
+                    title: "Статы",
+                    subtitle: nil,
+                    imgUrl: nil,
+                    showDisclosureIndicator: true
+                )
+            ))
 
-                models.append(.stat(
-                    ListItemCellModel(
-                        title: title,
-                        subtitle: String(value.value),
-                        imgUrl: nil,
-                        showDisclosureIndicator: false
-                    )
-                ))
-            }
+            models.append(.achievements(
+                ListItemCellModel(
+                    title: "Ачивки",
+                    subtitle: nil,
+                    imgUrl: nil,
+                    showDisclosureIndicator: true
+                )
+            ))
+
         }
 
         return models

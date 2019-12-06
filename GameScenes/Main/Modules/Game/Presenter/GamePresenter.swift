@@ -44,7 +44,7 @@ class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
 
         view.setTitle(state.game.name)
         loadModels()
-        interactor.loadGame()
+        interactor.loadGame(force: false)
     }
 
     func willAppear(animated: Bool) {
@@ -75,11 +75,11 @@ class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
     }
 
     func didTapRetryButton() {
-        interactor.loadGame()
+        interactor.loadGame(force: true)
     }
 
-    func statButtonTapped() {
-        output?(.goToStats)
+    func didRefresh() {
+        interactor.loadGame(force: true)
     }
 
     // MARK: - GameInteractorOutput
@@ -91,6 +91,7 @@ class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
 
     func didFinishGameLoading(result: Result<Void, Error>) {
         view.hideSpinner()
+        view.setPullToRefreshActive(false)
 
         if case let Result.failure(error) = result {
             switch errorDescriber.describeError(error) {
@@ -112,7 +113,6 @@ class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
                                                 gameHasNoStats: state.gameHasNoStats)
 
         displayModels = modelBuilder.buildModels(settings: settings)
-        view.setStatsButtonHidden(interactor.provideGameStats().isEmpty)
     }
 
     func reloadScreen() {
@@ -125,6 +125,16 @@ class GamePresenter: Coordinatable, GameViewOutput, GameInteractorOutput {
     }
 
     func didTapCell(at index: Int) {
+        switch displayModels[index] {
+        case .achievements:
+            output?(.goToAchievements)
+        case .news:
+            output?(.goToNews)
+        case .stats:
+            output?(.goToStats)
+        default:
+            break
+        }
     }
 }
 

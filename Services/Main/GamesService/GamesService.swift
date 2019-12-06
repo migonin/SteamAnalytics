@@ -50,9 +50,10 @@ public struct GamesService: GamesServicing {
         gamesAPIClient.getUserGames(request: request) { (result) in
             switch result {
                 case .success(let response):
-                    self.storage.createOrUpdateOwnGames(response.response.games, lastPlayed: lastPlayed, for: user)
+                    self.storage.createOrUpdateOwnGames(response.response.games, lastPlayed: lastPlayed, for: user) {
+                        completionHandler(.success(()))
+                    }
 
-                completionHandler(.success(()))
                 case .failure(let error):
                     completionHandler(.failure(error))
             }

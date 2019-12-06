@@ -65,7 +65,7 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
             formatter.locale = Locale(identifier: preferredLanguage)
         }
 
-        formatter.dateFormat = "d MMMM HH:mm"
+        formatter.dateFormat = "dd.MM HH:mm"
 
         let xValuesNumberFormatter = ChartXAxisFormatter(dateFormatter: formatter)
 
@@ -109,6 +109,7 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
         transformHandler = model.transformHandler
 
         chartView.scaleXEnabled = model.values.count > 1
+        chartView.dragEnabled = model.values.count > 1
     }
 
     public func setTransform(_ transform: CGAffineTransform?) {

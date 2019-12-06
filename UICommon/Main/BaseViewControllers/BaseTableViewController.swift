@@ -12,12 +12,14 @@ import SnapKit
 
 open class BaseTableViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     public let tableView = UITableView()
+    public let refreshControl = UIRefreshControl()
 
     open override func loadView() {
         super.loadView()
 
         setupTableView()
         registerCells()
+        setupPullToRefresh()
     }
 
     private func setupTableView() {
@@ -30,6 +32,31 @@ open class BaseTableViewController: BaseViewController, UITableViewDelegate, UIT
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+    }
+
+    func setupPullToRefresh() {
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+    }
+
+    public func setPullToRefreshActive(_ isActive: Bool) {
+        if isActive {
+            refreshControl.beginRefreshing()
+        } else {
+            refreshControl.endRefreshing()
+        }
+    }
+
+    public func setPullToRefreshEnabled(_ isEnabled: Bool) {
+        if isEnabled {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.refreshControl = nil
+        }
+    }
+
+    @objc open func refresh() {
+
     }
 
     open override func viewDidLoad() {

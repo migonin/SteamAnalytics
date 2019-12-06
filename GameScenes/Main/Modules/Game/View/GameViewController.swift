@@ -52,20 +52,12 @@ class GameViewController: BaseTableViewController, GameViewInput {
         output.didDisappear(animated: animated)
     }
 
-    func setStatsButtonHidden(_ isHidden: Bool) {
-        if isHidden {
-            navigationItem.rightBarButtonItem = nil
-        } else {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "История", style: .plain, target: self, action: #selector(statsButtonTapped))
-        }
-    }
-
-    @objc private func statsButtonTapped() {
-        output.statButtonTapped()
-    }
-
     func reloadData() {
         tableView.reloadData()
+    }
+
+    override func refresh() {
+        output.didRefresh()
     }
 
     // MARK: - Table view
@@ -87,7 +79,7 @@ class GameViewController: BaseTableViewController, GameViewInput {
             cell.configure(with: model)
 
             return cell
-        case .stat(let model):
+        case .stats(let model), .achievements(let model), .news(let model):
             let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: ListItemCell.self)
             cell.configure(with: model)
 

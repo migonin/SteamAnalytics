@@ -16,4 +16,6 @@ protocol UserFriendsViewOutput: class {
     func didTapCell(at index: Int)
     func didTapOKButton()
     func didTapRetryButton()
+
+    func didRefresh()
 }

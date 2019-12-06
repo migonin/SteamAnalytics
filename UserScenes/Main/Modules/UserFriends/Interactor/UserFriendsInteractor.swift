@@ -22,6 +22,8 @@ final class UserFriendsInteractor: UserFriendsInteractorInput {
 
     var user: User!
 
+    let dataInvalidationTime: TimeInterval = 3600
+
     // MARK: - UserFriendsInteractorInput
     func prepareDataSource(user: User) {
         self.user = user
@@ -36,7 +38,12 @@ final class UserFriendsInteractor: UserFriendsInteractorInput {
         userMonitor?.removeObserver(self)
     }
 
-    func loadUserFriends() {
+    func loadUserFriends(force: Bool) {
+        if let lastFriendsSyncDate = userStorage.userFriendsSyncDate(user),
+            Date().timeIntervalSince(lastFriendsSyncDate) < dataInvalidationTime && !force {
+            return
+        }
+
         output.didStartUserFriendsLoading()
 
         userService.getUserFriends(user) { [weak self] (result) in

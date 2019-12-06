@@ -12,4 +12,6 @@ import Core
 public enum GameModuleResult {
     case back
     case goToStats
+    case goToNews
+    case goToAchievements
 }

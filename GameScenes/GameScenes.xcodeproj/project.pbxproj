@@ -24,6 +24,22 @@
 		BC044832239813A4008BEA66 /* GameStatsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044821239813A3008BEA66 /* GameStatsInteractorInput.swift */; };
 		BC044833239813A4008BEA66 /* GameStatsModuleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044823239813A3008BEA66 /* GameStatsModuleResult.swift */; };
 		BC044834239813A4008BEA66 /* GameStatsModuleStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC044824239813A3008BEA66 /* GameStatsModuleStartOption.swift */; };
+		BC938381239A686700A147BE /* GameAchievementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93836B239A686700A147BE /* GameAchievementsPresenter.swift */; };
+		BC938382239A686700A147BE /* GameAchievementsPresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93836C239A686700A147BE /* GameAchievementsPresenterState.swift */; };
+		BC938383239A686700A147BE /* GameAchievementsItemsSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93836E239A686700A147BE /* GameAchievementsItemsSourcing.swift */; };
+		BC938384239A686700A147BE /* GameAchievementsModelBuilderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938370239A686700A147BE /* GameAchievementsModelBuilderSettings.swift */; };
+		BC938385239A686700A147BE /* GameAchievementsModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938371239A686700A147BE /* GameAchievementsModelBuilder.swift */; };
+		BC938386239A686800A147BE /* GameAchievementsModelBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938372239A686700A147BE /* GameAchievementsModelBuilding.swift */; };
+		BC938387239A686800A147BE /* GameAchievementsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938373239A686700A147BE /* GameAchievementsCellModel.swift */; };
+		BC938388239A686800A147BE /* GameAchievementsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938375239A686700A147BE /* GameAchievementsViewInput.swift */; };
+		BC938389239A686800A147BE /* GameAchievementsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938376239A686700A147BE /* GameAchievementsViewOutput.swift */; };
+		BC93838A239A686800A147BE /* GameAchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938377239A686700A147BE /* GameAchievementsViewController.swift */; };
+		BC93838B239A686800A147BE /* GameAchievementsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938379239A686700A147BE /* GameAchievementsConfigurator.swift */; };
+		BC93838C239A686800A147BE /* GameAchievementsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93837B239A686700A147BE /* GameAchievementsInteractorInput.swift */; };
+		BC93838D239A686800A147BE /* GameAchievementsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93837C239A686700A147BE /* GameAchievementsInteractorOutput.swift */; };
+		BC93838E239A686800A147BE /* GameAchievementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93837D239A686700A147BE /* GameAchievementsInteractor.swift */; };
+		BC93838F239A686800A147BE /* GameAchievementsModuleStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93837F239A686700A147BE /* GameAchievementsModuleStartOption.swift */; };
+		BC938390239A686800A147BE /* GameAchievementsModuleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938380239A686700A147BE /* GameAchievementsModuleResult.swift */; };
 		BC9CF7F3239755FD00CCD732 /* UserGamesPresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF7DD239755FD00CCD732 /* UserGamesPresenterState.swift */; };
 		BC9CF7F4239755FD00CCD732 /* UserGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF7DE239755FD00CCD732 /* UserGamesPresenter.swift */; };
 		BC9CF7F5239755FD00CCD732 /* UserGamesItemsSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9CF7E0239755FD00CCD732 /* UserGamesItemsSourcing.swift */; };
@@ -103,6 +119,22 @@
 		BC044821239813A3008BEA66 /* GameStatsInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsInteractorInput.swift; sourceTree = "<group>"; };
 		BC044823239813A3008BEA66 /* GameStatsModuleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModuleResult.swift; sourceTree = "<group>"; };
 		BC044824239813A3008BEA66 /* GameStatsModuleStartOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModuleStartOption.swift; sourceTree = "<group>"; };
+		BC93836B239A686700A147BE /* GameAchievementsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsPresenter.swift; sourceTree = "<group>"; };
+		BC93836C239A686700A147BE /* GameAchievementsPresenterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsPresenterState.swift; sourceTree = "<group>"; };
+		BC93836E239A686700A147BE /* GameAchievementsItemsSourcing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsItemsSourcing.swift; sourceTree = "<group>"; };
+		BC938370239A686700A147BE /* GameAchievementsModelBuilderSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsModelBuilderSettings.swift; sourceTree = "<group>"; };
+		BC938371239A686700A147BE /* GameAchievementsModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsModelBuilder.swift; sourceTree = "<group>"; };
+		BC938372239A686700A147BE /* GameAchievementsModelBuilding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsModelBuilding.swift; sourceTree = "<group>"; };
+		BC938373239A686700A147BE /* GameAchievementsCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsCellModel.swift; sourceTree = "<group>"; };
+		BC938375239A686700A147BE /* GameAchievementsViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsViewInput.swift; sourceTree = "<group>"; };
+		BC938376239A686700A147BE /* GameAchievementsViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsViewOutput.swift; sourceTree = "<group>"; };
+		BC938377239A686700A147BE /* GameAchievementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsViewController.swift; sourceTree = "<group>"; };
+		BC938379239A686700A147BE /* GameAchievementsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsConfigurator.swift; sourceTree = "<group>"; };
+		BC93837B239A686700A147BE /* GameAchievementsInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsInteractorInput.swift; sourceTree = "<group>"; };
+		BC93837C239A686700A147BE /* GameAchievementsInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsInteractorOutput.swift; sourceTree = "<group>"; };
+		BC93837D239A686700A147BE /* GameAchievementsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsInteractor.swift; sourceTree = "<group>"; };
+		BC93837F239A686700A147BE /* GameAchievementsModuleStartOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsModuleStartOption.swift; sourceTree = "<group>"; };
+		BC938380239A686700A147BE /* GameAchievementsModuleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAchievementsModuleResult.swift; sourceTree = "<group>"; };
 		BC9CF7DD239755FD00CCD732 /* UserGamesPresenterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesPresenterState.swift; sourceTree = "<group>"; };
 		BC9CF7DE239755FD00CCD732 /* UserGamesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesPresenter.swift; sourceTree = "<group>"; };
 		BC9CF7E0239755FD00CCD732 /* UserGamesItemsSourcing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGamesItemsSourcing.swift; sourceTree = "<group>"; };
@@ -253,6 +285,85 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		BC938369239A686700A147BE /* GameAchievements */ = {
+			isa = PBXGroup;
+			children = (
+				BC93836A239A686700A147BE /* Presenter */,
+				BC93836D239A686700A147BE /* Common */,
+				BC938374239A686700A147BE /* View */,
+				BC938378239A686700A147BE /* Configurator */,
+				BC93837A239A686700A147BE /* Interactor */,
+				BC93837E239A686700A147BE /* Router */,
+			);
+			path = GameAchievements;
+			sourceTree = "<group>";
+		};
+		BC93836A239A686700A147BE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BC93836B239A686700A147BE /* GameAchievementsPresenter.swift */,
+				BC93836C239A686700A147BE /* GameAchievementsPresenterState.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BC93836D239A686700A147BE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BC93836E239A686700A147BE /* GameAchievementsItemsSourcing.swift */,
+				BC93836F239A686700A147BE /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BC93836F239A686700A147BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC938370239A686700A147BE /* GameAchievementsModelBuilderSettings.swift */,
+				BC938371239A686700A147BE /* GameAchievementsModelBuilder.swift */,
+				BC938372239A686700A147BE /* GameAchievementsModelBuilding.swift */,
+				BC938373239A686700A147BE /* GameAchievementsCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC938374239A686700A147BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC938375239A686700A147BE /* GameAchievementsViewInput.swift */,
+				BC938376239A686700A147BE /* GameAchievementsViewOutput.swift */,
+				BC938377239A686700A147BE /* GameAchievementsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC938378239A686700A147BE /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				BC938379239A686700A147BE /* GameAchievementsConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		BC93837A239A686700A147BE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BC93837B239A686700A147BE /* GameAchievementsInteractorInput.swift */,
+				BC93837C239A686700A147BE /* GameAchievementsInteractorOutput.swift */,
+				BC93837D239A686700A147BE /* GameAchievementsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BC93837E239A686700A147BE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BC93837F239A686700A147BE /* GameAchievementsModuleStartOption.swift */,
+				BC938380239A686700A147BE /* GameAchievementsModuleResult.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		BC9CF7DB239755FD00CCD732 /* UserGames */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,8 +479,8 @@
 		BCCCCAEE23950A3100772A89 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BCCCCAEF23950A3100772A89 /* GameItemsSourcing.swift */,
 				BCCCCAF023950A3100772A89 /* Models */,
+				BCCCCAEF23950A3100772A89 /* GameItemsSourcing.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -474,8 +585,9 @@
 			isa = PBXGroup;
 			children = (
 				BC9CF7DB239755FD00CCD732 /* UserGames */,
-				BC04480D239813A3008BEA66 /* GameStats */,
 				BCCCCAEA23950A3100772A89 /* Game */,
+				BC04480D239813A3008BEA66 /* GameStats */,
+				BC938369239A686700A147BE /* GameAchievements */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -595,18 +707,26 @@
 				BCCCCB0423950A3100772A89 /* GameItemsSourcing.swift in Sources */,
 				BCCCCABA2394275C00772A89 /* GameScenesDependencies.swift in Sources */,
 				BC9CF7F6239755FD00CCD732 /* UserGamesModelBuilder.swift in Sources */,
+				BC938381239A686700A147BE /* GameAchievementsPresenter.swift in Sources */,
 				BC04482F239813A4008BEA66 /* GameStatsConfigurator.swift in Sources */,
+				BC93838E239A686800A147BE /* GameAchievementsInteractor.swift in Sources */,
+				BC93838A239A686800A147BE /* GameAchievementsViewController.swift in Sources */,
 				BCCCCAB82394270400772A89 /* GameModulesFactory.swift in Sources */,
 				BC9CF7F4239755FD00CCD732 /* UserGamesPresenter.swift in Sources */,
 				BCCCCB0323950A3100772A89 /* GamePresenterState.swift in Sources */,
 				BCCCCB1023950A3100772A89 /* GameModuleStartOption.swift in Sources */,
+				BC938390239A686800A147BE /* GameAchievementsModuleResult.swift in Sources */,
 				BCCCCB0A23950A3100772A89 /* GameViewController.swift in Sources */,
+				BC938388239A686800A147BE /* GameAchievementsViewInput.swift in Sources */,
 				BCCCCB0E23950A3100772A89 /* GameInteractorOutput.swift in Sources */,
 				BC04482A239813A3008BEA66 /* GameStatsModelBuilding.swift in Sources */,
 				BCCCCB0C23950A3100772A89 /* GameConfigurator.swift in Sources */,
 				BCCCCB0623950A3100772A89 /* GameCellModel.swift in Sources */,
 				BC9CF802239755FD00CCD732 /* UserGamesModuleStartOption.swift in Sources */,
+				BC93838D239A686800A147BE /* GameAchievementsInteractorOutput.swift in Sources */,
 				BCCCCB0923950A3100772A89 /* GameViewOutput.swift in Sources */,
+				BC938383239A686700A147BE /* GameAchievementsItemsSourcing.swift in Sources */,
+				BC938385239A686700A147BE /* GameAchievementsModelBuilder.swift in Sources */,
 				BC044829239813A3008BEA66 /* GameStatsModelBuilderSettings.swift in Sources */,
 				BC9CF7FD239755FD00CCD732 /* UserGamesConfigurator.swift in Sources */,
 				BC9CF7F8239755FD00CCD732 /* UserGamesModelBuilding.swift in Sources */,
@@ -615,19 +735,25 @@
 				BC9CF7FF239755FD00CCD732 /* UserGamesInteractor.swift in Sources */,
 				BCCCCB0D23950A3100772A89 /* GameInteractorInput.swift in Sources */,
 				BC04482B239813A4008BEA66 /* GameStatsItemsSourcing.swift in Sources */,
+				BC93838C239A686800A147BE /* GameAchievementsInteractorInput.swift in Sources */,
 				BC9CF7FC239755FD00CCD732 /* UserGamesViewInput.swift in Sources */,
+				BC938382239A686700A147BE /* GameAchievementsPresenterState.swift in Sources */,
 				BC9CF7FE239755FD00CCD732 /* UserGamesInteractorOutput.swift in Sources */,
 				BCCCCB1123950A3100772A89 /* GameModuleResult.swift in Sources */,
 				BC044830239813A4008BEA66 /* GameStatsInteractorOutput.swift in Sources */,
+				BC93838F239A686800A147BE /* GameAchievementsModuleStartOption.swift in Sources */,
 				BCCCCB0523950A3100772A89 /* GameModelBuilderSettings.swift in Sources */,
 				BC04482C239813A4008BEA66 /* GameStatsViewOutput.swift in Sources */,
 				BCCCCB0F23950A3100772A89 /* GameInteractor.swift in Sources */,
+				BC938386239A686800A147BE /* GameAchievementsModelBuilding.swift in Sources */,
 				BC9CF7FA239755FD00CCD732 /* UserGamesViewController.swift in Sources */,
 				BC9CF800239755FD00CCD732 /* UserGamesInteractorInput.swift in Sources */,
 				BC9CF7FB239755FD00CCD732 /* UserGamesViewOutput.swift in Sources */,
 				BCCCCB0B23950A3100772A89 /* GameViewInput.swift in Sources */,
 				BC044828239813A3008BEA66 /* GameStatsModelBuilder.swift in Sources */,
+				BC938389239A686800A147BE /* GameAchievementsViewOutput.swift in Sources */,
 				BCCCCABC239428C200772A89 /* GamesCoordinator.swift in Sources */,
+				BC938384239A686700A147BE /* GameAchievementsModelBuilderSettings.swift in Sources */,
 				BCCCCB0223950A3100772A89 /* GamePresenter.swift in Sources */,
 				BC044834239813A4008BEA66 /* GameStatsModuleStartOption.swift in Sources */,
 				BCD22CC4238E87410020885E /* GameModulesFactoring.swift in Sources */,
@@ -635,6 +761,8 @@
 				BC044832239813A4008BEA66 /* GameStatsInteractorInput.swift in Sources */,
 				BC9CF7F5239755FD00CCD732 /* UserGamesItemsSourcing.swift in Sources */,
 				BC044831239813A4008BEA66 /* GameStatsInteractor.swift in Sources */,
+				BC93838B239A686800A147BE /* GameAchievementsConfigurator.swift in Sources */,
+				BC938387239A686800A147BE /* GameAchievementsCellModel.swift in Sources */,
 				BC9CF801239755FD00CCD732 /* UserGamesModuleResult.swift in Sources */,
 				BC9CF7F7239755FD00CCD732 /* UserGamesCellModel.swift in Sources */,
 				BC9CF7F3239755FD00CCD732 /* UserGamesPresenterState.swift in Sources */,

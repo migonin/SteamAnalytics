@@ -22,24 +22,24 @@ class GameViewController: UITableViewController {
         ),
 
         ListItemCellModel(
-            title: "Стата 1",
-            subtitle: "123",
+            title: "Новости",
+            subtitle: nil,
             imgUrl: nil,
-            showDisclosureIndicator: false
+            showDisclosureIndicator: true
         ),
 
         ListItemCellModel(
-            title: "Стата 2",
-            subtitle: "10",
+            title: "Ачивки",
+            subtitle: nil,
             imgUrl: nil,
-            showDisclosureIndicator: false
+            showDisclosureIndicator: true
         ),
 
         ListItemCellModel(
-            title: "Стата 3",
-            subtitle: "100500",
+            title: "Статы",
+            subtitle: nil,
             imgUrl: nil,
-            showDisclosureIndicator: false
+            showDisclosureIndicator: true
         ),
     ]
 

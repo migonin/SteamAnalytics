@@ -14,6 +14,6 @@ protocol UserGamesInteractorInput {
     func subscribeForDataSourceChanges()
     func unsubscribeForDataSourceChanges()
 
-    func loadUserGames()
+    func loadUserGames(force: Bool)
     func provideUserGames() -> [Game]
 }

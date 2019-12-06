@@ -17,17 +17,23 @@ final class UserInteractor: UserInteractorInput {
 
     var userService: UsersServicing!
     var logoutService: LogoutServicing!
+    var syncService: GameStatsSyncServicing!
+    
     var userStorage: UsersStorageOutput!
-    var authStorage: (AuthStorageInput & AuthStorageOutput)!
-
     var userMonitor: ObjectMonitor<CSUser>?
 
     var user: User!
 
+    let dataInvalidationTime: TimeInterval = 3600
+
     // MARK: - UserInteractorInput
-    func prepareDataSource(user: User) {
+    func prepareDataSource(user: User, startScreen: Bool) {
         self.user = user
         userMonitor = userStorage.monitorUser(user)
+
+        if startScreen {
+            syncService.syncStats(for: user)
+        }
     }
 
     func subscribeForDataSourceChanges() {
@@ -42,13 +48,12 @@ final class UserInteractor: UserInteractorInput {
         logoutService.logout()
     }
 
-    func isUserOwn(_ user: User) -> Bool {
-        guard let ownUserID = authStorage.getOwnUserID() else { return false }
+    func loadUser(force: Bool) {
+        if let lastUserSyncDate = userStorage.userSyncDate(user),
+            Date().timeIntervalSince(lastUserSyncDate) < dataInvalidationTime && !force {
+            return
+        }
 
-        return user.id == ownUserID
-    }
-
-    func loadUser() {
         output.didStartUserLoading()
 
         userService.getUser(withID: user.id) { [weak self] (result) in

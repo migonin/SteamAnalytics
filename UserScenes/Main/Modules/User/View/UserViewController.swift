@@ -60,6 +60,10 @@ class UserViewController: BaseTableViewController, UserViewInput {
         output.logoutButtonTapped()
     }
 
+    override func refresh() {
+        output.didRefresh()
+    }
+
     // MARK: - Table view
 
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -84,6 +84,10 @@ public final class GamesCoordinator: NavigationCoordinator, Coordinatable {
             switch result {
             case .goToStats:
                 self.goToGameStats(game, animated: true)
+            case .goToAchievements:
+                self.goToGameAchievements(game, animated: true)
+            case .goToNews:
+                break
             case .back:
                 self.popModule(animated: true)
             }
@@ -108,6 +112,23 @@ public final class GamesCoordinator: NavigationCoordinator, Coordinatable {
         }
 
         module.start(with: .gameStats(game, of: user), animated: true)
+        push(presentable, animated: true)
+    }
+
+    private func goToGameAchievements(_ game: Game, animated: Bool) {
+        let (module, presentable) = modulesFactory.makeGameAchievements()
+
+        module.output = { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+            case .back:
+                self.popModule(animated: true)
+            }
+
+        }
+
+        module.start(with: .gameAchievements(game, of: user), animated: true)
         push(presentable, animated: true)
     }
 }

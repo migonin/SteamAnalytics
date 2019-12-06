@@ -24,6 +24,9 @@ public class CSUser: CoreStoreObject {
 
     public let friends = Relationship.ToManyOrdered<CSUser>("friends", inverse: { $0.friendOf }, deleteRule: .cascade)
 
+    public let lastUpdateDate = Value.Optional<Date>("lastUpdateDate")
+    public let lastFriendsUpdateDate = Value.Optional<Date>("lastFriendsUpdateDate")
+
     //To make CoreData happy
     public let friendOf = Relationship.ToManyUnordered<CSUser>("friendOf")
 }

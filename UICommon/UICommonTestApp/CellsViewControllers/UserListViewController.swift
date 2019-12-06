@@ -16,6 +16,7 @@ class UserListViewController: UITableViewController {
             title: "Vasiliy Pupkin",
             subtitle: nil,
             imgUrl: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c0/c0428498c7dee5b9e156e743af2d849a9fa66a90_medium.jpg",
+            roundedImg: true,
             showDisclosureIndicator: true
         ),
 
@@ -23,6 +24,7 @@ class UserListViewController: UITableViewController {
             title: "Vasiliy Pupkin",
             subtitle: nil,
             imgUrl: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c0/c0428498c7dee5b9e156e743af2d849a9fa66a90_medium.jpg",
+            roundedImg: true,
             showDisclosureIndicator: true
         ),
 
@@ -30,6 +32,7 @@ class UserListViewController: UITableViewController {
             title: "Vasiliy Pupkin",
             subtitle: nil,
             imgUrl: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c0/c0428498c7dee5b9e156e743af2d849a9fa66a90_medium.jpg",
+            roundedImg: true,
             showDisclosureIndicator: true
         )
     ]

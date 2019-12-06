@@ -19,4 +19,7 @@ public protocol GamesStorageOutput {
     func getGameStats(_ game: Game, user: User) -> [(Stat, [StatValue])]
     func getLastGameStats(_ game: Game, user: User) -> [(Stat, StatValue)]
     func getGameAchievements(_ game: Game, user: User) -> [Achievement]
+
+    func userGamesSyncDate(_ user: User) -> Date?
+    func userLastPlayedGamesSyncDate(_ user: User) -> Date?
 }
