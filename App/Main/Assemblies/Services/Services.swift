@@ -41,7 +41,8 @@ public final class Services {
     }()
 
     public static let logoutService: LogoutServicing = {
-        return LogoutService(userStorage: Storages.usersStorage,
+        return LogoutService(usersStorage: Storages.usersStorage,
+                             gamesStorage: Storages.gamesStorage,
                              authStorage: Storages.authStorage)
     }()
 

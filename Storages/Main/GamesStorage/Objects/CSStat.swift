@@ -14,5 +14,5 @@ public class CSStat: CoreStoreObject {
     public let displayName = Value.Required<String>("displayName", initial: "")
 
     public let game = Relationship.ToOne<CSGame>("game")
-    public let values = Relationship.ToManyUnordered<CSStatValue>("values")
+    public let values = Relationship.ToManyUnordered<CSStatValue>("values", deleteRule: .cascade)
 }

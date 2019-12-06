@@ -66,6 +66,16 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
         })
     }
 
+    public func deleteUser(_ user: User) {
+        let owner = gamesOwnerObject(for: user)
+
+        dataStack.perform(asynchronous: { (transaction) -> Void in
+            guard let owner = transaction.fetchExisting(owner) else { return }
+
+            transaction.delete(owner)
+        }, completion: { _ in })
+    }
+
     public func addGamesStats(stats: [StatValue], achievements: [AchievementValue], for game: Game, user: User) {
         guard let csGame = csGame(for: game) else { return }
         let owner = gamesOwnerObject(for: user)

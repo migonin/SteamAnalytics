@@ -10,22 +10,26 @@ import Foundation
 import Storages
 
 public class LogoutService: LogoutServicing {
-    let userStorage: UsersStorageInput&UsersStorageOutput
-    let authStorage: AuthStorageInput&AuthStorageOutput
+    let usersStorage: UsersStorageInput & UsersStorageOutput
+    let gamesStorage: GamesStorageInput & GamesStorageOutput
+    let authStorage: AuthStorageInput & AuthStorageOutput
 
-    public init(userStorage: UsersStorageInput&UsersStorageOutput,
-                authStorage: AuthStorageInput&AuthStorageOutput) {
-        self.userStorage = userStorage
+    public init(usersStorage: UsersStorageInput & UsersStorageOutput,
+                gamesStorage: GamesStorageInput & GamesStorageOutput,
+                authStorage: AuthStorageInput & AuthStorageOutput) {
+        self.usersStorage = usersStorage
+        self.gamesStorage = gamesStorage
         self.authStorage = authStorage
     }
 
     public func logout() {
         guard let ownUserID = authStorage.getOwnUserID(),
-            let ownUser = userStorage.getUser(withID: ownUserID) else {
+            let ownUser = usersStorage.getUser(withID: ownUserID) else {
                 return
         }
 
-        userStorage.deleteUser(ownUser)
+        usersStorage.deleteUser(ownUser)
+        gamesStorage.deleteUser(ownUser)
         authStorage.setUserID(nil)
     }
 }

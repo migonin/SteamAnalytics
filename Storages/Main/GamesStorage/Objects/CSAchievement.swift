@@ -17,5 +17,5 @@ public class CSAchievement: CoreStoreObject {
     public let iconGray = Value.Required<String>("iconGray", initial: "")
 
     public let game = Relationship.ToOne<CSGame>("game")
-    public let values = Relationship.ToManyUnordered<CSAchievementValue>("values")
+    public let values = Relationship.ToManyUnordered<CSAchievementValue>("values", deleteRule: .cascade)
 }

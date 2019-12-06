@@ -15,12 +15,12 @@ public class CSGame: CoreStoreObject {
     public let iconUrl = Value.Required<String>("iconUrl", initial: "")
     public let logoUrl = Value.Required<String>("logoUrl", initial: "")
 
-    public let achievements = Relationship.ToManyOrdered<CSAchievement>("achievements", inverse: { $0.game })
-    public let stats = Relationship.ToManyOrdered<CSStat>("stats", inverse: { $0.game })
+    public let achievements = Relationship.ToManyOrdered<CSAchievement>("achievements", inverse: { $0.game }, deleteRule: .cascade)
+    public let stats = Relationship.ToManyOrdered<CSStat>("stats", inverse: { $0.game }, deleteRule: .cascade)
 
     public let owners = Relationship.ToManyUnordered<CSGameOwner>("owners")
     public let lastPlayers = Relationship.ToManyUnordered<CSGameOwner>("lastPlayers")
     public let playtimes = Relationship.ToManyUnordered<CSPlaytime>("playtimes", inverse: { $0.game })
-    public let news = Relationship.ToManyOrdered<CSNewsEntry>("news", inverse: { $0.game })
+    public let news = Relationship.ToManyOrdered<CSNewsEntry>("news", inverse: { $0.game }, deleteRule: .cascade)
     public let lastNewsUpdateDate = Value.Optional<Date>("lastNewsUpdateDate")
 }
