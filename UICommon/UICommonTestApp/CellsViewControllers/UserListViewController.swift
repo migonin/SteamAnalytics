@@ -43,6 +43,10 @@ class UserListViewController: UITableViewController {
 
         title = "Список пользователей"
         tableView.registerClassCell(ListItemCell.self)
+
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -44,7 +44,7 @@
 "Game.time.total" = "Total: %@";
 "Game.time.twoWeeks" = "Two weeks: %@";
 "Game.news" = "News";
-"Game.stats" = "Stats";
+"Game.stats" = "Stats history";
 "Game.achievements" = "Achievements";
 "Game.noStats" = "Game has no accessible stats. Please check othe games, e.g. CS: GO, Team Fortress 2, Portal 2, they have plenty of data";
 "Game.time.hmformat" = "%d h %d min";

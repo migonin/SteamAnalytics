@@ -33,6 +33,8 @@ class NewsViewController: UITableViewController {
 
         title = "Новости"
         tableView.registerClassCell(NewsEntryCell.self)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
 
         dataSource = [
             NewsEntryCellModel(

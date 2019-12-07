@@ -44,7 +44,7 @@
 "Game.time.total" = "Всего %@";
 "Game.time.twoWeeks" = "За 2 недели %@";
 "Game.news" = "Новости";
-"Game.stats" = "Статистика";
+"Game.stats" = "История статистики";
 "Game.achievements" = "Ачивки";
 "Game.noStats" = "У игры нет доступных стат. Посмотрите другие игры, например, CS: GO, Team Fortress 2, Portal 2, по ним есть много всего.";
 "Game.time.hmformat" = "%d ч %d мин";

@@ -79,7 +79,7 @@ class GameViewController: BaseTableViewController, GameViewInput {
             cell.configure(with: model)
 
             return cell
-        case .stats(let model), .achievements(let model), .news(let model):
+        case .stats(let model), .achievements(let model), .news(let model), .statValue(let model):
             let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: ListItemCell.self)
             cell.configure(with: model)
 

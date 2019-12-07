@@ -19,6 +19,7 @@
 		BC1117182390DCF600422EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1117162390DCF600422EEA /* LaunchScreen.storyboard */; };
 		BC11171D2390E29400422EEA /* UICommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD22C4F238E329D0020885E /* UICommon.framework */; };
 		BC11171E2390E29400422EEA /* UICommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCD22C4F238E329D0020885E /* UICommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC18B49F239B99CF003CA866 /* ChartYAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B49E239B99CE003CA866 /* ChartYAxisFormatter.swift */; };
 		BC2C9A8F239A9E88006F7D14 /* NewsEntryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383CE239A91FD00A147BE /* NewsEntryCellModel.swift */; };
 		BC2C9A90239A9E8C006F7D14 /* NewsEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9383CD239A91FD00A147BE /* NewsEntryCell.swift */; };
 		BC2C9A94239ADA40006F7D14 /* MainCoordinatorStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9A93239ADA40006F7D14 /* MainCoordinatorStartOption.swift */; };
@@ -124,6 +125,7 @@
 		BC1117142390DCF600422EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC1117172390DCF600422EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC1117192390DCF600422EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC18B49E239B99CE003CA866 /* ChartYAxisFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartYAxisFormatter.swift; sourceTree = "<group>"; };
 		BC2C9A93239ADA40006F7D14 /* MainCoordinatorStartOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorStartOption.swift; sourceTree = "<group>"; };
 		BC2C9A9B239B4D1C006F7D14 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		BC2C9AA2239B4D9C006F7D14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			children = (
 				BC85FCF7239171D7002138B3 /* GraphCell.swift */,
 				BC9CF8072397ABCB00CCD732 /* ChartXAxisFormatter.swift */,
+				BC18B49E239B99CE003CA866 /* ChartYAxisFormatter.swift */,
 				BC85FCF8239171D7002138B3 /* GraphCellModel.swift */,
 			);
 			path = GraphCell;
@@ -750,6 +753,7 @@
 				BCD22C75238E609F0020885E /* GamesCoordinatorStartOption.swift in Sources */,
 				BC2C9A94239ADA40006F7D14 /* MainCoordinatorStartOption.swift in Sources */,
 				BC938394239A754400A147BE /* TitleAndTextCellModel.swift in Sources */,
+				BC18B49F239B99CF003CA866 /* ChartYAxisFormatter.swift in Sources */,
 				BCD22C61238E37920020885E /* NavigatorDegelate.swift in Sources */,
 				BC9CF8082397ABCB00CCD732 /* ChartXAxisFormatter.swift in Sources */,
 				BC9CF80A2397AC5300CCD732 /* GraphCellModel.swift in Sources */,

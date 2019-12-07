@@ -29,6 +29,12 @@ open class BaseTableViewController: BaseViewController, UITableViewDelegate, UIT
         tableView.delegate = self
         tableView.tableFooterView = UIView()
 
+        tableView.estimatedRowHeight = 86
+        tableView.rowHeight = UITableView.automaticDimension
+        if #available(iOS 11, *) {
+            tableView.estimatedRowHeight = UITableView.automaticDimension
+        }
+
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }

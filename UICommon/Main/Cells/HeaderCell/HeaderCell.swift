@@ -41,7 +41,7 @@ public class HeaderCell: UITableViewCell {
         stackView.alignment = .center
         stackView.spacing = 2.0
 
-        addSubview(stackView)
+        contentView.addSubview(stackView)
 
         stackView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(5.0)
@@ -51,10 +51,11 @@ public class HeaderCell: UITableViewCell {
         }
 
         imgView.contentMode = .scaleAspectFill
+
         stackView.addArrangedSubview(imgView)
 
         imgView.snp.makeConstraints { make in
-            make.leading.top.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
             make.height.equalTo(imgViewHeight).priority(999)
         }
 

@@ -9,21 +9,16 @@
 import Foundation
 import Charts
 
-class ChartXAxisFormatter: NSObject {
-    fileprivate var dateFormatter: DateFormatter!
+class ChartXAxisFormatter: NSObject, IAxisValueFormatter {
+    let dateFormatter: DateFormatter
 
-    convenience init(dateFormatter: DateFormatter) {
-        self.init()
+    init(dateFormatter: DateFormatter) {
         self.dateFormatter = dateFormatter
+        super.init()
     }
-}
-
-
-extension ChartXAxisFormatter: IAxisValueFormatter {
 
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         let date = Date(timeIntervalSinceReferenceDate: value)
         return dateFormatter.string(from: date)
     }
-
 }

@@ -32,6 +32,9 @@ class ComparsionViewController: UITableViewController {
         title = "Сравнение пользователей"
         tableView.registerClassCell(TwoUsersCell.self)
         tableView.registerClassCell(ComparisonCell.self)
+
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

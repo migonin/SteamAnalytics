@@ -13,6 +13,7 @@ enum GameCellModel {
     case header(HeaderCellModel)
     case error(MessageCellModel)
     case stats(ListItemCellModel)
+    case statValue(ListItemCellModel)
     case achievements(ListItemCellModel)
     case news(ListItemCellModel)
 }

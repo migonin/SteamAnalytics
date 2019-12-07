@@ -86,11 +86,13 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
         leftAxis.axisLineColor = UIColor.systemGray
         leftAxis.gridColor = UIColor.systemGray.withAlphaComponent(0.25)
         leftAxis.gridLineWidth = 0.5
+        leftAxis.valueFormatter = ChartYAxisFormatter()
 
         let rightAxis = chartView.rightAxis
         rightAxis.labelTextColor = UIColor.systemGray
         rightAxis.axisLineColor = UIColor.systemGray
         rightAxis.gridColor = UIColor.clear
+        rightAxis.valueFormatter = leftAxis.valueFormatter
 
         chartView.pinchZoomEnabled = true
         chartView.scaleYEnabled = false
@@ -105,6 +107,7 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
 
         let dataSet = prepareDataSet(for: model.values)
         chartView.data = LineChartData(dataSet: dataSet)
+        chartView.setVisibleXRangeMinimum(24 * 60 * 60)
 
         transformHandler = model.transformHandler
 

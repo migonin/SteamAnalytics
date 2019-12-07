@@ -41,6 +41,9 @@ class UserViewController: UITableViewController {
         title = "Vasiliy Pupkin"
         tableView.registerClassCell(HeaderCell.self)
         tableView.registerClassCell(ListItemCell.self)
+
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -51,7 +51,7 @@ public enum L10n {
     public static let news = L10n.tr("Localizable", "Game.news")
     /// У игры нет доступных стат. Посмотрите другие игры, например, CS: GO, Team Fortress 2, Portal 2, по ним есть много всего.
     public static let noStats = L10n.tr("Localizable", "Game.noStats")
-    /// Статистика
+    /// История статистики
     public static let stats = L10n.tr("Localizable", "Game.stats")
     public enum Time {
       /// %d ч %d мин

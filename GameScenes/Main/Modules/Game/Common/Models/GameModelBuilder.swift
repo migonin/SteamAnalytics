@@ -65,6 +65,17 @@ struct GameModelBuilder: GameModelBuilding {
                 )
             ))
 
+            for (stat, value) in settings.stats {
+                models.append(.statValue(
+                    ListItemCellModel(
+                        title: stat.displayName,
+                        subtitle: "\(value.value)",
+                        imgUrl: nil,
+                        showDisclosureIndicator: false
+                    )
+                ))
+            }
+
         }
 
         return models

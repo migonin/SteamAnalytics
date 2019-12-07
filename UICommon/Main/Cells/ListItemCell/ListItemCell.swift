@@ -36,7 +36,7 @@ public class ListItemCell: UITableViewCell {
         stackView.spacing = 10.0
         stackView.isUserInteractionEnabled = false
 
-        addSubview(stackView)
+        contentView.addSubview(stackView)
 
         stackView.snp.makeConstraints { make in
             make.height.equalTo(imgViewSize).priority(999)

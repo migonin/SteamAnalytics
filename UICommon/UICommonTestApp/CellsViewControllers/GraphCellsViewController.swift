@@ -72,6 +72,10 @@ class GraphCellsViewController: UITableViewController {
 
         title = "Статистика игры"
         tableView.registerClassCell(GraphCell.self)
+
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
