@@ -61,7 +61,7 @@
 		BC45C66A23879B8B0096EBD2 /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4646ED2397D4180010881D /* Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4646F02397D43E0010881D /* UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC604B6E2384E7EA00FA5588 /* SteamAnalyticsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteamAnalyticsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC604B6E2384E7EA00FA5588 /* SteamAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteamAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC604B712384E7EA00FA5588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC604B7A2384E7EA00FA5588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC604B7D2384E7EA00FA5588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		BC604B6F2384E7EA00FA5588 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC604B6E2384E7EA00FA5588 /* SteamAnalyticsApp.app */,
+				BC604B6E2384E7EA00FA5588 /* SteamAnalytics.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 			);
 			name = SteamAnalyticsApp;
 			productName = App;
-			productReference = BC604B6E2384E7EA00FA5588 /* SteamAnalyticsApp.app */;
+			productReference = BC604B6E2384E7EA00FA5588 /* SteamAnalytics.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -463,7 +463,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.frozenlion.steamanalytics.App;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SteamAnalytics;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -481,7 +481,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.frozenlion.steamanalytics.App;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SteamAnalytics;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

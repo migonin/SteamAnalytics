@@ -32,7 +32,7 @@ public class MessageCell: UITableViewCell {
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .left
         
-        addSubview(titleLabel)
+        contentView.addSubview(titleLabel)
 
         titleLabel.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(5.0)

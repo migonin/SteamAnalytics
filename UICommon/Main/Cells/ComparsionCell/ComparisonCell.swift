@@ -34,7 +34,7 @@ public class ComparisonCell: UITableViewCell {
         backgroundColor = nil
         selectionStyle = .none
 
-        addSubview(titleLabel)
+        contentView.addSubview(titleLabel)
 
         titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
 
@@ -44,7 +44,7 @@ public class ComparisonCell: UITableViewCell {
             make.trailingMargin.equalTo(snp.trailingMargin)
         }
 
-        addSubview(progressView)
+        contentView.addSubview(progressView)
 
         progressView.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(5)
@@ -55,8 +55,8 @@ public class ComparisonCell: UITableViewCell {
         leftCountLabel.textColor = UIColor.systemGray
         leftCountLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
 
-        addSubview(leftCountLabel)
-        addSubview(rightCountLabel)
+        contentView.addSubview(leftCountLabel)
+        contentView.addSubview(rightCountLabel)
 
         leftCountLabel.snp.makeConstraints { (make) in
             make.top.equalTo(progressView.snp.bottom).offset(5)

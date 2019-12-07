@@ -38,7 +38,7 @@ public class NewsEntryCell: UITableViewCell {
         stackView.spacing = 2.0
         stackView.isUserInteractionEnabled = false
 
-        addSubview(stackView)
+        contentView.addSubview(stackView)
 
         stackView.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(10.0)

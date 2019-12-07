@@ -35,7 +35,7 @@ public class TwoUsersCell: UITableViewCell {
     }
 
     func setupStackView(_ stackView: UIStackView, titleLabel: UILabel, imageView: UIImageView) {
-        addSubview(stackView)
+        contentView.addSubview(stackView)
 
         stackView.axis = .vertical
         stackView.alignment = .center

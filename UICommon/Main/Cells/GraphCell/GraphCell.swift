@@ -35,7 +35,7 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
         backgroundColor = nil
         selectionStyle = .none
 
-        addSubview(titleLabel)
+        contentView.addSubview(titleLabel)
 
         titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
 
@@ -45,7 +45,7 @@ public class GraphCell: UITableViewCell, ChartViewDelegate {
             make.trailingMargin.equalTo(snp.trailingMargin)
         }
 
-        addSubview(chartView)
+        contentView.addSubview(chartView)
 
         chartView.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(5)

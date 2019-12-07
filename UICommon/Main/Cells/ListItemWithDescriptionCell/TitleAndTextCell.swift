@@ -37,7 +37,7 @@ public class TitleAndTextCell: UITableViewCell {
         stackView.spacing = 10.0
         stackView.isUserInteractionEnabled = false
 
-        addSubview(stackView)
+        contentView.addSubview(stackView)
 
         stackView.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(5.0)
