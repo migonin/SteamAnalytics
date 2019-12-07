@@ -47,7 +47,18 @@ class LoginViewController: BaseViewController, LoginViewInput {
         webView.snp.makeConstraints { (make) in
             make.top.leading.trailing.bottom.equalToSuperview()
         }
+
+        clearWebViewStorage()
     }
+
+    private func clearWebViewStorage() {
+        let websiteDataTypes = Set([WKWebsiteDataTypeDiskCache,
+                                    WKWebsiteDataTypeMemoryCache,
+                                    WKWebsiteDataTypeCookies])
+        let date = Date(timeIntervalSince1970: 0)
+        WKWebsiteDataStore.default().removeData(ofTypes: websiteDataTypes, modifiedSince: date, completionHandler: {})
+    }
+
 
     // MARK: Life cycle
     override func viewDidLoad() {

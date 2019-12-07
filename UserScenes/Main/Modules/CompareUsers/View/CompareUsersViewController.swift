@@ -70,7 +70,7 @@ class CompareUsersViewController: BaseTableViewController, CompareUsersViewInput
 
         pickerHidingView.addSubview(toolBar)
 
-        toolBar.barStyle = .black
+//        toolBar.barStyle = .black
 
         toolBar.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
