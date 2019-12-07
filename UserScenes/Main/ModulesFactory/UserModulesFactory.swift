@@ -24,4 +24,9 @@ public struct UserModulesFactory: UserModulesFactoring {
     public func makeUserFriendsScreen() -> CoordinatableFactoryResult<UserFriendsModuleStartOption, UserFriendsModuleResult> {
         return UserFriendsModuleConfigurator(dependencies: dependencies).configure()
     }
+
+    public func makeUserComparison() ->
+        CoordinatableFactoryResult<CompareUsersModuleStartOption, CompareUsersModuleResult> {
+            return CompareUsersModuleConfigurator(dependencies: dependencies).configure()
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  ComparsionCell.swift
+//  ComparisonCell.swift
 //  UICommon
 //
 //  Created by Михаил Игонин on 29.11.2019.
@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-public class ComparsionCell: UITableViewCell {
+public class ComparisonCell: UITableViewCell {
     let titleLabel = UILabel()
 
     let leftCountLabel = UILabel()
@@ -76,7 +76,7 @@ public class ComparsionCell: UITableViewCell {
         }
     }
 
-    public func configure(with model: ComparsionCellModel) {
+    public func configure(with model: ComparisonCellModel) {
         titleLabel.text = model.title
         leftCountLabel.text = "\(Int(model.leftValue))"
         rightCountLabel.text = "\(Int(model.rightValue))"
@@ -87,7 +87,7 @@ public class ComparsionCell: UITableViewCell {
         if model.leftValue == model.rightValue {
             progressView.progress = 0.5
         } else {
-            progressView.progress = Float(model.leftValue / (model.leftValue + model.rightValue))
+            progressView.progress = Float(model.leftValue) / (Float(model.leftValue) + Float(model.rightValue))
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC18B498239B62BD003CA866 /* StatComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B497239B62BD003CA866 /* StatComparison.swift */; };
 		BC8BF38B23893BEB00B754AF /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = BC8BF38923893BEB00B754AF /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC8BF39423893C8B00B754AF /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF39223893C8B00B754AF /* UserStatus.swift */; };
 		BC8BF3A52389742B00B754AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BF3A42389742B00B754AF /* User.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC18B497239B62BD003CA866 /* StatComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatComparison.swift; sourceTree = "<group>"; };
 		BC8BF38623893BEB00B754AF /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8BF38923893BEB00B754AF /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		BC8BF38A23893BEB00B754AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				BCD22C35238D5B280020885E /* AchievementValue.swift */,
 				BC938367239A5B9100A147BE /* HardcodedGameId.swift */,
 				BC938398239A827500A147BE /* NewsEntry.swift */,
+				BC18B497239B62BD003CA866 /* StatComparison.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				BC8BF39423893C8B00B754AF /* UserStatus.swift in Sources */,
 				BC938368239A5B9100A147BE /* HardcodedGameId.swift in Sources */,
 				BCD22C34238D5A7A0020885E /* StatValue.swift in Sources */,
+				BC18B498239B62BD003CA866 /* StatComparison.swift in Sources */,
 				BC8BF3AD238A61A400B754AF /* Stat.swift in Sources */,
 				BC8BF3A72389743600B754AF /* Game.swift in Sources */,
 				BC8BF3A52389742B00B754AF /* User.swift in Sources */,

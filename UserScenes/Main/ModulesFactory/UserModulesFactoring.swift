@@ -15,4 +15,7 @@ public protocol UserModulesFactoring {
 
     func makeUserFriendsScreen() ->
         CoordinatableFactoryResult<UserFriendsModuleStartOption, UserFriendsModuleResult>
+
+    func makeUserComparison() ->
+        CoordinatableFactoryResult<CompareUsersModuleStartOption, CompareUsersModuleResult>
 }

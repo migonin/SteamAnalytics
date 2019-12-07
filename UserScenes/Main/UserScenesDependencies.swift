@@ -14,22 +14,19 @@ public struct UserScenesDependencies {
     let userService: UsersServicing
     let userStorage: UsersStorageInput & UsersStorageOutput
 
-    let gameService: GamesServicing
-    let gameStorage: GamesStorageOutput
+    let comparisonService: UsersComparisonServicing
 
     let logoutService: LogoutServicing
     let gameStatsSyncService: GameStatsSyncServicing
 
     public init(userService: UsersServicing,
                 userStorage: UsersStorageInput & UsersStorageOutput,
-                gameService: GamesServicing,
-                gameStorage: GamesStorageOutput,
+                comparisonService: UsersComparisonServicing,
                 logoutService: LogoutServicing,
                 gameStatsSyncService: GameStatsSyncServicing) {
         self.userService = userService
         self.userStorage = userStorage
-        self.gameService = gameService
-        self.gameStorage = gameStorage
+        self.comparisonService = comparisonService
         self.logoutService = logoutService
         self.gameStatsSyncService = gameStatsSyncService
     }

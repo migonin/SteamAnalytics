@@ -12,4 +12,5 @@ import Core
 struct UserModelBuilderSettings {
     let user: User
     let startScreen: Bool
+    let isOwn: Bool
 }

@@ -18,10 +18,10 @@ class ComparsionViewController: UITableViewController {
                           rightImgUrl: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c0/c0428498c7dee5b9e156e743af2d849a9fa66a90_medium.jpg"
         ),
 
-        ComparsionCellModel(title: "Показатель", leftValue: 10, rightValue: 20),
-        ComparsionCellModel(title: "Другой показатель", leftValue: 1000, rightValue: 20),
-        ComparsionCellModel(title: "Третий показатель", leftValue: 10, rightValue: 10),
-        ComparsionCellModel(title: "Еще показатель", leftValue: 100500, rightValue: 20),
+        ComparisonCellModel(title: "Показатель", leftValue: 10, rightValue: 20),
+        ComparisonCellModel(title: "Другой показатель", leftValue: 1000, rightValue: 20),
+        ComparisonCellModel(title: "Третий показатель", leftValue: 10, rightValue: 10),
+        ComparisonCellModel(title: "Еще показатель", leftValue: 100500, rightValue: 20),
 
     ]
 
@@ -31,7 +31,7 @@ class ComparsionViewController: UITableViewController {
 
         title = "Сравнение пользователей"
         tableView.registerClassCell(TwoUsersCell.self)
-        tableView.registerClassCell(ComparsionCell.self)
+        tableView.registerClassCell(ComparisonCell.self)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,8 +46,8 @@ class ComparsionViewController: UITableViewController {
             cell.configure(with: model)
 
             return cell
-        } else if let model = model as? ComparsionCellModel {
-            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: ComparsionCell.self)
+        } else if let model = model as? ComparisonCellModel {
+            let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: ComparisonCell.self)
             cell.configure(with: model)
 
             return cell

@@ -1,5 +1,5 @@
 //
-//  TwoUsersCellModel.swift
+//  ComparisonCellModel.swift
 //  UICommon
 //
 //  Created by Михаил Игонин on 27.11.2019.
@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-public struct ComparsionCellModel {
+public struct ComparisonCellModel {
     public let title: String
 
-    public let leftValue: Double
-    public let rightValue: Double
+    public let leftValue: Int
+    public let rightValue: Int
 
     public let leftColor: UIColor
     public let rightColor: UIColor
 
     public init(title: String,
-                leftValue: Double,
-                rightValue: Double,
+                leftValue: Int,
+                rightValue: Int,
                 leftColor: UIColor = .systemRed,
                 rightColor: UIColor = .systemGreen) {
         self.title = title

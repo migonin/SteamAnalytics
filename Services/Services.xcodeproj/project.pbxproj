@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BC04483B23992418008BEA66 /* GameStatsSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04483A23992418008BEA66 /* GameStatsSyncService.swift */; };
 		BC04483D2399241E008BEA66 /* GameStatsSyncServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04483C2399241E008BEA66 /* GameStatsSyncServicing.swift */; };
+		BC18B49B239B6424003CA866 /* UsersComparisonServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B49A239B6424003CA866 /* UsersComparisonServicing.swift */; };
+		BC18B49D239B6428003CA866 /* UsersComparisonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B49C239B6428003CA866 /* UsersComparisonService.swift */; };
 		BC2C9AB0239B55F2006F7D14 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9AAD239B55F2006F7D14 /* ErrorType.swift */; };
 		BC2C9AB1239B55F2006F7D14 /* ErrorDescribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9AAE239B55F2006F7D14 /* ErrorDescribing.swift */; };
 		BC2C9AB2239B55F2006F7D14 /* ErrorDescriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9AAF239B55F2006F7D14 /* ErrorDescriber.swift */; };
@@ -59,6 +61,8 @@
 		072C0B2F49E4FB33C1A52442 /* Pods-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.debug.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.debug.xcconfig"; sourceTree = "<group>"; };
 		BC04483A23992418008BEA66 /* GameStatsSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsSyncService.swift; sourceTree = "<group>"; };
 		BC04483C2399241E008BEA66 /* GameStatsSyncServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsSyncServicing.swift; sourceTree = "<group>"; };
+		BC18B49A239B6424003CA866 /* UsersComparisonServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersComparisonServicing.swift; sourceTree = "<group>"; };
+		BC18B49C239B6428003CA866 /* UsersComparisonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersComparisonService.swift; sourceTree = "<group>"; };
 		BC2C9AAD239B55F2006F7D14 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		BC2C9AAE239B55F2006F7D14 /* ErrorDescribing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescribing.swift; sourceTree = "<group>"; };
 		BC2C9AAF239B55F2006F7D14 /* ErrorDescriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescriber.swift; sourceTree = "<group>"; };
@@ -123,6 +127,15 @@
 			path = GameStatsSyncService;
 			sourceTree = "<group>";
 		};
+		BC18B499239B63FC003CA866 /* UsersComparisonService */ = {
+			isa = PBXGroup;
+			children = (
+				BC18B49A239B6424003CA866 /* UsersComparisonServicing.swift */,
+				BC18B49C239B6428003CA866 /* UsersComparisonService.swift */,
+			);
+			path = UsersComparisonService;
+			sourceTree = "<group>";
+		};
 		BC2C9AAB239B55F2006F7D14 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +196,7 @@
 		BC604C452384EA9D00FA5588 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BC18B499239B63FC003CA866 /* UsersComparisonService */,
 				BC044839239923EC008BEA66 /* GameStatsSyncService */,
 				BCC302F7239616FD00914EB1 /* LogoutService */,
 				BC45C6652387963D0096EBD2 /* Common */,
@@ -374,10 +388,12 @@
 				BC2C9AB2239B55F2006F7D14 /* ErrorDescriber.swift in Sources */,
 				BC04483D2399241E008BEA66 /* GameStatsSyncServicing.swift in Sources */,
 				BC04483B23992418008BEA66 /* GameStatsSyncService.swift in Sources */,
+				BC18B49B239B6424003CA866 /* UsersComparisonServicing.swift in Sources */,
 				BC45C669238796C10096EBD2 /* ServiceCompletion.swift in Sources */,
 				BC2C9AB0239B55F2006F7D14 /* ErrorType.swift in Sources */,
 				BC45C664238794E10096EBD2 /* UsersService.swift in Sources */,
 				BC2C9AB1239B55F2006F7D14 /* ErrorDescribing.swift in Sources */,
+				BC18B49D239B6428003CA866 /* UsersComparisonService.swift in Sources */,
 				BCE3221F238AF13000792F50 /* GamesService.swift in Sources */,
 				BC45C662238794DA0096EBD2 /* UsersServicing.swift in Sources */,
 				BCE3221D238AF11300792F50 /* GamesServicing.swift in Sources */,

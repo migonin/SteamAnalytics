@@ -30,8 +30,8 @@
 		BC5B4BE82392F1CD00896A98 /* LoginCoordinatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B4BE72392F1CD00896A98 /* LoginCoordinatorResult.swift */; };
 		BC85FCE6239148B2002138B3 /* TwoUsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCE4239148B2002138B3 /* TwoUsersCell.swift */; };
 		BC85FCE7239148B2002138B3 /* TwoUsersCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCE5239148B2002138B3 /* TwoUsersCellModel.swift */; };
-		BC85FCF023916511002138B3 /* ComparsionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEE23916511002138B3 /* ComparsionCell.swift */; };
-		BC85FCF123916511002138B3 /* ComparsionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEF23916511002138B3 /* ComparsionCellModel.swift */; };
+		BC85FCF023916511002138B3 /* ComparisonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEE23916511002138B3 /* ComparisonCell.swift */; };
+		BC85FCF123916511002138B3 /* ComparisonCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCEF23916511002138B3 /* ComparisonCellModel.swift */; };
 		BC85FCF523916BF9002138B3 /* ComparsionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCF423916BF8002138B3 /* ComparsionViewController.swift */; };
 		BC85FCFC239173D8002138B3 /* GraphCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FCFB239173D8002138B3 /* GraphCellsViewController.swift */; };
 		BC938394239A754400A147BE /* TitleAndTextCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC938392239A754400A147BE /* TitleAndTextCellModel.swift */; };
@@ -135,8 +135,8 @@
 		BC5B4BE72392F1CD00896A98 /* LoginCoordinatorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorResult.swift; sourceTree = "<group>"; };
 		BC85FCE4239148B2002138B3 /* TwoUsersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoUsersCell.swift; sourceTree = "<group>"; };
 		BC85FCE5239148B2002138B3 /* TwoUsersCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoUsersCellModel.swift; sourceTree = "<group>"; };
-		BC85FCEE23916511002138B3 /* ComparsionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparsionCell.swift; sourceTree = "<group>"; };
-		BC85FCEF23916511002138B3 /* ComparsionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparsionCellModel.swift; sourceTree = "<group>"; };
+		BC85FCEE23916511002138B3 /* ComparisonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparisonCell.swift; sourceTree = "<group>"; };
+		BC85FCEF23916511002138B3 /* ComparisonCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparisonCellModel.swift; sourceTree = "<group>"; };
 		BC85FCF423916BF8002138B3 /* ComparsionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparsionViewController.swift; sourceTree = "<group>"; };
 		BC85FCF7239171D7002138B3 /* GraphCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCell.swift; sourceTree = "<group>"; };
 		BC85FCF8239171D7002138B3 /* GraphCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCellModel.swift; sourceTree = "<group>"; };
@@ -278,8 +278,8 @@
 		BC85FCED23916511002138B3 /* ComparsionCell */ = {
 			isa = PBXGroup;
 			children = (
-				BC85FCEE23916511002138B3 /* ComparsionCell.swift */,
-				BC85FCEF23916511002138B3 /* ComparsionCellModel.swift */,
+				BC85FCEE23916511002138B3 /* ComparisonCell.swift */,
+				BC85FCEF23916511002138B3 /* ComparisonCellModel.swift */,
 			);
 			path = ComparsionCell;
 			sourceTree = "<group>";
@@ -743,7 +743,7 @@
 				BCD22C7A238E65630020885E /* StubCoordinator.swift in Sources */,
 				BC1117042390DBE800422EEA /* UITableViewExtensions.swift in Sources */,
 				BC2C9A8F239A9E88006F7D14 /* NewsEntryCellModel.swift in Sources */,
-				BC85FCF123916511002138B3 /* ComparsionCellModel.swift in Sources */,
+				BC85FCF123916511002138B3 /* ComparisonCellModel.swift in Sources */,
 				BC85FCE6239148B2002138B3 /* TwoUsersCell.swift in Sources */,
 				BCD22C7C238E6E530020885E /* NavigationCoordinator.swift in Sources */,
 				BC1117002390DB7A00422EEA /* ListItemCell.swift in Sources */,
@@ -754,7 +754,7 @@
 				BC9CF8082397ABCB00CCD732 /* ChartXAxisFormatter.swift in Sources */,
 				BC9CF80A2397AC5300CCD732 /* GraphCellModel.swift in Sources */,
 				BCD22C67238E38810020885E /* Navigator.swift in Sources */,
-				BC85FCF023916511002138B3 /* ComparsionCell.swift in Sources */,
+				BC85FCF023916511002138B3 /* ComparisonCell.swift in Sources */,
 				BCD22C77238E650C0020885E /* StubCoordinatorFactory.swift in Sources */,
 				BCCCCA832393F5C000772A89 /* BaseViewController.swift in Sources */,
 				BCD22C64238E37920020885E /* Presentable.swift in Sources */,

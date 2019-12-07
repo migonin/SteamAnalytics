@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1664710B4928553FAB0DE0E6 /* Pods_UserScenes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9A1C370E5C75C3ACC8F78D /* Pods_UserScenes.framework */; };
+		BC18B487239B6103003CA866 /* CompareUsersPresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B471239B6102003CA866 /* CompareUsersPresenterState.swift */; };
+		BC18B488239B6103003CA866 /* CompareUsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B472239B6102003CA866 /* CompareUsersPresenter.swift */; };
+		BC18B489239B6103003CA866 /* CompareUsersItemsSourcing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B474239B6102003CA866 /* CompareUsersItemsSourcing.swift */; };
+		BC18B48A239B6103003CA866 /* CompareUsersModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B476239B6102003CA866 /* CompareUsersModelBuilder.swift */; };
+		BC18B48B239B6103003CA866 /* CompareUsersModelBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B477239B6102003CA866 /* CompareUsersModelBuilding.swift */; };
+		BC18B48C239B6103003CA866 /* CompareUsersCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B478239B6102003CA866 /* CompareUsersCellModel.swift */; };
+		BC18B48D239B6103003CA866 /* CompareUsersModelBuilderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B479239B6102003CA866 /* CompareUsersModelBuilderSettings.swift */; };
+		BC18B48E239B6103003CA866 /* CompareUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B47B239B6102003CA866 /* CompareUsersViewController.swift */; };
+		BC18B48F239B6103003CA866 /* CompareUsersViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B47C239B6102003CA866 /* CompareUsersViewOutput.swift */; };
+		BC18B490239B6103003CA866 /* CompareUsersViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B47D239B6102003CA866 /* CompareUsersViewInput.swift */; };
+		BC18B491239B6103003CA866 /* CompareUsersConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B47F239B6102003CA866 /* CompareUsersConfigurator.swift */; };
+		BC18B492239B6103003CA866 /* CompareUsersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B481239B6102003CA866 /* CompareUsersInteractor.swift */; };
+		BC18B493239B6103003CA866 /* CompareUsersInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B482239B6102003CA866 /* CompareUsersInteractorOutput.swift */; };
+		BC18B494239B6103003CA866 /* CompareUsersInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B483239B6102003CA866 /* CompareUsersInteractorInput.swift */; };
+		BC18B495239B6103003CA866 /* CompareUsersModuleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B485239B6102003CA866 /* CompareUsersModuleResult.swift */; };
+		BC18B496239B6103003CA866 /* CompareUsersModuleStartOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B486239B6102003CA866 /* CompareUsersModuleStartOption.swift */; };
 		BC85FD01239245AA002138B3 /* UserModelBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FD00239245AA002138B3 /* UserModelBuilding.swift */; };
 		BC85FD03239245B8002138B3 /* UserModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FD02239245B8002138B3 /* UserModelBuilder.swift */; };
 		BC85FD05239245C6002138B3 /* UserCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85FD04239245C6002138B3 /* UserCellModel.swift */; };
@@ -76,6 +92,22 @@
 		20A862964B3DE9428F9C67BC /* Pods-UserScenes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserScenes.debug.xcconfig"; path = "Target Support Files/Pods-UserScenes/Pods-UserScenes.debug.xcconfig"; sourceTree = "<group>"; };
 		3F9A1C370E5C75C3ACC8F78D /* Pods_UserScenes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserScenes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FCBD726A64A14026BEEE030 /* Pods-UserScenes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserScenes.release.xcconfig"; path = "Target Support Files/Pods-UserScenes/Pods-UserScenes.release.xcconfig"; sourceTree = "<group>"; };
+		BC18B471239B6102003CA866 /* CompareUsersPresenterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersPresenterState.swift; sourceTree = "<group>"; };
+		BC18B472239B6102003CA866 /* CompareUsersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersPresenter.swift; sourceTree = "<group>"; };
+		BC18B474239B6102003CA866 /* CompareUsersItemsSourcing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersItemsSourcing.swift; sourceTree = "<group>"; };
+		BC18B476239B6102003CA866 /* CompareUsersModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersModelBuilder.swift; sourceTree = "<group>"; };
+		BC18B477239B6102003CA866 /* CompareUsersModelBuilding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersModelBuilding.swift; sourceTree = "<group>"; };
+		BC18B478239B6102003CA866 /* CompareUsersCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersCellModel.swift; sourceTree = "<group>"; };
+		BC18B479239B6102003CA866 /* CompareUsersModelBuilderSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersModelBuilderSettings.swift; sourceTree = "<group>"; };
+		BC18B47B239B6102003CA866 /* CompareUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersViewController.swift; sourceTree = "<group>"; };
+		BC18B47C239B6102003CA866 /* CompareUsersViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersViewOutput.swift; sourceTree = "<group>"; };
+		BC18B47D239B6102003CA866 /* CompareUsersViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersViewInput.swift; sourceTree = "<group>"; };
+		BC18B47F239B6102003CA866 /* CompareUsersConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersConfigurator.swift; sourceTree = "<group>"; };
+		BC18B481239B6102003CA866 /* CompareUsersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersInteractor.swift; sourceTree = "<group>"; };
+		BC18B482239B6102003CA866 /* CompareUsersInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersInteractorOutput.swift; sourceTree = "<group>"; };
+		BC18B483239B6102003CA866 /* CompareUsersInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersInteractorInput.swift; sourceTree = "<group>"; };
+		BC18B485239B6102003CA866 /* CompareUsersModuleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersModuleResult.swift; sourceTree = "<group>"; };
+		BC18B486239B6102003CA866 /* CompareUsersModuleStartOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareUsersModuleStartOption.swift; sourceTree = "<group>"; };
 		BC85FD00239245AA002138B3 /* UserModelBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelBuilding.swift; sourceTree = "<group>"; };
 		BC85FD02239245B8002138B3 /* UserModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelBuilder.swift; sourceTree = "<group>"; };
 		BC85FD04239245C6002138B3 /* UserCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellModel.swift; sourceTree = "<group>"; };
@@ -137,6 +169,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC18B46F239B6102003CA866 /* CompareUsers */ = {
+			isa = PBXGroup;
+			children = (
+				BC18B470239B6102003CA866 /* Presenter */,
+				BC18B473239B6102003CA866 /* Common */,
+				BC18B47A239B6102003CA866 /* View */,
+				BC18B47E239B6102003CA866 /* Configurator */,
+				BC18B480239B6102003CA866 /* Interactor */,
+				BC18B484239B6102003CA866 /* Router */,
+			);
+			path = CompareUsers;
+			sourceTree = "<group>";
+		};
+		BC18B470239B6102003CA866 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BC18B471239B6102003CA866 /* CompareUsersPresenterState.swift */,
+				BC18B472239B6102003CA866 /* CompareUsersPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BC18B473239B6102003CA866 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BC18B474239B6102003CA866 /* CompareUsersItemsSourcing.swift */,
+				BC18B475239B6102003CA866 /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BC18B475239B6102003CA866 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC18B476239B6102003CA866 /* CompareUsersModelBuilder.swift */,
+				BC18B477239B6102003CA866 /* CompareUsersModelBuilding.swift */,
+				BC18B478239B6102003CA866 /* CompareUsersCellModel.swift */,
+				BC18B479239B6102003CA866 /* CompareUsersModelBuilderSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC18B47A239B6102003CA866 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC18B47B239B6102003CA866 /* CompareUsersViewController.swift */,
+				BC18B47C239B6102003CA866 /* CompareUsersViewOutput.swift */,
+				BC18B47D239B6102003CA866 /* CompareUsersViewInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC18B47E239B6102003CA866 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				BC18B47F239B6102003CA866 /* CompareUsersConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		BC18B480239B6102003CA866 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BC18B481239B6102003CA866 /* CompareUsersInteractor.swift */,
+				BC18B482239B6102003CA866 /* CompareUsersInteractorOutput.swift */,
+				BC18B483239B6102003CA866 /* CompareUsersInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BC18B484239B6102003CA866 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BC18B485239B6102003CA866 /* CompareUsersModuleResult.swift */,
+				BC18B486239B6102003CA866 /* CompareUsersModuleStartOption.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		BC85FCFF23924593002138B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +389,7 @@
 		BCD22CAE238E845A0020885E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BC18B46F239B6102003CA866 /* CompareUsers */,
 				BCD22CCA238E8BC90020885E /* User */,
 				BCCCCA5A2393EFD900772A89 /* UserFriends */,
 			);
@@ -481,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC18B494239B6103003CA866 /* CompareUsersInteractorInput.swift in Sources */,
 				BCCCCA7D2393EFD900772A89 /* UserFriendsInteractorInput.swift in Sources */,
 				BC85FD01239245AA002138B3 /* UserModelBuilding.swift in Sources */,
 				BCCCCA782393EFD900772A89 /* UserFriendsCellModel.swift in Sources */,
@@ -488,8 +601,13 @@
 				BCCCCA772393EFD900772A89 /* UserFriendsModelBuilding.swift in Sources */,
 				BCD22CE3238E8BC90020885E /* UserInteractor.swift in Sources */,
 				BCD22CEE238E8E4F0020885E /* UserModuleStartOption.swift in Sources */,
+				BC18B48F239B6103003CA866 /* CompareUsersViewOutput.swift in Sources */,
 				BCD22CC2238E869F0020885E /* UserModulesFactoring.swift in Sources */,
+				BC18B487239B6103003CA866 /* CompareUsersPresenterState.swift in Sources */,
 				BCCCCA732393EFD900772A89 /* UserFriendsPresenterState.swift in Sources */,
+				BC18B496239B6103003CA866 /* CompareUsersModuleStartOption.swift in Sources */,
+				BC18B48C239B6103003CA866 /* CompareUsersCellModel.swift in Sources */,
+				BC18B48A239B6103003CA866 /* CompareUsersModelBuilder.swift in Sources */,
 				BCD22CF0238E90610020885E /* UserModulesFactory.swift in Sources */,
 				BCCCCA722393EFD900772A89 /* UserFriendsPresenter.swift in Sources */,
 				BCD22CE0238E8BC90020885E /* UserConfigurator.swift in Sources */,
@@ -500,20 +618,30 @@
 				BCD22CDF238E8BC90020885E /* UserViewOutput.swift in Sources */,
 				BCD22CDD238E8BC90020885E /* UserViewController.swift in Sources */,
 				BCD22CC6238E88030020885E /* UserScenesDependencies.swift in Sources */,
+				BC18B491239B6103003CA866 /* CompareUsersConfigurator.swift in Sources */,
 				BCCCCA7F2393EFD900772A89 /* UserFriendsInteractorOutput.swift in Sources */,
 				BCD22CC0238E86730020885E /* UserCoordinator.swift in Sources */,
 				BCD22CDC238E8BC90020885E /* UserPresenter.swift in Sources */,
 				BCCCCA792393EFD900772A89 /* UserFriendsViewInput.swift in Sources */,
+				BC18B48E239B6103003CA866 /* CompareUsersViewController.swift in Sources */,
+				BC18B489239B6103003CA866 /* CompareUsersItemsSourcing.swift in Sources */,
 				BCD22CDB238E8BC90020885E /* UserPresenterState.swift in Sources */,
 				BC85FD03239245B8002138B3 /* UserModelBuilder.swift in Sources */,
 				BCD22CE2238E8BC90020885E /* UserInteractorOutput.swift in Sources */,
+				BC18B490239B6103003CA866 /* CompareUsersViewInput.swift in Sources */,
 				BCCCCA7C2393EFD900772A89 /* UserFriendsConfigurator.swift in Sources */,
 				BC85FD05239245C6002138B3 /* UserCellModel.swift in Sources */,
+				BC18B488239B6103003CA866 /* CompareUsersPresenter.swift in Sources */,
+				BC18B48B239B6103003CA866 /* CompareUsersModelBuilding.swift in Sources */,
 				BCCCCA762393EFD900772A89 /* UserFriendsModelBuilderSettings.swift in Sources */,
 				BCCCCA592393DFC000772A89 /* UserModelBuilderSettings.swift in Sources */,
 				BCD22CED238E8E4F0020885E /* UserModuleResult.swift in Sources */,
 				BC85FD0823924855002138B3 /* UserItemsSourcing.swift in Sources */,
+				BC18B48D239B6103003CA866 /* CompareUsersModelBuilderSettings.swift in Sources */,
+				BC18B492239B6103003CA866 /* CompareUsersInteractor.swift in Sources */,
+				BC18B495239B6103003CA866 /* CompareUsersModuleResult.swift in Sources */,
 				BCCCCA812393EFD900772A89 /* UserFriendsModuleStartOption.swift in Sources */,
+				BC18B493239B6103003CA866 /* CompareUsersInteractorOutput.swift in Sources */,
 				BCCCCA742393EFD900772A89 /* UserFriendsItemsSourcing.swift in Sources */,
 				BCCCCA7A2393EFD900772A89 /* UserFriendsViewOutput.swift in Sources */,
 				BCCCCA7B2393EFD900772A89 /* UserFriendsViewController.swift in Sources */,

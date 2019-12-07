@@ -30,6 +30,7 @@
 "User.friends" = "Friends";
 "User.games" = "Games";
 "User.private" = "Private profile";
+"User.compare" = "Compare";
 
 "UserFriends.title" = "Friends of %@";
 "UserFriends.noFriends" = "No friends";
@@ -55,3 +56,8 @@
 
 "GameNews.title" = "Game news";
 "GameNews.loading" = "Please wait, HTML and BB-codes processing...";
+
+"CompareUsers.title" = "Comparison";
+"CompareUsers.noGames" = "Users have no common games to compare";
+"CompareUsers.selectedGame" = "Game";
+"CompareUsers.chooseGame" = "Select game";

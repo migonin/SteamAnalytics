@@ -14,4 +14,5 @@ public enum UserModuleResult {
     case logout
     case friendsTapped
     case gamesTapped
+    case compareTapped
 }

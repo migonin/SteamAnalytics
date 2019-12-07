@@ -103,9 +103,12 @@ public struct GamesService: GamesServicing {
             gamesAPIClient.getGameStats(request: request) { (result) in
                 switch result {
                 case .success(let response):
-                    self.storage.addGamesStats(stats: response.playerstats.stats, achievements: response.playerstats.achievements, for: game, user: user)
-
-                    completionHandler(.success(()))
+                    self.storage.addGamesStats(stats: response.playerstats.stats,
+                                               achievements: response.playerstats.achievements,
+                                               for: game,
+                                               user: user) {
+                        completionHandler(.success(()))
+                    }
                 case .failure(let error):
                     completionHandler(.failure(error))
                 }
@@ -123,9 +126,9 @@ public struct GamesService: GamesServicing {
                                                        for: game,
                                                        schemaStats: schemaStats,
                                                        schemaAchievements: schemaAchievements,
-                                                       user: user)
-
-                            completionHandler(.success(()))
+                                                       user: user) {
+                                completionHandler(.success(()))
+                            }
                         case .failure(let error):
                             completionHandler(.failure(error))
                         }

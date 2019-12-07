@@ -14,4 +14,5 @@ enum UserCellModel {
     case privateProfile(MessageCellModel)
     case friends(ListItemCellModel)
     case games(ListItemCellModel)
+    case compare(ListItemCellModel)
 }

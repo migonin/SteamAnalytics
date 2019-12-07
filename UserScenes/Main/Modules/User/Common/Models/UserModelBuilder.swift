@@ -25,7 +25,6 @@ struct UserModelBuilder: UserModelBuilding {
             )
         ))
 
-        // TODO Localize
         if settings.user.isProfileVisible {
             models.append(.friends(
                 ListItemCellModel(
@@ -44,6 +43,17 @@ struct UserModelBuilder: UserModelBuilding {
                     showDisclosureIndicator: true
                 )
             ))
+
+            if !settings.isOwn {
+                models.append(.compare(
+                    ListItemCellModel(
+                        title: L10n.User.compare,
+                        subtitle: nil,
+                        imgUrl: nil,
+                        showDisclosureIndicator: true
+                    )
+                ))
+            }
         } else {
             models.append(.privateProfile(
                 MessageCellModel(

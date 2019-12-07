@@ -32,9 +32,11 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
         case .startScreen(let user):
             state.startScreen = true
             state.user = user
+            state.isOwn = true
 
-        case .user(let user):
+        case .user(let user, let isOwn):
             state.user = user
+            state.isOwn = isOwn
         }
 
         interactor.prepareDataSource(user: state.user, startScreen: state.startScreen)
@@ -126,7 +128,8 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
 
     func loadModels() {
         let settings = UserModelBuilderSettings(user: state.user,
-                                                startScreen: state.startScreen)
+                                                startScreen: state.startScreen,
+                                                isOwn: state.isOwn)
 
         displayModels = modelBuilder.buildModels(settings: settings)
     }
@@ -143,6 +146,9 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
 
         case .games:
             output?(.gamesTapped)
+
+        case .compare:
+            output?(.compareTapped)
 
         default:
             break

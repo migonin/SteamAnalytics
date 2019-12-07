@@ -29,7 +29,7 @@ public class LogoutService: LogoutServicing {
         }
 
         usersStorage.deleteUser(ownUser)
-        gamesStorage.deleteUser(ownUser)
+        gamesStorage.deleteAllData()
         authStorage.setUserID(nil)
     }
 }

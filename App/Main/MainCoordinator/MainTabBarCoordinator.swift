@@ -37,7 +37,7 @@ class MainTabBarCoordinator: TabBarCoordinator, Coordinatable {
     func makeUserCoordinator() -> CoordinatableFactoryResult<UserCoordinatorStartOption, UserCoordinatorResult> {
         let navController = UINavigationController()
 
-        let tabBarItem = UITabBarItem(title: L10n.TabBar.user, image: nil, tag: 0)
+        let tabBarItem = UITabBarItem(title: L10n.TabBar.user, image: Asset.home.image, tag: 0)
 
         navController.tabBarItem = tabBarItem
 
@@ -57,7 +57,7 @@ class MainTabBarCoordinator: TabBarCoordinator, Coordinatable {
     func makeLastGamesCoordinator() -> CoordinatableFactoryResult<GamesCoordinatorStartOption, EmptyOption> {
         let navController = UINavigationController()
 
-        let tabBarItem = UITabBarItem(title: L10n.TabBar.games, image: nil, tag: 1)
+        let tabBarItem = UITabBarItem(title: L10n.TabBar.games, image: Asset.time.image, tag: 1)
 
         navController.tabBarItem = tabBarItem
 

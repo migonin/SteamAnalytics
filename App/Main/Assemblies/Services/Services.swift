@@ -51,4 +51,8 @@ public final class Services {
                                     gameStorage: Storages.gamesStorage)
     }()
 
+    public static let comparisonService: UsersComparisonServicing = {
+        return UsersComparisonService(gamesService: Services.gamesService, gamesStorage: Storages.gamesStorage)
+    }()
+
 }

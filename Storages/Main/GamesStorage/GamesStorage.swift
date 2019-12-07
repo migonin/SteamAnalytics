@@ -66,17 +66,17 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
         })
     }
 
-    public func deleteUser(_ user: User) {
-        let owner = gamesOwnerObject(for: user)
-
+    public func deleteAllData() {
         dataStack.perform(asynchronous: { (transaction) -> Void in
-            guard let owner = transaction.fetchExisting(owner) else { return }
-
-            transaction.delete(owner)
+            try transaction.deleteAll(From<CSGameOwner>())
         }, completion: { _ in })
     }
 
-    public func addGamesStats(stats: [StatValue], achievements: [AchievementValue], for game: Game, user: User) {
+    public func addGamesStats(stats: [StatValue],
+                              achievements: [AchievementValue],
+                              for game: Game,
+                              user: User,
+                              completion: (() -> Void)?) {
         guard let csGame = csGame(for: game) else { return }
         let owner = gamesOwnerObject(for: user)
 
@@ -94,10 +94,18 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
                                    schemaCSAchievements: schemaCSAchievements,
                                    owner: owner,
                                    in: transaction)
-        }, completion: { _ in })
+        }, completion: { _ in
+            completion?()
+        })
     }
 
-    public func addGamesStats(stats: [StatValue], achievements: [AchievementValue], for game: Game, schemaStats: [Stat], schemaAchievements: [Achievement], user: User) {
+    public func addGamesStats(stats: [StatValue],
+                              achievements: [AchievementValue],
+                              for game: Game,
+                              schemaStats: [Stat],
+                              schemaAchievements: [Achievement],
+                              user: User,
+                              completion: (() -> Void)?) {
         guard let csGame = csGame(for: game) else { return }
         let owner = gamesOwnerObject(for: user)
 
@@ -118,7 +126,9 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
                                    schemaCSAchievements: schemaCSAchievements,
                                    owner: owner,
                                    in: transaction)
-        }, completion: { _ in })
+        }, completion: { _ in
+            completion?()
+        })
     }
 
     public func createOrUpdateNews(_ news: [NewsEntry], for game: Game) {
@@ -236,7 +246,11 @@ public struct GamesStorage: GamesStorageInput, GamesStorageOutput {
                 fatalError("Data stack error, gamesOwner not created")
             }
 
-            return owner
+            if let owner = dataStack.fetchExisting(owner) {
+                return owner
+            } else {
+                fatalError("Data stack error, gamesOwner not existed in main context")
+            }
         }
     }
 

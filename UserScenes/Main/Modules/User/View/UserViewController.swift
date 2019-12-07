@@ -83,7 +83,7 @@ class UserViewController: BaseTableViewController, UserViewInput {
             cell.configure(with: model)
 
             return cell
-        case .games(let model), .friends(let model):
+        case .games(let model), .friends(let model), .compare(let model):
             let cell = tableView.dequeueReusableTypedCell(for: indexPath, cellType: ListItemCell.self)
             cell.configure(with: model)
 

@@ -55,7 +55,7 @@ public class HeaderCell: UITableViewCell {
 
         imgView.snp.makeConstraints { make in
             make.leading.top.trailing.equalToSuperview()
-            make.height.equalTo(imgViewHeight)
+            make.height.equalTo(imgViewHeight).priority(999)
         }
 
         separatorView.snp.makeConstraints { make in

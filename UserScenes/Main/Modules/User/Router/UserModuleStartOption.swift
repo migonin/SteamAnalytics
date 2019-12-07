@@ -10,5 +10,5 @@ import Core
 
 public enum UserModuleStartOption {
     case startScreen(User)
-    case user(User)
+    case user(User, isOwn: Bool)
 }

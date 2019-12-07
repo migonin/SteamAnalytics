@@ -50,6 +50,7 @@ target 'UserScenes' do
   project 'UserScenes/UserScenes.xcodeproj'
 
   corestore_pod
+  snapkit_pod
 end
 
 target 'GameScenes' do

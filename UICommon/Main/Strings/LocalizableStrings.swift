@@ -26,6 +26,17 @@ public enum L10n {
     public static let retry = L10n.tr("Localizable", "Common.retry")
   }
 
+  public enum CompareUsers {
+    /// Выберите игру
+    public static let chooseGame = L10n.tr("Localizable", "CompareUsers.chooseGame")
+    /// У пользователей нет общих игр для сравнения
+    public static let noGames = L10n.tr("Localizable", "CompareUsers.noGames")
+    /// Выберите игру
+    public static let selectedGame = L10n.tr("Localizable", "CompareUsers.selectedGame")
+    /// Сравнение
+    public static let title = L10n.tr("Localizable", "CompareUsers.title")
+  }
+
   public enum Error {
     /// Что-то пошло не так.
     public static let general = L10n.tr("Localizable", "Error.general")
@@ -89,6 +100,8 @@ public enum L10n {
   }
 
   public enum User {
+    /// Сравнить
+    public static let compare = L10n.tr("Localizable", "User.compare")
     /// Друзья
     public static let friends = L10n.tr("Localizable", "User.friends")
     /// Игры

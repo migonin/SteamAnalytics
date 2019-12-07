@@ -62,19 +62,22 @@ public class TwoUsersCell: UITableViewCell {
     func commonInit() {
         backgroundColor = nil
         selectionStyle = .none
+        separatorInset = UIEdgeInsets(top: 0, left: 10000, bottom: 0, right: 0)
 
         setupStackView(leftStackView, titleLabel: leftTitleLabel, imageView: leftImgView)
         setupStackView(rightStackView, titleLabel: rightTitleLabel, imageView: rightImgView)
 
         leftStackView.snp.makeConstraints { (make) in
-            make.top.bottom.equalToSuperview().inset(5.0)
+            make.top.equalToSuperview().inset(10.0)
+            make.bottom.equalToSuperview().inset(20.0)
             make.leading.equalTo(snp.leadingMargin)
             make.trailing.equalTo(rightStackView.snp.leading)
             make.width.equalTo(rightStackView)
         }
 
         rightStackView.snp.makeConstraints { (make) in
-            make.top.bottom.equalToSuperview().inset(5.0)
+            make.top.equalToSuperview().inset(10.0)
+            make.bottom.equalToSuperview().inset(20.0)
             make.trailing.equalTo(snp.trailingMargin)
         }
 

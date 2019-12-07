@@ -30,6 +30,7 @@
 "User.friends" = "Друзья";
 "User.games" = "Игры";
 "User.private" = "Закрытый профиль";
+"User.compare" = "Сравнить";
 
 "UserFriends.title" = "Друзья %@";
 "UserFriends.noFriends" = "У пользователя нет друзей";
@@ -56,4 +57,7 @@
 "GameNews.title" = "Новости игры";
 "GameNews.loading" = "Пожалуйста, подождите. Обрабатываются HTML и BB-коды...";
 
-
+"CompareUsers.title" = "Сравнение";
+"CompareUsers.noGames" = "У пользователей нет общих игр для сравнения";
+"CompareUsers.selectedGame" = "Выберите игру";
+"CompareUsers.chooseGame" = "Выберите игру";

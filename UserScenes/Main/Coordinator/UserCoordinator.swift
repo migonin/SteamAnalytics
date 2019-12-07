@@ -46,7 +46,8 @@ public final class UserCoordinator: NavigationCoordinator, Coordinatable {
     private func goToUser(_ user: User, startScreen: Bool = false, animated: Bool) {
         let (module, presentable) = modulesFactory.makeUserScreen()
 
-        let startOption = startScreen ? UserModuleStartOption.startScreen(user) : UserModuleStartOption.user(user)
+        let isOwn = self.user.id == user.id
+        let startOption = startScreen ? UserModuleStartOption.startScreen(user) : UserModuleStartOption.user(user, isOwn: isOwn)
 
         module.output = { [weak self] result in
             guard let self = self else { return }
@@ -58,6 +59,8 @@ public final class UserCoordinator: NavigationCoordinator, Coordinatable {
                 self.goToGames(of: user)
             case .logout:
                 self.output?(.loggedOut)
+            case .compareTapped:
+                self.goToComparison(with: user)
             case .back:
                 self.popModule(animated: true)
             }
@@ -100,5 +103,22 @@ public final class UserCoordinator: NavigationCoordinator, Coordinatable {
         }
 
         coordinator.start(with: .allGames(of: user), animated: true)
+    }
+
+    private func goToComparison(with otherUser: User) {
+        let (module, presentable) = modulesFactory.makeUserComparison()
+
+        module.output = { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+            case .back:
+                self.popModule(animated: true)
+            }
+
+        }
+
+        module.start(with: .compare(firstUser: user, secondUser: otherUser), animated: true)
+        push(presentable, animated: true)
     }
 }
