@@ -464,6 +464,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.frozenlion.steamanalytics.App;
 				PRODUCT_NAME = SteamAnalytics;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -482,6 +483,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.frozenlion.steamanalytics.App;
 				PRODUCT_NAME = SteamAnalytics;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -11,6 +11,8 @@
 		BC04483D2399241E008BEA66 /* GameStatsSyncServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04483C2399241E008BEA66 /* GameStatsSyncServicing.swift */; };
 		BC18B49B239B6424003CA866 /* UsersComparisonServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B49A239B6424003CA866 /* UsersComparisonServicing.swift */; };
 		BC18B49D239B6428003CA866 /* UsersComparisonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18B49C239B6428003CA866 /* UsersComparisonService.swift */; };
+		BC18B4A1239BE04A003CA866 /* UICommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC18B4A0239BE04A003CA866 /* UICommon.framework */; };
+		BC18B4A2239BE04A003CA866 /* UICommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC18B4A0239BE04A003CA866 /* UICommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC2C9AB0239B55F2006F7D14 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9AAD239B55F2006F7D14 /* ErrorType.swift */; };
 		BC2C9AB1239B55F2006F7D14 /* ErrorDescribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9AAE239B55F2006F7D14 /* ErrorDescribing.swift */; };
 		BC2C9AB2239B55F2006F7D14 /* ErrorDescriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9AAF239B55F2006F7D14 /* ErrorDescriber.swift */; };
@@ -49,6 +51,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BC18B4A2239BE04A003CA866 /* UICommon.framework in Embed Frameworks */,
 				BC45C660238792CF0096EBD2 /* APIClient.framework in Embed Frameworks */,
 				BC45C65C238792CA0096EBD2 /* Storages.framework in Embed Frameworks */,
 			);
@@ -63,6 +66,7 @@
 		BC04483C2399241E008BEA66 /* GameStatsSyncServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsSyncServicing.swift; sourceTree = "<group>"; };
 		BC18B49A239B6424003CA866 /* UsersComparisonServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersComparisonServicing.swift; sourceTree = "<group>"; };
 		BC18B49C239B6428003CA866 /* UsersComparisonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersComparisonService.swift; sourceTree = "<group>"; };
+		BC18B4A0239BE04A003CA866 /* UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2C9AAD239B55F2006F7D14 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		BC2C9AAE239B55F2006F7D14 /* ErrorDescribing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescribing.swift; sourceTree = "<group>"; };
 		BC2C9AAF239B55F2006F7D14 /* ErrorDescriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescriber.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC45C65F238792CF0096EBD2 /* APIClient.framework in Frameworks */,
+				BC18B4A1239BE04A003CA866 /* UICommon.framework in Frameworks */,
 				BC45C65B238792CA0096EBD2 /* Storages.framework in Frameworks */,
 				FFF202B99D13C26B49D052C6 /* Pods_Services.framework in Frameworks */,
 			);
@@ -157,6 +162,7 @@
 		BC45C659238792CA0096EBD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC18B4A0239BE04A003CA866 /* UICommon.framework */,
 				BC45C65E238792CF0096EBD2 /* APIClient.framework */,
 				BC45C65A238792CA0096EBD2 /* Storages.framework */,
 				BDB04B20E6E09FD8997043A6 /* Pods_Services.framework */,
@@ -559,6 +565,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.frozenlion.steamanalytics.Services;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -585,6 +592,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.frozenlion.steamanalytics.Services;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
