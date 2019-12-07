@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		BC04483B23992418008BEA66 /* GameStatsSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04483A23992418008BEA66 /* GameStatsSyncService.swift */; };
 		BC04483D2399241E008BEA66 /* GameStatsSyncServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04483C2399241E008BEA66 /* GameStatsSyncServicing.swift */; };
+		BC2C9AB0239B55F2006F7D14 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9AAD239B55F2006F7D14 /* ErrorType.swift */; };
+		BC2C9AB1239B55F2006F7D14 /* ErrorDescribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9AAE239B55F2006F7D14 /* ErrorDescribing.swift */; };
+		BC2C9AB2239B55F2006F7D14 /* ErrorDescriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9AAF239B55F2006F7D14 /* ErrorDescriber.swift */; };
 		BC45C65B238792CA0096EBD2 /* Storages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C65A238792CA0096EBD2 /* Storages.framework */; };
 		BC45C65C238792CA0096EBD2 /* Storages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C65A238792CA0096EBD2 /* Storages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC45C65F238792CF0096EBD2 /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C65E238792CF0096EBD2 /* APIClient.framework */; };
@@ -56,6 +59,9 @@
 		072C0B2F49E4FB33C1A52442 /* Pods-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.debug.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.debug.xcconfig"; sourceTree = "<group>"; };
 		BC04483A23992418008BEA66 /* GameStatsSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsSyncService.swift; sourceTree = "<group>"; };
 		BC04483C2399241E008BEA66 /* GameStatsSyncServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsSyncServicing.swift; sourceTree = "<group>"; };
+		BC2C9AAD239B55F2006F7D14 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		BC2C9AAE239B55F2006F7D14 /* ErrorDescribing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescribing.swift; sourceTree = "<group>"; };
+		BC2C9AAF239B55F2006F7D14 /* ErrorDescriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescriber.swift; sourceTree = "<group>"; };
 		BC45C65A238792CA0096EBD2 /* Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC45C65E238792CF0096EBD2 /* APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC45C661238794DA0096EBD2 /* UsersServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersServicing.swift; sourceTree = "<group>"; };
@@ -117,6 +123,24 @@
 			path = GameStatsSyncService;
 			sourceTree = "<group>";
 		};
+		BC2C9AAB239B55F2006F7D14 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BC2C9AAC239B55F2006F7D14 /* ErrorDescriber */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BC2C9AAC239B55F2006F7D14 /* ErrorDescriber */ = {
+			isa = PBXGroup;
+			children = (
+				BC2C9AAD239B55F2006F7D14 /* ErrorType.swift */,
+				BC2C9AAE239B55F2006F7D14 /* ErrorDescribing.swift */,
+				BC2C9AAF239B55F2006F7D14 /* ErrorDescriber.swift */,
+			);
+			path = ErrorDescriber;
+			sourceTree = "<group>";
+		};
 		BC45C659238792CA0096EBD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +186,7 @@
 				BC044839239923EC008BEA66 /* GameStatsSyncService */,
 				BCC302F7239616FD00914EB1 /* LogoutService */,
 				BC45C6652387963D0096EBD2 /* Common */,
+				BC2C9AAB239B55F2006F7D14 /* Utils */,
 				BC8C1B21238698F9000A80BA /* UserService */,
 				BCE3221B238AF0FE00792F50 /* GamesService */,
 				BC604C462384EA9D00FA5588 /* Services.h */,
@@ -346,10 +371,13 @@
 				BC45C667238796500096EBD2 /* ServiceResult.swift in Sources */,
 				BCC302FB2396171400914EB1 /* LogoutService.swift in Sources */,
 				BCC302F92396171000914EB1 /* LogoutServicing.swift in Sources */,
+				BC2C9AB2239B55F2006F7D14 /* ErrorDescriber.swift in Sources */,
 				BC04483D2399241E008BEA66 /* GameStatsSyncServicing.swift in Sources */,
 				BC04483B23992418008BEA66 /* GameStatsSyncService.swift in Sources */,
 				BC45C669238796C10096EBD2 /* ServiceCompletion.swift in Sources */,
+				BC2C9AB0239B55F2006F7D14 /* ErrorType.swift in Sources */,
 				BC45C664238794E10096EBD2 /* UsersService.swift in Sources */,
+				BC2C9AB1239B55F2006F7D14 /* ErrorDescribing.swift in Sources */,
 				BCE3221F238AF13000792F50 /* GamesService.swift in Sources */,
 				BC45C662238794DA0096EBD2 /* UsersServicing.swift in Sources */,
 				BCE3221D238AF11300792F50 /* GamesServicing.swift in Sources */,

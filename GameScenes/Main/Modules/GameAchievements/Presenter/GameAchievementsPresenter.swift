@@ -9,6 +9,7 @@
 import UICommon
 import Core
 import UIKit
+import Services
 
 class GameAchievementsPresenter: Coordinatable, GameAchievementsViewOutput, GameAchievementsInteractorOutput {
     typealias InputType = GameAchievementsModuleStartOption
@@ -43,7 +44,7 @@ class GameAchievementsPresenter: Coordinatable, GameAchievementsViewOutput, Game
         state.isViewWillPresented = false
         state.isViewPresented = false
 
-        view.setTitle("Ачивки")
+        view.setTitle(L10n.Achievements.title)
         view.setPullToRefreshEnabled(false)
         loadModels()
     }

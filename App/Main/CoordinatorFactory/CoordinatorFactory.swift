@@ -15,7 +15,7 @@ import UIKit
 
 class CoordinatorFactory: CoordinatorFactoring {
     func makeLoginCoordinator() ->
-        CoordinatableFactoryResult<EmptyOption, LoginCoordinatorResult> {
+        CoordinatableFactoryResult<MainCoordinatorStartOption, LoginCoordinatorResult> {
 
             let navController = UINavigationController()
             let navigator = Navigator(rootController: navController)

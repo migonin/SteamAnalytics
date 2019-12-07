@@ -9,6 +9,7 @@
 import UIKit
 import UICommon
 import Core
+import Services
 
 final class UserModuleConfigurator {
     let dependencies: UserScenesDependencies

@@ -8,6 +8,7 @@
 
 import UICommon
 import Core
+import Services
 
 class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInteractorOutput {
     typealias InputType = UserFriendsModuleStartOption
@@ -41,7 +42,7 @@ class UserFriendsPresenter: Coordinatable, UserFriendsViewOutput, UserFriendsInt
         state.isViewWillPresented = false
         state.isViewPresented = false
 
-        view.setTitle("Друзья \(state.user.name)")
+        view.setTitle(L10n.UserFriends.title(state.user.name))
         interactor.loadUserFriends(force: false)
         loadModels()
     }

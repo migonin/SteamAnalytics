@@ -10,5 +10,5 @@ import Foundation
 import UICommon
 
 public protocol LoginModulesFactoring {
-    func makeLoginScreen() -> CoordinatableFactoryResult<EmptyOption, LoginModuleResult>
+    func makeLoginScreen() -> CoordinatableFactoryResult<MainCoordinatorStartOption, LoginModuleResult>
 }

@@ -1,0 +1,59 @@
+/* 
+  Localizable.strings
+  UICommon
+
+  Created by Михаил Игонин on 07.12.2019.
+  Copyright © 2019 YouDo. All rights reserved.
+*/
+
+"Common.ok" = "ОК";
+"Common.back" = "Назад";
+"Common.retry" = "Повторить";
+
+"Error.internet" = "Проблемы с инернетом.";
+"Error.general" = "Что-то пошло не так.";
+
+"TabBar.user" = "Юзер";
+"TabBar.games" = "Последние игры";
+
+"Login.title" = "Вход";
+"Login.fakeLogin" = "Фейковый вход";
+
+"User.mainScreen" = "Старт";
+"User.user" = "Юзер";
+
+"User.logout" = "Выйти";
+"User.logoutPopup.text" = "Вы точно хотите выйти?";
+"User.logoutPopup.confirm" = "Выйти";
+"User.logoutPopup.cancel" = "Отмена";
+
+"User.friends" = "Друзья";
+"User.games" = "Игры";
+"User.private" = "Закрытый профиль";
+
+"UserFriends.title" = "Друзья %@";
+"UserFriends.noFriends" = "У пользователя нет друзей";
+"UserFriends.private" = "Друзья пользователя недоступны";
+
+"UserGames.title" = "Игры %@";
+"UserGames.lastGames.title" = "Последние игры %@";
+"UserGames.noGames" = "У пользователя нет игр";
+"UserGames.private" = "Игры пользователя недоступны";
+
+"Game.time.total" = "Всего %@";
+"Game.time.twoWeeks" = "За 2 недели %@";
+"Game.news" = "Новости";
+"Game.stats" = "Статистика";
+"Game.achievements" = "Ачивки";
+"Game.noStats" = "У игры нет доступных стат. Посмотрите другие игры, например, CS: GO, Team Fortress 2, Portal 2, по ним есть много всего.";
+"Game.time.hmformat" = "%d ч %d мин";
+"Game.time.mformat" = "%d мин";
+
+"GameStats.title" = "Статистика игры";
+
+"Achievements.title" = "Ачивки";
+
+"GameNews.title" = "Новости игры";
+"GameNews.loading" = "Пожалуйста, подождите. Обрабатываются HTML и BB-коды...";
+
+

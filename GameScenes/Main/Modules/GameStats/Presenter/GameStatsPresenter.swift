@@ -9,6 +9,7 @@
 import UICommon
 import Core
 import UIKit
+import Services
 
 class GameStatsPresenter: Coordinatable, GameStatsViewOutput, GameStatsInteractorOutput {
     typealias InputType = GameStatsModuleStartOption
@@ -43,7 +44,7 @@ class GameStatsPresenter: Coordinatable, GameStatsViewOutput, GameStatsInteracto
         state.isViewWillPresented = false
         state.isViewPresented = false
 
-        view.setTitle("Статистика игры")
+        view.setTitle(L10n.GameStats.title)
         view.setPullToRefreshEnabled(false)
         loadModels()
     }

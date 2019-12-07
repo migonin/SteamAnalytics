@@ -9,6 +9,7 @@
 import UIKit
 import UICommon
 import Core
+import Services
 
 final class GameAchievementsModuleConfigurator {
     let dependencies: GameScenesDependencies

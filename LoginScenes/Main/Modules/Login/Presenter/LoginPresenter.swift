@@ -11,7 +11,7 @@ import Services
 import Core
 
 class LoginPresenter: Coordinatable, LoginViewOutput, LoginInteractorOutput {
-    typealias InputType = EmptyOption
+    typealias InputType = MainCoordinatorStartOption
     typealias OutputType = LoginModuleResult
 
     weak var view: LoginViewInput!
@@ -26,7 +26,10 @@ class LoginPresenter: Coordinatable, LoginViewOutput, LoginInteractorOutput {
     var state = LoginPresenterState()
 
     // MARK: Coordinatable
-    func start(with option: EmptyOption, animated: Bool) {
+    func start(with option: MainCoordinatorStartOption, animated: Bool) {
+        if case let MainCoordinatorStartOption.debugMode(debugMode) = option {
+            state.debugMode = debugMode
+        }
     }
 
     var output: ((LoginModuleResult) -> Void)?
@@ -37,8 +40,9 @@ class LoginPresenter: Coordinatable, LoginViewOutput, LoginInteractorOutput {
         state.isViewWillPresented = false
         state.isViewPresented = false
 
-        view.setTitle("Вход")
+        view.setTitle(L10n.Login.title)
 
+        view.setFakeLoginButtonHidden(!state.debugMode)
         loadWebView()
     }
     

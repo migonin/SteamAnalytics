@@ -29,7 +29,7 @@ struct UserModelBuilder: UserModelBuilding {
         if settings.user.isProfileVisible {
             models.append(.friends(
                 ListItemCellModel(
-                    title: "Друзья",
+                    title: L10n.User.friends,
                     subtitle: nil,
                     imgUrl: nil,
                     showDisclosureIndicator: true
@@ -38,7 +38,7 @@ struct UserModelBuilder: UserModelBuilding {
 
             models.append(.games(
                 ListItemCellModel(
-                    title: "Игры",
+                    title: L10n.User.games,
                     subtitle: nil,
                     imgUrl: nil,
                     showDisclosureIndicator: true
@@ -47,7 +47,7 @@ struct UserModelBuilder: UserModelBuilding {
         } else {
             models.append(.privateProfile(
                 MessageCellModel(
-                    title: "Приватный профиль"
+                    title: L10n.User.private
                 )
             ))
         }

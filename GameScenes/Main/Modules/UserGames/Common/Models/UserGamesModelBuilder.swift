@@ -18,11 +18,11 @@ struct UserGamesModelBuilder: UserGamesModelBuilding {
 
         if settings.infoInaccessibleError {
             models.append(.message(
-                MessageCellModel(title: "Игры пользователя недоступны")
+                MessageCellModel(title: L10n.UserGames.private)
             ))
         } else if settings.games.isEmpty && !settings.requestInProgress {
             models.append(.message(
-                MessageCellModel(title: "У пользователя нет игр")
+                MessageCellModel(title: L10n.UserGames.noGames)
             ))
         } else {
             for game in settings.games {

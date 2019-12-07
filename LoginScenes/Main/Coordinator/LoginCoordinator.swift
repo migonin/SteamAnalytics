@@ -11,13 +11,15 @@ import UICommon
 import Core
 
 public final class LoginCoordinator: NavigationCoordinator, Coordinatable {
-    public typealias InputType = EmptyOption
+    public typealias InputType = MainCoordinatorStartOption
     public typealias OutputType = LoginCoordinatorResult
 
     let dependencies: LoginScenesDependencies
     let modulesFactory: LoginModulesFactoring
 
     public var output: ((LoginCoordinatorResult) -> Void)?
+
+    var startOption: MainCoordinatorStartOption!
 
     public init(dependencies: LoginScenesDependencies,
                 modulesFactory: LoginModulesFactoring,
@@ -28,8 +30,10 @@ public final class LoginCoordinator: NavigationCoordinator, Coordinatable {
         super.init(navigator: navigator)
     }
 
-    public func start(with option: EmptyOption, animated: Bool) {
+    public func start(with option: MainCoordinatorStartOption, animated: Bool) {
         super.start()
+
+        self.startOption = option
 
         let (module, presentable) = modulesFactory.makeLoginScreen()
 
@@ -39,7 +43,7 @@ public final class LoginCoordinator: NavigationCoordinator, Coordinatable {
             }
         }
 
-        module.start(with: .none, animated: false)
+        module.start(with: startOption, animated: false)
         push(presentable, animated: false)
     }
 }

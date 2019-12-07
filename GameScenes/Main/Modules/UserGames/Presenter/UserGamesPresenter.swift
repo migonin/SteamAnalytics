@@ -8,6 +8,7 @@
 
 import UICommon
 import Core
+import Services
 
 class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteractorOutput {
     typealias InputType = UserGamesModuleStartOption
@@ -45,9 +46,9 @@ class UserGamesPresenter: Coordinatable, UserGamesViewOutput, UserGamesInteracto
         state.isViewPresented = false
 
         if state.lastPlayedGamed {
-            view.setTitle("Последние игры \(state.user.name)")
+            view.setTitle(L10n.UserGames.LastGames.title(state.user.name))
         } else {
-            view.setTitle("Игры \(state.user.name)")
+            view.setTitle(L10n.UserGames.title(state.user.name))
         }
         
         interactor.loadUserGames(force: false)

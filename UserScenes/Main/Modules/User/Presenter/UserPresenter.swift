@@ -8,6 +8,7 @@
 
 import UICommon
 import Core
+import Services
 
 class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
     typealias InputType = UserModuleStartOption
@@ -46,10 +47,10 @@ class UserPresenter: Coordinatable, UserViewOutput, UserInteractorOutput {
         state.isViewPresented = false
 
         if state.startScreen {
-            view.setTitle("Стартовый экран")
+            view.setTitle(L10n.User.mainScreen)
             view.addLogoutButton()
         } else {
-            view.setTitle("Юзер")
+            view.setTitle(L10n.User.user)
         }
 
         interactor.loadUser(force: false)

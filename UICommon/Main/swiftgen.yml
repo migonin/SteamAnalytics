@@ -1,0 +1,15 @@
+xcassets:
+    inputs: ./Images/Assets.xcassets
+    outputs:
+        templateName: swift4
+        output: ./Images/Images.swift
+        params:
+            publicAccess: 1
+
+strings:
+    inputs: ./Strings/ru.lproj/Localizable.strings
+    outputs:
+        templateName: structured-swift4
+        output: ./Strings/LocalizableStrings.swift
+        params:
+            publicAccess: 1

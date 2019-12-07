@@ -6,6 +6,7 @@
 //  Copyright © 2019 FrozenApps. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import UICommon
 
@@ -29,12 +30,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        applicationCoordinator.start(with: .none, animated: false)
+
+        let debugMode = getEnvironmentVariableBoolValue(.debugMode)
+
+        applicationCoordinator.start(with: .debugMode(debugMode), animated: false)
 
         return true
     }
 
-    func makeMainCoordinator() -> AnyCoordinatable<EmptyOption, EmptyOption> {
+    func getEnvironmentVariableBoolValue(_ variable: EnvironmentVariable) -> Bool {
+        if let environmentStringValue = ProcessInfo.processInfo.environment[variable.rawValue],
+            let environmentBoolValue = Bool(environmentStringValue) {
+                return environmentBoolValue
+        } else {
+            return false
+        }
+    }
+
+    func makeMainCoordinator() -> AnyCoordinatable<MainCoordinatorStartOption, EmptyOption> {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
 

@@ -8,6 +8,7 @@
 
 import UICommon
 import Core
+import Services
 
 class GameNewsPresenter: Coordinatable, GameNewsViewOutput, GameNewsInteractorOutput {
     typealias InputType = GameNewsModuleStartOption
@@ -41,7 +42,7 @@ class GameNewsPresenter: Coordinatable, GameNewsViewOutput, GameNewsInteractorOu
         state.isViewWillPresented = false
         state.isViewPresented = false
 
-        view.setTitle("Новости")
+        view.setTitle(L10n.GameNews.title)
 
         interactor.loadGameNews(force: false)
         reloadScreen()
@@ -110,7 +111,7 @@ class GameNewsPresenter: Coordinatable, GameNewsViewOutput, GameNewsInteractorOu
         let settings = GameNewsModelBuilderSettings(news: news)
 
         if !news.isEmpty {
-            view.showSpinner(message: "Please wait, HTML and BB-codes processing...")
+            view.showSpinner(message: L10n.GameNews.loading)
 
             //OHMYGOD, HEAWY HTML PROCESSING!!!111
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in

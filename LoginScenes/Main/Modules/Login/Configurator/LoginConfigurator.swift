@@ -9,11 +9,12 @@
 import UIKit
 import UICommon
 import Core
+import Services
 
 final class LoginModuleConfigurator {
     let dependencies: LoginScenesDependencies
     
-    func configure() -> CoordinatableFactoryResult<EmptyOption, LoginModuleResult> {
+    func configure() -> CoordinatableFactoryResult<MainCoordinatorStartOption, LoginModuleResult> {
         let viewController = LoginViewController()
 
         let presenter = LoginPresenter()

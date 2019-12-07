@@ -16,7 +16,7 @@ public struct LoginModulesFactory: LoginModulesFactoring {
         self.dependencies = dependencies
     }
 
-    public func makeLoginScreen() -> CoordinatableFactoryResult<EmptyOption, LoginModuleResult> {
+    public func makeLoginScreen() -> CoordinatableFactoryResult<MainCoordinatorStartOption, LoginModuleResult> {
         return LoginModuleConfigurator(dependencies: dependencies).configure()
     }
 }

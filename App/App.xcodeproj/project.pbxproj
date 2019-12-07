@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC2C9A99239B4818006F7D14 /* EnvironmentVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C9A98239B4818006F7D14 /* EnvironmentVariable.swift */; };
 		BC45C66B23879B8B0096EBD2 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C66A23879B8B0096EBD2 /* Services.framework */; };
 		BC45C66C23879B8B0096EBD2 /* Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC45C66A23879B8B0096EBD2 /* Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC4646EE2397D4180010881D /* Storages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4646ED2397D4180010881D /* Storages.framework */; };
@@ -56,6 +57,7 @@
 		605B4DC8D320D485879DF30F /* Pods-SteamAnalyticsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SteamAnalyticsApp.debug.xcconfig"; path = "Target Support Files/Pods-SteamAnalyticsApp/Pods-SteamAnalyticsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7DED0B260414F8C014DD4D2C /* Pods_SteamAnalyticsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SteamAnalyticsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC522B637C40D73DBE0E8C6 /* Pods-SteamAnalyticsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SteamAnalyticsApp.release.xcconfig"; path = "Target Support Files/Pods-SteamAnalyticsApp/Pods-SteamAnalyticsApp.release.xcconfig"; sourceTree = "<group>"; };
+		BC2C9A98239B4818006F7D14 /* EnvironmentVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentVariable.swift; sourceTree = "<group>"; };
 		BC45C66A23879B8B0096EBD2 /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4646ED2397D4180010881D /* Storages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Storages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4646F02397D43E0010881D /* UICommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 				BCCCCA302392FC6800772A89 /* MainCoordinator */,
 				BCD22C3E238E30F20020885E /* Assemblies */,
 				BC604B712384E7EA00FA5588 /* AppDelegate.swift */,
+				BC2C9A98239B4818006F7D14 /* EnvironmentVariable.swift */,
 				BC604B7A2384E7EA00FA5588 /* Assets.xcassets */,
 				BC604B7C2384E7EA00FA5588 /* LaunchScreen.storyboard */,
 				BC604B7F2384E7EA00FA5588 /* Info.plist */,
@@ -315,6 +318,7 @@
 				BCCCCA352392FD6100772A89 /* CoordinatorFactory.swift in Sources */,
 				BCD22C43238E30F20020885E /* Storages.swift in Sources */,
 				BCC30301239623B300914EB1 /* MainTabBarCoordinator.swift in Sources */,
+				BC2C9A99239B4818006F7D14 /* EnvironmentVariable.swift in Sources */,
 				BC604B722384E7EA00FA5588 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,12 +14,14 @@ import UICommon
 import UIKit
 
 final class MainCoordinator: WindowCoordinator, Coordinatable {
-    public typealias InputType = EmptyOption
+    public typealias InputType = MainCoordinatorStartOption
     public typealias OutputType = EmptyOption
 
     let coordinatorFactory: CoordinatorFactoring
     let authStorage: AuthStorageOutput
     let userStorage: UsersStorageOutput
+
+    var startOption: MainCoordinatorStartOption!
 
     public var output: ((EmptyOption) -> Void)?
 
@@ -34,7 +36,9 @@ final class MainCoordinator: WindowCoordinator, Coordinatable {
         super.init(window: window)
     }
 
-    public func start(with option: EmptyOption, animated: Bool) {
+    public func start(with option: MainCoordinatorStartOption, animated: Bool) {
+        self.startOption = option
+
         if let ownUserID = authStorage.getOwnUserID(), let ownUser = userStorage.getUser(withID: ownUserID) {
             runMainFlow(user: ownUser)
         } else {
@@ -56,7 +60,7 @@ final class MainCoordinator: WindowCoordinator, Coordinatable {
         }
 
         setChildCoordinator((coordinator, presentable))
-        coordinator.start(with: .none, animated: true)
+        coordinator.start(with: startOption, animated: true)
     }
 
     func runMainFlow(user: User) {

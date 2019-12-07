@@ -114,17 +114,17 @@ class UserViewController: BaseTableViewController, UserViewInput {
 
     // MARK: - UserViewInput
     func addLogoutButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Выйти", style: .plain, target: self, action: #selector(logoutTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: L10n.User.logout, style: .plain, target: self, action: #selector(logoutTapped))
     }
 
     func showLogoutPopup() {
-        let alertController = UIAlertController(title: "", message: "Вы точно хотите выйти?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "", message: L10n.User.LogoutPopup.text, preferredStyle: .alert)
 
-        alertController.addAction(UIAlertAction(title: "Выйти", style: .destructive, handler: { [weak self] (_) in
+        alertController.addAction(UIAlertAction(title: L10n.User.LogoutPopup.confirm, style: .destructive, handler: { [weak self] (_) in
             self?.output.logoutConfirmed()
         }))
 
-        alertController.addAction(UIAlertAction(title: "Отмена", style: .default, handler: { (_) in
+        alertController.addAction(UIAlertAction(title: L10n.User.LogoutPopup.cancel, style: .default, handler: { (_) in
 
         }))
 

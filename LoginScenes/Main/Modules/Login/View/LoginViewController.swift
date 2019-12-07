@@ -26,10 +26,17 @@ class LoginViewController: BaseViewController, LoginViewInput {
         setupWebView()
     }
 
-    private func setupNavBar() {
+    func setupNavBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(reloadPage))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Fake login", style: .plain, target: self, action: #selector(fakeLogin))
+    }
 
+    func setFakeLoginButtonHidden(_ hidden: Bool) {
+        if hidden{
+            navigationItem.rightBarButtonItem = nil
+        } else {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: L10n.Login.fakeLogin, style: .plain, target: self, action: #selector(fakeLogin))
+
+        }
     }
 
     private func setupWebView() {

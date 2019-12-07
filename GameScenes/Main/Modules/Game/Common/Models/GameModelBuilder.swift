@@ -16,8 +16,8 @@ struct GameModelBuilder: GameModelBuilding {
     func buildModels(settings: GameModelBuilderSettings) -> [GameCellModel] {
         var models: [GameCellModel] = []
 
-        let totalPlaytimeString = "Всего " + formatPlaytime(settings.game.totalPlaytime)
-        let twoWeeksPlaytimeString = settings.game.playtimeTwoWeeks != 0 ? "За 2 недели " + formatPlaytime(settings.game.playtimeTwoWeeks) : nil
+        let totalPlaytimeString = L10n.Game.Time.total(formatPlaytime(settings.game.totalPlaytime))
+        let twoWeeksPlaytimeString = settings.game.playtimeTwoWeeks != 0 ? L10n.Game.Time.twoWeeks(formatPlaytime(settings.game.playtimeTwoWeeks)) : nil
 
         models.append(.header(
             HeaderCellModel(
@@ -33,7 +33,7 @@ struct GameModelBuilder: GameModelBuilding {
 
         models.append(.news(
             ListItemCellModel(
-                title: "Новости",
+                title: L10n.Game.news,
                 subtitle: nil,
                 imgUrl: nil,
                 showDisclosureIndicator: true
@@ -43,13 +43,13 @@ struct GameModelBuilder: GameModelBuilding {
         if settings.gameHasNoStats {
             models.append(.error(
                 MessageCellModel(
-                    title: "У игры нет доступных стат. Посмотрите другие игры, например, CS: GO, Team Fortress 2, Portal 2, по ним есть много всего."
+                    title: L10n.Game.noStats
                 )
             ))
         } else {
             models.append(.stats(
                 ListItemCellModel(
-                    title: "Статы",
+                    title: L10n.Game.stats,
                     subtitle: nil,
                     imgUrl: nil,
                     showDisclosureIndicator: true
@@ -58,7 +58,7 @@ struct GameModelBuilder: GameModelBuilding {
 
             models.append(.achievements(
                 ListItemCellModel(
-                    title: "Ачивки",
+                    title: L10n.Game.achievements,
                     subtitle: nil,
                     imgUrl: nil,
                     showDisclosureIndicator: true
@@ -75,9 +75,9 @@ struct GameModelBuilder: GameModelBuilding {
             let hours = playtime / 60
             let minutes = playtime - hours * 60
 
-            return "\(hours) ч \(minutes) мин"
+            return L10n.Game.Time.hmformat(hours, minutes)
         } else {
-            return "\(playtime) мин"
+            return L10n.Game.Time.mformat(playtime)
         }
     }
 }

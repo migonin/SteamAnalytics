@@ -14,4 +14,6 @@ struct LoginPresenterState {
     var isViewPresented: Bool = false
 
     var userID: String? = nil
+
+    var debugMode = false
 }

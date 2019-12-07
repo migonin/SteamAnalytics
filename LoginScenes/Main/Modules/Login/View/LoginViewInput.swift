@@ -9,5 +9,6 @@
 import UICommon
 
 protocol LoginViewInput: class, BaseViewInput {
+    func setFakeLoginButtonHidden(_ hidden: Bool)
     func loadRequest(_ request: URLRequest)
 }

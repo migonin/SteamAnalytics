@@ -86,7 +86,7 @@ public class HeaderCell: UITableViewCell {
 
         if model.roundedImg {
             let processor = RoundCornerImageProcessor(cornerRadius: imgViewHeight, backgroundColor: nil)
-            imgView.kf.setImage(with: URL(string: model.imgUrl), options: [.processor(processor)])
+            imgView.kf.setImage(with: URL(string: model.imgUrl), options: [.processor(processor), .cacheSerializer(FormatIndicatedCacheSerializer.png)])
         } else {
             imgView.kf.setImage(with: URL(string: model.imgUrl))
         }

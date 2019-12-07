@@ -23,6 +23,10 @@ def charts_pod
   pod 'Charts', '3.4.0'
 end
 
+def swiftgen_pod
+  pod 'SwiftGen', '6.0'
+end
+
 ###########################
 
 target 'SteamAnalyticsApp' do
@@ -59,6 +63,7 @@ target 'Services' do
   project 'Services/Services.xcodeproj'
 
   corestore_pod
+  alamofire_pod
 end
 
 target 'UICommon' do
@@ -67,6 +72,7 @@ target 'UICommon' do
   snapkit_pod
   kingfisher_pod
   charts_pod
+  swiftgen_pod
 end
 
 target 'UICommonTestApp' do
@@ -92,12 +98,5 @@ end
 target 'StoragesUnitTests' do
   project 'Storages/Storages.xcodeproj'
 
-  corestore_pod
-end
-
-target 'Core' do
-  project 'Core/Core.xcodeproj'
-
-  alamofire_pod
   corestore_pod
 end

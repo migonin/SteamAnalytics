@@ -18,11 +18,11 @@ struct UserFriendsModelBuilder: UserFriendsModelBuilding {
 
         if settings.infoInaccessibleError {
             models.append(.message(
-                MessageCellModel(title: "Игры пользователя недоступны")
+                MessageCellModel(title: L10n.UserFriends.private)
             ))
         } else if settings.friends.isEmpty && !settings.requestInProgress {
             models.append(.message(
-                MessageCellModel(title: "У пользователя нет друзей")
+                MessageCellModel(title: L10n.UserFriends.noFriends)
             ))
         } else {
             for friend in settings.friends {

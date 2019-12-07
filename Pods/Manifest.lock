@@ -8,6 +8,7 @@ PODS:
     - Kingfisher/Core (= 5.10.1)
   - Kingfisher/Core (5.10.1)
   - SnapKit (5.0.1)
+  - SwiftGen (6.0.0)
 
 DEPENDENCIES:
   - Alamofire (= 5.0.0-rc.3)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - CoreStore (= 7.0.1)
   - Kingfisher (= 5.10.1)
   - SnapKit (= 5.0.1)
+  - SwiftGen (= 6.0)
 
 SPEC REPOS:
   trunk:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - CoreStore
     - Kingfisher
     - SnapKit
+    - SwiftGen
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   CoreStore: c353080c6ae1708f621b75d9f8afe7d2ee716807
   Kingfisher: eb36b7dfcc78d60877051c92c119a2865972961a
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftGen: cd0bb0c9838c3fc90b78d35b19f492711b19eb55
 
-PODFILE CHECKSUM: f886e4b3e77ae79d4e8b71a05be9d54f32b52ee7
+PODFILE CHECKSUM: 68a554e55f0df72f01ca9ff240f1322cc4cc6f46
 
 COCOAPODS: 1.8.4

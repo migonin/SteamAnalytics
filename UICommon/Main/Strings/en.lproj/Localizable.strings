@@ -1,0 +1,57 @@
+/* 
+  Localizable.strings
+  UICommon
+
+  Created by Михаил Игонин on 07.12.2019.
+  Copyright © 2019 YouDo. All rights reserved.
+*/
+
+"Common.ok" = "ОК";
+"Common.back" = "Back";
+"Common.retry" = "Retry";
+
+"Error.internet" = "Connection problems";
+"Error.general" = "Someting is wrong";
+
+"TabBar.user" = "User";
+"TabBar.games" = "Last sessions";
+
+"Login.title" = "Sign in";
+"Login.fakeLogin" = "Fake sign in";
+
+"User.mainScreen" = "Main";
+"User.user" = "User";
+
+"User.logout" = "Sign out";
+"User.logoutPopup.text" = "Are you sure to sign out?";
+"User.logoutPopup.confirm" = "Sign out";
+"User.logoutPopup.cancel" = "Cancel";
+
+"User.friends" = "Friends";
+"User.games" = "Games";
+"User.private" = "Private profile";
+
+"UserFriends.title" = "Friends of %@";
+"UserFriends.noFriends" = "No friends";
+"UserFriends.private" = "User's friends are private";
+
+"UserGames.title" = "Games of %@";
+"UserGames.lastGames.title" = "Last sessions of %@";
+"UserGames.noGames" = "No games";
+"UserGames.private" = "User's games are private";
+
+"Game.time.total" = "Total: %@";
+"Game.time.twoWeeks" = "Two weeks: %@";
+"Game.news" = "News";
+"Game.stats" = "Stats";
+"Game.achievements" = "Achievements";
+"Game.noStats" = "Game has no accessible stats. Please check othe games, e.g. CS: GO, Team Fortress 2, Portal 2, they have plenty of data";
+"Game.time.hmformat" = "%d h %d min";
+"Game.time.mformat" = "%d min";
+
+"GameStats.title" = "Game stats";
+
+"Achievements.title" = "Achievements";
+
+"GameNews.title" = "Game news";
+"GameNews.loading" = "Please wait, HTML and BB-codes processing...";

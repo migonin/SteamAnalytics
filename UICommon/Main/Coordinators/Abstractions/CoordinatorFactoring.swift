@@ -10,7 +10,7 @@ import Foundation
 
 public protocol CoordinatorFactoring {
     func makeLoginCoordinator() ->
-        CoordinatableFactoryResult<EmptyOption, LoginCoordinatorResult>
+        CoordinatableFactoryResult<MainCoordinatorStartOption, LoginCoordinatorResult>
 
     func makeTabCoordinator() ->
         CoordinatableFactoryResult<UserCoordinatorStartOption, UserCoordinatorResult>

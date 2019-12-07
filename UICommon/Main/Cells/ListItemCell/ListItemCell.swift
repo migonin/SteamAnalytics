@@ -72,12 +72,10 @@ public class ListItemCell: UITableViewCell {
         subtitleLabel.text = model.subtitle
 
         if let imgUrl = model.imgUrl {
-            if model.roundedImg {
-                let processor = RoundCornerImageProcessor(cornerRadius: imgViewSize, backgroundColor: nil)
-                imgView.kf.setImage(with: URL(string: imgUrl), options: [.processor(processor)])
-            } else {
-                imgView.kf.setImage(with: URL(string: imgUrl))
-            }
+            let cornerRadius = model.roundedImg ? imgViewSize : 4.0
+            let processor = RoundCornerImageProcessor(cornerRadius: cornerRadius, backgroundColor: nil)
+            
+            imgView.kf.setImage(with: URL(string: imgUrl), options: [.processor(processor), .cacheSerializer(FormatIndicatedCacheSerializer.png)])
 
             imgView.isHidden = false
         } else {
