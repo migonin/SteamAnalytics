@@ -1,88 +1,100 @@
 # Steam Analytics
+This repo contains simple iOS app which display data from Steam API - friends, own games, play time, some statistics from game (if game collects it), acheivements and so on.
+I plan to use this app as playground for my ideas about iOS development and also as showcase of my current skillz :)
 
-## Архитектура вкратце 🏠
-Приложение разбито на фреймворки нескольких уровней. 
+[README in Russian 🇷🇺](https://github.com/migonin/SteamAnalytics/blob/master/README_ru.md)
+
+##### My contacts:
+Email: mikhail.igonin@gmail.com
+Telegram: https://t.me/mikhail_igonin
+Twitter: https://twitter.com/frozen_lion/
+
+## Architecture features
+- framework-based layers
+- test apps for some layers
+- clean code. No hidden dependencies and singletons, no `SuperDuperManager.shared.getStuff` and so on. SOLID as it should be.
+- SOA
+- [generic coordinators](https://github.com/migonin/AnyCoordinatable)
+- VIPER screen modules
+- unit tests for storages
+
+## Layers 🏠
 - `SteamAnalyticsApp`
 - `LoginScenes`, `UsersScenes` и `GamesScenes`
 - `Services`, `UICommon`, `UICommonTestApp`
 - `APIClient`, `Storages`
 - `Core`
 
-Фреймворки могут использовть только слои, лежащие ниже. При разработе старался придерживаться принципов чистого кода, SOLID и DI. О каждом фреймворке подробнее далее.
+Each layer can use only underlying layers. Horisontal connections are not allowed also.
 
 ### Core ☢️
-Базовые структуры данных приложения (`User`, `Game` etc).
+Base data structures (`User`, `Game` etc).
 
 ### Storages 💾
-Для хранения данных используется `CoreData` и [CoreStore][CoreStore]. Последний облегчает работу, добавляя type safety, мониторинг объектов и листов, бэкграундные транзакции с меньшим количеством возможностей выстрелить себе в ногу и прочее. Так же важным плюсом является то, что можно создавать модели данных без графического редактора и программирования мышкой. В общем, получается Realm :)
-На входе и выходе у стораджей простые структуры объектов, методы managed objects не экспоузятся наружу. По сути, из персистинга снаружи доступен только мониторинг изменений объектов. От этого тоже можно было абстрагироваться, но пожалел времени и не стал перфекционировать. Врочем, сделать это было бы не так сложно.
-Стораджи закрыты `Input` и `Output` протоколами, `Input` используют только сервисы, интеракторы экранов забирают данные через `Output`. Экранные модули получают данные реактивно, подписываясь на изменения стораджа.
+Storages is based on `CoreData` and [CoreStore][CoreStore]. 
+Each storage is enclosed with `SomeStorageInput` and `SomeStorageOutput` protocols. Basically only services can use `Input` protocols to save data from API. Interactors of screen modules subscribes for data changes and gets it reactively by `Output` protocols. `Inputs` and `Outputs` uses simple structs from `Core`, `NSManagedObject` and its subclasses are not exposed outside.
 
 ### APIClient 📻
-Расширяет структуры из `Core` до `Codable`. Содержит несколько протоколов клиентов для работы с разными сущностями, а так же структуры, необходимые для функционирования (`query`, `url factory`, etc). Реализации протоколов используют [Alamofire], но можно было бы обойтись и без него.
+At this level `Core` structures are extended to `Codable`. Also there are some networking helpers (`queries`, `url factories`, etc). API clients protocols. Concrete implementation of these protocols uses [Alamofire].
 
 ### Services 🛠
-Содержит сервисы для работы с данными, они получают данные из сети с помощью `APIClient` и кладут их в `Storages`. В отдельные сервисы вынесены логаут и сравнение пользователей. Все закрыты протоколами. Сюда так же затесался `ErrorDescribing`, хотя под utils можно было вынести отдельный фреймворк, но ради одной утилиты рука не поднялась.
+`Services` uses `APIClients` to get data from API and then to save it to `Storages`. Also there are services for complex logic like users comparison.
 
 ### UICommon 🧩
-В этом модуле лежат ячейки таблиц и их модели, базовые экраны. Для лейаута используется [SnapKit], для загрузок картинок [Kingfisher]. Так же тут содержатся строки и картинки, обертки для них генерятся через [SwiftGen].
+`UIView` subclasses and its models. [SnapKit] for layout (no xibs), [Kingfisher] for images loading. Also this level contains strings and images, wrapped with [SwiftGen].
 
-#### UICommonTestApp 🧪
-Тестовое приложения с моделям-рыбами для всех ячеек приложения. Помимо удобства разработки ячеек, его удобно использовать для ui-тестирования отдельных элементов.
+###### UICommonTestApp 🧪
+Test app for all cells and other views. Handy for UI developement and UI tests.
 
-#### Координаторы 🔀
-Также в `UICommon` лежат абстракции координаторов:
-- протокол `Coordinatable`, которые имеет два associated type: `start option` и `result`. Эти типы являются входом и выходом координаторов, лежат здесь же.
-- протокол фабрики координаторов `CoordinatorFactoring`, инстанцирующей type erased `AnyCoordinatable`. Позволяет координаторам инстанцировать дочерние через фабрику, зная только о входных и выходных типах друг друга. 
-- Приятный бонус: при необходимости создать для одного координатора тестовое приложение создается фабрика, закрывающая остальные координаторы стабами (см. в коде `StubCoordinator` и `StubCoordinatorFactory`).
+###### Coordinators 🔀
+`UICommon` also contains generic coordinators. For detailed explanation please check [my other repo](https://github.com/migonin/AnyCoordinatable). Main idea shortly:
+- `Coordinatable` protocol with two associated type: `start option` and `result`. 
+- `CoordinatorFactoring`, which is used by coordinators to instantiate other coordinators (wrapped with type erased `AnyCoordinatable`) without knowledge of concrete implementation, only of `start option` and `result` types.
+- Useful feature: with this approach you can use every coordinator separately in test application. Other coordinators can be stubbed. Please check [`StubCoordinator`](https://github.com/migonin/SteamAnalytics/blob/master/UICommon/Main/Coordinators/Abstractions/StubCoordinators/StubCoordinator.swift) and [`StubCoordinatorFactory`](https://github.com/migonin/SteamAnalytics/blob/master/UICommon/Main/Coordinators/Abstractions/StubCoordinators/StubCoordinatorFactory.swift).
 
-Здесь же есть 3 абстрактных координатора, от коротрых наследуются все остальные: `WindowCoordinator`, `TabCoordinator` и `NavigationCoordinator`, думаю, что их назначение ясно.
+3 base coordinators: `WindowCoordinator`, `TabCoordinator` и `NavigationCoordinator`, its purposes is obvious.
 
-### Слой потоков экранов ➡️
-Всего их три: `LoginScenes`, `UsersScenes` и `GamesScenes`. В каждом содержится соответствующий координатор, экранные модули и фабрика этих модулей.
+### Screens flows layer ➡️
+Separate frameworks for diffenert flows: `LoginScenes`, `UsersScenes` & `GamesScenes`. Each contains: coordinator, viper modules, modules factory.
 
-### Экранный модуль 📺
-Экранные модули закрыты тем же протоколом, что и координаторы, отличие лишь в том, что сами они не инстанцируют дочерние модули, а передают управление в координатор.
-Модуль представляет собой VIPER-модуль без R. Так же из всех презентеров вынесен в отдельную сущность `ModelsBuilder`. По сути с имеющимся подходом к абстракции навигации и экранов не имеет значения архитектура конктертного модуля, т.к. она закрыта протоколом, применил VIPER, т.к. на работе использую его и так было быстрее.
+### Screen module 📺
+Each screen module is enclosed with same approach as coordinator: it has `input` and `output` protocols, and exposes `UIViewController`, so coordinator can intagrate it into views hierarchy. 
 
-### Основное приложение 📱
-Основное приложение содержит минимум всего - создание стораджей, API-клиентов и инжекцию их в сервисы, создание основного координатора и фабрики координаторов. DI реализован через сервис-локаторы `Services` и `Storages`. 
+VIPER-like pattern is used for every module, however as it is fully enclosed with protocols, it does not matter.
 
-## Графики 📈
-На самописные графики не хватило времени, в Telegram-контесте, увы, не участвовал. Использовал [Charts], как наиболее популярное и кастомизируемое решение.
+### Main app 📱
+Main app is very thin and minimalistic - it combines all layers, sets up and injects all dependencies and starts main coordinator.  
 
-## Дебаг 🔧
-При запуске из xCode с переменной окружения `xDebugMode` (включена по умолчанию) на экране логина появляется кнопка `fake login` для авторизации под пользователем с хорошим аккаунтом по CS: GO.
+## Graphs 📈
+[Charts] pod is used for games stats history, in future I have plans to develop my own charting library.
 
-## Тесты ✅
-На unit-тесты не хватило сил и времени, хотя изначально в планах было покрыть тестами все `Storages`. Но в качестве примеров тестов с созданием in-memory стораджа под каждый и ожиданием асинхронных результатов и бэкграундных транзакций написал `AuthStorageTests`.
+## Debug 🔧
+Main app schema has `xDebugMode` environment variable, when it is enabled  `fake login` button appears on login screen, it emulates login by user with great CS: GO stats :)
 
-## Прочий GOD-mode 🎅
-- ачивки пользователя по игре
-- статус юзера
-- экран сравнения себя с другим пользователем
-- новости по игре (даже с картинками из html и bb codes)
-- время, проведенное в игре за всю историю и за послендие 2 недели
-- темная тема
+## Tests ✅
+Unit tests for `Storages`. In-memory data stacks, background transactions awaiting.
+
+## Other features 🎅
+- dark mode
 - dynamic type
 
-## Дальнейшее развитие 📋
-- Хотелось бы добавить sourcery для генерации autoinit'ов, руками утомился писать, нужно было сделать это сразу.
-- Можно попробовать сделать DI какими-нибудь другими средствами, давно хотел.
-- Закрыть протоколом мониторинг изменений объектов в `Storage`.
-- Сделать тестовые приложения для отдельных координаторов
-- Сделать получении данных для Dota2. В отдельный сторадж, на отдельный таб.
+## Future plans 📋
+- sourcery for autoinits generation.
+- test some DI container.
+- enclose `Storage`'s object monitoring.
+- test apps for separate coordinators.
+- stats from Dota2.
 
 ## Pods 🥜
 
-| Pod | Описание | URL |
+| Pod | Description | URL |
 | ------ | ------ | ------ |
-| CoreStore | Хелпер CoreData | [https://github.com/JohnEstropia/CoreStore][CoreStore] |
+| CoreStore | CoreData as it should be | [https://github.com/JohnEstropia/CoreStore][CoreStore] |
 | SnapKit | UI layaout | [https://github.com/SnapKit/SnapKit][SnapKit] |
-| Kingfisher | Загрузка картинок | [https://github.com/onevcat/Kingfisher][Kingfisher] |
-| Alamofire | Работа с сетью | https://github.com/Alamofire/Alamofire |
-| Charts | Отрисовка графиков | https://github.com/danielgindi/Charts |
-| SwiftGen | Кодогенерация для строк и картинок | https://github.com/SwiftGen/SwiftGen |
+| Kingfisher | Images loading | [https://github.com/onevcat/Kingfisher][Kingfisher] |
+| Alamofire | Networking | https://github.com/Alamofire/Alamofire |
+| Charts | Graphs | https://github.com/danielgindi/Charts |
+| SwiftGen | Codegeneration for images and strings | https://github.com/SwiftGen/SwiftGen |
 
    [Alamofire]: <https://github.com/Alamofire/Alamofire>
    [CoreStore]: <https://github.com/JohnEstropia/CoreStore>
